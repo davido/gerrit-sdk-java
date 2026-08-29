@@ -49,7 +49,7 @@ import com.google.gerrit.client.JSON;
 /**
  * PureRevertInfo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-08-29T17:17:57.806085+02:00[Europe/Paris]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.25.0")
 public class PureRevertInfo {
   public static final String SERIALIZED_NAME_IS_PURE_REVERT = "is_pure_revert";
   @SerializedName(SERIALIZED_NAME_IS_PURE_REVERT)

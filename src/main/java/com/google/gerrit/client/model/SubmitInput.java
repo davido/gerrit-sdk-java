@@ -53,7 +53,7 @@ import com.google.gerrit.client.JSON;
 /**
  * SubmitInput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-08-29T17:17:57.806085+02:00[Europe/Paris]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.25.0")
 public class SubmitInput {
   public static final String SERIALIZED_NAME_WAIT_FOR_MERGE = "wait_for_merge";
   @SerializedName(SERIALIZED_NAME_WAIT_FOR_MERGE)

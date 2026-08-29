@@ -59,7 +59,7 @@ import com.google.gerrit.client.JSON;
 /**
  * GeneralPreferencesInfo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-08-29T17:17:57.806085+02:00[Europe/Paris]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.25.0")
 public class GeneralPreferencesInfo {
   public static final String SERIALIZED_NAME_CHANGES_PER_PAGE = "changes_per_page";
   @SerializedName(SERIALIZED_NAME_CHANGES_PER_PAGE)

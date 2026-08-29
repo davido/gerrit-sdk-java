@@ -51,7 +51,7 @@ import com.google.gerrit.client.JSON;
 /**
  * AddSubgroupsInput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-08-29T17:17:57.806085+02:00[Europe/Paris]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.25.0")
 public class AddSubgroupsInput {
   public static final String SERIALIZED_NAME_ONE_GROUP = "_one_group";
   @SerializedName(SERIALIZED_NAME_ONE_GROUP)

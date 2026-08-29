@@ -31,7 +31,7 @@ echo "2/4 generate java client (okhttp-gson, Gerrit $VERSION)"
 # .openapi-generator-ignore; pom.xml is regenerated with the version below.
 npx --yes @openapitools/openapi-generator-cli@2.41.0 generate \
   -g java -i "$SPEC" -o . \
-  --additional-properties=library=okhttp-gson,groupId=com.github.davido,artifactId=gerrit-sdk-java,artifactVersion="$VERSION",apiPackage=com.google.gerrit.client.api,modelPackage=com.google.gerrit.client.model,invokerPackage=com.google.gerrit.client \
+  --additional-properties=library=okhttp-gson,hideGenerationTimestamp=true,groupId=com.github.davido,artifactId=gerrit-sdk-java,artifactVersion="$VERSION",apiPackage=com.google.gerrit.client.api,modelPackage=com.google.gerrit.client.model,invokerPackage=com.google.gerrit.client \
   >/dev/null
 
 echo "3/4 restore hand-written XSSI interceptor + modernize the pom"
@@ -45,10 +45,15 @@ s = s.replace("<java.version>1.8</java.version>", "<java.version>21</java.versio
 s = s.replace("<version>3.8.1</version>", "<version>3.13.0</version>")  # maven-compiler-plugin
 s = s.replace("<okhttp-version>4.12.0</okhttp-version>", "<okhttp-version>5.4.0</okhttp-version>")
 s = s.replace("<gson-version>2.10.1</gson-version>", "<gson-version>2.14.0</gson-version>")
+# The java generator stamps OpenAPI-Generator's own project/SCM/license metadata into
+# the pom regardless of the spec; rewrite it to this repo + Apache-2.0.
+s = s.replace("https://github.com/openapitools/openapi-generator", "https://github.com/davido/gerrit-sdk-java")
+s = s.replace("scm:git:git@github.com:openapitools/openapi-generator.git", "scm:git:git@github.com:davido/gerrit-sdk-java.git")
+s = s.replace("<name>Unlicense</name>", "<name>Apache-2.0</name>")
 open(p, "w").write(s)
 PY
 
 echo "4/4 drop non-Maven scaffolding (no Gradle)"
 rm -rf build.gradle build.sbt settings.gradle gradle gradlew gradlew.bat gradle.properties git_push.sh docs api .travis.yml
 
-echo "done: src/ regenerated from $SPEC; XSSI via GerritXssiInterceptor; Maven-only; okhttp 5 / gson 2.11"
+echo "done: src/ regenerated from $SPEC; XSSI via GerritXssiInterceptor; Maven-only; okhttp 5.4 / gson 2.14, pom metadata=Apache-2.0"

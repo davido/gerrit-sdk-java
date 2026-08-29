@@ -49,7 +49,7 @@ import com.google.gerrit.client.JSON;
 /**
  * ReceiveInfo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-08-29T17:17:57.806085+02:00[Europe/Paris]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.25.0")
 public class ReceiveInfo {
   public static final String SERIALIZED_NAME_ENABLE_SIGNED_PUSH = "enable_signed_push";
   @SerializedName(SERIALIZED_NAME_ENABLE_SIGNED_PUSH)
