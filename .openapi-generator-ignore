@@ -1,0 +1,23 @@
+# Hand-written / owned by this repo -- must survive regeneration.
+README.md
+LICENSE.txt
+.gitignore
+jitpack.yml
+src/main/java/com/google/gerrit/client/GerritXssiInterceptor.java
+# generator scaffolding we don't ship (no Gradle)
+build.gradle
+build.sbt
+settings.gradle
+gradle/**
+gradlew
+gradlew.bat
+gradle.properties
+git_push.sh
+docs/**
+api/**
+.travis.yml
+src/test/**
+mvnw
+mvnw.cmd
+.mvn/**
+.github/**

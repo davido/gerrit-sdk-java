@@ -1,0 +1,8 @@
+# JitPack build configuration.
+#
+# JitPack builds this repo's git tag into a Maven artifact on demand
+# (com.github.davido:gerrit-sdk-java:<tag>) by running `mvn install`. Pin the JDK to the
+# language level we target (21, Gerrit's own level) -- JitPack ships this JDK, so no
+# custom install is needed: it just works.
+jdk:
+  - openjdk21
