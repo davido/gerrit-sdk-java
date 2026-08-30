@@ -367,7 +367,7 @@ public class PluginsApi {
         return localVarCall;
     }
     /**
-     * Build call for getPluginsPluginIdStatus
+     * Build call for getPluginsPluginIdGerritStatus
      * @param pluginId  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -379,7 +379,7 @@ public class PluginsApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getPluginsPluginIdStatusCall(@javax.annotation.Nonnull String pluginId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getPluginsPluginIdGerritStatusCall(@javax.annotation.Nonnull String pluginId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -396,7 +396,7 @@ public class PluginsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/plugins/{plugin-id}/status"
+        String localVarPath = "/plugins/{plugin-id}/gerrit~status"
             .replace("{" + "plugin-id" + "}", localVarApiClient.escapeString(pluginId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -425,19 +425,19 @@ public class PluginsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getPluginsPluginIdStatusValidateBeforeCall(@javax.annotation.Nonnull String pluginId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getPluginsPluginIdGerritStatusValidateBeforeCall(@javax.annotation.Nonnull String pluginId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pluginId' is set
         if (pluginId == null) {
-            throw new ApiException("Missing the required parameter 'pluginId' when calling getPluginsPluginIdStatus(Async)");
+            throw new ApiException("Missing the required parameter 'pluginId' when calling getPluginsPluginIdGerritStatus(Async)");
         }
 
-        return getPluginsPluginIdStatusCall(pluginId, _callback);
+        return getPluginsPluginIdGerritStatusCall(pluginId, _callback);
 
     }
 
     /**
-     * 
-     * 
+     * Get Plugin Status
+     * Retrieves the status of a plugin on the Gerrit server.
      * @param pluginId  (required)
      * @return PluginInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -448,14 +448,14 @@ public class PluginsApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public PluginInfo getPluginsPluginIdStatus(@javax.annotation.Nonnull String pluginId) throws ApiException {
-        ApiResponse<PluginInfo> localVarResp = getPluginsPluginIdStatusWithHttpInfo(pluginId);
+    public PluginInfo getPluginsPluginIdGerritStatus(@javax.annotation.Nonnull String pluginId) throws ApiException {
+        ApiResponse<PluginInfo> localVarResp = getPluginsPluginIdGerritStatusWithHttpInfo(pluginId);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
+     * Get Plugin Status
+     * Retrieves the status of a plugin on the Gerrit server.
      * @param pluginId  (required)
      * @return ApiResponse&lt;PluginInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -466,15 +466,15 @@ public class PluginsApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<PluginInfo> getPluginsPluginIdStatusWithHttpInfo(@javax.annotation.Nonnull String pluginId) throws ApiException {
-        okhttp3.Call localVarCall = getPluginsPluginIdStatusValidateBeforeCall(pluginId, null);
+    public ApiResponse<PluginInfo> getPluginsPluginIdGerritStatusWithHttpInfo(@javax.annotation.Nonnull String pluginId) throws ApiException {
+        okhttp3.Call localVarCall = getPluginsPluginIdGerritStatusValidateBeforeCall(pluginId, null);
         Type localVarReturnType = new TypeToken<PluginInfo>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Get Plugin Status (asynchronously)
+     * Retrieves the status of a plugin on the Gerrit server.
      * @param pluginId  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -486,15 +486,15 @@ public class PluginsApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getPluginsPluginIdStatusAsync(@javax.annotation.Nonnull String pluginId, final ApiCallback<PluginInfo> _callback) throws ApiException {
+    public okhttp3.Call getPluginsPluginIdGerritStatusAsync(@javax.annotation.Nonnull String pluginId, final ApiCallback<PluginInfo> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getPluginsPluginIdStatusValidateBeforeCall(pluginId, _callback);
+        okhttp3.Call localVarCall = getPluginsPluginIdGerritStatusValidateBeforeCall(pluginId, _callback);
         Type localVarReturnType = new TypeToken<PluginInfo>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for postPluginsPluginIdDisable
+     * Build call for postPluginsPluginIdGerritDisable
      * @param pluginId  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -506,7 +506,7 @@ public class PluginsApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call postPluginsPluginIdDisableCall(@javax.annotation.Nonnull String pluginId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call postPluginsPluginIdGerritDisableCall(@javax.annotation.Nonnull String pluginId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -523,7 +523,7 @@ public class PluginsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/plugins/{plugin-id}/disable"
+        String localVarPath = "/plugins/{plugin-id}/gerrit~disable"
             .replace("{" + "plugin-id" + "}", localVarApiClient.escapeString(pluginId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -552,18 +552,18 @@ public class PluginsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call postPluginsPluginIdDisableValidateBeforeCall(@javax.annotation.Nonnull String pluginId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call postPluginsPluginIdGerritDisableValidateBeforeCall(@javax.annotation.Nonnull String pluginId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pluginId' is set
         if (pluginId == null) {
-            throw new ApiException("Missing the required parameter 'pluginId' when calling postPluginsPluginIdDisable(Async)");
+            throw new ApiException("Missing the required parameter 'pluginId' when calling postPluginsPluginIdGerritDisable(Async)");
         }
 
-        return postPluginsPluginIdDisableCall(pluginId, _callback);
+        return postPluginsPluginIdGerritDisableCall(pluginId, _callback);
 
     }
 
     /**
-     * 
+     * Disable Plugin
      * 
      * @param pluginId  (required)
      * @return PluginInfo
@@ -575,13 +575,13 @@ public class PluginsApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public PluginInfo postPluginsPluginIdDisable(@javax.annotation.Nonnull String pluginId) throws ApiException {
-        ApiResponse<PluginInfo> localVarResp = postPluginsPluginIdDisableWithHttpInfo(pluginId);
+    public PluginInfo postPluginsPluginIdGerritDisable(@javax.annotation.Nonnull String pluginId) throws ApiException {
+        ApiResponse<PluginInfo> localVarResp = postPluginsPluginIdGerritDisableWithHttpInfo(pluginId);
         return localVarResp.getData();
     }
 
     /**
-     * 
+     * Disable Plugin
      * 
      * @param pluginId  (required)
      * @return ApiResponse&lt;PluginInfo&gt;
@@ -593,14 +593,14 @@ public class PluginsApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<PluginInfo> postPluginsPluginIdDisableWithHttpInfo(@javax.annotation.Nonnull String pluginId) throws ApiException {
-        okhttp3.Call localVarCall = postPluginsPluginIdDisableValidateBeforeCall(pluginId, null);
+    public ApiResponse<PluginInfo> postPluginsPluginIdGerritDisableWithHttpInfo(@javax.annotation.Nonnull String pluginId) throws ApiException {
+        okhttp3.Call localVarCall = postPluginsPluginIdGerritDisableValidateBeforeCall(pluginId, null);
         Type localVarReturnType = new TypeToken<PluginInfo>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
+     * Disable Plugin (asynchronously)
      * 
      * @param pluginId  (required)
      * @param _callback The callback to be executed when the API call finishes
@@ -613,15 +613,15 @@ public class PluginsApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call postPluginsPluginIdDisableAsync(@javax.annotation.Nonnull String pluginId, final ApiCallback<PluginInfo> _callback) throws ApiException {
+    public okhttp3.Call postPluginsPluginIdGerritDisableAsync(@javax.annotation.Nonnull String pluginId, final ApiCallback<PluginInfo> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = postPluginsPluginIdDisableValidateBeforeCall(pluginId, _callback);
+        okhttp3.Call localVarCall = postPluginsPluginIdGerritDisableValidateBeforeCall(pluginId, _callback);
         Type localVarReturnType = new TypeToken<PluginInfo>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for postPluginsPluginIdEnable
+     * Build call for postPluginsPluginIdGerritEnable
      * @param pluginId  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -633,7 +633,7 @@ public class PluginsApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call postPluginsPluginIdEnableCall(@javax.annotation.Nonnull String pluginId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call postPluginsPluginIdGerritEnableCall(@javax.annotation.Nonnull String pluginId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -650,7 +650,7 @@ public class PluginsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/plugins/{plugin-id}/enable"
+        String localVarPath = "/plugins/{plugin-id}/gerrit~enable"
             .replace("{" + "plugin-id" + "}", localVarApiClient.escapeString(pluginId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -679,19 +679,19 @@ public class PluginsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call postPluginsPluginIdEnableValidateBeforeCall(@javax.annotation.Nonnull String pluginId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call postPluginsPluginIdGerritEnableValidateBeforeCall(@javax.annotation.Nonnull String pluginId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pluginId' is set
         if (pluginId == null) {
-            throw new ApiException("Missing the required parameter 'pluginId' when calling postPluginsPluginIdEnable(Async)");
+            throw new ApiException("Missing the required parameter 'pluginId' when calling postPluginsPluginIdGerritEnable(Async)");
         }
 
-        return postPluginsPluginIdEnableCall(pluginId, _callback);
+        return postPluginsPluginIdGerritEnableCall(pluginId, _callback);
 
     }
 
     /**
-     * 
-     * 
+     * Enable Plugin
+     * Enables a plugin on the Gerrit server.
      * @param pluginId  (required)
      * @return PluginInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -702,14 +702,14 @@ public class PluginsApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public PluginInfo postPluginsPluginIdEnable(@javax.annotation.Nonnull String pluginId) throws ApiException {
-        ApiResponse<PluginInfo> localVarResp = postPluginsPluginIdEnableWithHttpInfo(pluginId);
+    public PluginInfo postPluginsPluginIdGerritEnable(@javax.annotation.Nonnull String pluginId) throws ApiException {
+        ApiResponse<PluginInfo> localVarResp = postPluginsPluginIdGerritEnableWithHttpInfo(pluginId);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
+     * Enable Plugin
+     * Enables a plugin on the Gerrit server.
      * @param pluginId  (required)
      * @return ApiResponse&lt;PluginInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -720,15 +720,15 @@ public class PluginsApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<PluginInfo> postPluginsPluginIdEnableWithHttpInfo(@javax.annotation.Nonnull String pluginId) throws ApiException {
-        okhttp3.Call localVarCall = postPluginsPluginIdEnableValidateBeforeCall(pluginId, null);
+    public ApiResponse<PluginInfo> postPluginsPluginIdGerritEnableWithHttpInfo(@javax.annotation.Nonnull String pluginId) throws ApiException {
+        okhttp3.Call localVarCall = postPluginsPluginIdGerritEnableValidateBeforeCall(pluginId, null);
         Type localVarReturnType = new TypeToken<PluginInfo>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Enable Plugin (asynchronously)
+     * Enables a plugin on the Gerrit server.
      * @param pluginId  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -740,15 +740,15 @@ public class PluginsApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call postPluginsPluginIdEnableAsync(@javax.annotation.Nonnull String pluginId, final ApiCallback<PluginInfo> _callback) throws ApiException {
+    public okhttp3.Call postPluginsPluginIdGerritEnableAsync(@javax.annotation.Nonnull String pluginId, final ApiCallback<PluginInfo> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = postPluginsPluginIdEnableValidateBeforeCall(pluginId, _callback);
+        okhttp3.Call localVarCall = postPluginsPluginIdGerritEnableValidateBeforeCall(pluginId, _callback);
         Type localVarReturnType = new TypeToken<PluginInfo>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for postPluginsPluginIdReload
+     * Build call for postPluginsPluginIdGerritReload
      * @param pluginId  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -760,7 +760,7 @@ public class PluginsApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call postPluginsPluginIdReloadCall(@javax.annotation.Nonnull String pluginId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call postPluginsPluginIdGerritReloadCall(@javax.annotation.Nonnull String pluginId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -777,7 +777,7 @@ public class PluginsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/plugins/{plugin-id}/reload"
+        String localVarPath = "/plugins/{plugin-id}/gerrit~reload"
             .replace("{" + "plugin-id" + "}", localVarApiClient.escapeString(pluginId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -806,19 +806,19 @@ public class PluginsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call postPluginsPluginIdReloadValidateBeforeCall(@javax.annotation.Nonnull String pluginId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call postPluginsPluginIdGerritReloadValidateBeforeCall(@javax.annotation.Nonnull String pluginId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pluginId' is set
         if (pluginId == null) {
-            throw new ApiException("Missing the required parameter 'pluginId' when calling postPluginsPluginIdReload(Async)");
+            throw new ApiException("Missing the required parameter 'pluginId' when calling postPluginsPluginIdGerritReload(Async)");
         }
 
-        return postPluginsPluginIdReloadCall(pluginId, _callback);
+        return postPluginsPluginIdGerritReloadCall(pluginId, _callback);
 
     }
 
     /**
-     * 
-     * 
+     * Reload Plugin
+     * Reloads a plugin on the Gerrit server.
      * @param pluginId  (required)
      * @return PluginInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -829,14 +829,14 @@ public class PluginsApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public PluginInfo postPluginsPluginIdReload(@javax.annotation.Nonnull String pluginId) throws ApiException {
-        ApiResponse<PluginInfo> localVarResp = postPluginsPluginIdReloadWithHttpInfo(pluginId);
+    public PluginInfo postPluginsPluginIdGerritReload(@javax.annotation.Nonnull String pluginId) throws ApiException {
+        ApiResponse<PluginInfo> localVarResp = postPluginsPluginIdGerritReloadWithHttpInfo(pluginId);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
+     * Reload Plugin
+     * Reloads a plugin on the Gerrit server.
      * @param pluginId  (required)
      * @return ApiResponse&lt;PluginInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -847,15 +847,15 @@ public class PluginsApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<PluginInfo> postPluginsPluginIdReloadWithHttpInfo(@javax.annotation.Nonnull String pluginId) throws ApiException {
-        okhttp3.Call localVarCall = postPluginsPluginIdReloadValidateBeforeCall(pluginId, null);
+    public ApiResponse<PluginInfo> postPluginsPluginIdGerritReloadWithHttpInfo(@javax.annotation.Nonnull String pluginId) throws ApiException {
+        okhttp3.Call localVarCall = postPluginsPluginIdGerritReloadValidateBeforeCall(pluginId, null);
         Type localVarReturnType = new TypeToken<PluginInfo>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Reload Plugin (asynchronously)
+     * Reloads a plugin on the Gerrit server.
      * @param pluginId  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -867,9 +867,9 @@ public class PluginsApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call postPluginsPluginIdReloadAsync(@javax.annotation.Nonnull String pluginId, final ApiCallback<PluginInfo> _callback) throws ApiException {
+    public okhttp3.Call postPluginsPluginIdGerritReloadAsync(@javax.annotation.Nonnull String pluginId, final ApiCallback<PluginInfo> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = postPluginsPluginIdReloadValidateBeforeCall(pluginId, _callback);
+        okhttp3.Call localVarCall = postPluginsPluginIdGerritReloadValidateBeforeCall(pluginId, _callback);
         Type localVarReturnType = new TypeToken<PluginInfo>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

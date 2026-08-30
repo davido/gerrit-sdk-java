@@ -45,9 +45,12 @@ import com.google.gerrit.client.model.EmailInfo;
 import com.google.gerrit.client.model.EmailInput;
 import java.io.File;
 import com.google.gerrit.client.model.GeneralPreferencesInfo;
+import com.google.gerrit.client.model.GpgKeyInfo;
+import com.google.gerrit.client.model.GpgKeysInput;
 import com.google.gerrit.client.model.GroupInfo;
 import com.google.gerrit.client.model.HttpPasswordInput;
 import com.google.gerrit.client.model.NameInput;
+import com.google.gerrit.client.model.OAuthTokenInfo;
 import com.google.gerrit.client.model.ProjectWatchInfo;
 import com.google.gerrit.client.model.SshKeyInfo;
 import com.google.gerrit.client.model.StatusInput;
@@ -480,6 +483,138 @@ public class AccountsApi {
         okhttp3.Call localVarCall = deleteAccountsAccountIdEmailsEmailIdValidateBeforeCall(accountId, emailId, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for deleteAccountsAccountIdGpgkeysGpgKeyId
+     * @param accountId  (required)
+     * @param gpgKeyId  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call deleteAccountsAccountIdGpgkeysGpgKeyIdCall(@javax.annotation.Nonnull String accountId, @javax.annotation.Nonnull String gpgKeyId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/accounts/{account-id}/gpgkeys/{gpg-key-id}"
+            .replace("{" + "account-id" + "}", localVarApiClient.escapeString(accountId.toString()))
+            .replace("{" + "gpg-key-id" + "}", localVarApiClient.escapeString(gpgKeyId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call deleteAccountsAccountIdGpgkeysGpgKeyIdValidateBeforeCall(@javax.annotation.Nonnull String accountId, @javax.annotation.Nonnull String gpgKeyId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'accountId' is set
+        if (accountId == null) {
+            throw new ApiException("Missing the required parameter 'accountId' when calling deleteAccountsAccountIdGpgkeysGpgKeyId(Async)");
+        }
+
+        // verify the required parameter 'gpgKeyId' is set
+        if (gpgKeyId == null) {
+            throw new ApiException("Missing the required parameter 'gpgKeyId' when calling deleteAccountsAccountIdGpgkeysGpgKeyId(Async)");
+        }
+
+        return deleteAccountsAccountIdGpgkeysGpgKeyIdCall(accountId, gpgKeyId, _callback);
+
+    }
+
+    /**
+     * Delete GPG Key
+     * Deletes a GPG key of a user.
+     * @param accountId  (required)
+     * @param gpgKeyId  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public void deleteAccountsAccountIdGpgkeysGpgKeyId(@javax.annotation.Nonnull String accountId, @javax.annotation.Nonnull String gpgKeyId) throws ApiException {
+        deleteAccountsAccountIdGpgkeysGpgKeyIdWithHttpInfo(accountId, gpgKeyId);
+    }
+
+    /**
+     * Delete GPG Key
+     * Deletes a GPG key of a user.
+     * @param accountId  (required)
+     * @param gpgKeyId  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> deleteAccountsAccountIdGpgkeysGpgKeyIdWithHttpInfo(@javax.annotation.Nonnull String accountId, @javax.annotation.Nonnull String gpgKeyId) throws ApiException {
+        okhttp3.Call localVarCall = deleteAccountsAccountIdGpgkeysGpgKeyIdValidateBeforeCall(accountId, gpgKeyId, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     * Delete GPG Key (asynchronously)
+     * Deletes a GPG key of a user.
+     * @param accountId  (required)
+     * @param gpgKeyId  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call deleteAccountsAccountIdGpgkeysGpgKeyIdAsync(@javax.annotation.Nonnull String accountId, @javax.annotation.Nonnull String gpgKeyId, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = deleteAccountsAccountIdGpgkeysGpgKeyIdValidateBeforeCall(accountId, gpgKeyId, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
@@ -2745,6 +2880,270 @@ public class AccountsApi {
         return localVarCall;
     }
     /**
+     * Build call for getAccountsAccountIdGpgkeys
+     * @param accountId  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getAccountsAccountIdGpgkeysCall(@javax.annotation.Nonnull String accountId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/accounts/{account-id}/gpgkeys"
+            .replace("{" + "account-id" + "}", localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getAccountsAccountIdGpgkeysValidateBeforeCall(@javax.annotation.Nonnull String accountId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'accountId' is set
+        if (accountId == null) {
+            throw new ApiException("Missing the required parameter 'accountId' when calling getAccountsAccountIdGpgkeys(Async)");
+        }
+
+        return getAccountsAccountIdGpgkeysCall(accountId, _callback);
+
+    }
+
+    /**
+     * List GPG Keys
+     * Returns the GPG keys of an account.
+     * @param accountId  (required)
+     * @return Map&lt;String, GpgKeyInfo&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public Map<String, GpgKeyInfo> getAccountsAccountIdGpgkeys(@javax.annotation.Nonnull String accountId) throws ApiException {
+        ApiResponse<Map<String, GpgKeyInfo>> localVarResp = getAccountsAccountIdGpgkeysWithHttpInfo(accountId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * List GPG Keys
+     * Returns the GPG keys of an account.
+     * @param accountId  (required)
+     * @return ApiResponse&lt;Map&lt;String, GpgKeyInfo&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Map<String, GpgKeyInfo>> getAccountsAccountIdGpgkeysWithHttpInfo(@javax.annotation.Nonnull String accountId) throws ApiException {
+        okhttp3.Call localVarCall = getAccountsAccountIdGpgkeysValidateBeforeCall(accountId, null);
+        Type localVarReturnType = new TypeToken<Map<String, GpgKeyInfo>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * List GPG Keys (asynchronously)
+     * Returns the GPG keys of an account.
+     * @param accountId  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getAccountsAccountIdGpgkeysAsync(@javax.annotation.Nonnull String accountId, final ApiCallback<Map<String, GpgKeyInfo>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getAccountsAccountIdGpgkeysValidateBeforeCall(accountId, _callback);
+        Type localVarReturnType = new TypeToken<Map<String, GpgKeyInfo>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getAccountsAccountIdGpgkeysGpgKeyId
+     * @param accountId  (required)
+     * @param gpgKeyId  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getAccountsAccountIdGpgkeysGpgKeyIdCall(@javax.annotation.Nonnull String accountId, @javax.annotation.Nonnull String gpgKeyId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/accounts/{account-id}/gpgkeys/{gpg-key-id}"
+            .replace("{" + "account-id" + "}", localVarApiClient.escapeString(accountId.toString()))
+            .replace("{" + "gpg-key-id" + "}", localVarApiClient.escapeString(gpgKeyId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getAccountsAccountIdGpgkeysGpgKeyIdValidateBeforeCall(@javax.annotation.Nonnull String accountId, @javax.annotation.Nonnull String gpgKeyId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'accountId' is set
+        if (accountId == null) {
+            throw new ApiException("Missing the required parameter 'accountId' when calling getAccountsAccountIdGpgkeysGpgKeyId(Async)");
+        }
+
+        // verify the required parameter 'gpgKeyId' is set
+        if (gpgKeyId == null) {
+            throw new ApiException("Missing the required parameter 'gpgKeyId' when calling getAccountsAccountIdGpgkeysGpgKeyId(Async)");
+        }
+
+        return getAccountsAccountIdGpgkeysGpgKeyIdCall(accountId, gpgKeyId, _callback);
+
+    }
+
+    /**
+     * Get GPG Key
+     * Retrieves a GPG key of a user.
+     * @param accountId  (required)
+     * @param gpgKeyId  (required)
+     * @return GpgKeyInfo
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public GpgKeyInfo getAccountsAccountIdGpgkeysGpgKeyId(@javax.annotation.Nonnull String accountId, @javax.annotation.Nonnull String gpgKeyId) throws ApiException {
+        ApiResponse<GpgKeyInfo> localVarResp = getAccountsAccountIdGpgkeysGpgKeyIdWithHttpInfo(accountId, gpgKeyId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get GPG Key
+     * Retrieves a GPG key of a user.
+     * @param accountId  (required)
+     * @param gpgKeyId  (required)
+     * @return ApiResponse&lt;GpgKeyInfo&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<GpgKeyInfo> getAccountsAccountIdGpgkeysGpgKeyIdWithHttpInfo(@javax.annotation.Nonnull String accountId, @javax.annotation.Nonnull String gpgKeyId) throws ApiException {
+        okhttp3.Call localVarCall = getAccountsAccountIdGpgkeysGpgKeyIdValidateBeforeCall(accountId, gpgKeyId, null);
+        Type localVarReturnType = new TypeToken<GpgKeyInfo>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get GPG Key (asynchronously)
+     * Retrieves a GPG key of a user.
+     * @param accountId  (required)
+     * @param gpgKeyId  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getAccountsAccountIdGpgkeysGpgKeyIdAsync(@javax.annotation.Nonnull String accountId, @javax.annotation.Nonnull String gpgKeyId, final ApiCallback<GpgKeyInfo> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getAccountsAccountIdGpgkeysGpgKeyIdValidateBeforeCall(accountId, gpgKeyId, _callback);
+        Type localVarReturnType = new TypeToken<GpgKeyInfo>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for getAccountsAccountIdGroups
      * @param accountId  (required)
      * @param _callback Callback for upload/download progress
@@ -2995,6 +3394,133 @@ public class AccountsApi {
 
         okhttp3.Call localVarCall = getAccountsAccountIdNameValidateBeforeCall(accountId, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getAccountsAccountIdOauthtoken
+     * @param accountId  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getAccountsAccountIdOauthtokenCall(@javax.annotation.Nonnull String accountId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/accounts/{account-id}/oauthtoken"
+            .replace("{" + "account-id" + "}", localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getAccountsAccountIdOauthtokenValidateBeforeCall(@javax.annotation.Nonnull String accountId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'accountId' is set
+        if (accountId == null) {
+            throw new ApiException("Missing the required parameter 'accountId' when calling getAccountsAccountIdOauthtoken(Async)");
+        }
+
+        return getAccountsAccountIdOauthtokenCall(accountId, _callback);
+
+    }
+
+    /**
+     * Get OAuth Access Token
+     * Returns a previously obtained OAuth access token.
+     * @param accountId  (required)
+     * @return OAuthTokenInfo
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public OAuthTokenInfo getAccountsAccountIdOauthtoken(@javax.annotation.Nonnull String accountId) throws ApiException {
+        ApiResponse<OAuthTokenInfo> localVarResp = getAccountsAccountIdOauthtokenWithHttpInfo(accountId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get OAuth Access Token
+     * Returns a previously obtained OAuth access token.
+     * @param accountId  (required)
+     * @return ApiResponse&lt;OAuthTokenInfo&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<OAuthTokenInfo> getAccountsAccountIdOauthtokenWithHttpInfo(@javax.annotation.Nonnull String accountId) throws ApiException {
+        okhttp3.Call localVarCall = getAccountsAccountIdOauthtokenValidateBeforeCall(accountId, null);
+        Type localVarReturnType = new TypeToken<OAuthTokenInfo>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get OAuth Access Token (asynchronously)
+     * Returns a previously obtained OAuth access token.
+     * @param accountId  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getAccountsAccountIdOauthtokenAsync(@javax.annotation.Nonnull String accountId, final ApiCallback<OAuthTokenInfo> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getAccountsAccountIdOauthtokenValidateBeforeCall(accountId, _callback);
+        Type localVarReturnType = new TypeToken<OAuthTokenInfo>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -4664,6 +5190,139 @@ public class AccountsApi {
 
         okhttp3.Call localVarCall = postAccountsAccountIdExternalIdsDeleteValidateBeforeCall(accountId, requestBody, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for postAccountsAccountIdGpgkeys
+     * @param accountId  (required)
+     * @param gpgKeysInput  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call postAccountsAccountIdGpgkeysCall(@javax.annotation.Nonnull String accountId, @javax.annotation.Nullable GpgKeysInput gpgKeysInput, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = gpgKeysInput;
+
+        // create path and map variables
+        String localVarPath = "/accounts/{account-id}/gpgkeys"
+            .replace("{" + "account-id" + "}", localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json",
+            "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call postAccountsAccountIdGpgkeysValidateBeforeCall(@javax.annotation.Nonnull String accountId, @javax.annotation.Nullable GpgKeysInput gpgKeysInput, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'accountId' is set
+        if (accountId == null) {
+            throw new ApiException("Missing the required parameter 'accountId' when calling postAccountsAccountIdGpgkeys(Async)");
+        }
+
+        return postAccountsAccountIdGpgkeysCall(accountId, gpgKeysInput, _callback);
+
+    }
+
+    /**
+     * Add/Delete GPG Keys
+     * Add or delete one or more GPG keys for a user.
+     * @param accountId  (required)
+     * @param gpgKeysInput  (optional)
+     * @return Map&lt;String, GpgKeyInfo&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public Map<String, GpgKeyInfo> postAccountsAccountIdGpgkeys(@javax.annotation.Nonnull String accountId, @javax.annotation.Nullable GpgKeysInput gpgKeysInput) throws ApiException {
+        ApiResponse<Map<String, GpgKeyInfo>> localVarResp = postAccountsAccountIdGpgkeysWithHttpInfo(accountId, gpgKeysInput);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Add/Delete GPG Keys
+     * Add or delete one or more GPG keys for a user.
+     * @param accountId  (required)
+     * @param gpgKeysInput  (optional)
+     * @return ApiResponse&lt;Map&lt;String, GpgKeyInfo&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Map<String, GpgKeyInfo>> postAccountsAccountIdGpgkeysWithHttpInfo(@javax.annotation.Nonnull String accountId, @javax.annotation.Nullable GpgKeysInput gpgKeysInput) throws ApiException {
+        okhttp3.Call localVarCall = postAccountsAccountIdGpgkeysValidateBeforeCall(accountId, gpgKeysInput, null);
+        Type localVarReturnType = new TypeToken<Map<String, GpgKeyInfo>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Add/Delete GPG Keys (asynchronously)
+     * Add or delete one or more GPG keys for a user.
+     * @param accountId  (required)
+     * @param gpgKeysInput  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call postAccountsAccountIdGpgkeysAsync(@javax.annotation.Nonnull String accountId, @javax.annotation.Nullable GpgKeysInput gpgKeysInput, final ApiCallback<Map<String, GpgKeyInfo>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = postAccountsAccountIdGpgkeysValidateBeforeCall(accountId, gpgKeysInput, _callback);
+        Type localVarReturnType = new TypeToken<Map<String, GpgKeyInfo>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**

@@ -44,6 +44,7 @@ import com.google.gerrit.client.model.CommitInfo;
 import com.google.gerrit.client.model.CommitMessageInfo;
 import com.google.gerrit.client.model.CommitMessageInput;
 import com.google.gerrit.client.model.CommonDescriptionInput;
+import com.google.gerrit.client.model.CommonFileInfo;
 import com.google.gerrit.client.model.CustomKeyedValuesInput;
 import com.google.gerrit.client.model.DeleteChangeMessageInput;
 import com.google.gerrit.client.model.DeleteCommentInput;
@@ -1041,6 +1042,280 @@ public class ChangesApi {
     public okhttp3.Call deleteChangesChangeIdPrivateAsync(@javax.annotation.Nonnull String changeId, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = deleteChangesChangeIdPrivateValidateBeforeCall(changeId, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for deleteChangesChangeIdReviewersReviewerId
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call deleteChangesChangeIdReviewersReviewerIdCall(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/changes/{change-id}/reviewers/{reviewer-id}"
+            .replace("{" + "change-id" + "}", localVarApiClient.escapeString(changeId.toString()))
+            .replace("{" + "reviewer-id" + "}", localVarApiClient.escapeString(reviewerId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call deleteChangesChangeIdReviewersReviewerIdValidateBeforeCall(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'changeId' is set
+        if (changeId == null) {
+            throw new ApiException("Missing the required parameter 'changeId' when calling deleteChangesChangeIdReviewersReviewerId(Async)");
+        }
+
+        // verify the required parameter 'reviewerId' is set
+        if (reviewerId == null) {
+            throw new ApiException("Missing the required parameter 'reviewerId' when calling deleteChangesChangeIdReviewersReviewerId(Async)");
+        }
+
+        return deleteChangesChangeIdReviewersReviewerIdCall(changeId, reviewerId, _callback);
+
+    }
+
+    /**
+     * Delete Reviewer
+     * &#39;POST /changes/\\{change-id\\}/reviewers/\\{account-id\\}/delete&#39; --
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public void deleteChangesChangeIdReviewersReviewerId(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId) throws ApiException {
+        deleteChangesChangeIdReviewersReviewerIdWithHttpInfo(changeId, reviewerId);
+    }
+
+    /**
+     * Delete Reviewer
+     * &#39;POST /changes/\\{change-id\\}/reviewers/\\{account-id\\}/delete&#39; --
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> deleteChangesChangeIdReviewersReviewerIdWithHttpInfo(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId) throws ApiException {
+        okhttp3.Call localVarCall = deleteChangesChangeIdReviewersReviewerIdValidateBeforeCall(changeId, reviewerId, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     * Delete Reviewer (asynchronously)
+     * &#39;POST /changes/\\{change-id\\}/reviewers/\\{account-id\\}/delete&#39; --
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call deleteChangesChangeIdReviewersReviewerIdAsync(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = deleteChangesChangeIdReviewersReviewerIdValidateBeforeCall(changeId, reviewerId, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for deleteChangesChangeIdReviewersReviewerIdVotesVoteId
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @param voteId  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call deleteChangesChangeIdReviewersReviewerIdVotesVoteIdCall(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, @javax.annotation.Nonnull String voteId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/changes/{change-id}/reviewers/{reviewer-id}/votes/{vote-id}"
+            .replace("{" + "change-id" + "}", localVarApiClient.escapeString(changeId.toString()))
+            .replace("{" + "reviewer-id" + "}", localVarApiClient.escapeString(reviewerId.toString()))
+            .replace("{" + "vote-id" + "}", localVarApiClient.escapeString(voteId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call deleteChangesChangeIdReviewersReviewerIdVotesVoteIdValidateBeforeCall(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, @javax.annotation.Nonnull String voteId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'changeId' is set
+        if (changeId == null) {
+            throw new ApiException("Missing the required parameter 'changeId' when calling deleteChangesChangeIdReviewersReviewerIdVotesVoteId(Async)");
+        }
+
+        // verify the required parameter 'reviewerId' is set
+        if (reviewerId == null) {
+            throw new ApiException("Missing the required parameter 'reviewerId' when calling deleteChangesChangeIdReviewersReviewerIdVotesVoteId(Async)");
+        }
+
+        // verify the required parameter 'voteId' is set
+        if (voteId == null) {
+            throw new ApiException("Missing the required parameter 'voteId' when calling deleteChangesChangeIdReviewersReviewerIdVotesVoteId(Async)");
+        }
+
+        return deleteChangesChangeIdReviewersReviewerIdVotesVoteIdCall(changeId, reviewerId, voteId, _callback);
+
+    }
+
+    /**
+     * Delete Vote
+     * &#39;POST /changes/\\{change-id\\}/reviewers/\\{account-id\\}/votes/\\{label-id\\}/delete&#39; --
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @param voteId  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public void deleteChangesChangeIdReviewersReviewerIdVotesVoteId(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, @javax.annotation.Nonnull String voteId) throws ApiException {
+        deleteChangesChangeIdReviewersReviewerIdVotesVoteIdWithHttpInfo(changeId, reviewerId, voteId);
+    }
+
+    /**
+     * Delete Vote
+     * &#39;POST /changes/\\{change-id\\}/reviewers/\\{account-id\\}/votes/\\{label-id\\}/delete&#39; --
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @param voteId  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> deleteChangesChangeIdReviewersReviewerIdVotesVoteIdWithHttpInfo(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, @javax.annotation.Nonnull String voteId) throws ApiException {
+        okhttp3.Call localVarCall = deleteChangesChangeIdReviewersReviewerIdVotesVoteIdValidateBeforeCall(changeId, reviewerId, voteId, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     * Delete Vote (asynchronously)
+     * &#39;POST /changes/\\{change-id\\}/reviewers/\\{account-id\\}/votes/\\{label-id\\}/delete&#39; --
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @param voteId  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call deleteChangesChangeIdReviewersReviewerIdVotesVoteIdAsync(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, @javax.annotation.Nonnull String voteId, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = deleteChangesChangeIdReviewersReviewerIdVotesVoteIdValidateBeforeCall(changeId, reviewerId, voteId, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
@@ -5346,8 +5621,9 @@ public class ChangesApi {
         return localVarCall;
     }
     /**
-     * Build call for getChangesChangeIdRevisions
+     * Build call for getChangesChangeIdReviewersReviewerId
      * @param changeId  (required)
+     * @param reviewerId  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -5355,10 +5631,10 @@ public class ChangesApi {
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getChangesChangeIdRevisionsCall(@javax.annotation.Nonnull String changeId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getChangesChangeIdReviewersReviewerIdCall(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -5375,8 +5651,9 @@ public class ChangesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/changes/{change-id}/revisions"
-            .replace("{" + "change-id" + "}", localVarApiClient.escapeString(changeId.toString()));
+        String localVarPath = "/changes/{change-id}/reviewers/{reviewer-id}"
+            .replace("{" + "change-id" + "}", localVarApiClient.escapeString(changeId.toString()))
+            .replace("{" + "reviewer-id" + "}", localVarApiClient.escapeString(reviewerId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -5404,57 +5681,65 @@ public class ChangesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getChangesChangeIdRevisionsValidateBeforeCall(@javax.annotation.Nonnull String changeId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getChangesChangeIdReviewersReviewerIdValidateBeforeCall(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'changeId' is set
         if (changeId == null) {
-            throw new ApiException("Missing the required parameter 'changeId' when calling getChangesChangeIdRevisions(Async)");
+            throw new ApiException("Missing the required parameter 'changeId' when calling getChangesChangeIdReviewersReviewerId(Async)");
         }
 
-        return getChangesChangeIdRevisionsCall(changeId, _callback);
+        // verify the required parameter 'reviewerId' is set
+        if (reviewerId == null) {
+            throw new ApiException("Missing the required parameter 'reviewerId' when calling getChangesChangeIdReviewersReviewerId(Async)");
+        }
+
+        return getChangesChangeIdReviewersReviewerIdCall(changeId, reviewerId, _callback);
 
     }
 
     /**
-     * 
-     * 
+     * Get Reviewer
+     * Retrieves a reviewer of a change.
      * @param changeId  (required)
-     * @return Object
+     * @param reviewerId  (required)
+     * @return List&lt;ReviewerInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public Object getChangesChangeIdRevisions(@javax.annotation.Nonnull String changeId) throws ApiException {
-        ApiResponse<Object> localVarResp = getChangesChangeIdRevisionsWithHttpInfo(changeId);
+    public List<ReviewerInfo> getChangesChangeIdReviewersReviewerId(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId) throws ApiException {
+        ApiResponse<List<ReviewerInfo>> localVarResp = getChangesChangeIdReviewersReviewerIdWithHttpInfo(changeId, reviewerId);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
+     * Get Reviewer
+     * Retrieves a reviewer of a change.
      * @param changeId  (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @param reviewerId  (required)
+     * @return ApiResponse&lt;List&lt;ReviewerInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> getChangesChangeIdRevisionsWithHttpInfo(@javax.annotation.Nonnull String changeId) throws ApiException {
-        okhttp3.Call localVarCall = getChangesChangeIdRevisionsValidateBeforeCall(changeId, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+    public ApiResponse<List<ReviewerInfo>> getChangesChangeIdReviewersReviewerIdWithHttpInfo(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId) throws ApiException {
+        okhttp3.Call localVarCall = getChangesChangeIdReviewersReviewerIdValidateBeforeCall(changeId, reviewerId, null);
+        Type localVarReturnType = new TypeToken<List<ReviewerInfo>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Get Reviewer (asynchronously)
+     * Retrieves a reviewer of a change.
      * @param changeId  (required)
+     * @param reviewerId  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -5462,13 +5747,150 @@ public class ChangesApi {
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getChangesChangeIdRevisionsAsync(@javax.annotation.Nonnull String changeId, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call getChangesChangeIdReviewersReviewerIdAsync(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, final ApiCallback<List<ReviewerInfo>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getChangesChangeIdRevisionsValidateBeforeCall(changeId, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = getChangesChangeIdReviewersReviewerIdValidateBeforeCall(changeId, reviewerId, _callback);
+        Type localVarReturnType = new TypeToken<List<ReviewerInfo>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getChangesChangeIdReviewersReviewerIdVotes
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getChangesChangeIdReviewersReviewerIdVotesCall(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/changes/{change-id}/reviewers/{reviewer-id}/votes"
+            .replace("{" + "change-id" + "}", localVarApiClient.escapeString(changeId.toString()))
+            .replace("{" + "reviewer-id" + "}", localVarApiClient.escapeString(reviewerId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getChangesChangeIdReviewersReviewerIdVotesValidateBeforeCall(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'changeId' is set
+        if (changeId == null) {
+            throw new ApiException("Missing the required parameter 'changeId' when calling getChangesChangeIdReviewersReviewerIdVotes(Async)");
+        }
+
+        // verify the required parameter 'reviewerId' is set
+        if (reviewerId == null) {
+            throw new ApiException("Missing the required parameter 'reviewerId' when calling getChangesChangeIdReviewersReviewerIdVotes(Async)");
+        }
+
+        return getChangesChangeIdReviewersReviewerIdVotesCall(changeId, reviewerId, _callback);
+
+    }
+
+    /**
+     * List Votes
+     * Lists the votes for a specific reviewer of the change.
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @return Map&lt;String, Integer&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public Map<String, Integer> getChangesChangeIdReviewersReviewerIdVotes(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId) throws ApiException {
+        ApiResponse<Map<String, Integer>> localVarResp = getChangesChangeIdReviewersReviewerIdVotesWithHttpInfo(changeId, reviewerId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * List Votes
+     * Lists the votes for a specific reviewer of the change.
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @return ApiResponse&lt;Map&lt;String, Integer&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Map<String, Integer>> getChangesChangeIdReviewersReviewerIdVotesWithHttpInfo(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId) throws ApiException {
+        okhttp3.Call localVarCall = getChangesChangeIdReviewersReviewerIdVotesValidateBeforeCall(changeId, reviewerId, null);
+        Type localVarReturnType = new TypeToken<Map<String, Integer>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * List Votes (asynchronously)
+     * Lists the votes for a specific reviewer of the change.
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getChangesChangeIdReviewersReviewerIdVotesAsync(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, final ApiCallback<Map<String, Integer>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getChangesChangeIdReviewersReviewerIdVotesValidateBeforeCall(changeId, reviewerId, _callback);
+        Type localVarReturnType = new TypeToken<Map<String, Integer>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -6846,7 +7268,7 @@ public class ChangesApi {
      * @param parent  (optional)
      * @param q  (optional)
      * @param reviewed  (optional)
-     * @return Object
+     * @return Map&lt;String, CommonFileInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -6855,8 +7277,8 @@ public class ChangesApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public Object getChangesChangeIdRevisionsRevisionIdFiles(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String revisionId, @javax.annotation.Nullable String base, @javax.annotation.Nullable Integer parent, @javax.annotation.Nullable String q, @javax.annotation.Nullable Boolean reviewed) throws ApiException {
-        ApiResponse<Object> localVarResp = getChangesChangeIdRevisionsRevisionIdFilesWithHttpInfo(changeId, revisionId, base, parent, q, reviewed);
+    public Map<String, CommonFileInfo> getChangesChangeIdRevisionsRevisionIdFiles(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String revisionId, @javax.annotation.Nullable String base, @javax.annotation.Nullable Integer parent, @javax.annotation.Nullable String q, @javax.annotation.Nullable Boolean reviewed) throws ApiException {
+        ApiResponse<Map<String, CommonFileInfo>> localVarResp = getChangesChangeIdRevisionsRevisionIdFilesWithHttpInfo(changeId, revisionId, base, parent, q, reviewed);
         return localVarResp.getData();
     }
 
@@ -6869,7 +7291,7 @@ public class ChangesApi {
      * @param parent  (optional)
      * @param q  (optional)
      * @param reviewed  (optional)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;Map&lt;String, CommonFileInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -6878,9 +7300,9 @@ public class ChangesApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> getChangesChangeIdRevisionsRevisionIdFilesWithHttpInfo(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String revisionId, @javax.annotation.Nullable String base, @javax.annotation.Nullable Integer parent, @javax.annotation.Nullable String q, @javax.annotation.Nullable Boolean reviewed) throws ApiException {
+    public ApiResponse<Map<String, CommonFileInfo>> getChangesChangeIdRevisionsRevisionIdFilesWithHttpInfo(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String revisionId, @javax.annotation.Nullable String base, @javax.annotation.Nullable Integer parent, @javax.annotation.Nullable String q, @javax.annotation.Nullable Boolean reviewed) throws ApiException {
         okhttp3.Call localVarCall = getChangesChangeIdRevisionsRevisionIdFilesValidateBeforeCall(changeId, revisionId, base, parent, q, reviewed, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<Map<String, CommonFileInfo>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -6903,10 +7325,10 @@ public class ChangesApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getChangesChangeIdRevisionsRevisionIdFilesAsync(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String revisionId, @javax.annotation.Nullable String base, @javax.annotation.Nullable Integer parent, @javax.annotation.Nullable String q, @javax.annotation.Nullable Boolean reviewed, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call getChangesChangeIdRevisionsRevisionIdFilesAsync(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String revisionId, @javax.annotation.Nullable String base, @javax.annotation.Nullable Integer parent, @javax.annotation.Nullable String q, @javax.annotation.Nullable Boolean reviewed, final ApiCallback<Map<String, CommonFileInfo>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getChangesChangeIdRevisionsRevisionIdFilesValidateBeforeCall(changeId, revisionId, base, parent, q, reviewed, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<Map<String, CommonFileInfo>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -7567,143 +7989,6 @@ public class ChangesApi {
 
         okhttp3.Call localVarCall = getChangesChangeIdRevisionsRevisionIdFilesFileIdDownloadValidateBeforeCall(changeId, revisionId, fileId, parent, _callback);
         Type localVarReturnType = new TypeToken<File>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for getChangesChangeIdRevisionsRevisionIdFixes
-     * @param changeId  (required)
-     * @param revisionId  (required)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getChangesChangeIdRevisionsRevisionIdFixesCall(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String revisionId, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/changes/{change-id}/revisions/{revision-id}/fixes"
-            .replace("{" + "change-id" + "}", localVarApiClient.escapeString(changeId.toString()))
-            .replace("{" + "revision-id" + "}", localVarApiClient.escapeString(revisionId.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] { "basicAuth" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call getChangesChangeIdRevisionsRevisionIdFixesValidateBeforeCall(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String revisionId, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'changeId' is set
-        if (changeId == null) {
-            throw new ApiException("Missing the required parameter 'changeId' when calling getChangesChangeIdRevisionsRevisionIdFixes(Async)");
-        }
-
-        // verify the required parameter 'revisionId' is set
-        if (revisionId == null) {
-            throw new ApiException("Missing the required parameter 'revisionId' when calling getChangesChangeIdRevisionsRevisionIdFixes(Async)");
-        }
-
-        return getChangesChangeIdRevisionsRevisionIdFixesCall(changeId, revisionId, _callback);
-
-    }
-
-    /**
-     * 
-     * 
-     * @param changeId  (required)
-     * @param revisionId  (required)
-     * @return Object
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
-     </table>
-     */
-    public Object getChangesChangeIdRevisionsRevisionIdFixes(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String revisionId) throws ApiException {
-        ApiResponse<Object> localVarResp = getChangesChangeIdRevisionsRevisionIdFixesWithHttpInfo(changeId, revisionId);
-        return localVarResp.getData();
-    }
-
-    /**
-     * 
-     * 
-     * @param changeId  (required)
-     * @param revisionId  (required)
-     * @return ApiResponse&lt;Object&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<Object> getChangesChangeIdRevisionsRevisionIdFixesWithHttpInfo(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String revisionId) throws ApiException {
-        okhttp3.Call localVarCall = getChangesChangeIdRevisionsRevisionIdFixesValidateBeforeCall(changeId, revisionId, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param changeId  (required)
-     * @param revisionId  (required)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getChangesChangeIdRevisionsRevisionIdFixesAsync(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String revisionId, final ApiCallback<Object> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = getChangesChangeIdRevisionsRevisionIdFixesValidateBeforeCall(changeId, revisionId, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -13749,6 +14034,427 @@ public class ChangesApi {
         okhttp3.Call localVarCall = postChangesChangeIdRevertSubmissionValidateBeforeCall(changeId, revertInput, _callback);
         Type localVarReturnType = new TypeToken<RevertSubmissionInfo>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for postChangesChangeIdReviewers
+     * @param changeId  (required)
+     * @param reviewerInput  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call postChangesChangeIdReviewersCall(@javax.annotation.Nonnull String changeId, @javax.annotation.Nullable ReviewerInput reviewerInput, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reviewerInput;
+
+        // create path and map variables
+        String localVarPath = "/changes/{change-id}/reviewers"
+            .replace("{" + "change-id" + "}", localVarApiClient.escapeString(changeId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json",
+            "application/x-www-form-urlencoded",
+            "text/plain"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call postChangesChangeIdReviewersValidateBeforeCall(@javax.annotation.Nonnull String changeId, @javax.annotation.Nullable ReviewerInput reviewerInput, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'changeId' is set
+        if (changeId == null) {
+            throw new ApiException("Missing the required parameter 'changeId' when calling postChangesChangeIdReviewers(Async)");
+        }
+
+        return postChangesChangeIdReviewersCall(changeId, reviewerInput, _callback);
+
+    }
+
+    /**
+     * Add Reviewer
+     * Adds one user or all members of one group as reviewer to the change.
+     * @param changeId  (required)
+     * @param reviewerInput  (optional)
+     * @return ReviewerResult
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ReviewerResult postChangesChangeIdReviewers(@javax.annotation.Nonnull String changeId, @javax.annotation.Nullable ReviewerInput reviewerInput) throws ApiException {
+        ApiResponse<ReviewerResult> localVarResp = postChangesChangeIdReviewersWithHttpInfo(changeId, reviewerInput);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Add Reviewer
+     * Adds one user or all members of one group as reviewer to the change.
+     * @param changeId  (required)
+     * @param reviewerInput  (optional)
+     * @return ApiResponse&lt;ReviewerResult&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<ReviewerResult> postChangesChangeIdReviewersWithHttpInfo(@javax.annotation.Nonnull String changeId, @javax.annotation.Nullable ReviewerInput reviewerInput) throws ApiException {
+        okhttp3.Call localVarCall = postChangesChangeIdReviewersValidateBeforeCall(changeId, reviewerInput, null);
+        Type localVarReturnType = new TypeToken<ReviewerResult>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Add Reviewer (asynchronously)
+     * Adds one user or all members of one group as reviewer to the change.
+     * @param changeId  (required)
+     * @param reviewerInput  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call postChangesChangeIdReviewersAsync(@javax.annotation.Nonnull String changeId, @javax.annotation.Nullable ReviewerInput reviewerInput, final ApiCallback<ReviewerResult> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = postChangesChangeIdReviewersValidateBeforeCall(changeId, reviewerInput, _callback);
+        Type localVarReturnType = new TypeToken<ReviewerResult>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for postChangesChangeIdReviewersReviewerIdDelete
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @param deleteReviewerInput  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call postChangesChangeIdReviewersReviewerIdDeleteCall(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, @javax.annotation.Nullable DeleteReviewerInput deleteReviewerInput, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = deleteReviewerInput;
+
+        // create path and map variables
+        String localVarPath = "/changes/{change-id}/reviewers/{reviewer-id}/delete"
+            .replace("{" + "change-id" + "}", localVarApiClient.escapeString(changeId.toString()))
+            .replace("{" + "reviewer-id" + "}", localVarApiClient.escapeString(reviewerId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json",
+            "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call postChangesChangeIdReviewersReviewerIdDeleteValidateBeforeCall(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, @javax.annotation.Nullable DeleteReviewerInput deleteReviewerInput, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'changeId' is set
+        if (changeId == null) {
+            throw new ApiException("Missing the required parameter 'changeId' when calling postChangesChangeIdReviewersReviewerIdDelete(Async)");
+        }
+
+        // verify the required parameter 'reviewerId' is set
+        if (reviewerId == null) {
+            throw new ApiException("Missing the required parameter 'reviewerId' when calling postChangesChangeIdReviewersReviewerIdDelete(Async)");
+        }
+
+        return postChangesChangeIdReviewersReviewerIdDeleteCall(changeId, reviewerId, deleteReviewerInput, _callback);
+
+    }
+
+    /**
+     * Delete Reviewer
+     * Deletes a reviewer from a change. Deleting a reviewer also removes that user from the attention set.
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @param deleteReviewerInput  (optional)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public void postChangesChangeIdReviewersReviewerIdDelete(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, @javax.annotation.Nullable DeleteReviewerInput deleteReviewerInput) throws ApiException {
+        postChangesChangeIdReviewersReviewerIdDeleteWithHttpInfo(changeId, reviewerId, deleteReviewerInput);
+    }
+
+    /**
+     * Delete Reviewer
+     * Deletes a reviewer from a change. Deleting a reviewer also removes that user from the attention set.
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @param deleteReviewerInput  (optional)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> postChangesChangeIdReviewersReviewerIdDeleteWithHttpInfo(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, @javax.annotation.Nullable DeleteReviewerInput deleteReviewerInput) throws ApiException {
+        okhttp3.Call localVarCall = postChangesChangeIdReviewersReviewerIdDeleteValidateBeforeCall(changeId, reviewerId, deleteReviewerInput, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     * Delete Reviewer (asynchronously)
+     * Deletes a reviewer from a change. Deleting a reviewer also removes that user from the attention set.
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @param deleteReviewerInput  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call postChangesChangeIdReviewersReviewerIdDeleteAsync(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, @javax.annotation.Nullable DeleteReviewerInput deleteReviewerInput, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = postChangesChangeIdReviewersReviewerIdDeleteValidateBeforeCall(changeId, reviewerId, deleteReviewerInput, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for postChangesChangeIdReviewersReviewerIdVotesVoteIdDelete
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @param voteId  (required)
+     * @param deleteVoteInput  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call postChangesChangeIdReviewersReviewerIdVotesVoteIdDeleteCall(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, @javax.annotation.Nonnull String voteId, @javax.annotation.Nullable DeleteVoteInput deleteVoteInput, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = deleteVoteInput;
+
+        // create path and map variables
+        String localVarPath = "/changes/{change-id}/reviewers/{reviewer-id}/votes/{vote-id}/delete"
+            .replace("{" + "change-id" + "}", localVarApiClient.escapeString(changeId.toString()))
+            .replace("{" + "reviewer-id" + "}", localVarApiClient.escapeString(reviewerId.toString()))
+            .replace("{" + "vote-id" + "}", localVarApiClient.escapeString(voteId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json",
+            "application/x-www-form-urlencoded",
+            "text/plain"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call postChangesChangeIdReviewersReviewerIdVotesVoteIdDeleteValidateBeforeCall(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, @javax.annotation.Nonnull String voteId, @javax.annotation.Nullable DeleteVoteInput deleteVoteInput, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'changeId' is set
+        if (changeId == null) {
+            throw new ApiException("Missing the required parameter 'changeId' when calling postChangesChangeIdReviewersReviewerIdVotesVoteIdDelete(Async)");
+        }
+
+        // verify the required parameter 'reviewerId' is set
+        if (reviewerId == null) {
+            throw new ApiException("Missing the required parameter 'reviewerId' when calling postChangesChangeIdReviewersReviewerIdVotesVoteIdDelete(Async)");
+        }
+
+        // verify the required parameter 'voteId' is set
+        if (voteId == null) {
+            throw new ApiException("Missing the required parameter 'voteId' when calling postChangesChangeIdReviewersReviewerIdVotesVoteIdDelete(Async)");
+        }
+
+        return postChangesChangeIdReviewersReviewerIdVotesVoteIdDeleteCall(changeId, reviewerId, voteId, deleteVoteInput, _callback);
+
+    }
+
+    /**
+     * Delete Vote
+     * Deletes a single vote from a change. Note, that even when the last vote of a reviewer is removed the reviewer itself is still listed on the change.
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @param voteId  (required)
+     * @param deleteVoteInput  (optional)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public void postChangesChangeIdReviewersReviewerIdVotesVoteIdDelete(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, @javax.annotation.Nonnull String voteId, @javax.annotation.Nullable DeleteVoteInput deleteVoteInput) throws ApiException {
+        postChangesChangeIdReviewersReviewerIdVotesVoteIdDeleteWithHttpInfo(changeId, reviewerId, voteId, deleteVoteInput);
+    }
+
+    /**
+     * Delete Vote
+     * Deletes a single vote from a change. Note, that even when the last vote of a reviewer is removed the reviewer itself is still listed on the change.
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @param voteId  (required)
+     * @param deleteVoteInput  (optional)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> postChangesChangeIdReviewersReviewerIdVotesVoteIdDeleteWithHttpInfo(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, @javax.annotation.Nonnull String voteId, @javax.annotation.Nullable DeleteVoteInput deleteVoteInput) throws ApiException {
+        okhttp3.Call localVarCall = postChangesChangeIdReviewersReviewerIdVotesVoteIdDeleteValidateBeforeCall(changeId, reviewerId, voteId, deleteVoteInput, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     * Delete Vote (asynchronously)
+     * Deletes a single vote from a change. Note, that even when the last vote of a reviewer is removed the reviewer itself is still listed on the change.
+     * @param changeId  (required)
+     * @param reviewerId  (required)
+     * @param voteId  (required)
+     * @param deleteVoteInput  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> No Content </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call postChangesChangeIdReviewersReviewerIdVotesVoteIdDeleteAsync(@javax.annotation.Nonnull String changeId, @javax.annotation.Nonnull String reviewerId, @javax.annotation.Nonnull String voteId, @javax.annotation.Nullable DeleteVoteInput deleteVoteInput, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = postChangesChangeIdReviewersReviewerIdVotesVoteIdDeleteValidateBeforeCall(changeId, reviewerId, voteId, deleteVoteInput, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**

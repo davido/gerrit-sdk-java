@@ -51,6 +51,7 @@ import com.google.gerrit.client.model.DeleteTagsInput;
 import com.google.gerrit.client.model.DiffInfo;
 import java.io.File;
 import com.google.gerrit.client.model.GarbageCollectInput;
+import com.google.gerrit.client.model.GetProjectsDefaultResponse;
 import com.google.gerrit.client.model.HeadInput;
 import com.google.gerrit.client.model.IncludedInInfo;
 import com.google.gerrit.client.model.IndexProjectInput;
@@ -915,6 +916,20 @@ public class ProjectsApi {
     }
     /**
      * Build call for getProjects
+     * @param all  (optional)
+     * @param description  (optional)
+     * @param format  (optional)
+     * @param hasAclFor  (optional)
+     * @param limit  (optional)
+     * @param match  (optional)
+     * @param prefix  (optional)
+     * @param query  (optional)
+     * @param r  (optional)
+     * @param showBranch  (optional)
+     * @param start  (optional)
+     * @param state  (optional)
+     * @param tree  (optional)
+     * @param type  (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -925,7 +940,7 @@ public class ProjectsApi {
         <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getProjectsCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getProjectsCall(@javax.annotation.Nullable Boolean all, @javax.annotation.Nullable Boolean description, @javax.annotation.Nullable String format, @javax.annotation.Nullable String hasAclFor, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable String prefix, @javax.annotation.Nullable String query, @javax.annotation.Nullable String r, @javax.annotation.Nullable List<String> showBranch, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String state, @javax.annotation.Nullable Boolean tree, @javax.annotation.Nullable String type, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -950,6 +965,62 @@ public class ProjectsApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
+        if (all != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("all", all));
+        }
+
+        if (description != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("description", description));
+        }
+
+        if (format != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("format", format));
+        }
+
+        if (hasAclFor != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("has-acl-for", hasAclFor));
+        }
+
+        if (limit != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+
+        if (match != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("match", match));
+        }
+
+        if (prefix != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("prefix", prefix));
+        }
+
+        if (query != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("query", query));
+        }
+
+        if (r != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("r", r));
+        }
+
+        if (showBranch != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("multi", "show-branch", showBranch));
+        }
+
+        if (start != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("start", start));
+        }
+
+        if (state != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("state", state));
+        }
+
+        if (tree != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("tree", tree));
+        }
+
+        if (type != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("type", type));
+        }
+
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -970,15 +1041,29 @@ public class ProjectsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getProjectsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return getProjectsCall(_callback);
+    private okhttp3.Call getProjectsValidateBeforeCall(@javax.annotation.Nullable Boolean all, @javax.annotation.Nullable Boolean description, @javax.annotation.Nullable String format, @javax.annotation.Nullable String hasAclFor, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable String prefix, @javax.annotation.Nullable String query, @javax.annotation.Nullable String r, @javax.annotation.Nullable List<String> showBranch, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String state, @javax.annotation.Nullable Boolean tree, @javax.annotation.Nullable String type, final ApiCallback _callback) throws ApiException {
+        return getProjectsCall(all, description, format, hasAclFor, limit, match, prefix, query, r, showBranch, start, state, tree, type, _callback);
 
     }
 
     /**
      * List projects
      * Lists the projects accessible by the caller, optionally filtered by prefix, regex, or substring.
-     * @return Object
+     * @param all  (optional)
+     * @param description  (optional)
+     * @param format  (optional)
+     * @param hasAclFor  (optional)
+     * @param limit  (optional)
+     * @param match  (optional)
+     * @param prefix  (optional)
+     * @param query  (optional)
+     * @param r  (optional)
+     * @param showBranch  (optional)
+     * @param start  (optional)
+     * @param state  (optional)
+     * @param tree  (optional)
+     * @param type  (optional)
+     * @return GetProjectsDefaultResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -987,15 +1072,29 @@ public class ProjectsApi {
         <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
      </table>
      */
-    public Object getProjects() throws ApiException {
-        ApiResponse<Object> localVarResp = getProjectsWithHttpInfo();
+    public GetProjectsDefaultResponse getProjects(@javax.annotation.Nullable Boolean all, @javax.annotation.Nullable Boolean description, @javax.annotation.Nullable String format, @javax.annotation.Nullable String hasAclFor, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable String prefix, @javax.annotation.Nullable String query, @javax.annotation.Nullable String r, @javax.annotation.Nullable List<String> showBranch, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String state, @javax.annotation.Nullable Boolean tree, @javax.annotation.Nullable String type) throws ApiException {
+        ApiResponse<GetProjectsDefaultResponse> localVarResp = getProjectsWithHttpInfo(all, description, format, hasAclFor, limit, match, prefix, query, r, showBranch, start, state, tree, type);
         return localVarResp.getData();
     }
 
     /**
      * List projects
      * Lists the projects accessible by the caller, optionally filtered by prefix, regex, or substring.
-     * @return ApiResponse&lt;Object&gt;
+     * @param all  (optional)
+     * @param description  (optional)
+     * @param format  (optional)
+     * @param hasAclFor  (optional)
+     * @param limit  (optional)
+     * @param match  (optional)
+     * @param prefix  (optional)
+     * @param query  (optional)
+     * @param r  (optional)
+     * @param showBranch  (optional)
+     * @param start  (optional)
+     * @param state  (optional)
+     * @param tree  (optional)
+     * @param type  (optional)
+     * @return ApiResponse&lt;GetProjectsDefaultResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1004,15 +1103,29 @@ public class ProjectsApi {
         <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> getProjectsWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getProjectsValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+    public ApiResponse<GetProjectsDefaultResponse> getProjectsWithHttpInfo(@javax.annotation.Nullable Boolean all, @javax.annotation.Nullable Boolean description, @javax.annotation.Nullable String format, @javax.annotation.Nullable String hasAclFor, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable String prefix, @javax.annotation.Nullable String query, @javax.annotation.Nullable String r, @javax.annotation.Nullable List<String> showBranch, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String state, @javax.annotation.Nullable Boolean tree, @javax.annotation.Nullable String type) throws ApiException {
+        okhttp3.Call localVarCall = getProjectsValidateBeforeCall(all, description, format, hasAclFor, limit, match, prefix, query, r, showBranch, start, state, tree, type, null);
+        Type localVarReturnType = new TypeToken<GetProjectsDefaultResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * List projects (asynchronously)
      * Lists the projects accessible by the caller, optionally filtered by prefix, regex, or substring.
+     * @param all  (optional)
+     * @param description  (optional)
+     * @param format  (optional)
+     * @param hasAclFor  (optional)
+     * @param limit  (optional)
+     * @param match  (optional)
+     * @param prefix  (optional)
+     * @param query  (optional)
+     * @param r  (optional)
+     * @param showBranch  (optional)
+     * @param start  (optional)
+     * @param state  (optional)
+     * @param tree  (optional)
+     * @param type  (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1023,10 +1136,10 @@ public class ProjectsApi {
         <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getProjectsAsync(final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call getProjectsAsync(@javax.annotation.Nullable Boolean all, @javax.annotation.Nullable Boolean description, @javax.annotation.Nullable String format, @javax.annotation.Nullable String hasAclFor, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable String prefix, @javax.annotation.Nullable String query, @javax.annotation.Nullable String r, @javax.annotation.Nullable List<String> showBranch, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String state, @javax.annotation.Nullable Boolean tree, @javax.annotation.Nullable String type, final ApiCallback<GetProjectsDefaultResponse> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getProjectsValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = getProjectsValidateBeforeCall(all, description, format, hasAclFor, limit, match, prefix, query, r, showBranch, start, state, tree, type, _callback);
+        Type localVarReturnType = new TypeToken<GetProjectsDefaultResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1589,9 +1702,10 @@ public class ProjectsApi {
         return localVarCall;
     }
     /**
-     * Build call for getProjectsProjectIdBranchesBranchIdFiles
+     * Build call for getProjectsProjectIdBranchesBranchIdFilesFileIdContent
      * @param projectId  (required)
      * @param branchId  (required)
+     * @param fileId  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1599,10 +1713,10 @@ public class ProjectsApi {
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getProjectsProjectIdBranchesBranchIdFilesCall(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String branchId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getProjectsProjectIdBranchesBranchIdFilesFileIdContentCall(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String branchId, @javax.annotation.Nonnull String fileId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1619,15 +1733,178 @@ public class ProjectsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/projects/{project-id}/branches/{branch-id}/files"
+        String localVarPath = "/projects/{project-id}/branches/{branch-id}/files/{file-id}/content"
             .replace("{" + "project-id" + "}", localVarApiClient.escapeString(projectId.toString()))
-            .replace("{" + "branch-id" + "}", localVarApiClient.escapeString(branchId.toString()));
+            .replace("{" + "branch-id" + "}", localVarApiClient.escapeString(branchId.toString()))
+            .replace("{" + "file-id" + "}", localVarApiClient.escapeString(fileId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/octet-stream"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getProjectsProjectIdBranchesBranchIdFilesFileIdContentValidateBeforeCall(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String branchId, @javax.annotation.Nonnull String fileId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'projectId' is set
+        if (projectId == null) {
+            throw new ApiException("Missing the required parameter 'projectId' when calling getProjectsProjectIdBranchesBranchIdFilesFileIdContent(Async)");
+        }
+
+        // verify the required parameter 'branchId' is set
+        if (branchId == null) {
+            throw new ApiException("Missing the required parameter 'branchId' when calling getProjectsProjectIdBranchesBranchIdFilesFileIdContent(Async)");
+        }
+
+        // verify the required parameter 'fileId' is set
+        if (fileId == null) {
+            throw new ApiException("Missing the required parameter 'fileId' when calling getProjectsProjectIdBranchesBranchIdFilesFileIdContent(Async)");
+        }
+
+        return getProjectsProjectIdBranchesBranchIdFilesFileIdContentCall(projectId, branchId, fileId, _callback);
+
+    }
+
+    /**
+     * Get Content
+     * Gets the content of a file from the HEAD revision of a certain branch.
+     * @param projectId  (required)
+     * @param branchId  (required)
+     * @param fileId  (required)
+     * @return File
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public File getProjectsProjectIdBranchesBranchIdFilesFileIdContent(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String branchId, @javax.annotation.Nonnull String fileId) throws ApiException {
+        ApiResponse<File> localVarResp = getProjectsProjectIdBranchesBranchIdFilesFileIdContentWithHttpInfo(projectId, branchId, fileId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get Content
+     * Gets the content of a file from the HEAD revision of a certain branch.
+     * @param projectId  (required)
+     * @param branchId  (required)
+     * @param fileId  (required)
+     * @return ApiResponse&lt;File&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<File> getProjectsProjectIdBranchesBranchIdFilesFileIdContentWithHttpInfo(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String branchId, @javax.annotation.Nonnull String fileId) throws ApiException {
+        okhttp3.Call localVarCall = getProjectsProjectIdBranchesBranchIdFilesFileIdContentValidateBeforeCall(projectId, branchId, fileId, null);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get Content (asynchronously)
+     * Gets the content of a file from the HEAD revision of a certain branch.
+     * @param projectId  (required)
+     * @param branchId  (required)
+     * @param fileId  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getProjectsProjectIdBranchesBranchIdFilesFileIdContentAsync(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String branchId, @javax.annotation.Nonnull String fileId, final ApiCallback<File> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getProjectsProjectIdBranchesBranchIdFilesFileIdContentValidateBeforeCall(projectId, branchId, fileId, _callback);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getProjectsProjectIdBranchesBranchIdFilesFileIdDiff
+     * @param projectId  (required)
+     * @param branchId  (required)
+     * @param fileId  (required)
+     * @param base  (optional)
+     * @param intraline  (optional)
+     * @param whitespace  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getProjectsProjectIdBranchesBranchIdFilesFileIdDiffCall(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String branchId, @javax.annotation.Nonnull String fileId, @javax.annotation.Nullable String base, @javax.annotation.Nullable Boolean intraline, @javax.annotation.Nullable String whitespace, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/projects/{project-id}/branches/{branch-id}/files/{file-id}/diff"
+            .replace("{" + "project-id" + "}", localVarApiClient.escapeString(projectId.toString()))
+            .replace("{" + "branch-id" + "}", localVarApiClient.escapeString(branchId.toString()))
+            .replace("{" + "file-id" + "}", localVarApiClient.escapeString(fileId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (base != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("base", base));
+        }
+
+        if (intraline != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("intraline", intraline));
+        }
+
+        if (whitespace != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("whitespace", whitespace));
+        }
 
         final String[] localVarAccepts = {
             "application/json"
@@ -1649,18 +1926,23 @@ public class ProjectsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getProjectsProjectIdBranchesBranchIdFilesValidateBeforeCall(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String branchId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getProjectsProjectIdBranchesBranchIdFilesFileIdDiffValidateBeforeCall(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String branchId, @javax.annotation.Nonnull String fileId, @javax.annotation.Nullable String base, @javax.annotation.Nullable Boolean intraline, @javax.annotation.Nullable String whitespace, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'projectId' is set
         if (projectId == null) {
-            throw new ApiException("Missing the required parameter 'projectId' when calling getProjectsProjectIdBranchesBranchIdFiles(Async)");
+            throw new ApiException("Missing the required parameter 'projectId' when calling getProjectsProjectIdBranchesBranchIdFilesFileIdDiff(Async)");
         }
 
         // verify the required parameter 'branchId' is set
         if (branchId == null) {
-            throw new ApiException("Missing the required parameter 'branchId' when calling getProjectsProjectIdBranchesBranchIdFiles(Async)");
+            throw new ApiException("Missing the required parameter 'branchId' when calling getProjectsProjectIdBranchesBranchIdFilesFileIdDiff(Async)");
         }
 
-        return getProjectsProjectIdBranchesBranchIdFilesCall(projectId, branchId, _callback);
+        // verify the required parameter 'fileId' is set
+        if (fileId == null) {
+            throw new ApiException("Missing the required parameter 'fileId' when calling getProjectsProjectIdBranchesBranchIdFilesFileIdDiff(Async)");
+        }
+
+        return getProjectsProjectIdBranchesBranchIdFilesFileIdDiffCall(projectId, branchId, fileId, base, intraline, whitespace, _callback);
 
     }
 
@@ -1669,17 +1951,21 @@ public class ProjectsApi {
      * 
      * @param projectId  (required)
      * @param branchId  (required)
-     * @return Object
+     * @param fileId  (required)
+     * @param base  (optional)
+     * @param intraline  (optional)
+     * @param whitespace  (optional)
+     * @return DiffInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public Object getProjectsProjectIdBranchesBranchIdFiles(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String branchId) throws ApiException {
-        ApiResponse<Object> localVarResp = getProjectsProjectIdBranchesBranchIdFilesWithHttpInfo(projectId, branchId);
+    public DiffInfo getProjectsProjectIdBranchesBranchIdFilesFileIdDiff(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String branchId, @javax.annotation.Nonnull String fileId, @javax.annotation.Nullable String base, @javax.annotation.Nullable Boolean intraline, @javax.annotation.Nullable String whitespace) throws ApiException {
+        ApiResponse<DiffInfo> localVarResp = getProjectsProjectIdBranchesBranchIdFilesFileIdDiffWithHttpInfo(projectId, branchId, fileId, base, intraline, whitespace);
         return localVarResp.getData();
     }
 
@@ -1688,18 +1974,22 @@ public class ProjectsApi {
      * 
      * @param projectId  (required)
      * @param branchId  (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @param fileId  (required)
+     * @param base  (optional)
+     * @param intraline  (optional)
+     * @param whitespace  (optional)
+     * @return ApiResponse&lt;DiffInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> getProjectsProjectIdBranchesBranchIdFilesWithHttpInfo(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String branchId) throws ApiException {
-        okhttp3.Call localVarCall = getProjectsProjectIdBranchesBranchIdFilesValidateBeforeCall(projectId, branchId, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+    public ApiResponse<DiffInfo> getProjectsProjectIdBranchesBranchIdFilesFileIdDiffWithHttpInfo(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String branchId, @javax.annotation.Nonnull String fileId, @javax.annotation.Nullable String base, @javax.annotation.Nullable Boolean intraline, @javax.annotation.Nullable String whitespace) throws ApiException {
+        okhttp3.Call localVarCall = getProjectsProjectIdBranchesBranchIdFilesFileIdDiffValidateBeforeCall(projectId, branchId, fileId, base, intraline, whitespace, null);
+        Type localVarReturnType = new TypeToken<DiffInfo>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1708,6 +1998,10 @@ public class ProjectsApi {
      * 
      * @param projectId  (required)
      * @param branchId  (required)
+     * @param fileId  (required)
+     * @param base  (optional)
+     * @param intraline  (optional)
+     * @param whitespace  (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1715,13 +2009,13 @@ public class ProjectsApi {
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getProjectsProjectIdBranchesBranchIdFilesAsync(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String branchId, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call getProjectsProjectIdBranchesBranchIdFilesFileIdDiffAsync(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String branchId, @javax.annotation.Nonnull String fileId, @javax.annotation.Nullable String base, @javax.annotation.Nullable Boolean intraline, @javax.annotation.Nullable String whitespace, final ApiCallback<DiffInfo> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getProjectsProjectIdBranchesBranchIdFilesValidateBeforeCall(projectId, branchId, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = getProjectsProjectIdBranchesBranchIdFilesFileIdDiffValidateBeforeCall(projectId, branchId, fileId, base, intraline, whitespace, _callback);
+        Type localVarReturnType = new TypeToken<DiffInfo>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2786,133 +3080,6 @@ public class ProjectsApi {
 
         okhttp3.Call localVarCall = getProjectsProjectIdChildrenChildProjectIdValidateBeforeCall(projectId, childProjectId, recursive, _callback);
         Type localVarReturnType = new TypeToken<ProjectInfo>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for getProjectsProjectIdCommits
-     * @param projectId  (required)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getProjectsProjectIdCommitsCall(@javax.annotation.Nonnull String projectId, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/projects/{project-id}/commits"
-            .replace("{" + "project-id" + "}", localVarApiClient.escapeString(projectId.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] { "basicAuth" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call getProjectsProjectIdCommitsValidateBeforeCall(@javax.annotation.Nonnull String projectId, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'projectId' is set
-        if (projectId == null) {
-            throw new ApiException("Missing the required parameter 'projectId' when calling getProjectsProjectIdCommits(Async)");
-        }
-
-        return getProjectsProjectIdCommitsCall(projectId, _callback);
-
-    }
-
-    /**
-     * 
-     * 
-     * @param projectId  (required)
-     * @return Object
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
-     </table>
-     */
-    public Object getProjectsProjectIdCommits(@javax.annotation.Nonnull String projectId) throws ApiException {
-        ApiResponse<Object> localVarResp = getProjectsProjectIdCommitsWithHttpInfo(projectId);
-        return localVarResp.getData();
-    }
-
-    /**
-     * 
-     * 
-     * @param projectId  (required)
-     * @return ApiResponse&lt;Object&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<Object> getProjectsProjectIdCommitsWithHttpInfo(@javax.annotation.Nonnull String projectId) throws ApiException {
-        okhttp3.Call localVarCall = getProjectsProjectIdCommitsValidateBeforeCall(projectId, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param projectId  (required)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getProjectsProjectIdCommitsAsync(@javax.annotation.Nonnull String projectId, final ApiCallback<Object> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = getProjectsProjectIdCommitsValidateBeforeCall(projectId, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

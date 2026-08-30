@@ -31,6 +31,7 @@ import com.google.gerrit.client.model.AccountInfo;
 import com.google.gerrit.client.model.AddMembersInput;
 import com.google.gerrit.client.model.AddSubgroupsInput;
 import com.google.gerrit.client.model.CommonDescriptionInput;
+import com.google.gerrit.client.model.GetGroupsDefaultResponse;
 import com.google.gerrit.client.model.GroupAuditEventInfo;
 import com.google.gerrit.client.model.GroupInfo;
 import com.google.gerrit.client.model.GroupInput;
@@ -615,6 +616,20 @@ public class GroupsApi {
     }
     /**
      * Build call for getGroups
+     * @param O  (optional)
+     * @param group  (optional)
+     * @param limit  (optional)
+     * @param match  (optional)
+     * @param o  (optional)
+     * @param owned  (optional)
+     * @param ownedBy  (optional)
+     * @param project  (optional)
+     * @param query  (optional)
+     * @param regex  (optional)
+     * @param start  (optional)
+     * @param suggest  (optional)
+     * @param user  (optional)
+     * @param visibleToAll  (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -625,7 +640,7 @@ public class GroupsApi {
         <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGroupsCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getGroupsCall(@javax.annotation.Nullable String O, @javax.annotation.Nullable List<String> group, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable List<String> o, @javax.annotation.Nullable Boolean owned, @javax.annotation.Nullable String ownedBy, @javax.annotation.Nullable List<String> project, @javax.annotation.Nullable String query, @javax.annotation.Nullable String regex, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String suggest, @javax.annotation.Nullable String user, @javax.annotation.Nullable Boolean visibleToAll, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -650,6 +665,62 @@ public class GroupsApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
+        if (O != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("O", O));
+        }
+
+        if (group != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("multi", "group", group));
+        }
+
+        if (limit != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+
+        if (match != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("match", match));
+        }
+
+        if (o != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("multi", "o", o));
+        }
+
+        if (owned != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("owned", owned));
+        }
+
+        if (ownedBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("owned-by", ownedBy));
+        }
+
+        if (project != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("multi", "project", project));
+        }
+
+        if (query != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("query", query));
+        }
+
+        if (regex != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("regex", regex));
+        }
+
+        if (start != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("start", start));
+        }
+
+        if (suggest != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("suggest", suggest));
+        }
+
+        if (user != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("user", user));
+        }
+
+        if (visibleToAll != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("visible-to-all", visibleToAll));
+        }
+
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -670,15 +741,29 @@ public class GroupsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getGroupsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return getGroupsCall(_callback);
+    private okhttp3.Call getGroupsValidateBeforeCall(@javax.annotation.Nullable String O, @javax.annotation.Nullable List<String> group, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable List<String> o, @javax.annotation.Nullable Boolean owned, @javax.annotation.Nullable String ownedBy, @javax.annotation.Nullable List<String> project, @javax.annotation.Nullable String query, @javax.annotation.Nullable String regex, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String suggest, @javax.annotation.Nullable String user, @javax.annotation.Nullable Boolean visibleToAll, final ApiCallback _callback) throws ApiException {
+        return getGroupsCall(O, group, limit, match, o, owned, ownedBy, project, query, regex, start, suggest, user, visibleToAll, _callback);
 
     }
 
     /**
      * List groups
      * Lists the internal groups visible to the caller.
-     * @return Object
+     * @param O  (optional)
+     * @param group  (optional)
+     * @param limit  (optional)
+     * @param match  (optional)
+     * @param o  (optional)
+     * @param owned  (optional)
+     * @param ownedBy  (optional)
+     * @param project  (optional)
+     * @param query  (optional)
+     * @param regex  (optional)
+     * @param start  (optional)
+     * @param suggest  (optional)
+     * @param user  (optional)
+     * @param visibleToAll  (optional)
+     * @return GetGroupsDefaultResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -687,15 +772,29 @@ public class GroupsApi {
         <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
      </table>
      */
-    public Object getGroups() throws ApiException {
-        ApiResponse<Object> localVarResp = getGroupsWithHttpInfo();
+    public GetGroupsDefaultResponse getGroups(@javax.annotation.Nullable String O, @javax.annotation.Nullable List<String> group, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable List<String> o, @javax.annotation.Nullable Boolean owned, @javax.annotation.Nullable String ownedBy, @javax.annotation.Nullable List<String> project, @javax.annotation.Nullable String query, @javax.annotation.Nullable String regex, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String suggest, @javax.annotation.Nullable String user, @javax.annotation.Nullable Boolean visibleToAll) throws ApiException {
+        ApiResponse<GetGroupsDefaultResponse> localVarResp = getGroupsWithHttpInfo(O, group, limit, match, o, owned, ownedBy, project, query, regex, start, suggest, user, visibleToAll);
         return localVarResp.getData();
     }
 
     /**
      * List groups
      * Lists the internal groups visible to the caller.
-     * @return ApiResponse&lt;Object&gt;
+     * @param O  (optional)
+     * @param group  (optional)
+     * @param limit  (optional)
+     * @param match  (optional)
+     * @param o  (optional)
+     * @param owned  (optional)
+     * @param ownedBy  (optional)
+     * @param project  (optional)
+     * @param query  (optional)
+     * @param regex  (optional)
+     * @param start  (optional)
+     * @param suggest  (optional)
+     * @param user  (optional)
+     * @param visibleToAll  (optional)
+     * @return ApiResponse&lt;GetGroupsDefaultResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -704,15 +803,29 @@ public class GroupsApi {
         <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> getGroupsWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getGroupsValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+    public ApiResponse<GetGroupsDefaultResponse> getGroupsWithHttpInfo(@javax.annotation.Nullable String O, @javax.annotation.Nullable List<String> group, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable List<String> o, @javax.annotation.Nullable Boolean owned, @javax.annotation.Nullable String ownedBy, @javax.annotation.Nullable List<String> project, @javax.annotation.Nullable String query, @javax.annotation.Nullable String regex, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String suggest, @javax.annotation.Nullable String user, @javax.annotation.Nullable Boolean visibleToAll) throws ApiException {
+        okhttp3.Call localVarCall = getGroupsValidateBeforeCall(O, group, limit, match, o, owned, ownedBy, project, query, regex, start, suggest, user, visibleToAll, null);
+        Type localVarReturnType = new TypeToken<GetGroupsDefaultResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * List groups (asynchronously)
      * Lists the internal groups visible to the caller.
+     * @param O  (optional)
+     * @param group  (optional)
+     * @param limit  (optional)
+     * @param match  (optional)
+     * @param o  (optional)
+     * @param owned  (optional)
+     * @param ownedBy  (optional)
+     * @param project  (optional)
+     * @param query  (optional)
+     * @param regex  (optional)
+     * @param start  (optional)
+     * @param suggest  (optional)
+     * @param user  (optional)
+     * @param visibleToAll  (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -723,10 +836,10 @@ public class GroupsApi {
         <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGroupsAsync(final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call getGroupsAsync(@javax.annotation.Nullable String O, @javax.annotation.Nullable List<String> group, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable List<String> o, @javax.annotation.Nullable Boolean owned, @javax.annotation.Nullable String ownedBy, @javax.annotation.Nullable List<String> project, @javax.annotation.Nullable String query, @javax.annotation.Nullable String regex, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String suggest, @javax.annotation.Nullable String user, @javax.annotation.Nullable Boolean visibleToAll, final ApiCallback<GetGroupsDefaultResponse> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getGroupsValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = getGroupsValidateBeforeCall(O, group, limit, match, o, owned, ownedBy, project, query, regex, start, suggest, user, visibleToAll, _callback);
+        Type localVarReturnType = new TypeToken<GetGroupsDefaultResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

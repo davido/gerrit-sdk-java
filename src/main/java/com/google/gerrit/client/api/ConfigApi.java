@@ -38,9 +38,13 @@ import com.google.gerrit.client.model.DiffPreferencesInfo;
 import com.google.gerrit.client.model.EditPreferencesInfo;
 import com.google.gerrit.client.model.ExperimentInfo;
 import com.google.gerrit.client.model.GeneralPreferencesInfo;
+import com.google.gerrit.client.model.GetConfigServerCaches200Response;
+import com.google.gerrit.client.model.GetConfigServerIndexes200ResponseInner;
+import com.google.gerrit.client.model.GetConfigServerVersion200Response;
 import com.google.gerrit.client.model.IndexChangesInput;
 import com.google.gerrit.client.model.LabelDefinitionInfo;
 import com.google.gerrit.client.model.MenuEntry;
+import com.google.gerrit.client.model.MetricJson;
 import com.google.gerrit.client.model.MigratePasswordsToTokensInput;
 import com.google.gerrit.client.model.PostCachesInput;
 import com.google.gerrit.client.model.ReduceMaxTokenLifetimeInput;
@@ -266,7 +270,8 @@ public class ConfigApi {
         }
 
         final String[] localVarAccepts = {
-            "application/json"
+            "application/json",
+            "text/plain"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -295,7 +300,7 @@ public class ConfigApi {
      * Lists the caches of the server. Caches defined by plugins are included.
      * @param format  (optional)
      * @param includeDiskstats  (optional)
-     * @return Object
+     * @return GetConfigServerCaches200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -304,8 +309,8 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public Object getConfigServerCaches(@javax.annotation.Nullable String format, @javax.annotation.Nullable Boolean includeDiskstats) throws ApiException {
-        ApiResponse<Object> localVarResp = getConfigServerCachesWithHttpInfo(format, includeDiskstats);
+    public GetConfigServerCaches200Response getConfigServerCaches(@javax.annotation.Nullable String format, @javax.annotation.Nullable Boolean includeDiskstats) throws ApiException {
+        ApiResponse<GetConfigServerCaches200Response> localVarResp = getConfigServerCachesWithHttpInfo(format, includeDiskstats);
         return localVarResp.getData();
     }
 
@@ -314,7 +319,7 @@ public class ConfigApi {
      * Lists the caches of the server. Caches defined by plugins are included.
      * @param format  (optional)
      * @param includeDiskstats  (optional)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;GetConfigServerCaches200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -323,9 +328,9 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> getConfigServerCachesWithHttpInfo(@javax.annotation.Nullable String format, @javax.annotation.Nullable Boolean includeDiskstats) throws ApiException {
+    public ApiResponse<GetConfigServerCaches200Response> getConfigServerCachesWithHttpInfo(@javax.annotation.Nullable String format, @javax.annotation.Nullable Boolean includeDiskstats) throws ApiException {
         okhttp3.Call localVarCall = getConfigServerCachesValidateBeforeCall(format, includeDiskstats, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetConfigServerCaches200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -344,10 +349,10 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConfigServerCachesAsync(@javax.annotation.Nullable String format, @javax.annotation.Nullable Boolean includeDiskstats, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call getConfigServerCachesAsync(@javax.annotation.Nullable String format, @javax.annotation.Nullable Boolean includeDiskstats, final ApiCallback<GetConfigServerCaches200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getConfigServerCachesValidateBeforeCall(format, includeDiskstats, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetConfigServerCaches200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -912,7 +917,7 @@ public class ConfigApi {
     /**
      * List Indexes
      * Lists the indexes used by Gerrit. It provides details about the index versions, which index version is used to search and which versions are written to.
-     * @return Object
+     * @return List&lt;GetConfigServerIndexes200ResponseInner&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -921,15 +926,15 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public Object getConfigServerIndexes() throws ApiException {
-        ApiResponse<Object> localVarResp = getConfigServerIndexesWithHttpInfo();
+    public List<GetConfigServerIndexes200ResponseInner> getConfigServerIndexes() throws ApiException {
+        ApiResponse<List<GetConfigServerIndexes200ResponseInner>> localVarResp = getConfigServerIndexesWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * List Indexes
      * Lists the indexes used by Gerrit. It provides details about the index versions, which index version is used to search and which versions are written to.
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;List&lt;GetConfigServerIndexes200ResponseInner&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -938,9 +943,9 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> getConfigServerIndexesWithHttpInfo() throws ApiException {
+    public ApiResponse<List<GetConfigServerIndexes200ResponseInner>> getConfigServerIndexesWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = getConfigServerIndexesValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<GetConfigServerIndexes200ResponseInner>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -957,10 +962,10 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConfigServerIndexesAsync(final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call getConfigServerIndexesAsync(final ApiCallback<List<GetConfigServerIndexes200ResponseInner>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getConfigServerIndexesValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<GetConfigServerIndexes200ResponseInner>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1586,6 +1591,274 @@ public class ConfigApi {
 
         okhttp3.Call localVarCall = getConfigServerLabelsValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<LabelDefinitionInfo>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getConfigServerMetrics
+     * @param dataOnly  (optional)
+     * @param prefix  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getConfigServerMetricsCall(@javax.annotation.Nullable Boolean dataOnly, @javax.annotation.Nullable List<String> prefix, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/config/server/metrics";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (dataOnly != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("data-only", dataOnly));
+        }
+
+        if (prefix != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("multi", "prefix", prefix));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getConfigServerMetricsValidateBeforeCall(@javax.annotation.Nullable Boolean dataOnly, @javax.annotation.Nullable List<String> prefix, final ApiCallback _callback) throws ApiException {
+        return getConfigServerMetricsCall(dataOnly, prefix, _callback);
+
+    }
+
+    /**
+     * 
+     * 
+     * @param dataOnly  (optional)
+     * @param prefix  (optional)
+     * @return Map&lt;String, MetricJson&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public Map<String, MetricJson> getConfigServerMetrics(@javax.annotation.Nullable Boolean dataOnly, @javax.annotation.Nullable List<String> prefix) throws ApiException {
+        ApiResponse<Map<String, MetricJson>> localVarResp = getConfigServerMetricsWithHttpInfo(dataOnly, prefix);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param dataOnly  (optional)
+     * @param prefix  (optional)
+     * @return ApiResponse&lt;Map&lt;String, MetricJson&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Map<String, MetricJson>> getConfigServerMetricsWithHttpInfo(@javax.annotation.Nullable Boolean dataOnly, @javax.annotation.Nullable List<String> prefix) throws ApiException {
+        okhttp3.Call localVarCall = getConfigServerMetricsValidateBeforeCall(dataOnly, prefix, null);
+        Type localVarReturnType = new TypeToken<Map<String, MetricJson>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param dataOnly  (optional)
+     * @param prefix  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getConfigServerMetricsAsync(@javax.annotation.Nullable Boolean dataOnly, @javax.annotation.Nullable List<String> prefix, final ApiCallback<Map<String, MetricJson>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getConfigServerMetricsValidateBeforeCall(dataOnly, prefix, _callback);
+        Type localVarReturnType = new TypeToken<Map<String, MetricJson>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getConfigServerMetricsMetricId
+     * @param metricId  (required)
+     * @param dataOnly  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getConfigServerMetricsMetricIdCall(@javax.annotation.Nonnull String metricId, @javax.annotation.Nullable Boolean dataOnly, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/config/server/metrics/{metric-id}"
+            .replace("{" + "metric-id" + "}", localVarApiClient.escapeString(metricId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (dataOnly != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("data-only", dataOnly));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getConfigServerMetricsMetricIdValidateBeforeCall(@javax.annotation.Nonnull String metricId, @javax.annotation.Nullable Boolean dataOnly, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'metricId' is set
+        if (metricId == null) {
+            throw new ApiException("Missing the required parameter 'metricId' when calling getConfigServerMetricsMetricId(Async)");
+        }
+
+        return getConfigServerMetricsMetricIdCall(metricId, dataOnly, _callback);
+
+    }
+
+    /**
+     * 
+     * 
+     * @param metricId  (required)
+     * @param dataOnly  (optional)
+     * @return MetricJson
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public MetricJson getConfigServerMetricsMetricId(@javax.annotation.Nonnull String metricId, @javax.annotation.Nullable Boolean dataOnly) throws ApiException {
+        ApiResponse<MetricJson> localVarResp = getConfigServerMetricsMetricIdWithHttpInfo(metricId, dataOnly);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param metricId  (required)
+     * @param dataOnly  (optional)
+     * @return ApiResponse&lt;MetricJson&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<MetricJson> getConfigServerMetricsMetricIdWithHttpInfo(@javax.annotation.Nonnull String metricId, @javax.annotation.Nullable Boolean dataOnly) throws ApiException {
+        okhttp3.Call localVarCall = getConfigServerMetricsMetricIdValidateBeforeCall(metricId, dataOnly, null);
+        Type localVarReturnType = new TypeToken<MetricJson>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param metricId  (required)
+     * @param dataOnly  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getConfigServerMetricsMetricIdAsync(@javax.annotation.Nonnull String metricId, @javax.annotation.Nullable Boolean dataOnly, final ApiCallback<MetricJson> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getConfigServerMetricsMetricIdValidateBeforeCall(metricId, dataOnly, _callback);
+        Type localVarReturnType = new TypeToken<MetricJson>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2614,7 +2887,7 @@ public class ConfigApi {
      * Get version
      * Returns the version of the Gerrit server.
      * @param verbose  (optional)
-     * @return Object
+     * @return GetConfigServerVersion200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -2623,8 +2896,8 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public Object getConfigServerVersion(@javax.annotation.Nullable Boolean verbose) throws ApiException {
-        ApiResponse<Object> localVarResp = getConfigServerVersionWithHttpInfo(verbose);
+    public GetConfigServerVersion200Response getConfigServerVersion(@javax.annotation.Nullable Boolean verbose) throws ApiException {
+        ApiResponse<GetConfigServerVersion200Response> localVarResp = getConfigServerVersionWithHttpInfo(verbose);
         return localVarResp.getData();
     }
 
@@ -2632,7 +2905,7 @@ public class ConfigApi {
      * Get version
      * Returns the version of the Gerrit server.
      * @param verbose  (optional)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;GetConfigServerVersion200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -2641,9 +2914,9 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> getConfigServerVersionWithHttpInfo(@javax.annotation.Nullable Boolean verbose) throws ApiException {
+    public ApiResponse<GetConfigServerVersion200Response> getConfigServerVersionWithHttpInfo(@javax.annotation.Nullable Boolean verbose) throws ApiException {
         okhttp3.Call localVarCall = getConfigServerVersionValidateBeforeCall(verbose, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetConfigServerVersion200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2661,10 +2934,10 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConfigServerVersionAsync(@javax.annotation.Nullable Boolean verbose, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call getConfigServerVersionAsync(@javax.annotation.Nullable Boolean verbose, final ApiCallback<GetConfigServerVersion200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getConfigServerVersionValidateBeforeCall(verbose, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetConfigServerVersion200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
