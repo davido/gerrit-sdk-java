@@ -50,6 +50,7 @@ s = s.replace("<gson-version>2.10.1</gson-version>", "<gson-version>2.14.0</gson
 s = s.replace("https://github.com/openapitools/openapi-generator", "https://github.com/davido/gerrit-sdk-java")
 s = s.replace("scm:git:git@github.com:openapitools/openapi-generator.git", "scm:git:git@github.com:davido/gerrit-sdk-java.git")
 s = s.replace("<name>Unlicense</name>", "<name>Apache-2.0</name>")
+s = s.replace("<description>OpenAPI Java</description>", "<description>Generated Java SDK for the Gerrit Code Review REST API</description>")
 open(p, "w").write(s)
 PY
 
