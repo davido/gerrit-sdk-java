@@ -66,7 +66,7 @@ public class MigrateLabelsInfo {
   }
 
   /**
-   * Get status
+   * The status of the migration. Takes one of the following values: MIGRATED, HAS_PROLOG, PREVIOUSLY_MIGRATED, NO_CHANGE
    * @return status
    */
   @javax.annotation.Nullable

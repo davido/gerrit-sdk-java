@@ -91,7 +91,7 @@ public class ConflictsInfo {
   }
 
   /**
-   * Get base
+   * The SHA1 of the commit that was used as the base commit for the Git merge that created the revision. + A base is not set if: + - the merged commits do not have a common ancestor (in this case no_base_reason is NO_COMMON_ANCESTOR).
    * @return base
    */
   @javax.annotation.Nullable
@@ -110,7 +110,7 @@ public class ConflictsInfo {
   }
 
   /**
-   * Get ours
+   * The SHA1 of the commit that was used as \&quot;ours\&quot; for the Git merge that created the revision. + - For merge commits that are created by the Create Change REST endpoint \&quot;ours\&quot; is the SHA1 of the change&#39;s target branch (the branch that is specified as branch in the ChangeInput).
    * @return ours
    */
   @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class ConflictsInfo {
   }
 
   /**
-   * Get theirs
+   * The SHA1 of the commit that was used as \&quot;theirs\&quot; for the Git merge that created the revision.
    * @return theirs
    */
   @javax.annotation.Nullable
@@ -148,7 +148,7 @@ public class ConflictsInfo {
   }
 
   /**
-   * Get mergeStrategy
+   * The merge strategy was used for the Git merge that created the revision. + Possible values: resolve, recursive, simple-two-way-in-core, ours and theirs.
    * @return mergeStrategy
    */
   @javax.annotation.Nullable
@@ -167,7 +167,7 @@ public class ConflictsInfo {
   }
 
   /**
-   * Get noBaseReason
+   * Reason why base is not set. + Only set if base is not set. + Possible values are: + - NO_COMMON_ANCESTOR: The merged commits do not have a common ancestor. + - COMPUTED_BASE: The merged commits have multiple merge bases (happens for criss-cross-merges) and the base was computed.
    * @return noBaseReason
    */
   @javax.annotation.Nullable
@@ -186,7 +186,7 @@ public class ConflictsInfo {
   }
 
   /**
-   * Get containsConflicts
+   * Whether any of the files in the revision has a conflict due to merging \&quot;ours\&quot; and \&quot;theirs\&quot;. + If \&quot;true\&quot; at least one of the files in the revision has a conflict and contains Git conflict markers. The conflicts occurred while performing a merge between \&quot;ours\&quot; and \&quot;theirs\&quot;.
    * @return containsConflicts
    */
   @javax.annotation.Nullable

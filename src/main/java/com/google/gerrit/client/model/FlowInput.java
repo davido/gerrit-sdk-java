@@ -76,7 +76,7 @@ public class FlowInput {
   }
 
   /**
-   * Get stageExpressions
+   * The expressions for the stages of the flow (sorted by execution order) as a list of FlowExpressionInfo entities.
    * @return stageExpressions
    */
   @javax.annotation.Nullable

@@ -124,7 +124,7 @@ public class CherryPickInput {
   }
 
   /**
-   * Get message
+   * Commit message for the cherry-pick change. If not set, the commit message of the cherry-picked commit is used.
    * @return message
    */
   @javax.annotation.Nullable
@@ -143,7 +143,7 @@ public class CherryPickInput {
   }
 
   /**
-   * Get destination
+   * Destination branch
    * @return destination
    */
   @javax.annotation.Nullable
@@ -162,7 +162,7 @@ public class CherryPickInput {
   }
 
   /**
-   * Get base
+   * 40-hex digit SHA-1 of the commit which will be the parent commit of the newly created change. If set, it must be a merged commit or a change revision on the destination branch.
    * @return base
    */
   @javax.annotation.Nullable
@@ -181,7 +181,7 @@ public class CherryPickInput {
   }
 
   /**
-   * Get parent
+   * Number of the parent relative to which the cherry-pick should be considered.
    * @return parent
    */
   @javax.annotation.Nullable
@@ -200,7 +200,7 @@ public class CherryPickInput {
   }
 
   /**
-   * Get notify
+   * Notify handling that defines to whom email notifications should be sent after the cherry-pick. + Allowed values are NONE, OWNER, OWNER_REVIEWERS and ALL. + If not set, the default is ALL.
    * @return notify
    */
   @javax.annotation.Nullable
@@ -227,7 +227,7 @@ public class CherryPickInput {
   }
 
   /**
-   * Get notifyDetails
+   * Additional information about whom to notify about the update as a map of recipient type to NotifyInfo entity.
    * @return notifyDetails
    */
   @javax.annotation.Nullable
@@ -246,7 +246,7 @@ public class CherryPickInput {
   }
 
   /**
-   * Get keepReviewers
+   * If true, carries reviewers and ccs over from original change to newly created one.
    * @return keepReviewers
    */
   @javax.annotation.Nullable
@@ -265,7 +265,7 @@ public class CherryPickInput {
   }
 
   /**
-   * Get allowConflicts
+   * If true, the cherry-pick uses content merge and succeeds also if there are conflicts. If there are conflicts the file contents of the created change contain git conflict markers to indicate the conflicts.
    * @return allowConflicts
    */
   @javax.annotation.Nullable
@@ -284,7 +284,7 @@ public class CherryPickInput {
   }
 
   /**
-   * Get topic
+   * The topic of the created cherry-picked change. If not set, the default depends on the source. If the source is a change with a topic, the resulting topic of the cherry-picked change will be {source_change_topic}-{destination_branch}.
    * @return topic
    */
   @javax.annotation.Nullable
@@ -303,7 +303,7 @@ public class CherryPickInput {
   }
 
   /**
-   * Get allowEmpty
+   * If true, the cherry-pick succeeds also if the created commit will be empty. If false, a cherry-pick that would create an empty commit fails without creating the commit.
    * @return allowEmpty
    */
   @javax.annotation.Nullable
@@ -330,7 +330,7 @@ public class CherryPickInput {
   }
 
   /**
-   * Get validationOptions
+   * Map with key-value pairs that are forwarded as options to the commit validation listeners (e.g. can be used to skip certain validations). Which validation options are supported depends on the installed commit validation listeners.
    * @return validationOptions
    */
   @javax.annotation.Nullable
@@ -349,7 +349,7 @@ public class CherryPickInput {
   }
 
   /**
-   * Get committerEmail
+   * Cherry-pick is committed using this email address. Only the registered emails of the calling user are considered valid. Defaults to source commit&#39;s committer email if it is a registered email of the calling user, else defaults to calling user&#39;s preferred email.
    * @return committerEmail
    */
   @javax.annotation.Nullable

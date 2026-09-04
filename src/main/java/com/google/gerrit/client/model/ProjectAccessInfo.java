@@ -128,7 +128,7 @@ public class ProjectAccessInfo {
   }
 
   /**
-   * Get revision
+   * The revision of the refs/meta/config branch from which the access rights were loaded.
    * @return revision
    */
   @javax.annotation.Nullable
@@ -147,7 +147,7 @@ public class ProjectAccessInfo {
   }
 
   /**
-   * Get inheritsFrom
+   * The parent project from which permissions are inherited as a ProjectInfo entity.
    * @return inheritsFrom
    */
   @javax.annotation.Nullable
@@ -174,7 +174,7 @@ public class ProjectAccessInfo {
   }
 
   /**
-   * Get local
+   * The local access rights of the project as a map that maps the refs to AccessSectionInfo entities.
    * @return local
    */
   @javax.annotation.Nullable
@@ -193,7 +193,7 @@ public class ProjectAccessInfo {
   }
 
   /**
-   * Get isOwner
+   * Whether the calling user owns this project.
    * @return isOwner
    */
   @javax.annotation.Nullable
@@ -220,7 +220,7 @@ public class ProjectAccessInfo {
   }
 
   /**
-   * Get ownerOf
+   * The list of refs owned by the calling user.
    * @return ownerOf
    */
   @javax.annotation.Nullable
@@ -239,7 +239,7 @@ public class ProjectAccessInfo {
   }
 
   /**
-   * Get canUpload
+   * Whether the calling user can upload to any ref.
    * @return canUpload
    */
   @javax.annotation.Nullable
@@ -258,7 +258,7 @@ public class ProjectAccessInfo {
   }
 
   /**
-   * Get canAdd
+   * Whether the calling user can add any ref.
    * @return canAdd
    */
   @javax.annotation.Nullable
@@ -277,7 +277,7 @@ public class ProjectAccessInfo {
   }
 
   /**
-   * Get canAddTags
+   * Whether the calling user can add any tag ref.
    * @return canAddTags
    */
   @javax.annotation.Nullable
@@ -296,7 +296,7 @@ public class ProjectAccessInfo {
   }
 
   /**
-   * Get configVisible
+   * Whether the calling user can see the refs/meta/config branch of the project.
    * @return configVisible
    */
   @javax.annotation.Nullable
@@ -315,7 +315,7 @@ public class ProjectAccessInfo {
   }
 
   /**
-   * Get requireChangeForConfigUpdate
+   * Whether the calling user must create a change for updating project config. If true, all API requests which directly update project config are rejected.
    * @return requireChangeForConfigUpdate
    */
   @javax.annotation.Nullable
@@ -342,7 +342,7 @@ public class ProjectAccessInfo {
   }
 
   /**
-   * Get groups
+   * A map of group UUID to GroupInfo objects, with names and URLs for the group UUIDs used in the local map. This will include names for groups that might be invisible to the caller.
    * @return groups
    */
   @javax.annotation.Nullable
@@ -369,7 +369,7 @@ public class ProjectAccessInfo {
   }
 
   /**
-   * Get configWebLinks
+   * Links to the history of the configuration file governing this project&#39;s access rights as list of WebLinkInfo entities.
    * @return configWebLinks
    */
   @javax.annotation.Nullable

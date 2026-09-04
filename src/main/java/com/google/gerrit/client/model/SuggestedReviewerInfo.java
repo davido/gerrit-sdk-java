@@ -82,7 +82,7 @@ public class SuggestedReviewerInfo {
   }
 
   /**
-   * Get account
+   * An AccountInfo entity, if the suggestion is an account.
    * @return account
    */
   @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class SuggestedReviewerInfo {
   }
 
   /**
-   * Get group
+   * A GroupBaseInfo entity, if the suggestion is a group.
    * @return group
    */
   @javax.annotation.Nullable
@@ -120,7 +120,7 @@ public class SuggestedReviewerInfo {
   }
 
   /**
-   * Get count
+   * The total number of accounts in the suggestion. This is 1 if account is present. If group is present, the total number of accounts that are members of the group is returned (this count includes members of nested groups).
    * @return count
    */
   @javax.annotation.Nullable
@@ -139,7 +139,7 @@ public class SuggestedReviewerInfo {
   }
 
   /**
-   * Get confirm
+   * True if group is present and count is above the threshold where the confirmed flag must be passed to add the group as a reviewer.
    * @return confirm
    */
   @javax.annotation.Nullable

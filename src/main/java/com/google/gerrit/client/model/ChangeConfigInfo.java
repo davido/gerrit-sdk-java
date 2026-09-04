@@ -95,7 +95,7 @@ public class ChangeConfigInfo {
   }
 
   /**
-   * Get allowBlame
+   * Whether blame on side by side diff is allowed.
    * @return allowBlame
    */
   @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class ChangeConfigInfo {
   }
 
   /**
-   * Get disablePrivateChanges
+   * Returns true if private changes are disabled.
    * @return disablePrivateChanges
    */
   @javax.annotation.Nullable
@@ -133,7 +133,7 @@ public class ChangeConfigInfo {
   }
 
   /**
-   * Get updateDelay
+   * How often in seconds the web interface should poll for updates to the currently open change.
    * @return updateDelay
    */
   @javax.annotation.Nullable
@@ -152,7 +152,7 @@ public class ChangeConfigInfo {
   }
 
   /**
-   * Get submitWholeTopic
+   * A configuration if the whole topic is submitted.
    * @return submitWholeTopic
    */
   @javax.annotation.Nullable
@@ -171,7 +171,7 @@ public class ChangeConfigInfo {
   }
 
   /**
-   * Get mergeabilityComputationBehavior
+   * Value of the configuration parameter that controls whether the mergeability bit in ChangeInfo will never be set and if the bit is indexed.
    * @return mergeabilityComputationBehavior
    */
   @javax.annotation.Nullable
@@ -190,7 +190,7 @@ public class ChangeConfigInfo {
   }
 
   /**
-   * Get conflictsPredicateEnabled
+   * Are conflicts enabled?.
    * @return conflictsPredicateEnabled
    */
   @javax.annotation.Nullable
@@ -209,7 +209,7 @@ public class ChangeConfigInfo {
   }
 
   /**
-   * Get allowMarkdownBase64ImagesInComments
+   * Are markdown base64 images in comments allowed?.
    * @return allowMarkdownBase64ImagesInComments
    */
   @javax.annotation.Nullable

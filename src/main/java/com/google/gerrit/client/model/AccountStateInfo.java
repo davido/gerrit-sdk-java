@@ -93,7 +93,7 @@ public class AccountStateInfo {
   }
 
   /**
-   * Get account
+   * The account details as AccountDetailInfo entity.
    * @return account
    */
   @javax.annotation.Nullable
@@ -120,7 +120,7 @@ public class AccountStateInfo {
   }
 
   /**
-   * Get capabilities
+   * The global capabilities of the account as a CapabilityInfo entity. Not set if the permission backend doesn&#39;t use default capabilities.
    * @return capabilities
    */
   @javax.annotation.Nullable
@@ -147,7 +147,7 @@ public class AccountStateInfo {
   }
 
   /**
-   * Get groups
+   * The groups that contain the account as a member as a list of GroupInfo entries.
    * @return groups
    */
   @javax.annotation.Nullable
@@ -174,7 +174,7 @@ public class AccountStateInfo {
   }
 
   /**
-   * Get externalIds
+   * The external IDs of the account as a list of AccountExternalIdInfo entities.
    * @return externalIds
    */
   @javax.annotation.Nullable
@@ -201,7 +201,7 @@ public class AccountStateInfo {
   }
 
   /**
-   * Get metadata
+   * Optional account metadata as a list of MetadataInfo entities. If and which metadata is provided depends on the Gerrit setup.
    * @return metadata
    */
   @javax.annotation.Nullable

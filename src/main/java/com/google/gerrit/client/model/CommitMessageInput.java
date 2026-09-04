@@ -84,7 +84,7 @@ public class CommitMessageInput {
   }
 
   /**
-   * Get message
+   * New commit message.
    * @return message
    */
   @javax.annotation.Nullable
@@ -103,7 +103,7 @@ public class CommitMessageInput {
   }
 
   /**
-   * Get notify
+   * Notify handling that defines to whom email notifications should be sent after the commit message was updated. + Allowed values are NONE, OWNER, OWNER_REVIEWERS and ALL. + If not set, the default is OWNER for WIP changes and ALL otherwise.
    * @return notify
    */
   @javax.annotation.Nullable
@@ -130,7 +130,7 @@ public class CommitMessageInput {
   }
 
   /**
-   * Get notifyDetails
+   * Additional information about whom to notify about the update as a map of recipient type to NotifyInfo entity.
    * @return notifyDetails
    */
   @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class CommitMessageInput {
   }
 
   /**
-   * Get committerEmail
+   * New message is committed using this email address. Only the registered emails of the calling user are considered valid.
    * @return committerEmail
    */
   @javax.annotation.Nullable

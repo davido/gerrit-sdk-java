@@ -70,7 +70,7 @@ public class AvatarInfo {
   }
 
   /**
-   * Get url
+   * The URL to the avatar image.
    * @return url
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class AvatarInfo {
   }
 
   /**
-   * Get height
+   * The height of the avatar image in pixels.
    * @return height
    */
   @javax.annotation.Nullable

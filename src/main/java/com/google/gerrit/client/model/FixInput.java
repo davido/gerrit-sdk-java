@@ -70,7 +70,7 @@ public class FixInput {
   }
 
   /**
-   * Get deletePatchSetIfCommitMissing
+   * If true, delete patch sets from the database if they refer to missing commit options.
    * @return deletePatchSetIfCommitMissing
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class FixInput {
   }
 
   /**
-   * Get expectMergedAs
+   * If set, check that the change is merged into the destination branch as this exact SHA-1. If not, insert a new patch set referring to this commit.
    * @return expectMergedAs
    */
   @javax.annotation.Nullable

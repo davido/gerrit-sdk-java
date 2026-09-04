@@ -70,7 +70,7 @@ public class RangeInfo {
   }
 
   /**
-   * Get start
+   * First index.
    * @return start
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class RangeInfo {
   }
 
   /**
-   * Get end
+   * Last index.
    * @return end
    */
   @javax.annotation.Nullable

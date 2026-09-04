@@ -71,7 +71,7 @@ public class PushCertificateInfo {
   }
 
   /**
-   * Get certificate
+   * Signed certificate payload and GPG signature block.
    * @return certificate
    */
   @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class PushCertificateInfo {
   }
 
   /**
-   * Get key
+   * Information about the key that signed the push, along with any problems found while checking the signature or the key itself, as a GpgKeyInfo entity.
    * @return key
    */
   @javax.annotation.Nullable

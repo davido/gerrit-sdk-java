@@ -82,7 +82,7 @@ public class CustomKeyedValuesInput {
   }
 
   /**
-   * Get add
+   * The map of custom keyed values to be added to the change.
    * @return add
    */
   @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class CustomKeyedValuesInput {
   }
 
   /**
-   * Get remove
+   * The list of custom keys to be removed from the change.
    * @return remove
    */
   @javax.annotation.Nullable

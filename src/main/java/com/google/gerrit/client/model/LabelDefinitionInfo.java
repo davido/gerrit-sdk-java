@@ -119,7 +119,7 @@ public class LabelDefinitionInfo {
   }
 
   /**
-   * Get name
+   * The name of the label.
    * @return name
    */
   @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class LabelDefinitionInfo {
   }
 
   /**
-   * Get description
+   * The description of the label.
    * @return description
    */
   @javax.annotation.Nullable
@@ -157,7 +157,7 @@ public class LabelDefinitionInfo {
   }
 
   /**
-   * Get projectName
+   * The name of the project in which this label is defined. Not set for globally defined labels.
    * @return projectName
    */
   @javax.annotation.Nullable
@@ -176,7 +176,7 @@ public class LabelDefinitionInfo {
   }
 
   /**
-   * Get function
+   * The function of the label (can be MaxWithBlock, AnyWithBlock, MaxNoBlock, NoBlock, NoOp and PatchSetLock.
    * @return function
    */
   @javax.annotation.Nullable
@@ -203,7 +203,7 @@ public class LabelDefinitionInfo {
   }
 
   /**
-   * Get values
+   * The values of the label as a map of label value to value description. The label values are formatted strings, e.g. \&quot;+1\&quot; instead of \&quot;1\&quot;, \&quot; 0\&quot; instead of \&quot;0\&quot;.
    * @return values
    */
   @javax.annotation.Nullable
@@ -222,7 +222,7 @@ public class LabelDefinitionInfo {
   }
 
   /**
-   * Get defaultValue
+   * The default value of the label (as integer).
    * @return defaultValue
    */
   @javax.annotation.Nullable
@@ -249,7 +249,7 @@ public class LabelDefinitionInfo {
   }
 
   /**
-   * Get branches
+   * A list of branches for which the label applies. A branch can be a ref, a ref pattern or a regular expression. If not set, the label applies for all branches.
    * @return branches
    */
   @javax.annotation.Nullable
@@ -268,7 +268,7 @@ public class LabelDefinitionInfo {
   }
 
   /**
-   * Get canOverride
+   * Whether this label can be overridden by child projects.
    * @return canOverride
    */
   @javax.annotation.Nullable
@@ -287,7 +287,7 @@ public class LabelDefinitionInfo {
   }
 
   /**
-   * Get copyCondition
+   * See copyCondition.
    * @return copyCondition
    */
   @javax.annotation.Nullable
@@ -306,7 +306,7 @@ public class LabelDefinitionInfo {
   }
 
   /**
-   * Get allowPostSubmit
+   * Whether allowPostSubmit is set on the label.
    * @return allowPostSubmit
    */
   @javax.annotation.Nullable
@@ -325,7 +325,7 @@ public class LabelDefinitionInfo {
   }
 
   /**
-   * Get ignoreSelfApproval
+   * Whether ignoreSelfApproval is set on the label.
    * @return ignoreSelfApproval
    */
   @javax.annotation.Nullable

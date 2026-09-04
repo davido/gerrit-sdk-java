@@ -77,7 +77,7 @@ public class AccessCheckInfo {
   }
 
   /**
-   * Get message
+   * A clarifying message if status is not 200.
    * @return message
    */
   @javax.annotation.Nullable
@@ -96,7 +96,7 @@ public class AccessCheckInfo {
   }
 
   /**
-   * Get status
+   * The HTTP status code for the access. 200 means success and 403 means denied.
    * @return status
    */
   @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class AccessCheckInfo {
   }
 
   /**
-   * Get debugLogs
+   * Debug logs that may help to understand why a permission is denied or allowed.
    * @return debugLogs
    */
   @javax.annotation.Nullable

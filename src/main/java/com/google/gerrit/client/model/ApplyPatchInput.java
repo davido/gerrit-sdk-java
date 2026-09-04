@@ -70,7 +70,7 @@ public class ApplyPatchInput {
   }
 
   /**
-   * Get patch
+   * The patch to be applied. Must be compatible with git diff output. For example, Get Patch output. The patch must be provided as UTF-8 text, either directly or base64-encoded.
    * @return patch
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class ApplyPatchInput {
   }
 
   /**
-   * Get allowConflicts
+   * If true, tolerate conflicts and add conflict markers where required.
    * @return allowConflicts
    */
   @javax.annotation.Nullable

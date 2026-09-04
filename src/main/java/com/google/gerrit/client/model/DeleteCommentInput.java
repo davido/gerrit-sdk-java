@@ -65,7 +65,7 @@ public class DeleteCommentInput {
   }
 
   /**
-   * Get reason
+   * The reason why the comment should be deleted. + If set, the comment&#39;s message will be replaced with \&quot;Comment removed by: name; Reason: reason\&quot;, or just \&quot;Comment removed by: name.\&quot; if not set.
    * @return reason
    */
   @javax.annotation.Nullable

@@ -80,7 +80,7 @@ public class EmailInfo {
   }
 
   /**
-   * Get email
+   * The email address.
    * @return email
    */
   @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class EmailInfo {
   }
 
   /**
-   * Get preferred
+   * Whether this is the preferred email address of the user.
    * @return preferred
    */
   @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class EmailInfo {
   }
 
   /**
-   * Get pendingConfirmation
+   * Set true if the user must confirm control of the email address by following a verification link before Gerrit will permit use of this address.
    * @return pendingConfirmation
    */
   @javax.annotation.Nullable

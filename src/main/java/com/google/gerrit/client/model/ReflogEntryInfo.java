@@ -81,7 +81,7 @@ public class ReflogEntryInfo {
   }
 
   /**
-   * Get oldId
+   * The old commit ID.
    * @return oldId
    */
   @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class ReflogEntryInfo {
   }
 
   /**
-   * Get newId
+   * The new commit ID.
    * @return newId
    */
   @javax.annotation.Nullable
@@ -119,7 +119,7 @@ public class ReflogEntryInfo {
   }
 
   /**
-   * Get who
+   * The user performing the change as a GitPersonInfo entity.
    * @return who
    */
   @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class ReflogEntryInfo {
   }
 
   /**
-   * Get comment
+   * Comment of the reflog entry.
    * @return comment
    */
   @javax.annotation.Nullable

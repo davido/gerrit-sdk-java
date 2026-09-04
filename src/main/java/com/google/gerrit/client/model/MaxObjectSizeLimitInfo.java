@@ -75,7 +75,7 @@ public class MaxObjectSizeLimitInfo {
   }
 
   /**
-   * Get value
+   * The effective value in bytes of the max object size limit. + Not set if there is no limit for the object size.
    * @return value
    */
   @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class MaxObjectSizeLimitInfo {
   }
 
   /**
-   * Get configuredValue
+   * The max object size limit that is configured on the project as a formatted string. + Not set if there is no limit for the object size configured on project level.
    * @return configuredValue
    */
   @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class MaxObjectSizeLimitInfo {
   }
 
   /**
-   * Get summary
+   * A string describing whether the value was inherited or overridden from the parent project or global config. + Not set if not inherited or overridden.
    * @return summary
    */
   @javax.annotation.Nullable

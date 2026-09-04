@@ -100,7 +100,7 @@ public class SubmitRequirementExpressionInfo {
   }
 
   /**
-   * Get expression
+   * The submit requirement expression as a string, for example branch:refs/heads/foo and label:verified&#x3D;+1.
    * @return expression
    */
   @javax.annotation.Nullable
@@ -119,7 +119,7 @@ public class SubmitRequirementExpressionInfo {
   }
 
   /**
-   * Get fulfilled
+   * True if the submit requirement is fulfilled for the change.
    * @return fulfilled
    */
   @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class SubmitRequirementExpressionInfo {
   }
 
   /**
-   * Get status
+   * A string containing the status of evaluating the expression which can be one of the following: + * PASS - expression was evaluated and result is true. + * FAIL - expression was evaluated and result is false. + * ERROR - an error occurred while evaluating the expression.
    * @return status
    */
   @javax.annotation.Nullable
@@ -165,7 +165,7 @@ public class SubmitRequirementExpressionInfo {
   }
 
   /**
-   * Get passingAtoms
+   * A list of passing atoms as strings. For the above expression, passing_atoms can contain [\&quot;branch:refs/heads/foo\&quot;] if the branch predicate is fulfilled for the change.
    * @return passingAtoms
    */
   @javax.annotation.Nullable
@@ -192,7 +192,7 @@ public class SubmitRequirementExpressionInfo {
   }
 
   /**
-   * Get failingAtoms
+   * A list of failing atoms. This is similar to passing_atoms except that it contains the list of predicates that are not fulfilled for the change.
    * @return failingAtoms
    */
   @javax.annotation.Nullable
@@ -219,7 +219,7 @@ public class SubmitRequirementExpressionInfo {
   }
 
   /**
-   * Get atomExplanations
+   * A map of atoms (as strings) to strings explaining the result. This field only contains atoms for which the explanation is available.
    * @return atomExplanations
    */
   @javax.annotation.Nullable
@@ -238,7 +238,7 @@ public class SubmitRequirementExpressionInfo {
   }
 
   /**
-   * Get errorMessage
+   * If the submit requirement fails during evaluation, this string will contain an error message describing why it failed.
    * @return errorMessage
    */
   @javax.annotation.Nullable

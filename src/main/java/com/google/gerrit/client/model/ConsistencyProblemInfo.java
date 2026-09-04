@@ -71,7 +71,7 @@ public class ConsistencyProblemInfo {
   }
 
   /**
-   * Get status
+   * The status of the consistency problem. + Possible values are FATAL, ERROR and WARNING.
    * @return status
    */
   @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class ConsistencyProblemInfo {
   }
 
   /**
-   * Get message
+   * Message describing the consistency problem.
    * @return message
    */
   @javax.annotation.Nullable

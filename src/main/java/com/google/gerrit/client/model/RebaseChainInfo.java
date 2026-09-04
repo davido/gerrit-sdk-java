@@ -81,7 +81,7 @@ public class RebaseChainInfo {
   }
 
   /**
-   * Get rebasedChanges
+   * List of the unsubmitted ancestors, as ChangeInfo entities. Includes both rebased changes, and previously up-to-date ancestors. The list is ordered by ancestry, where the oldest ancestor is the first.
    * @return rebasedChanges
    */
   @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class RebaseChainInfo {
   }
 
   /**
-   * Get containsGitConflicts
+   * Whether any of the rebased changes has conflicts due to rebasing.
    * @return containsGitConflicts
    */
   @javax.annotation.Nullable

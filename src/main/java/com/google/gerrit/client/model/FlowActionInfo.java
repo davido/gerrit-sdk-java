@@ -72,7 +72,7 @@ public class FlowActionInfo {
   }
 
   /**
-   * Get name
+   * The name of the action. Which actions are supported depends on the flow service implementation.
    * @return name
    */
   @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class FlowActionInfo {
   }
 
   /**
-   * Get parameters
+   * Parameters for the action as list of strings. Which parameters are supported and their format depends on the flow service implementation.
    * @return parameters
    */
   @javax.annotation.Nullable

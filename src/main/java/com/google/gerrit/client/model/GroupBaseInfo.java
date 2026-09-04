@@ -70,7 +70,7 @@ public class GroupBaseInfo {
   }
 
   /**
-   * Get id
+   * The UUID of the group.
    * @return id
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class GroupBaseInfo {
   }
 
   /**
-   * Get name
+   * The name of the group.
    * @return name
    */
   @javax.annotation.Nullable

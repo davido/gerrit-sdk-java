@@ -65,7 +65,7 @@ public class UserConfigInfo {
   }
 
   /**
-   * Get anonymousCowardName
+   * Username that is displayed in the Gerrit Web UI and in e-mail notifications if the full name of the user is not set.
    * @return anonymousCowardName
    */
   @javax.annotation.Nullable

@@ -65,7 +65,7 @@ public class DisplayNameInput {
   }
 
   /**
-   * Get displayName
+   * The new display name of the account.
    * @return displayName
    */
   @javax.annotation.Nullable

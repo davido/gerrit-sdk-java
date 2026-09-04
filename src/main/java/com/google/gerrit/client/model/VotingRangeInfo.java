@@ -70,7 +70,7 @@ public class VotingRangeInfo {
   }
 
   /**
-   * Get min
+   * The minimum voting value.
    * @return min
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class VotingRangeInfo {
   }
 
   /**
-   * Get max
+   * The maximum voting value.
    * @return max
    */
   @javax.annotation.Nullable

@@ -90,7 +90,7 @@ public class OAuthTokenInfo {
   }
 
   /**
-   * Get username
+   * The owner of the OAuth access token.
    * @return username
    */
   @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class OAuthTokenInfo {
   }
 
   /**
-   * Get resourceHost
+   * The host of the Gerrit instance.
    * @return resourceHost
    */
   @javax.annotation.Nullable
@@ -128,7 +128,7 @@ public class OAuthTokenInfo {
   }
 
   /**
-   * Get accessToken
+   * The actual token value.
    * @return accessToken
    */
   @javax.annotation.Nullable
@@ -147,7 +147,7 @@ public class OAuthTokenInfo {
   }
 
   /**
-   * Get providerId
+   * The identifier of the OAuth provider in the form plugin-name:provider-name.
    * @return providerId
    */
   @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class OAuthTokenInfo {
   }
 
   /**
-   * Get expiresAt
+   * Time of expiration of this token in milliseconds.
    * @return expiresAt
    */
   @javax.annotation.Nullable
@@ -185,7 +185,7 @@ public class OAuthTokenInfo {
   }
 
   /**
-   * Get type
+   * The type of the OAuth access token, always bearer.
    * @return type
    */
   @javax.annotation.Nullable

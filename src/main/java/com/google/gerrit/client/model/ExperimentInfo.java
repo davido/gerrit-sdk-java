@@ -65,7 +65,7 @@ public class ExperimentInfo {
   }
 
   /**
-   * Get enabled
+   * Whether the experiment is enabled.
    * @return enabled
    */
   @javax.annotation.Nullable

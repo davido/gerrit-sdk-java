@@ -75,7 +75,7 @@ public class ConsistencyCheckInput {
   }
 
   /**
-   * Get checkAccounts
+   * Input for the account consistency check as CheckAccountsInput entity.
    * @return checkAccounts
    */
   @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class ConsistencyCheckInput {
   }
 
   /**
-   * Get checkAccountExternalIds
+   * Input for the account external ID consistency check as CheckAccountExternalIdsInput entity.
    * @return checkAccountExternalIds
    */
   @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class ConsistencyCheckInput {
   }
 
   /**
-   * Get checkGroups
+   * Input for the group consistency check as CheckGroupsInput entity.
    * @return checkGroups
    */
   @javax.annotation.Nullable

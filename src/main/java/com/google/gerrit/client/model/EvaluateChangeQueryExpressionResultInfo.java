@@ -84,7 +84,7 @@ public class EvaluateChangeQueryExpressionResultInfo {
   }
 
   /**
-   * Get status
+   * Whether the change matches the change query expression.
    * @return status
    */
   @javax.annotation.Nullable
@@ -111,7 +111,7 @@ public class EvaluateChangeQueryExpressionResultInfo {
   }
 
   /**
-   * Get passingAtoms
+   * List of passing leaf atoms (atoms that match the change).
    * @return passingAtoms
    */
   @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class EvaluateChangeQueryExpressionResultInfo {
   }
 
   /**
-   * Get failingAtoms
+   * List of failing leaf atoms (atoms that do not match the change).
    * @return failingAtoms
    */
   @javax.annotation.Nullable

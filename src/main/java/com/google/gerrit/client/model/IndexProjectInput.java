@@ -70,7 +70,7 @@ public class IndexProjectInput {
   }
 
   /**
-   * Get indexChildren
+   * If children should be indexed recursively.
    * @return indexChildren
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class IndexProjectInput {
   }
 
   /**
-   * Get async
+   * If projects should be indexed asynchronously.
    * @return async
    */
   @javax.annotation.Nullable

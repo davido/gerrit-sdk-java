@@ -36,6 +36,7 @@ import com.google.gerrit.client.model.AgreementInfo;
 import com.google.gerrit.client.model.AgreementInput;
 import com.google.gerrit.client.model.AuthTokenInfo;
 import com.google.gerrit.client.model.AuthTokenInput;
+import com.google.gerrit.client.model.ChangeInfo;
 import com.google.gerrit.client.model.DeleteDraftCommentsInput;
 import com.google.gerrit.client.model.DeletedDraftCommentInfo;
 import com.google.gerrit.client.model.DiffPreferencesInfo;
@@ -4179,7 +4180,7 @@ public class AccountsApi {
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getAccountsAccountIdStarredChangesCall(@javax.annotation.Nonnull String accountId, final ApiCallback _callback) throws ApiException {
@@ -4239,45 +4240,45 @@ public class AccountsApi {
     }
 
     /**
-     * Get Changes With Default Star
-     * Gets the changes that were starred with the default star by the identified user account. This URL endpoint is functionally identical to the changes query GET /changes/?q&#x3D;is:starred. The result is a list of ChangeInfo entities.
+     * Get changes with default star
+     * Gets the changes that were starred with the default star by the identified user account.
      * @param accountId  (required)
-     * @return Object
+     * @return List&lt;ChangeInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public Object getAccountsAccountIdStarredChanges(@javax.annotation.Nonnull String accountId) throws ApiException {
-        ApiResponse<Object> localVarResp = getAccountsAccountIdStarredChangesWithHttpInfo(accountId);
+    public List<ChangeInfo> getAccountsAccountIdStarredChanges(@javax.annotation.Nonnull String accountId) throws ApiException {
+        ApiResponse<List<ChangeInfo>> localVarResp = getAccountsAccountIdStarredChangesWithHttpInfo(accountId);
         return localVarResp.getData();
     }
 
     /**
-     * Get Changes With Default Star
-     * Gets the changes that were starred with the default star by the identified user account. This URL endpoint is functionally identical to the changes query GET /changes/?q&#x3D;is:starred. The result is a list of ChangeInfo entities.
+     * Get changes with default star
+     * Gets the changes that were starred with the default star by the identified user account.
      * @param accountId  (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;List&lt;ChangeInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> getAccountsAccountIdStarredChangesWithHttpInfo(@javax.annotation.Nonnull String accountId) throws ApiException {
+    public ApiResponse<List<ChangeInfo>> getAccountsAccountIdStarredChangesWithHttpInfo(@javax.annotation.Nonnull String accountId) throws ApiException {
         okhttp3.Call localVarCall = getAccountsAccountIdStarredChangesValidateBeforeCall(accountId, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<ChangeInfo>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Get Changes With Default Star (asynchronously)
-     * Gets the changes that were starred with the default star by the identified user account. This URL endpoint is functionally identical to the changes query GET /changes/?q&#x3D;is:starred. The result is a list of ChangeInfo entities.
+     * Get changes with default star (asynchronously)
+     * Gets the changes that were starred with the default star by the identified user account.
      * @param accountId  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -4286,13 +4287,13 @@ public class AccountsApi {
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAccountsAccountIdStarredChangesAsync(@javax.annotation.Nonnull String accountId, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call getAccountsAccountIdStarredChangesAsync(@javax.annotation.Nonnull String accountId, final ApiCallback<List<ChangeInfo>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAccountsAccountIdStarredChangesValidateBeforeCall(accountId, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<ChangeInfo>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

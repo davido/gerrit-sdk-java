@@ -65,7 +65,7 @@ public class DeleteChangeMessageInput {
   }
 
   /**
-   * Get reason
+   * The reason why the change message should be deleted. + If set, the change message will be replaced with \&quot;Change message removed by: name\\nReason: reason\&quot;, or just \&quot;Change message removed by: name.\&quot; if not set.
    * @return reason
    */
   @javax.annotation.Nullable

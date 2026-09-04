@@ -74,7 +74,7 @@ public class DeletedDraftCommentInfo {
   }
 
   /**
-   * Get change
+   * ChangeInfo entity describing the change on which one or more comments was deleted. Populated with no change list options.
    * @return change
    */
   @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class DeletedDraftCommentInfo {
   }
 
   /**
-   * Get deleted
+   * List of CommentInfo entities for each comment that was deleted.
    * @return deleted
    */
   @javax.annotation.Nullable

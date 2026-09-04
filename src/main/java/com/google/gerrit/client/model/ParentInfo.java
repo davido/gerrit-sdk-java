@@ -95,7 +95,7 @@ public class ParentInfo {
   }
 
   /**
-   * Get branchName
+   * Name of the target branch into which the parent commit is merged.
    * @return branchName
    */
   @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class ParentInfo {
   }
 
   /**
-   * Get commitId
+   * The commit SHA-1 of the parent commit, or null if the current commit is root.
    * @return commitId
    */
   @javax.annotation.Nullable
@@ -133,7 +133,7 @@ public class ParentInfo {
   }
 
   /**
-   * Get isMergedInTargetBranch
+   * Set to true if the parent commit is merged into the target branch.
    * @return isMergedInTargetBranch
    */
   @javax.annotation.Nullable
@@ -152,7 +152,7 @@ public class ParentInfo {
   }
 
   /**
-   * Get changeId
+   * If the parent commit is a patch-set of another gerrit change, this field will hold the change ID of the parent change. Otherwise, will be null.
    * @return changeId
    */
   @javax.annotation.Nullable
@@ -171,7 +171,7 @@ public class ParentInfo {
   }
 
   /**
-   * Get changeNumber
+   * If the parent commit is a patch-set of another gerrit change, this field will hold the change number of the parent change. Otherwise, will be null.
    * @return changeNumber
    */
   @javax.annotation.Nullable
@@ -190,7 +190,7 @@ public class ParentInfo {
   }
 
   /**
-   * Get patchSetNumber
+   * If the parent commit is a patch-set of another gerrit change, this field will hold the patch-set number of the parent change. Otherwise, will be null.
    * @return patchSetNumber
    */
   @javax.annotation.Nullable
@@ -209,7 +209,7 @@ public class ParentInfo {
   }
 
   /**
-   * Get changeStatus
+   * If the parent commit is a patch-set of another gerrit change, this field will hold the change status of the parent change. Otherwise, will be null.
    * @return changeStatus
    */
   @javax.annotation.Nullable

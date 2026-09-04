@@ -77,7 +77,7 @@ public class FetchInfo {
   }
 
   /**
-   * Get url
+   * The URL of the project.
    * @return url
    */
   @javax.annotation.Nullable
@@ -96,7 +96,7 @@ public class FetchInfo {
   }
 
   /**
-   * Get ref
+   * The ref of the patch set.
    * @return ref
    */
   @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class FetchInfo {
   }
 
   /**
-   * Get commands
+   * The download commands for this patch set as a map that maps the command names to the commands. + Only set if download commands are requested.
    * @return commands
    */
   @javax.annotation.Nullable

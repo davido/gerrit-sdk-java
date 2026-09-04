@@ -65,7 +65,7 @@ public class HeadInput {
   }
 
   /**
-   * Get ref
+   * The ref to which HEAD should be set, the refs/heads prefix can be omitted.
    * @return ref
    */
   @javax.annotation.Nullable

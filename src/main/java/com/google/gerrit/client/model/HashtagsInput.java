@@ -80,7 +80,7 @@ public class HashtagsInput {
   }
 
   /**
-   * Get add
+   * The list of hashtags to be added to the change.
    * @return add
    */
   @javax.annotation.Nullable
@@ -107,7 +107,7 @@ public class HashtagsInput {
   }
 
   /**
-   * Get remove
+   * The list of hashtags to be removed from the change.
    * @return remove
    */
   @javax.annotation.Nullable

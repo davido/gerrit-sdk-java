@@ -150,7 +150,7 @@ public class AuthInfo {
   }
 
   /**
-   * Get useContributorAgreements
+   * Whether contributor agreements are required.
    * @return useContributorAgreements
    */
   @javax.annotation.Nullable
@@ -177,7 +177,7 @@ public class AuthInfo {
   }
 
   /**
-   * Get contributorAgreements
+   * List of contributor agreements as ContributorAgreementInfo entities.
    * @return contributorAgreements
    */
   @javax.annotation.Nullable
@@ -204,7 +204,7 @@ public class AuthInfo {
   }
 
   /**
-   * Get editableAccountFields
+   * List of account fields that are editable. Possible values are FULL_NAME, USER_NAME and REGISTER_NEW_EMAIL.
    * @return editableAccountFields
    */
   @javax.annotation.Nullable
@@ -223,7 +223,7 @@ public class AuthInfo {
   }
 
   /**
-   * Get loginUrl
+   * The login URL. Only set if authentication type is HTTP or HTTP_LDAP.
    * @return loginUrl
    */
   @javax.annotation.Nullable
@@ -242,7 +242,7 @@ public class AuthInfo {
   }
 
   /**
-   * Get loginText
+   * The login text. Only set if authentication type is HTTP or HTTP_LDAP.
    * @return loginText
    */
   @javax.annotation.Nullable
@@ -261,7 +261,7 @@ public class AuthInfo {
   }
 
   /**
-   * Get switchAccountUrl
+   * The URL to switch accounts.
    * @return switchAccountUrl
    */
   @javax.annotation.Nullable
@@ -280,7 +280,7 @@ public class AuthInfo {
   }
 
   /**
-   * Get registerUrl
+   * The register URL. Only set if authentication type is LDAP, LDAP_BIND or CUSTOM_EXTENSION.
    * @return registerUrl
    */
   @javax.annotation.Nullable
@@ -299,7 +299,7 @@ public class AuthInfo {
   }
 
   /**
-   * Get registerText
+   * The register text. Only set if authentication type is LDAP, LDAP_BIND or CUSTOM_EXTENSION.
    * @return registerText
    */
   @javax.annotation.Nullable
@@ -318,7 +318,7 @@ public class AuthInfo {
   }
 
   /**
-   * Get editFullNameUrl
+   * The URL to edit the full name. Only set if authentication type is LDAP, LDAP_BIND or CUSTOM_EXTENSION.
    * @return editFullNameUrl
    */
   @javax.annotation.Nullable
@@ -337,7 +337,7 @@ public class AuthInfo {
   }
 
   /**
-   * Get httpPasswordUrl
+   * The URL to obtain an HTTP password. Only set if authentication type is CUSTOM_EXTENSION.
    * @return httpPasswordUrl
    */
   @javax.annotation.Nullable
@@ -356,7 +356,7 @@ public class AuthInfo {
   }
 
   /**
-   * Get gitBasicAuthPolicy
+   * The policy to authenticate Git over HTTP and REST API requests when authentication type is LDAP, LDAP_BIND or OAUTH. Can be HTTP, LDAP, HTTP_LDAP or OAUTH.
    * @return gitBasicAuthPolicy
    */
   @javax.annotation.Nullable
@@ -375,7 +375,7 @@ public class AuthInfo {
   }
 
   /**
-   * Get maxTokenLifetime
+   * The maximum lifetime of authentication tokens.
    * @return maxTokenLifetime
    */
   @javax.annotation.Nullable

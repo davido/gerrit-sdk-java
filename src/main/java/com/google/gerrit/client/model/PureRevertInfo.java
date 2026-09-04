@@ -65,7 +65,7 @@ public class PureRevertInfo {
   }
 
   /**
-   * Get isPureRevert
+   * Outcome of the check as boolean.
    * @return isPureRevert
    */
   @javax.annotation.Nullable

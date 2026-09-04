@@ -66,7 +66,7 @@ public class CheckProjectInput {
   }
 
   /**
-   * Get autoCloseableChangesCheck
+   * Parameters for the AutoCloseableChangesCheck as AutoCloseableChangesCheckInput entity.
    * @return autoCloseableChangesCheck
    */
   @javax.annotation.Nullable

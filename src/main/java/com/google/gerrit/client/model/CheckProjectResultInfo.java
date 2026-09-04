@@ -66,7 +66,7 @@ public class CheckProjectResultInfo {
   }
 
   /**
-   * Get autoCloseableChangesCheckResult
+   * Results for the AutoCloseableChangesCheck as AutoCloseableChangesCheckResult entity.
    * @return autoCloseableChangesCheckResult
    */
   @javax.annotation.Nullable

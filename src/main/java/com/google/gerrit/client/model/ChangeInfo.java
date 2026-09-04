@@ -369,7 +369,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get id
+   * The ID of the change. The format is \&quot;&#39;&lt;project&gt;\\~&lt;_number&gt;&#39;\&quot;. &#39;project&#39; and &#39;_number&#39; are URL encoded. The callers must not rely on the format.
    * @return id
    */
   @javax.annotation.Nullable
@@ -388,7 +388,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get tripletId
+   * The ID of the change in the format \&quot;&#39;&lt;project&gt;\\~&lt;branch&gt;~&lt;Change-Id&gt;&#39;\&quot;, where &#39;project&#39; and &#39;branch&#39; are URL encoded. For &#39;branch&#39; the refs/heads/ prefix is omitted.
    * @return tripletId
    */
   @javax.annotation.Nullable
@@ -407,7 +407,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get project
+   * The name of the project.
    * @return project
    */
   @javax.annotation.Nullable
@@ -426,7 +426,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get branch
+   * The name of the target branch. + The refs/heads/ prefix is omitted.
    * @return branch
    */
   @javax.annotation.Nullable
@@ -445,7 +445,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get fullBranch
+   * The full name of the target branch. + Always starts with refs/.
    * @return fullBranch
    */
   @javax.annotation.Nullable
@@ -464,7 +464,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get topic
+   * The topic to which this change belongs.
    * @return topic
    */
   @javax.annotation.Nullable
@@ -491,7 +491,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get attentionSet
+   * The map that maps account IDs to AttentionSetInfo of that account. Those are all accounts that are currently in the attention set.
    * @return attentionSet
    */
   @javax.annotation.Nullable
@@ -518,7 +518,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get removedFromAttentionSet
+   * The map that maps account IDs to AttentionSetInfo of that account. Those are all accounts that were in the attention set but were removed. The AttentionSetInfo is the latest and most recent removal of the account from the attention set.
    * @return removedFromAttentionSet
    */
   @javax.annotation.Nullable
@@ -545,7 +545,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get customKeyedValues
+   * A map that maps custom keys to custom values that are tied to a specific change, both in the form of strings. Only set if custom keyed values are requested.
    * @return customKeyedValues
    */
   @javax.annotation.Nullable
@@ -572,7 +572,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get hashtags
+   * List of hashtags that are set on the change.
    * @return hashtags
    */
   @javax.annotation.Nullable
@@ -591,7 +591,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get changeId
+   * The Change-Id of the change.
    * @return changeId
    */
   @javax.annotation.Nullable
@@ -610,7 +610,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get subject
+   * The subject of the change (header line of the commit message).
    * @return subject
    */
   @javax.annotation.Nullable
@@ -629,7 +629,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get status
+   * The status of the change (NEW, MERGED, ABANDONED).
    * @return status
    */
   @javax.annotation.Nullable
@@ -648,7 +648,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get created
+   * The timestamp of when the change was created.
    * @return created
    */
   @javax.annotation.Nullable
@@ -667,7 +667,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get updated
+   * The timestamp of when the change was last updated.
    * @return updated
    */
   @javax.annotation.Nullable
@@ -686,7 +686,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get submitted
+   * The timestamp of when the change was submitted.
    * @return submitted
    */
   @javax.annotation.Nullable
@@ -705,7 +705,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get submitter
+   * The user who submitted the change, as an AccountInfo entity.
    * @return submitter
    */
   @javax.annotation.Nullable
@@ -724,7 +724,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get starred
+   * Whether the calling user has starred this change. Only set if requested.
    * @return starred
    */
   @javax.annotation.Nullable
@@ -770,7 +770,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get reviewed
+   * Whether the change was reviewed by the calling user. Only set if reviewed is requested.
    * @return reviewed
    */
   @javax.annotation.Nullable
@@ -789,7 +789,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get submitType
+   * The submit type of the change. + Not set for merged changes.
    * @return submitType
    */
   @javax.annotation.Nullable
@@ -808,7 +808,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get mergeable
+   * Whether the change is mergeable. + Only set for open changes if change.mergeabilityComputationBehavior is API_REF_UPDATED_AND_CHANGE_REINDEX.
    * @return mergeable
    */
   @javax.annotation.Nullable
@@ -827,7 +827,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get submittable
+   * Whether the change has been approved by the project submit rules. + Only set if requested.
    * @return submittable
    */
   @javax.annotation.Nullable
@@ -846,7 +846,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get insertions
+   * Number of inserted lines.
    * @return insertions
    */
   @javax.annotation.Nullable
@@ -865,7 +865,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get deletions
+   * Number of deleted lines.
    * @return deletions
    */
   @javax.annotation.Nullable
@@ -884,7 +884,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get totalCommentCount
+   * Total number of inline comments across all patch sets.
    * @return totalCommentCount
    */
   @javax.annotation.Nullable
@@ -903,7 +903,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get unresolvedCommentCount
+   * Number of unresolved inline comment threads across all patch sets.
    * @return unresolvedCommentCount
    */
   @javax.annotation.Nullable
@@ -922,7 +922,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get isPrivate
+   * When present, change is marked as private.
    * @return isPrivate
    */
   @javax.annotation.Nullable
@@ -941,7 +941,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get workInProgress
+   * When present, change is marked as Work In Progress.
    * @return workInProgress
    */
   @javax.annotation.Nullable
@@ -960,7 +960,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get hasReviewStarted
+   * When present, change has been marked Ready at some point in time.
    * @return hasReviewStarted
    */
   @javax.annotation.Nullable
@@ -979,7 +979,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get revertOf
+   * The change number of the change that this change reverts.
    * @return revertOf
    */
   @javax.annotation.Nullable
@@ -998,7 +998,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get submissionId
+   * ID of the submission of this change. Only set if the status is MERGED. This ID is equal to the change number of the change that triggered the submission. If the change that triggered the submission also has a topic, it will be \&quot;&lt;id&gt;-&lt;topic&gt;\&quot; of the change that triggered the submission.
    * @return submissionId
    */
   @javax.annotation.Nullable
@@ -1017,7 +1017,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get cherryPickOfChange
+   * The change number of the change that this change was cherry-picked from. Only set if the cherry-pick has been done through the Gerrit REST API (and not if a cherry-picked commit was pushed).
    * @return cherryPickOfChange
    */
   @javax.annotation.Nullable
@@ -1036,7 +1036,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get cherryPickOfPatchSet
+   * The patchset number of the change that this change was cherry-picked from. Only set if the cherry-pick has been done through the Gerrit REST API (and not if a cherry-picked commit was pushed).
    * @return cherryPickOfPatchSet
    */
   @javax.annotation.Nullable
@@ -1055,7 +1055,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get metaRevId
+   * The SHA-1 of the NoteDb meta ref.
    * @return metaRevId
    */
   @javax.annotation.Nullable
@@ -1074,7 +1074,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get containsGitConflicts
+   * Whether the change contains conflicts. + If true, some of the file contents of the change contain git conflict markers to indicate the conflicts. + Only set if this change info is returned in response to a request that creates a new change or patch set and conflicts are allowed.
    * @return containsGitConflicts
    */
   @javax.annotation.Nullable
@@ -1093,7 +1093,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get number
+   * The change number. (The underscore is just a relict of a prior attempt to deprecate the change number.)
    * @return number
    */
   @javax.annotation.Nullable
@@ -1112,7 +1112,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get virtualIdNumber
+   * The virtual id number is globally unique. For local changes, it is equal to the _number attribute. For imported changes, the original _number is processed through a function designed to prevent conflicts with local change numbers.
    * @return virtualIdNumber
    */
   @javax.annotation.Nullable
@@ -1131,7 +1131,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get owner
+   * The owner of the change as an AccountInfo entity.
    * @return owner
    */
   @javax.annotation.Nullable
@@ -1158,7 +1158,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get actions
+   * Actions the caller might be able to perform on this revision. The information is a map of view name to ActionInfo entities.
    * @return actions
    */
   @javax.annotation.Nullable
@@ -1185,7 +1185,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get labels
+   * The labels of the change as a map that maps the label names to LabelInfo entries. + Only set if labels or detailed labels are requested.
    * @return labels
    */
   @javax.annotation.Nullable
@@ -1212,7 +1212,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get permittedLabels
+   * A map of the permitted labels that maps a label name to the list of values that the current user can vote on. + Only set if detailed labels are requested.
    * @return permittedLabels
    */
   @javax.annotation.Nullable
@@ -1239,7 +1239,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get removableLabels
+   * A map of the removable labels that maps a label name to the map of values and reviewers ( AccountInfo entities) that are allowed to be removed from the change. + Only set if labels or detailed labels are requested.
    * @return removableLabels
    */
   @javax.annotation.Nullable
@@ -1266,7 +1266,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get removableReviewers
+   * The reviewers that can be removed by the calling user as a list of AccountInfo entities. + Only set if labels or detailed labels are requested.
    * @return removableReviewers
    */
   @javax.annotation.Nullable
@@ -1293,7 +1293,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get reviewers
+   * The reviewers as a map that maps a reviewer state to a list of AccountInfo entities. Possible reviewer states are REVIEWER, CC. + REVIEWER: Users with at least one non-zero vote on the change. + CC: Users that were added to the change, but have not voted.
    * @return reviewers
    */
   @javax.annotation.Nullable
@@ -1320,7 +1320,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get pendingReviewers
+   * Updates to reviewers that have been made while the change was in the WIP state. Only present on WIP changes and only if there are pending reviewer updates to report. These are reviewers who have not yet been notified about being added to or removed from the change.
    * @return pendingReviewers
    */
   @javax.annotation.Nullable
@@ -1347,7 +1347,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get reviewerUpdates
+   * Updates to reviewers set for the change as ReviewerUpdateInfo entities. Only set if reviewer updates are requested.
    * @return reviewerUpdates
    */
   @javax.annotation.Nullable
@@ -1374,7 +1374,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get messages
+   * Messages associated with the change as a list of ChangeMessageInfo entities. + Only set if messages are requested.
    * @return messages
    */
   @javax.annotation.Nullable
@@ -1393,7 +1393,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get currentRevisionNumber
+   * The number of the current patch set of this change. +
    * @return currentRevisionNumber
    */
   @javax.annotation.Nullable
@@ -1412,7 +1412,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get currentRevision
+   * The commit ID of the current patch set of this change. + Only set if the current revision is requested or if all revisions are requested.
    * @return currentRevision
    */
   @javax.annotation.Nullable
@@ -1439,7 +1439,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get revisions
+   * All patch sets of this change as a map that maps the commit ID of the patch set to a RevisionInfo entity. + Only set if the current revision is requested (in which case it will only contain a key for the current revision) or if all revisions are requested.
    * @return revisions
    */
   @javax.annotation.Nullable
@@ -1458,7 +1458,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get moreChanges
+   * Whether the query would deliver more results if not limited. + Only set on the last change that is returned.
    * @return moreChanges
    */
   @javax.annotation.Nullable
@@ -1485,7 +1485,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get problems
+   * A list of ProblemInfo entities describing potential problems with this change. Only set if CHECK is set.
    * @return problems
    */
   @javax.annotation.Nullable
@@ -1539,7 +1539,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get trackingIds
+   * A list of TrackingIdInfo entities describing references to external tracking systems. Only set if tracking ids are requested.
    * @return trackingIds
    */
   @javax.annotation.Nullable
@@ -1566,7 +1566,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get requirements
+   * List of the requirements to be met before this change can be submitted. This field is deprecated in favour of submit_requirements. Only set if SUBMIT_REQUIREMENTS is requested.
    * @return requirements
    */
   @javax.annotation.Nullable
@@ -1593,7 +1593,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get submitRecords
+   * List of the SubmitRecordInfo containing the submit records for the change at the latest patchset. This field is deprecated in favour of submit_requirements. Only set if SUBMIT_REQUIREMENTS is requested.
    * @return submitRecords
    */
   @javax.annotation.Nullable
@@ -1620,7 +1620,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get submitRequirements
+   * List of the SubmitRequirementResultInfo containing the evaluated submit requirements for the change. Only set if SUBMIT_REQUIREMENTS is requested.
    * @return submitRequirements
    */
   @javax.annotation.Nullable

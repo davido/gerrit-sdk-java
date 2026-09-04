@@ -75,7 +75,7 @@ public class AuthTokenInfo {
   }
 
   /**
-   * Get id
+   * The id of the token.
    * @return id
    */
   @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class AuthTokenInfo {
   }
 
   /**
-   * Get token
+   * The token in plain text. Will only be returned once when creating the token.
    * @return token
    */
   @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class AuthTokenInfo {
   }
 
   /**
-   * Get expiration
+   * The timestamp at which the token will expire or has been expired. If null, token lifetime is unlimited.
    * @return expiration
    */
   @javax.annotation.Nullable

@@ -148,7 +148,7 @@ public class GerritInfo {
   }
 
   /**
-   * Get docSearch
+   * Whether documentation search is available.
    * @return docSearch
    */
   @javax.annotation.Nullable
@@ -167,7 +167,7 @@ public class GerritInfo {
   }
 
   /**
-   * Get docUrl
+   * Custom base URL where Gerrit server documentation is located. (Documentation may still be available at /Documentation relative to the Gerrit base path even if this value is unset.)
    * @return docUrl
    */
   @javax.annotation.Nullable
@@ -186,7 +186,7 @@ public class GerritInfo {
   }
 
   /**
-   * Get editGpgKeys
+   * Whether to enable the web UI for editing GPG keys.
    * @return editGpgKeys
    */
   @javax.annotation.Nullable
@@ -205,7 +205,7 @@ public class GerritInfo {
   }
 
   /**
-   * Get reportBugUrl
+   * URL to report bugs.
    * @return reportBugUrl
    */
   @javax.annotation.Nullable
@@ -243,7 +243,7 @@ public class GerritInfo {
   }
 
   /**
-   * Get instanceId
+   * Short identifier for this Gerrit installation.
    * @return instanceId
    */
   @javax.annotation.Nullable
@@ -262,7 +262,7 @@ public class GerritInfo {
   }
 
   /**
-   * Get defaultBranch
+   * Name of the default branch to use on the project creation.
    * @return defaultBranch
    */
   @javax.annotation.Nullable
@@ -281,7 +281,7 @@ public class GerritInfo {
   }
 
   /**
-   * Get projectStatePredicateEnabled
+   * Whether the instance supports filtering projects by state.
    * @return projectStatePredicateEnabled
    */
   @javax.annotation.Nullable

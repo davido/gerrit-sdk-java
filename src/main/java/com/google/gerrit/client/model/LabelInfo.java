@@ -121,7 +121,7 @@ public class LabelInfo {
   }
 
   /**
-   * Get approved
+   * One user who approved this label on the change (voted the maximum value) as an AccountInfo entity.
    * @return approved
    */
   @javax.annotation.Nullable
@@ -140,7 +140,7 @@ public class LabelInfo {
   }
 
   /**
-   * Get rejected
+   * One user who rejected this label on the change (voted the minimum value) as an AccountInfo entity.
    * @return rejected
    */
   @javax.annotation.Nullable
@@ -159,7 +159,7 @@ public class LabelInfo {
   }
 
   /**
-   * Get recommended
+   * One user who recommended this label on the change (voted positively, but not the maximum value) as an AccountInfo entity.
    * @return recommended
    */
   @javax.annotation.Nullable
@@ -178,7 +178,7 @@ public class LabelInfo {
   }
 
   /**
-   * Get disliked
+   * One user who disliked this label on the change (voted negatively, but not the minimum value) as an AccountInfo entity.
    * @return disliked
    */
   @javax.annotation.Nullable
@@ -205,7 +205,7 @@ public class LabelInfo {
   }
 
   /**
-   * Get all
+   * List of all approvals for this label as a list of ApprovalInfo entities. Items in this list may not represent actual votes cast by users; if a user votes on any label, a corresponding ApprovalInfo will appear in this list for all labels.
    * @return all
    */
   @javax.annotation.Nullable
@@ -232,7 +232,7 @@ public class LabelInfo {
   }
 
   /**
-   * Get values
+   * A map of all values that are allowed for this label. The map maps the values (\&quot;-2\&quot;, \&quot;-1\&quot;, \&quot; 0\&quot;, \&quot;+1\&quot;, \&quot;+2\&quot;) to the value descriptions.
    * @return values
    */
   @javax.annotation.Nullable
@@ -251,7 +251,7 @@ public class LabelInfo {
   }
 
   /**
-   * Get description
+   * The description of the label.
    * @return description
    */
   @javax.annotation.Nullable
@@ -270,7 +270,7 @@ public class LabelInfo {
   }
 
   /**
-   * Get value
+   * The voting value of the user who recommended/disliked this label on the change if it is not \&quot;+1\&quot;/\&quot;-1\&quot;.
    * @return value
    */
   @javax.annotation.Nullable
@@ -289,7 +289,7 @@ public class LabelInfo {
   }
 
   /**
-   * Get defaultValue
+   * The default voting value for the label. This value may be outside the range specified in permitted_labels.
    * @return defaultValue
    */
   @javax.annotation.Nullable
@@ -308,7 +308,7 @@ public class LabelInfo {
   }
 
   /**
-   * Get optional
+   * Whether the label is optional. Optional means the label may be set, but it&#39;s neither necessary for submission nor does it block submission if set.
    * @return optional
    */
   @javax.annotation.Nullable
@@ -327,7 +327,7 @@ public class LabelInfo {
   }
 
   /**
-   * Get blocking
+   * If true, the label blocks submit operation. If not set, the default is false.
    * @return blocking
    */
   @javax.annotation.Nullable

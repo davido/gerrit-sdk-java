@@ -89,7 +89,7 @@ public class FlowInfo {
   }
 
   /**
-   * Get uuid
+   * The universally unique identifier that identifies the flow.
    * @return uuid
    */
   @javax.annotation.Nullable
@@ -108,7 +108,7 @@ public class FlowInfo {
   }
 
   /**
-   * Get owner
+   * The owner of the flow as an AccountInfo entity.
    * @return owner
    */
   @javax.annotation.Nullable
@@ -127,7 +127,7 @@ public class FlowInfo {
   }
 
   /**
-   * Get created
+   * The timestamp of when the flow was created.
    * @return created
    */
   @javax.annotation.Nullable
@@ -154,7 +154,7 @@ public class FlowInfo {
   }
 
   /**
-   * Get stages
+   * The stages of this flow as a list of FlowStageInfo entities (sorted by execution order).
    * @return stages
    */
   @javax.annotation.Nullable
@@ -173,7 +173,7 @@ public class FlowInfo {
   }
 
   /**
-   * Get lastEvaluated
+   * The timestamp of when the flow was last evaluated. Not set if the flow has not been evaluated yet.
    * @return lastEvaluated
    */
   @javax.annotation.Nullable

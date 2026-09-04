@@ -103,7 +103,7 @@ public class AccountInput {
   }
 
   /**
-   * Get username
+   * The user name. If provided, must match the user name from the URL.
    * @return username
    */
   @javax.annotation.Nullable
@@ -122,7 +122,7 @@ public class AccountInput {
   }
 
   /**
-   * Get name
+   * The full name of the user.
    * @return name
    */
   @javax.annotation.Nullable
@@ -141,7 +141,7 @@ public class AccountInput {
   }
 
   /**
-   * Get displayName
+   * The display name of the user.
    * @return displayName
    */
   @javax.annotation.Nullable
@@ -160,7 +160,7 @@ public class AccountInput {
   }
 
   /**
-   * Get email
+   * The email address of the user.
    * @return email
    */
   @javax.annotation.Nullable
@@ -179,7 +179,7 @@ public class AccountInput {
   }
 
   /**
-   * Get sshKey
+   * The public SSH key of the user.
    * @return sshKey
    */
   @javax.annotation.Nullable
@@ -198,7 +198,7 @@ public class AccountInput {
   }
 
   /**
-   * Get httpPassword
+   * The HTTP password of the user. (deprecated)
    * @return httpPassword
    */
   @javax.annotation.Nullable
@@ -225,7 +225,7 @@ public class AccountInput {
   }
 
   /**
-   * Get tokens
+   * A list of tokens in the form of AuthTokenInputs to assign to the user.
    * @return tokens
    */
   @javax.annotation.Nullable
@@ -252,7 +252,7 @@ public class AccountInput {
   }
 
   /**
-   * Get groups
+   * A list of group IDs that identify the groups to which the user should be added.
    * @return groups
    */
   @javax.annotation.Nullable

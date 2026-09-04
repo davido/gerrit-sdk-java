@@ -84,7 +84,7 @@ public class SummaryInfo {
   }
 
   /**
-   * Get taskSummary
+   * Summary about current tasks as a TaskSummaryInfo entity.
    * @return taskSummary
    */
   @javax.annotation.Nullable
@@ -103,7 +103,7 @@ public class SummaryInfo {
   }
 
   /**
-   * Get memSummary
+   * Summary about current memory usage as a MemSummaryInfo entity.
    * @return memSummary
    */
   @javax.annotation.Nullable
@@ -122,7 +122,7 @@ public class SummaryInfo {
   }
 
   /**
-   * Get threadSummary
+   * Summary about current threads as a ThreadSummaryInfo entity.
    * @return threadSummary
    */
   @javax.annotation.Nullable
@@ -141,7 +141,7 @@ public class SummaryInfo {
   }
 
   /**
-   * Get jvmSummary
+   * Summary about the JVM JvmSummaryInfo entity. Only set if the jvm option was set.
    * @return jvmSummary
    */
   @javax.annotation.Nullable

@@ -90,7 +90,7 @@ public class MemSummaryInfo {
   }
 
   /**
-   * Get total
+   * The total size of the memory. The value is returned with a unit abbreviation (k: kilobytes, m: megabytes, g: gigabytes).
    * @return total
    */
   @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class MemSummaryInfo {
   }
 
   /**
-   * Get used
+   * The size of used memory. The value is returned with a unit abbreviation (k: kilobytes, m: megabytes, g: gigabytes).
    * @return used
    */
   @javax.annotation.Nullable
@@ -128,7 +128,7 @@ public class MemSummaryInfo {
   }
 
   /**
-   * Get free
+   * The size of free memory. The value is returned with a unit abbreviation (k: kilobytes, m: megabytes, g: gigabytes).
    * @return free
    */
   @javax.annotation.Nullable
@@ -147,7 +147,7 @@ public class MemSummaryInfo {
   }
 
   /**
-   * Get buffers
+   * The size of memory used for JGit buffers. The value is returned with a unit abbreviation (k: kilobytes, m: megabytes, g: gigabytes).
    * @return buffers
    */
   @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class MemSummaryInfo {
   }
 
   /**
-   * Get max
+   * The maximal memory size. The value is returned with a unit abbreviation (k: kilobytes, m: megabytes, g: gigabytes).
    * @return max
    */
   @javax.annotation.Nullable
@@ -185,7 +185,7 @@ public class MemSummaryInfo {
   }
 
   /**
-   * Get openFiles
+   * The number of open files.
    * @return openFiles
    */
   @javax.annotation.Nullable

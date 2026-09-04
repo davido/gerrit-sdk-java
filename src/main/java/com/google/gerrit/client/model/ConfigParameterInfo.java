@@ -118,7 +118,7 @@ public class ConfigParameterInfo {
   }
 
   /**
-   * Get displayName
+   * The display name of the configuration parameter.
    * @return displayName
    */
   @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class ConfigParameterInfo {
   }
 
   /**
-   * Get description
+   * The description of the configuration parameter.
    * @return description
    */
   @javax.annotation.Nullable
@@ -156,7 +156,7 @@ public class ConfigParameterInfo {
   }
 
   /**
-   * Get warning
+   * Warning message for the configuration parameter.
    * @return warning
    */
   @javax.annotation.Nullable
@@ -175,7 +175,7 @@ public class ConfigParameterInfo {
   }
 
   /**
-   * Get type
+   * The type of the configuration parameter. Can be STRING, INT, LONG, BOOLEAN, LIST or ARRAY.
    * @return type
    */
   @javax.annotation.Nullable
@@ -194,7 +194,7 @@ public class ConfigParameterInfo {
   }
 
   /**
-   * Get value
+   * The value of the configuration parameter as string. If the parameter is inheritable this is the effective value which is deduced from configured_value and inherited_value.
    * @return value
    */
   @javax.annotation.Nullable
@@ -213,7 +213,7 @@ public class ConfigParameterInfo {
   }
 
   /**
-   * Get editable
+   * Whether the value is editable.
    * @return editable
    */
   @javax.annotation.Nullable
@@ -232,7 +232,7 @@ public class ConfigParameterInfo {
   }
 
   /**
-   * Get inheritable
+   * Whether the configuration parameter can be inherited.
    * @return inheritable
    */
   @javax.annotation.Nullable
@@ -251,7 +251,7 @@ public class ConfigParameterInfo {
   }
 
   /**
-   * Get configuredValue
+   * The value of the configuration parameter that is configured on this project, only set if inheritable is true.
    * @return configuredValue
    */
   @javax.annotation.Nullable
@@ -270,7 +270,7 @@ public class ConfigParameterInfo {
   }
 
   /**
-   * Get inheritedValue
+   * The inherited value of the configuration parameter, only set if inheritable is true.
    * @return inheritedValue
    */
   @javax.annotation.Nullable
@@ -297,7 +297,7 @@ public class ConfigParameterInfo {
   }
 
   /**
-   * Get permittedValues
+   * The list of permitted values. Only set if the type is LIST.
    * @return permittedValues
    */
   @javax.annotation.Nullable
@@ -324,7 +324,7 @@ public class ConfigParameterInfo {
   }
 
   /**
-   * Get values
+   * The list of values. Only set if the type is ARRAY.
    * @return values
    */
   @javax.annotation.Nullable

@@ -90,7 +90,7 @@ public class SubmitRecordInfo {
   }
 
   /**
-   * Get ruleName
+   * The name of the submit rule that created this submit record. The submit rule is specified in the form of \&quot;$plugin~$rule\&quot; where $plugin is the plugin name and $rule is the name of the class that implemented the submit rule.
    * @return ruleName
    */
   @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class SubmitRecordInfo {
   }
 
   /**
-   * Get status
+   * OK, the change can be submitted. + NOT_READY, additional labels are required before submit. + CLOSED, closed changes cannot be submitted. + FORCED, the change was submitted bypassing the submit rule. + RULE_ERROR, rule code failed with an error.
    * @return status
    */
   @javax.annotation.Nullable
@@ -136,7 +136,7 @@ public class SubmitRecordInfo {
   }
 
   /**
-   * Get labels
+   * A list of labels, each containing the following fields. + * label: the label name. + * status: the label status: {OK, REJECT, MAY, NEED, IMPOSSIBLE}. + * appliedBy: the AccountInfo that applied the vote to the label.
    * @return labels
    */
   @javax.annotation.Nullable
@@ -163,7 +163,7 @@ public class SubmitRecordInfo {
   }
 
   /**
-   * Get requirements
+   * List of the requirements to be met before this change can be submitted.
    * @return requirements
    */
   @javax.annotation.Nullable
@@ -182,7 +182,7 @@ public class SubmitRecordInfo {
   }
 
   /**
-   * Get errorMessage
+   * When status is RULE_ERROR this message provides some text describing the failure of the rule predicate.
    * @return errorMessage
    */
   @javax.annotation.Nullable

@@ -76,7 +76,7 @@ public class InheritedBooleanInfo {
   }
 
   /**
-   * Get value
+   * The effective boolean value.
    * @return value
    */
   @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class InheritedBooleanInfo {
   }
 
   /**
-   * Get configuredValue
+   * The configured value, can be TRUE, FALSE or INHERIT.
    * @return configuredValue
    */
   @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class InheritedBooleanInfo {
   }
 
   /**
-   * Get inheritedValue
+   * The boolean value inherited from the parent. + Not set if there is no parent.
    * @return inheritedValue
    */
   @javax.annotation.Nullable

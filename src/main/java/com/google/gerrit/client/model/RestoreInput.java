@@ -65,7 +65,7 @@ public class RestoreInput {
   }
 
   /**
-   * Get message
+   * Message to be added as review comment to the change when restoring the change.
    * @return message
    */
   @javax.annotation.Nullable

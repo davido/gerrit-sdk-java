@@ -76,7 +76,7 @@ public class CheckAccountsResultInfo {
   }
 
   /**
-   * Get problems
+   * A list of ConsistencyProblemInfo entities.
    * @return problems
    */
   @javax.annotation.Nullable

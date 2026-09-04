@@ -87,7 +87,7 @@ public class ReviewerUpdateInfo {
   }
 
   /**
-   * Get updated
+   * Timestamp of the update.
    * @return updated
    */
   @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class ReviewerUpdateInfo {
   }
 
   /**
-   * Get updatedBy
+   * The account which modified state of the reviewer in question as AccountInfo entity.
    * @return updatedBy
    */
   @javax.annotation.Nullable
@@ -125,7 +125,7 @@ public class ReviewerUpdateInfo {
   }
 
   /**
-   * Get realUpdatedBy
+   * The account which actually modified the state of the reviewer in question as AccountInfo entity. This will be different from updated_by in case of impersonation. For example, if Alice impersonates Bob and changes the state of a reviewer, updated_by will be Bob and real_updated_by will be Alice.
    * @return realUpdatedBy
    */
   @javax.annotation.Nullable
@@ -144,7 +144,7 @@ public class ReviewerUpdateInfo {
   }
 
   /**
-   * Get reviewer
+   * The reviewer added or removed from the change as an AccountInfo entity. For reviewers by email the AccountInfo doesn&#39;t contain an account ID but only the email and optionally a name.
    * @return reviewer
    */
   @javax.annotation.Nullable
@@ -163,7 +163,7 @@ public class ReviewerUpdateInfo {
   }
 
   /**
-   * Get state
+   * The reviewer state, one of REVIEWER, CC or REMOVED.
    * @return state
    */
   @javax.annotation.Nullable

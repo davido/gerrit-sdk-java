@@ -85,7 +85,7 @@ public class BatchSubmitRequirementInput {
   }
 
   /**
-   * Get commitMessage
+   * Message that should be used to commit the submit requirements updates in the project.config file to the refs/meta/config branch.
    * @return commitMessage
    */
   @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class BatchSubmitRequirementInput {
   }
 
   /**
-   * Get delete
+   * List of submit requirements that should be deleted.
    * @return delete
    */
   @javax.annotation.Nullable
@@ -139,7 +139,7 @@ public class BatchSubmitRequirementInput {
   }
 
   /**
-   * Get create
+   * List of SubmitRequirementInput entities that describe submit requirements that should be created.
    * @return create
    */
   @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class BatchSubmitRequirementInput {
   }
 
   /**
-   * Get update
+   * Map of submit requirement names to SubmitRequirementInput entities that describe the updates that should be done for the submit requirements. The given inputs must set all properties (including those that are not being changed).
    * @return update
    */
   @javax.annotation.Nullable

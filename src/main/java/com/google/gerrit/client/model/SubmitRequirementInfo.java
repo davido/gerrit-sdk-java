@@ -95,7 +95,7 @@ public class SubmitRequirementInfo {
   }
 
   /**
-   * Get name
+   * The submit requirement name.
    * @return name
    */
   @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class SubmitRequirementInfo {
   }
 
   /**
-   * Get description
+   * Description of the submit requirement.
    * @return description
    */
   @javax.annotation.Nullable
@@ -133,7 +133,7 @@ public class SubmitRequirementInfo {
   }
 
   /**
-   * Get projectName
+   * The name of the project in which this submit requirement is defined. Not set for globally defined submit requirements.
    * @return projectName
    */
   @javax.annotation.Nullable
@@ -152,7 +152,7 @@ public class SubmitRequirementInfo {
   }
 
   /**
-   * Get applicabilityExpression
+   * Query expression that can be evaluated on any change. If evaluated to true on a change, the submit requirement is then applicable for this change. If not specified, the submit requirement is applicable for all changes.
    * @return applicabilityExpression
    */
   @javax.annotation.Nullable
@@ -171,7 +171,7 @@ public class SubmitRequirementInfo {
   }
 
   /**
-   * Get submittabilityExpression
+   * Query expression that can be evaluated on any change. If evaluated to true on a change, the submit requirement is fulfilled and not blocking change submission.
    * @return submittabilityExpression
    */
   @javax.annotation.Nullable
@@ -190,7 +190,7 @@ public class SubmitRequirementInfo {
   }
 
   /**
-   * Get overrideExpression
+   * Query expression that can be evaluated on any change. If evaluated to true on a change, the submit requirement is overridden and not blocking change submission.
    * @return overrideExpression
    */
   @javax.annotation.Nullable
@@ -209,7 +209,7 @@ public class SubmitRequirementInfo {
   }
 
   /**
-   * Get allowOverrideInChildProjects
+   * Whether this submit requirement can be overridden in child projects.
    * @return allowOverrideInChildProjects
    */
   @javax.annotation.Nullable

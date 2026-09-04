@@ -84,7 +84,7 @@ public class AttentionSetInput {
   }
 
   /**
-   * Get user
+   * ID of the account that should be added to the attention set. For removals, this field should be empty or the same as the field in the request header.
    * @return user
    */
   @javax.annotation.Nullable
@@ -103,7 +103,7 @@ public class AttentionSetInput {
   }
 
   /**
-   * Get reason
+   * The reason of for adding or removing the user.
    * @return reason
    */
   @javax.annotation.Nullable
@@ -122,7 +122,7 @@ public class AttentionSetInput {
   }
 
   /**
-   * Get notify
+   * Notify handling that defines to whom email notifications should be sent after the change is created. + Allowed values are NONE, OWNER, OWNER_REVIEWERS and ALL. + If not set, the default is OWNER.
    * @return notify
    */
   @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class AttentionSetInput {
   }
 
   /**
-   * Get notifyDetails
+   * Additional information about whom to notify about the change creation as a map of recipient type to NotifyInfo entity.
    * @return notifyDetails
    */
   @javax.annotation.Nullable

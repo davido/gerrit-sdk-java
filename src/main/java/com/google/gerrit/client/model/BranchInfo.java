@@ -126,7 +126,7 @@ public class BranchInfo {
   }
 
   /**
-   * Get webLinks
+   * Links to the branch in external sites as a list of WebLinkInfo entries.
    * @return webLinks
    */
   @javax.annotation.Nullable
@@ -145,7 +145,7 @@ public class BranchInfo {
   }
 
   /**
-   * Get ref
+   * The ref of the branch.
    * @return ref
    */
   @javax.annotation.Nullable
@@ -164,7 +164,7 @@ public class BranchInfo {
   }
 
   /**
-   * Get revision
+   * The revision to which the branch points.
    * @return revision
    */
   @javax.annotation.Nullable
@@ -183,7 +183,7 @@ public class BranchInfo {
   }
 
   /**
-   * Get canDelete
+   * Whether the calling user can delete this branch.
    * @return canDelete
    */
   @javax.annotation.Nullable

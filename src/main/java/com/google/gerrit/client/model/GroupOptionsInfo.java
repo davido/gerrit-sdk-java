@@ -65,7 +65,7 @@ public class GroupOptionsInfo {
   }
 
   /**
-   * Get visibleToAll
+   * Whether the group is visible to all registered users.
    * @return visibleToAll
    */
   @javax.annotation.Nullable

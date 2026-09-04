@@ -112,7 +112,7 @@ public class ProjectInfo {
   }
 
   /**
-   * Get id
+   * The URL encoded project name.
    * @return id
    */
   @javax.annotation.Nullable
@@ -131,7 +131,7 @@ public class ProjectInfo {
   }
 
   /**
-   * Get name
+   * The name of the project.
    * @return name
    */
   @javax.annotation.Nullable
@@ -150,7 +150,7 @@ public class ProjectInfo {
   }
 
   /**
-   * Get parent
+   * The name of the parent project. + ?-&lt;n&gt; if the parent project is not visible (&lt;n&gt; is a number which is increased for each non-visible project).
    * @return parent
    */
   @javax.annotation.Nullable
@@ -169,7 +169,7 @@ public class ProjectInfo {
   }
 
   /**
-   * Get description
+   * The description of the project.
    * @return description
    */
   @javax.annotation.Nullable
@@ -188,7 +188,7 @@ public class ProjectInfo {
   }
 
   /**
-   * Get state
+   * ACTIVE, READ_ONLY or HIDDEN.
    * @return state
    */
   @javax.annotation.Nullable
@@ -215,7 +215,7 @@ public class ProjectInfo {
   }
 
   /**
-   * Get branches
+   * Map of branch names to HEAD revisions.
    * @return branches
    */
   @javax.annotation.Nullable
@@ -242,7 +242,7 @@ public class ProjectInfo {
   }
 
   /**
-   * Get webLinks
+   * Links to the project in external sites as a list of WebLinkInfo entries.
    * @return webLinks
    */
   @javax.annotation.Nullable
@@ -269,7 +269,7 @@ public class ProjectInfo {
   }
 
   /**
-   * Get labels
+   * Map of label names to LabelTypeInfo entries. This field is filled for Create Project and Get Project calls.
    * @return labels
    */
   @javax.annotation.Nullable
@@ -288,7 +288,7 @@ public class ProjectInfo {
   }
 
   /**
-   * Get moreProjects
+   * Whether the query would deliver more results if not limited. + Only set on the last project that is returned.
    * @return moreProjects
    */
   @javax.annotation.Nullable

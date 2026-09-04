@@ -76,7 +76,7 @@ public class CheckAccountExternalIdsResultInfo {
   }
 
   /**
-   * Get problems
+   * A list of ConsistencyProblemInfo entities.
    * @return problems
    */
   @javax.annotation.Nullable

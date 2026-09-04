@@ -83,7 +83,7 @@ public class MetadataInfo {
   }
 
   /**
-   * Get name
+   * The metadata name. Not guaranteed to be unique, e.g. multiple metadata entries with the same name may be returned.
    * @return name
    */
   @javax.annotation.Nullable
@@ -102,7 +102,7 @@ public class MetadataInfo {
   }
 
   /**
-   * Get value
+   * The metadata value.
    * @return value
    */
   @javax.annotation.Nullable
@@ -121,7 +121,7 @@ public class MetadataInfo {
   }
 
   /**
-   * Get description
+   * A description of the metadata.
    * @return description
    */
   @javax.annotation.Nullable
@@ -148,7 +148,7 @@ public class MetadataInfo {
   }
 
   /**
-   * Get webLinks
+   * A list of web links as WebLinkInfo entities.
    * @return webLinks
    */
   @javax.annotation.Nullable

@@ -90,7 +90,7 @@ public class SubmitRequirementInput {
   }
 
   /**
-   * Get name
+   * The submit requirement name.
    * @return name
    */
   @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class SubmitRequirementInput {
   }
 
   /**
-   * Get description
+   * Description of the submit requirement.
    * @return description
    */
   @javax.annotation.Nullable
@@ -128,7 +128,7 @@ public class SubmitRequirementInput {
   }
 
   /**
-   * Get applicabilityExpression
+   * Query expression that can be evaluated on any change. If evaluated to true on a change, the submit requirement is then applicable for this change. If not specified, the submit requirement is applicable for all changes.
    * @return applicabilityExpression
    */
   @javax.annotation.Nullable
@@ -147,7 +147,7 @@ public class SubmitRequirementInput {
   }
 
   /**
-   * Get submittabilityExpression
+   * Query expression that can be evaluated on any change. If evaluated to true on a change, the submit requirement is fulfilled and not blocking change submission.
    * @return submittabilityExpression
    */
   @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class SubmitRequirementInput {
   }
 
   /**
-   * Get overrideExpression
+   * Query expression that can be evaluated on any change. If evaluated to true on a change, the submit requirement is overridden and not blocking change submission.
    * @return overrideExpression
    */
   @javax.annotation.Nullable
@@ -185,7 +185,7 @@ public class SubmitRequirementInput {
   }
 
   /**
-   * Get allowOverrideInChildProjects
+   * Whether this submit requirement can be overridden in child projects. Default is true.
    * @return allowOverrideInChildProjects
    */
   @javax.annotation.Nullable

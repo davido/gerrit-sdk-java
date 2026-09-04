@@ -76,7 +76,7 @@ public class CheckGroupsResultInfo {
   }
 
   /**
-   * Get problems
+   * A list of ConsistencyProblemInfo entities.
    * @return problems
    */
   @javax.annotation.Nullable

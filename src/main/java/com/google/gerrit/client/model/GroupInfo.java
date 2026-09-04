@@ -124,7 +124,7 @@ public class GroupInfo {
   }
 
   /**
-   * Get url
+   * URL to information about the group. Typically a URL to a web page that permits users to apply to join the group, or manage their membership.
    * @return url
    */
   @javax.annotation.Nullable
@@ -143,7 +143,7 @@ public class GroupInfo {
   }
 
   /**
-   * Get options
+   * Options of the group
    * @return options
    */
   @javax.annotation.Nullable
@@ -162,7 +162,7 @@ public class GroupInfo {
   }
 
   /**
-   * Get description
+   * The description of the group.
    * @return description
    */
   @javax.annotation.Nullable
@@ -181,7 +181,7 @@ public class GroupInfo {
   }
 
   /**
-   * Get groupId
+   * The numeric ID of the group.
    * @return groupId
    */
   @javax.annotation.Nullable
@@ -200,7 +200,7 @@ public class GroupInfo {
   }
 
   /**
-   * Get owner
+   * The name of the owner group.
    * @return owner
    */
   @javax.annotation.Nullable
@@ -219,7 +219,7 @@ public class GroupInfo {
   }
 
   /**
-   * Get ownerId
+   * The URL encoded UUID of the owner group.
    * @return ownerId
    */
   @javax.annotation.Nullable
@@ -238,7 +238,7 @@ public class GroupInfo {
   }
 
   /**
-   * Get createdOn
+   * The timestamp of when the group was created.
    * @return createdOn
    */
   @javax.annotation.Nullable
@@ -257,7 +257,7 @@ public class GroupInfo {
   }
 
   /**
-   * Get moreGroups
+   * Whether the query would deliver more results if not limited. + Only set on the last group that is returned by a group query.
    * @return moreGroups
    */
   @javax.annotation.Nullable
@@ -284,7 +284,7 @@ public class GroupInfo {
   }
 
   /**
-   * Get members
+   * A list of AccountInfo entities describing the direct members. + Only set if members are requested.
    * @return members
    */
   @javax.annotation.Nullable
@@ -311,7 +311,7 @@ public class GroupInfo {
   }
 
   /**
-   * Get includes
+   * A list of GroupInfo entities describing the direct subgroups. + Only set if subgroups are requested.
    * @return includes
    */
   @javax.annotation.Nullable
@@ -330,7 +330,7 @@ public class GroupInfo {
   }
 
   /**
-   * Get id
+   * The URL encoded UUID of the group.
    * @return id
    */
   @javax.annotation.Nullable
@@ -349,7 +349,7 @@ public class GroupInfo {
   }
 
   /**
-   * Get name
+   * The name of the group. + For external groups the group name is missing if there is no group backend that can resolve the group UUID. E.g. this can happen when a plugin that provided a group backend was uninstalled.
    * @return name
    */
   @javax.annotation.Nullable

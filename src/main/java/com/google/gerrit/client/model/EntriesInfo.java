@@ -75,7 +75,7 @@ public class EntriesInfo {
   }
 
   /**
-   * Get mem
+   * Number of cache entries that are held in memory.
    * @return mem
    */
   @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class EntriesInfo {
   }
 
   /**
-   * Get disk
+   * Number of cache entries on the disk. For non-disk caches this value is not set; for disk caches it is only set if there are entries in the cache.
    * @return disk
    */
   @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class EntriesInfo {
   }
 
   /**
-   * Get space
+   * The space that is consumed by the cache on disk. The value is returned with a unit abbreviation (k: kilobytes, m: megabytes, g: gigabytes). Only set for disk caches.
    * @return space
    */
   @javax.annotation.Nullable

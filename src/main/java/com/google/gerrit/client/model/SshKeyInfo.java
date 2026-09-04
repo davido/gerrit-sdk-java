@@ -90,7 +90,7 @@ public class SshKeyInfo {
   }
 
   /**
-   * Get seq
+   * The sequence number of the SSH key.
    * @return seq
    */
   @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class SshKeyInfo {
   }
 
   /**
-   * Get sshPublicKey
+   * The complete public SSH key.
    * @return sshPublicKey
    */
   @javax.annotation.Nullable
@@ -128,7 +128,7 @@ public class SshKeyInfo {
   }
 
   /**
-   * Get encodedKey
+   * The encoded key.
    * @return encodedKey
    */
   @javax.annotation.Nullable
@@ -147,7 +147,7 @@ public class SshKeyInfo {
   }
 
   /**
-   * Get algorithm
+   * The algorithm of the SSH key.
    * @return algorithm
    */
   @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class SshKeyInfo {
   }
 
   /**
-   * Get comment
+   * The comment of the SSH key.
    * @return comment
    */
   @javax.annotation.Nullable
@@ -185,7 +185,7 @@ public class SshKeyInfo {
   }
 
   /**
-   * Get valid
+   * Whether the SSH key is valid.
    * @return valid
    */
   @javax.annotation.Nullable

@@ -65,7 +65,7 @@ public class UsernameInput {
   }
 
   /**
-   * Get username
+   * The new username of the account.
    * @return username
    */
   @javax.annotation.Nullable

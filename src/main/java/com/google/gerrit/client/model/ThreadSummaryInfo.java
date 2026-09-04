@@ -77,7 +77,7 @@ public class ThreadSummaryInfo {
   }
 
   /**
-   * Get cpus
+   * The number of available processors.
    * @return cpus
    */
   @javax.annotation.Nullable
@@ -96,7 +96,7 @@ public class ThreadSummaryInfo {
   }
 
   /**
-   * Get threads
+   * The total number of current threads.
    * @return threads
    */
   @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class ThreadSummaryInfo {
   }
 
   /**
-   * Get counts
+   * Detailed thread counts as a map that maps a thread kind to a map that maps a thread state to the thread count.
    * @return counts
    */
   @javax.annotation.Nullable

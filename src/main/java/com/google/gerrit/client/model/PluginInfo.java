@@ -90,7 +90,7 @@ public class PluginInfo {
   }
 
   /**
-   * Get id
+   * The ID of the plugin.
    * @return id
    */
   @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class PluginInfo {
   }
 
   /**
-   * Get version
+   * The version of the plugin.
    * @return version
    */
   @javax.annotation.Nullable
@@ -128,7 +128,7 @@ public class PluginInfo {
   }
 
   /**
-   * Get apiVersion
+   * The version of the Gerrit Api used by the plugin.
    * @return apiVersion
    */
   @javax.annotation.Nullable
@@ -147,7 +147,7 @@ public class PluginInfo {
   }
 
   /**
-   * Get indexUrl
+   * URL of the plugin&#39;s default page.
    * @return indexUrl
    */
   @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class PluginInfo {
   }
 
   /**
-   * Get filename
+   * The plugin&#39;s filename.
    * @return filename
    */
   @javax.annotation.Nullable
@@ -185,7 +185,7 @@ public class PluginInfo {
   }
 
   /**
-   * Get disabled
+   * Whether the plugin is disabled.
    * @return disabled
    */
   @javax.annotation.Nullable

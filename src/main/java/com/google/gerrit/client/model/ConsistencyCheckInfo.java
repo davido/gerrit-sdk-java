@@ -78,7 +78,7 @@ public class ConsistencyCheckInfo {
   }
 
   /**
-   * Get checkAccountsResult
+   * The result of running the account consistency check as a CheckAccountsResultInfo entity.
    * @return checkAccountsResult
    */
   @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class ConsistencyCheckInfo {
   }
 
   /**
-   * Get checkAccountExternalIdsResult
+   * The result of running the account external ID consistency check as a CheckAccountExternalIdsResultInfo entity.
    * @return checkAccountExternalIdsResult
    */
   @javax.annotation.Nullable
@@ -116,7 +116,7 @@ public class ConsistencyCheckInfo {
   }
 
   /**
-   * Get checkGroupsResult
+   * The result of running the group consistency check as a CheckGroupsResultInfo entity.
    * @return checkGroupsResult
    */
   @javax.annotation.Nullable

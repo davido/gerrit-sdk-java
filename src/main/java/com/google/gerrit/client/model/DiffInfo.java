@@ -113,7 +113,7 @@ public class DiffInfo {
   }
 
   /**
-   * Get metaA
+   * Meta information about the file on side A as a DiffFileMetaInfo entity.
    * @return metaA
    */
   @javax.annotation.Nullable
@@ -132,7 +132,7 @@ public class DiffInfo {
   }
 
   /**
-   * Get metaB
+   * Meta information about the file on side B as a DiffFileMetaInfo entity.
    * @return metaB
    */
   @javax.annotation.Nullable
@@ -151,7 +151,7 @@ public class DiffInfo {
   }
 
   /**
-   * Get intralineStatus
+   * Intraline status (OK, ERROR, TIMEOUT).
    * @return intralineStatus
    */
   @javax.annotation.Nullable
@@ -170,7 +170,7 @@ public class DiffInfo {
   }
 
   /**
-   * Get changeType
+   * The type of change (ADDED, MODIFIED, DELETED, RENAMED COPIED, REWRITE).
    * @return changeType
    */
   @javax.annotation.Nullable
@@ -197,7 +197,7 @@ public class DiffInfo {
   }
 
   /**
-   * Get diffHeader
+   * A list of strings representing the patch set diff header.
    * @return diffHeader
    */
   @javax.annotation.Nullable
@@ -224,7 +224,7 @@ public class DiffInfo {
   }
 
   /**
-   * Get content
+   * The content differences in the file as a list of DiffContent entities.
    * @return content
    */
   @javax.annotation.Nullable
@@ -251,7 +251,7 @@ public class DiffInfo {
   }
 
   /**
-   * Get webLinks
+   * Links to the file diff in external sites as a list of DiffWebLinkInfo entries.
    * @return webLinks
    */
   @javax.annotation.Nullable
@@ -278,7 +278,7 @@ public class DiffInfo {
   }
 
   /**
-   * Get editWebLinks
+   * Links to edit the file in external sites as a list of WebLinkInfo entries.
    * @return editWebLinks
    */
   @javax.annotation.Nullable
@@ -297,7 +297,7 @@ public class DiffInfo {
   }
 
   /**
-   * Get binary
+   * Whether the file is binary.
    * @return binary
    */
   @javax.annotation.Nullable

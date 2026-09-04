@@ -153,7 +153,7 @@ public class ServerInfo {
   }
 
   /**
-   * Get accounts
+   * Information about the configuration from the accounts section as AccountsConfigInfo entity.
    * @return accounts
    */
   @javax.annotation.Nullable
@@ -172,7 +172,7 @@ public class ServerInfo {
   }
 
   /**
-   * Get auth
+   * Information about the authentication configuration as AuthInfo entity.
    * @return auth
    */
   @javax.annotation.Nullable
@@ -191,7 +191,7 @@ public class ServerInfo {
   }
 
   /**
-   * Get change
+   * Information about the configuration from the change section as ChangeConfigInfo entity.
    * @return change
    */
   @javax.annotation.Nullable
@@ -210,7 +210,7 @@ public class ServerInfo {
   }
 
   /**
-   * Get download
+   * Information about the configured download options as DownloadInfo entity. information about Gerrit
    * @return download
    */
   @javax.annotation.Nullable
@@ -229,7 +229,7 @@ public class ServerInfo {
   }
 
   /**
-   * Get gerrit
+   * Information about the configuration from the gerrit section as GerritInfo entity.
    * @return gerrit
    */
   @javax.annotation.Nullable
@@ -248,7 +248,7 @@ public class ServerInfo {
   }
 
   /**
-   * Get groups
+   * Information about the configuration from the groups section as GroupsConfigInfo entity.
    * @return groups
    */
   @javax.annotation.Nullable
@@ -267,7 +267,7 @@ public class ServerInfo {
   }
 
   /**
-   * Get noteDbEnabled
+   * Whether the NoteDb storage backend is fully enabled.
    * @return noteDbEnabled
    */
   @javax.annotation.Nullable
@@ -286,7 +286,7 @@ public class ServerInfo {
   }
 
   /**
-   * Get plugin
+   * Information about Gerrit extensions by plugins as PluginConfigInfo entity.
    * @return plugin
    */
   @javax.annotation.Nullable
@@ -305,7 +305,7 @@ public class ServerInfo {
   }
 
   /**
-   * Get sshd
+   * Information about the configuration from the sshd section as SshdInfo entity. Not set if SSHD is disabled.
    * @return sshd
    */
   @javax.annotation.Nullable
@@ -324,7 +324,7 @@ public class ServerInfo {
   }
 
   /**
-   * Get suggest
+   * Information about the configuration from the suggest section as SuggestInfo entity.
    * @return suggest
    */
   @javax.annotation.Nullable
@@ -343,7 +343,7 @@ public class ServerInfo {
   }
 
   /**
-   * Get user
+   * Information about the configuration from the user section as UserConfigInfo entity.
    * @return user
    */
   @javax.annotation.Nullable
@@ -362,7 +362,7 @@ public class ServerInfo {
   }
 
   /**
-   * Get receive
+   * Information about the receive-pack configuration as a ReceiveInfo entity.
    * @return receive
    */
   @javax.annotation.Nullable
@@ -381,7 +381,7 @@ public class ServerInfo {
   }
 
   /**
-   * Get defaultTheme
+   * URL to a default Gerrit UI theme plugin, if available. Located in /static/gerrit-theme.js by default.
    * @return defaultTheme
    */
   @javax.annotation.Nullable
@@ -408,7 +408,7 @@ public class ServerInfo {
   }
 
   /**
-   * Get submitRequirementDashboardColumns
+   * The list of submit requirement names that should be displayed as separate columns in the dashboard. If empty, the default is to display all submit requirements that are applicable for changes appearing in the dashboard.
    * @return submitRequirementDashboardColumns
    */
   @javax.annotation.Nullable
@@ -427,7 +427,7 @@ public class ServerInfo {
   }
 
   /**
-   * Get dashboardShowAllLabels
+   * Whether to show all labels in the dashboard, even if they are not submit requirements.
    * @return dashboardShowAllLabels
    */
   @javax.annotation.Nullable
@@ -454,7 +454,7 @@ public class ServerInfo {
   }
 
   /**
-   * Get metadata
+   * Optional server metadata as a list of MetadataInfo entities. If and which metadata is provided depends on the Gerrit setup.
    * @return metadata
    */
   @javax.annotation.Nullable

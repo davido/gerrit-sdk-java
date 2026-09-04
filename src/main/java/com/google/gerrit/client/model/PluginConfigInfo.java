@@ -72,7 +72,7 @@ public class PluginConfigInfo {
   }
 
   /**
-   * Get hasAvatars
+   * Whether an avatar provider is registered.
    * @return hasAvatars
    */
   @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class PluginConfigInfo {
   }
 
   /**
-   * Get jsResourcePaths
+   * A list of relative paths (strings). Each path points to a frontend plugin that should be loaded, e.g. plugins/codemirror_editor/static/codemirror_editor.js.
    * @return jsResourcePaths
    */
   @javax.annotation.Nullable

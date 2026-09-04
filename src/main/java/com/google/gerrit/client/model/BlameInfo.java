@@ -88,7 +88,7 @@ public class BlameInfo {
   }
 
   /**
-   * Get author
+   * The author of the commit.
    * @return author
    */
   @javax.annotation.Nullable
@@ -107,7 +107,7 @@ public class BlameInfo {
   }
 
   /**
-   * Get id
+   * The id of the commit.
    * @return id
    */
   @javax.annotation.Nullable
@@ -126,7 +126,7 @@ public class BlameInfo {
   }
 
   /**
-   * Get time
+   * Commit time.
    * @return time
    */
   @javax.annotation.Nullable
@@ -145,7 +145,7 @@ public class BlameInfo {
   }
 
   /**
-   * Get commitMsg
+   * The commit message.
    * @return commitMsg
    */
   @javax.annotation.Nullable
@@ -172,7 +172,7 @@ public class BlameInfo {
   }
 
   /**
-   * Get ranges
+   * The blame row coordinates as RangeInfo entities.
    * @return ranges
    */
   @javax.annotation.Nullable

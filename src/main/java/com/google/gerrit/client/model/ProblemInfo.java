@@ -76,7 +76,7 @@ public class ProblemInfo {
   }
 
   /**
-   * Get message
+   * Plaintext message describing the problem with the change.
    * @return message
    */
   @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class ProblemInfo {
   }
 
   /**
-   * Get status
+   * The status of fixing the problem (FIXED, FIX_FAILED). Only set if a fix was attempted.
    * @return status
    */
   @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class ProblemInfo {
   }
 
   /**
-   * Get outcome
+   * If status is set, an additional plaintext message describing the outcome of the fix.
    * @return outcome
    */
   @javax.annotation.Nullable

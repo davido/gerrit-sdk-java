@@ -92,7 +92,7 @@ public class DownloadSchemeInfo {
   }
 
   /**
-   * Get url
+   * The URL of the download scheme, where &#39;${project}&#39; is used as placeholder for the project name.
    * @return url
    */
   @javax.annotation.Nullable
@@ -111,7 +111,7 @@ public class DownloadSchemeInfo {
   }
 
   /**
-   * Get description
+   * An optional description of how the scheme works and maybe comparing it to other schemes, explaining the pros and cons of each option.
    * @return description
    */
   @javax.annotation.Nullable
@@ -130,7 +130,7 @@ public class DownloadSchemeInfo {
   }
 
   /**
-   * Get isAuthRequired
+   * Whether this download scheme requires authentication.
    * @return isAuthRequired
    */
   @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class DownloadSchemeInfo {
   }
 
   /**
-   * Get isAuthSupported
+   * Whether this download scheme supports authentication.
    * @return isAuthSupported
    */
   @javax.annotation.Nullable
@@ -176,7 +176,7 @@ public class DownloadSchemeInfo {
   }
 
   /**
-   * Get commands
+   * Download commands as a map which maps the command name to the download command. In the download command &#39;${project}&#39; is used as placeholder for the project name, and &#39;${ref}&#39; is used as placeholder for the (change) ref. Empty, if accessed anonymously and the download scheme requires authentication.
    * @return commands
    */
   @javax.annotation.Nullable
@@ -203,7 +203,7 @@ public class DownloadSchemeInfo {
   }
 
   /**
-   * Get cloneCommands
+   * Clone commands as a map which maps the command name to the clone command. In the clone command &#39;${project}&#39; is used as placeholder for the project name and &#39;${project-base-name}&#39; as name for the project base name (e.g.
    * @return cloneCommands
    */
   @javax.annotation.Nullable

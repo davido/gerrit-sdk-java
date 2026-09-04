@@ -80,7 +80,7 @@ public class AccountExternalIdInfo {
   }
 
   /**
-   * Get identity
+   * The account external id.
    * @return identity
    */
   @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class AccountExternalIdInfo {
   }
 
   /**
-   * Get emailAddress
+   * The email address for the external id.
    * @return emailAddress
    */
   @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class AccountExternalIdInfo {
   }
 
   /**
-   * Get trusted
+   * Whether the external id is trusted.
    * @return trusted
    */
   @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class AccountExternalIdInfo {
   }
 
   /**
-   * Get canDelete
+   * Whether the external id can be deleted by the calling user.
    * @return canDelete
    */
   @javax.annotation.Nullable

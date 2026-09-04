@@ -110,7 +110,7 @@ public class JvmSummaryInfo {
   }
 
   /**
-   * Get vmVendor
+   * The vendor of the virtual machine.
    * @return vmVendor
    */
   @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class JvmSummaryInfo {
   }
 
   /**
-   * Get vmName
+   * The name of the virtual machine.
    * @return vmName
    */
   @javax.annotation.Nullable
@@ -148,7 +148,7 @@ public class JvmSummaryInfo {
   }
 
   /**
-   * Get vmVersion
+   * The version of the virtual machine.
    * @return vmVersion
    */
   @javax.annotation.Nullable
@@ -167,7 +167,7 @@ public class JvmSummaryInfo {
   }
 
   /**
-   * Get osName
+   * The name of the operating system.
    * @return osName
    */
   @javax.annotation.Nullable
@@ -186,7 +186,7 @@ public class JvmSummaryInfo {
   }
 
   /**
-   * Get osVersion
+   * The version of the operating system.
    * @return osVersion
    */
   @javax.annotation.Nullable
@@ -205,7 +205,7 @@ public class JvmSummaryInfo {
   }
 
   /**
-   * Get osArch
+   * The architecture of the operating system.
    * @return osArch
    */
   @javax.annotation.Nullable
@@ -224,7 +224,7 @@ public class JvmSummaryInfo {
   }
 
   /**
-   * Get user
+   * The user that is running Gerrit.
    * @return user
    */
   @javax.annotation.Nullable
@@ -243,7 +243,7 @@ public class JvmSummaryInfo {
   }
 
   /**
-   * Get host
+   * The host on which Gerrit is running.
    * @return host
    */
   @javax.annotation.Nullable
@@ -262,7 +262,7 @@ public class JvmSummaryInfo {
   }
 
   /**
-   * Get currentWorkingDirectory
+   * The current working directory.
    * @return currentWorkingDirectory
    */
   @javax.annotation.Nullable
@@ -281,7 +281,7 @@ public class JvmSummaryInfo {
   }
 
   /**
-   * Get site
+   * The path to the review site.
    * @return site
    */
   @javax.annotation.Nullable

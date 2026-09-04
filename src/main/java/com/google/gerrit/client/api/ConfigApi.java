@@ -38,9 +38,7 @@ import com.google.gerrit.client.model.DiffPreferencesInfo;
 import com.google.gerrit.client.model.EditPreferencesInfo;
 import com.google.gerrit.client.model.ExperimentInfo;
 import com.google.gerrit.client.model.GeneralPreferencesInfo;
-import com.google.gerrit.client.model.GetConfigServerCaches200Response;
 import com.google.gerrit.client.model.GetConfigServerIndexes200ResponseInner;
-import com.google.gerrit.client.model.GetConfigServerVersion200Response;
 import com.google.gerrit.client.model.IndexChangesInput;
 import com.google.gerrit.client.model.LabelDefinitionInfo;
 import com.google.gerrit.client.model.MenuEntry;
@@ -233,7 +231,7 @@ public class ConfigApi {
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> A map of CacheInfo keyed by cache name (the default), or an array of cache names with format&#x3D;LIST. Modeled as a free-form object because a oneOf(array, map) does not generate into compiling SDK code. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConfigServerCachesCall(@javax.annotation.Nullable String format, @javax.annotation.Nullable Boolean includeDiskstats, final ApiCallback _callback) throws ApiException {
@@ -300,17 +298,17 @@ public class ConfigApi {
      * Lists the caches of the server. Caches defined by plugins are included.
      * @param format  (optional)
      * @param includeDiskstats  (optional)
-     * @return GetConfigServerCaches200Response
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> A map of CacheInfo keyed by cache name (the default), or an array of cache names with format&#x3D;LIST. Modeled as a free-form object because a oneOf(array, map) does not generate into compiling SDK code. </td><td>  -  </td></tr>
      </table>
      */
-    public GetConfigServerCaches200Response getConfigServerCaches(@javax.annotation.Nullable String format, @javax.annotation.Nullable Boolean includeDiskstats) throws ApiException {
-        ApiResponse<GetConfigServerCaches200Response> localVarResp = getConfigServerCachesWithHttpInfo(format, includeDiskstats);
+    public Object getConfigServerCaches(@javax.annotation.Nullable String format, @javax.annotation.Nullable Boolean includeDiskstats) throws ApiException {
+        ApiResponse<Object> localVarResp = getConfigServerCachesWithHttpInfo(format, includeDiskstats);
         return localVarResp.getData();
     }
 
@@ -319,18 +317,18 @@ public class ConfigApi {
      * Lists the caches of the server. Caches defined by plugins are included.
      * @param format  (optional)
      * @param includeDiskstats  (optional)
-     * @return ApiResponse&lt;GetConfigServerCaches200Response&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> A map of CacheInfo keyed by cache name (the default), or an array of cache names with format&#x3D;LIST. Modeled as a free-form object because a oneOf(array, map) does not generate into compiling SDK code. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetConfigServerCaches200Response> getConfigServerCachesWithHttpInfo(@javax.annotation.Nullable String format, @javax.annotation.Nullable Boolean includeDiskstats) throws ApiException {
+    public ApiResponse<Object> getConfigServerCachesWithHttpInfo(@javax.annotation.Nullable String format, @javax.annotation.Nullable Boolean includeDiskstats) throws ApiException {
         okhttp3.Call localVarCall = getConfigServerCachesValidateBeforeCall(format, includeDiskstats, null);
-        Type localVarReturnType = new TypeToken<GetConfigServerCaches200Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -346,13 +344,13 @@ public class ConfigApi {
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> A map of CacheInfo keyed by cache name (the default), or an array of cache names with format&#x3D;LIST. Modeled as a free-form object because a oneOf(array, map) does not generate into compiling SDK code. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConfigServerCachesAsync(@javax.annotation.Nullable String format, @javax.annotation.Nullable Boolean includeDiskstats, final ApiCallback<GetConfigServerCaches200Response> _callback) throws ApiException {
+    public okhttp3.Call getConfigServerCachesAsync(@javax.annotation.Nullable String format, @javax.annotation.Nullable Boolean includeDiskstats, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getConfigServerCachesValidateBeforeCall(format, includeDiskstats, _callback);
-        Type localVarReturnType = new TypeToken<GetConfigServerCaches200Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2826,7 +2824,7 @@ public class ConfigApi {
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> The Gerrit server version string (the default), or a version object with the verbose option. Modeled as a free-form object to avoid an ungenerable oneOf(string, object). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConfigServerVersionCall(@javax.annotation.Nullable Boolean verbose, final ApiCallback _callback) throws ApiException {
@@ -2887,17 +2885,17 @@ public class ConfigApi {
      * Get version
      * Returns the version of the Gerrit server.
      * @param verbose  (optional)
-     * @return GetConfigServerVersion200Response
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> The Gerrit server version string (the default), or a version object with the verbose option. Modeled as a free-form object to avoid an ungenerable oneOf(string, object). </td><td>  -  </td></tr>
      </table>
      */
-    public GetConfigServerVersion200Response getConfigServerVersion(@javax.annotation.Nullable Boolean verbose) throws ApiException {
-        ApiResponse<GetConfigServerVersion200Response> localVarResp = getConfigServerVersionWithHttpInfo(verbose);
+    public Object getConfigServerVersion(@javax.annotation.Nullable Boolean verbose) throws ApiException {
+        ApiResponse<Object> localVarResp = getConfigServerVersionWithHttpInfo(verbose);
         return localVarResp.getData();
     }
 
@@ -2905,18 +2903,18 @@ public class ConfigApi {
      * Get version
      * Returns the version of the Gerrit server.
      * @param verbose  (optional)
-     * @return ApiResponse&lt;GetConfigServerVersion200Response&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> The Gerrit server version string (the default), or a version object with the verbose option. Modeled as a free-form object to avoid an ungenerable oneOf(string, object). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetConfigServerVersion200Response> getConfigServerVersionWithHttpInfo(@javax.annotation.Nullable Boolean verbose) throws ApiException {
+    public ApiResponse<Object> getConfigServerVersionWithHttpInfo(@javax.annotation.Nullable Boolean verbose) throws ApiException {
         okhttp3.Call localVarCall = getConfigServerVersionValidateBeforeCall(verbose, null);
-        Type localVarReturnType = new TypeToken<GetConfigServerVersion200Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2931,13 +2929,13 @@ public class ConfigApi {
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> The Gerrit server version string (the default), or a version object with the verbose option. Modeled as a free-form object to avoid an ungenerable oneOf(string, object). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConfigServerVersionAsync(@javax.annotation.Nullable Boolean verbose, final ApiCallback<GetConfigServerVersion200Response> _callback) throws ApiException {
+    public okhttp3.Call getConfigServerVersionAsync(@javax.annotation.Nullable Boolean verbose, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getConfigServerVersionValidateBeforeCall(verbose, _callback);
-        Type localVarReturnType = new TypeToken<GetConfigServerVersion200Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

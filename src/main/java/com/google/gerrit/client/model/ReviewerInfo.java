@@ -138,7 +138,7 @@ public class ReviewerInfo {
   }
 
   /**
-   * Get approvals
+   * The approvals of the reviewer as a map that maps the label names to the approval values (\&quot;-2\&quot;, \&quot;-1\&quot;, \&quot;0\&quot;, \&quot;+1\&quot;, \&quot;+2\&quot;).
    * @return approvals
    */
   @javax.annotation.Nullable
@@ -157,7 +157,7 @@ public class ReviewerInfo {
   }
 
   /**
-   * Get accountId
+   * This field is inherited from AccountInfo but is optional here if an unregistered reviewer was added by email. See add-reviewer for details.
    * @return accountId
    */
   @javax.annotation.Nullable

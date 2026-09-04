@@ -65,7 +65,7 @@ public class IsFlowsEnabledInfo {
   }
 
   /**
-   * Get enabled
+   * A boolean indicating whether the feature is enabled.
    * @return enabled
    */
   @javax.annotation.Nullable

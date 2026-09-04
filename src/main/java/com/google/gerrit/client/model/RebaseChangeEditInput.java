@@ -65,7 +65,7 @@ public class RebaseChangeEditInput {
   }
 
   /**
-   * Get allowConflicts
+   * If true, the rebase also succeeds if there are conflicts. + If there are conflicts the file contents of the rebased patch set contain git conflict markers to indicate the conflicts.
    * @return allowConflicts
    */
   @javax.annotation.Nullable

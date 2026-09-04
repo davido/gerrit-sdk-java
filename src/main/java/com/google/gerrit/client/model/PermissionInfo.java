@@ -78,7 +78,7 @@ public class PermissionInfo {
   }
 
   /**
-   * Get label
+   * The name of the label. Not set if it&#39;s not a label permission.
    * @return label
    */
   @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class PermissionInfo {
   }
 
   /**
-   * Get exclusive
+   * Whether this permission is assigned exclusively.
    * @return exclusive
    */
   @javax.annotation.Nullable
@@ -124,7 +124,7 @@ public class PermissionInfo {
   }
 
   /**
-   * Get rules
+   * The rules assigned for this permission as a map that maps the UUIDs of the groups for which the permission are assigned to PermissionRuleInfo entities.
    * @return rules
    */
   @javax.annotation.Nullable

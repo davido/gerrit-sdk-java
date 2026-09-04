@@ -70,7 +70,7 @@ public class CapabilityInfo {
   }
 
   /**
-   * Get id
+   * capability ID
    * @return id
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class CapabilityInfo {
   }
 
   /**
-   * Get name
+   * capability name
    * @return name
    */
   @javax.annotation.Nullable

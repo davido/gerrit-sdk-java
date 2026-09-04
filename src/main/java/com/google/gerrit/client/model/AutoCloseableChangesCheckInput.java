@@ -80,7 +80,7 @@ public class AutoCloseableChangesCheckInput {
   }
 
   /**
-   * Get fix
+   * Whether auto-closeable changes should be closed automatically.
    * @return fix
    */
   @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class AutoCloseableChangesCheckInput {
   }
 
   /**
-   * Get branch
+   * The branch for which the AutoCloseableChangesCheck should be performed. The &#39;refs/heads/&#39; prefix for the branch name can be omitted.
    * @return branch
    */
   @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class AutoCloseableChangesCheckInput {
   }
 
   /**
-   * Get skipCommits
+   * Number of commits that should be skipped when walking the commits of the branch.
    * @return skipCommits
    */
   @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class AutoCloseableChangesCheckInput {
   }
 
   /**
-   * Get maxCommits
+   * Maximum number of commits to walk. If not specified this defaults to 10,000 commits. 10,000 is also the maximum that can be set. Auto-closing changes is an expensive operation and the more commits are walked the slower it gets. This is why you should avoid walking too many commits.
    * @return maxCommits
    */
   @javax.annotation.Nullable

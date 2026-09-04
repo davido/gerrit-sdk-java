@@ -31,7 +31,6 @@ import com.google.gerrit.client.model.AccountInfo;
 import com.google.gerrit.client.model.AddMembersInput;
 import com.google.gerrit.client.model.AddSubgroupsInput;
 import com.google.gerrit.client.model.CommonDescriptionInput;
-import com.google.gerrit.client.model.GetGroupsDefaultResponse;
 import com.google.gerrit.client.model.GroupAuditEventInfo;
 import com.google.gerrit.client.model.GroupInfo;
 import com.google.gerrit.client.model.GroupInput;
@@ -637,7 +636,7 @@ public class GroupsApi {
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> A map of GroupInfo keyed by group name (the default), or an array of GroupInfo under certain query options. Modeled as a free-form object because a oneOf(array, map) does not generate into compiling SDK code. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getGroupsCall(@javax.annotation.Nullable String O, @javax.annotation.Nullable List<String> group, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable List<String> o, @javax.annotation.Nullable Boolean owned, @javax.annotation.Nullable String ownedBy, @javax.annotation.Nullable List<String> project, @javax.annotation.Nullable String query, @javax.annotation.Nullable String regex, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String suggest, @javax.annotation.Nullable String user, @javax.annotation.Nullable Boolean visibleToAll, final ApiCallback _callback) throws ApiException {
@@ -763,17 +762,17 @@ public class GroupsApi {
      * @param suggest  (optional)
      * @param user  (optional)
      * @param visibleToAll  (optional)
-     * @return GetGroupsDefaultResponse
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> A map of GroupInfo keyed by group name (the default), or an array of GroupInfo under certain query options. Modeled as a free-form object because a oneOf(array, map) does not generate into compiling SDK code. </td><td>  -  </td></tr>
      </table>
      */
-    public GetGroupsDefaultResponse getGroups(@javax.annotation.Nullable String O, @javax.annotation.Nullable List<String> group, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable List<String> o, @javax.annotation.Nullable Boolean owned, @javax.annotation.Nullable String ownedBy, @javax.annotation.Nullable List<String> project, @javax.annotation.Nullable String query, @javax.annotation.Nullable String regex, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String suggest, @javax.annotation.Nullable String user, @javax.annotation.Nullable Boolean visibleToAll) throws ApiException {
-        ApiResponse<GetGroupsDefaultResponse> localVarResp = getGroupsWithHttpInfo(O, group, limit, match, o, owned, ownedBy, project, query, regex, start, suggest, user, visibleToAll);
+    public Object getGroups(@javax.annotation.Nullable String O, @javax.annotation.Nullable List<String> group, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable List<String> o, @javax.annotation.Nullable Boolean owned, @javax.annotation.Nullable String ownedBy, @javax.annotation.Nullable List<String> project, @javax.annotation.Nullable String query, @javax.annotation.Nullable String regex, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String suggest, @javax.annotation.Nullable String user, @javax.annotation.Nullable Boolean visibleToAll) throws ApiException {
+        ApiResponse<Object> localVarResp = getGroupsWithHttpInfo(O, group, limit, match, o, owned, ownedBy, project, query, regex, start, suggest, user, visibleToAll);
         return localVarResp.getData();
     }
 
@@ -794,18 +793,18 @@ public class GroupsApi {
      * @param suggest  (optional)
      * @param user  (optional)
      * @param visibleToAll  (optional)
-     * @return ApiResponse&lt;GetGroupsDefaultResponse&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> A map of GroupInfo keyed by group name (the default), or an array of GroupInfo under certain query options. Modeled as a free-form object because a oneOf(array, map) does not generate into compiling SDK code. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetGroupsDefaultResponse> getGroupsWithHttpInfo(@javax.annotation.Nullable String O, @javax.annotation.Nullable List<String> group, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable List<String> o, @javax.annotation.Nullable Boolean owned, @javax.annotation.Nullable String ownedBy, @javax.annotation.Nullable List<String> project, @javax.annotation.Nullable String query, @javax.annotation.Nullable String regex, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String suggest, @javax.annotation.Nullable String user, @javax.annotation.Nullable Boolean visibleToAll) throws ApiException {
+    public ApiResponse<Object> getGroupsWithHttpInfo(@javax.annotation.Nullable String O, @javax.annotation.Nullable List<String> group, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable List<String> o, @javax.annotation.Nullable Boolean owned, @javax.annotation.Nullable String ownedBy, @javax.annotation.Nullable List<String> project, @javax.annotation.Nullable String query, @javax.annotation.Nullable String regex, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String suggest, @javax.annotation.Nullable String user, @javax.annotation.Nullable Boolean visibleToAll) throws ApiException {
         okhttp3.Call localVarCall = getGroupsValidateBeforeCall(O, group, limit, match, o, owned, ownedBy, project, query, regex, start, suggest, user, visibleToAll, null);
-        Type localVarReturnType = new TypeToken<GetGroupsDefaultResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -833,13 +832,13 @@ public class GroupsApi {
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> A map of GroupInfo keyed by group name (the default), or an array of GroupInfo under certain query options. Modeled as a free-form object because a oneOf(array, map) does not generate into compiling SDK code. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGroupsAsync(@javax.annotation.Nullable String O, @javax.annotation.Nullable List<String> group, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable List<String> o, @javax.annotation.Nullable Boolean owned, @javax.annotation.Nullable String ownedBy, @javax.annotation.Nullable List<String> project, @javax.annotation.Nullable String query, @javax.annotation.Nullable String regex, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String suggest, @javax.annotation.Nullable String user, @javax.annotation.Nullable Boolean visibleToAll, final ApiCallback<GetGroupsDefaultResponse> _callback) throws ApiException {
+    public okhttp3.Call getGroupsAsync(@javax.annotation.Nullable String O, @javax.annotation.Nullable List<String> group, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable List<String> o, @javax.annotation.Nullable Boolean owned, @javax.annotation.Nullable String ownedBy, @javax.annotation.Nullable List<String> project, @javax.annotation.Nullable String query, @javax.annotation.Nullable String regex, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String suggest, @javax.annotation.Nullable String user, @javax.annotation.Nullable Boolean visibleToAll, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getGroupsValidateBeforeCall(O, group, limit, match, o, owned, ownedBy, project, query, regex, start, suggest, user, visibleToAll, _callback);
-        Type localVarReturnType = new TypeToken<GetGroupsDefaultResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

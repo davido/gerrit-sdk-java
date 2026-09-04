@@ -130,7 +130,7 @@ public class EditPreferencesInfo {
   }
 
   /**
-   * Get tabSize
+   * Number of spaces that should be used to display one tab.
    * @return tabSize
    */
   @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class EditPreferencesInfo {
   }
 
   /**
-   * Get lineLength
+   * Number of characters that should be displayed per line.
    * @return lineLength
    */
   @javax.annotation.Nullable
@@ -168,7 +168,7 @@ public class EditPreferencesInfo {
   }
 
   /**
-   * Get indentUnit
+   * Number of spaces that should be used for auto-indent.
    * @return indentUnit
    */
   @javax.annotation.Nullable
@@ -187,7 +187,7 @@ public class EditPreferencesInfo {
   }
 
   /**
-   * Get cursorBlinkRate
+   * Half-period in milliseconds used for cursor blinking. Setting it to 0 disables cursor blinking.
    * @return cursorBlinkRate
    */
   @javax.annotation.Nullable
@@ -206,7 +206,7 @@ public class EditPreferencesInfo {
   }
 
   /**
-   * Get hideTopMenu
+   * If true the top menu header and site header is hidden.
    * @return hideTopMenu
    */
   @javax.annotation.Nullable
@@ -225,7 +225,7 @@ public class EditPreferencesInfo {
   }
 
   /**
-   * Get showTabs
+   * Whether tabs should be shown.
    * @return showTabs
    */
   @javax.annotation.Nullable
@@ -244,7 +244,7 @@ public class EditPreferencesInfo {
   }
 
   /**
-   * Get showWhitespaceErrors
+   * Whether whitespace errors should be shown.
    * @return showWhitespaceErrors
    */
   @javax.annotation.Nullable
@@ -263,7 +263,7 @@ public class EditPreferencesInfo {
   }
 
   /**
-   * Get syntaxHighlighting
+   * Whether syntax highlighting should be enabled.
    * @return syntaxHighlighting
    */
   @javax.annotation.Nullable
@@ -282,7 +282,7 @@ public class EditPreferencesInfo {
   }
 
   /**
-   * Get hideLineNumbers
+   * Whether line numbers should be hidden.
    * @return hideLineNumbers
    */
   @javax.annotation.Nullable
@@ -301,7 +301,7 @@ public class EditPreferencesInfo {
   }
 
   /**
-   * Get matchBrackets
+   * Whether matching brackets should be highlighted.
    * @return matchBrackets
    */
   @javax.annotation.Nullable
@@ -320,7 +320,7 @@ public class EditPreferencesInfo {
   }
 
   /**
-   * Get lineWrapping
+   * Whether to enable line wrapping or not.
    * @return lineWrapping
    */
   @javax.annotation.Nullable
@@ -339,7 +339,7 @@ public class EditPreferencesInfo {
   }
 
   /**
-   * Get indentWithTabs
+   * Whether to indent with tabs or not.
    * @return indentWithTabs
    */
   @javax.annotation.Nullable
@@ -358,7 +358,7 @@ public class EditPreferencesInfo {
   }
 
   /**
-   * Get autoCloseBrackets
+   * Whether brackets and quotes should be auto-closed during typing.
    * @return autoCloseBrackets
    */
   @javax.annotation.Nullable
@@ -377,7 +377,7 @@ public class EditPreferencesInfo {
   }
 
   /**
-   * Get showBase
+   * Whether to show the inline edit base version or not.
    * @return showBase
    */
   @javax.annotation.Nullable

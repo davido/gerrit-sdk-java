@@ -71,7 +71,7 @@ public class FlowExpressionInfo {
   }
 
   /**
-   * Get condition
+   * The condition which must be satisfied for the action to be triggered. Can contain multiple conditions separated by comma. The syntax of the condition depends on the flow service implementation.
    * @return condition
    */
   @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class FlowExpressionInfo {
   }
 
   /**
-   * Get action
+   * The action that should be triggered when the condition is satisfied as a FlowActionInfo entity.
    * @return action
    */
   @javax.annotation.Nullable

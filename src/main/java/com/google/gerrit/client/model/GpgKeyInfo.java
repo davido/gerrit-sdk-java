@@ -93,7 +93,7 @@ public class GpgKeyInfo {
   }
 
   /**
-   * Get id
+   * The 8-char hex GPG key ID.
    * @return id
    */
   @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class GpgKeyInfo {
   }
 
   /**
-   * Get fingerprint
+   * The 40-char (plus spaces) hex GPG key fingerprint.
    * @return fingerprint
    */
   @javax.annotation.Nullable
@@ -139,7 +139,7 @@ public class GpgKeyInfo {
   }
 
   /**
-   * Get userIds
+   * OpenPGP User IDs,role&#x3D;external,window&#x3D;_blank associated with the public key.
    * @return userIds
    */
   @javax.annotation.Nullable
@@ -158,7 +158,7 @@ public class GpgKeyInfo {
   }
 
   /**
-   * Get key
+   * ASCII armored public key material.
    * @return key
    */
   @javax.annotation.Nullable
@@ -177,7 +177,7 @@ public class GpgKeyInfo {
   }
 
   /**
-   * Get status
+   * The result of server-side checks on the key; one of BAD, OK, or TRUSTED. BAD keys have serious problems and should not be used. If a key is OK, inspecting only that key found no problems, but the system does not fully trust the key&#39;s origin.
    * @return status
    */
   @javax.annotation.Nullable
@@ -204,7 +204,7 @@ public class GpgKeyInfo {
   }
 
   /**
-   * Get problems
+   * A list of human-readable problem strings found in the course of checking whether the key is valid and trusted.
    * @return problems
    */
   @javax.annotation.Nullable

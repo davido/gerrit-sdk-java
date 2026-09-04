@@ -65,7 +65,7 @@ public class SuggestInfo {
   }
 
   /**
-   * Get from
+   * The number of characters that a user must have typed before suggestions are provided.
    * @return from
    */
   @javax.annotation.Nullable

@@ -213,14 +213,9 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.GarbageCollectInput.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.GeneralPreferencesInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.GerritInfo.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.GetConfigServerCaches200Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.GetConfigServerIndexes200ResponseInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.GetConfigServerIndexes200ResponseInnerVersionsValue.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.GetConfigServerVersion200Response.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.GetConfigServerVersion200ResponseOneOf.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.GetGroupsDefaultResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.GetMetaFileInfo.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.GetProjectsDefaultResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.GitPerson.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.GpgKeyInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.GpgKeysInput.CustomTypeAdapterFactory());

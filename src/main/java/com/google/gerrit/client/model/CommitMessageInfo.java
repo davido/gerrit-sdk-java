@@ -77,7 +77,7 @@ public class CommitMessageInfo {
   }
 
   /**
-   * Get subject
+   * The subject of the change (first line of the commit message).
    * @return subject
    */
   @javax.annotation.Nullable
@@ -96,7 +96,7 @@ public class CommitMessageInfo {
   }
 
   /**
-   * Get fullMessage
+   * Full commit message of the change.
    * @return fullMessage
    */
   @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class CommitMessageInfo {
   }
 
   /**
-   * Get footers
+   * The footers from the commit message as a map of key-value pairs. If there are multiple footers with the same key, only the last footer with that key is returned.
    * @return footers
    */
   @javax.annotation.Nullable

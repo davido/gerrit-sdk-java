@@ -83,7 +83,7 @@ public class DownloadInfo {
   }
 
   /**
-   * Get schemes
+   * The supported download schemes as a map which maps the scheme name to a of DownloadSchemeInfo entity.
    * @return schemes
    */
   @javax.annotation.Nullable
@@ -110,7 +110,7 @@ public class DownloadInfo {
   }
 
   /**
-   * Get archives
+   * List of supported archive formats. Possible values are tgz, tar, tbz2 and txz.
    * @return archives
    */
   @javax.annotation.Nullable

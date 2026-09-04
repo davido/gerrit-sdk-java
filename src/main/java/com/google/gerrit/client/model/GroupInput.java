@@ -92,7 +92,7 @@ public class GroupInput {
   }
 
   /**
-   * Get name
+   * The name of the group (not encoded). + If set, must match the group name in the URL.
    * @return name
    */
   @javax.annotation.Nullable
@@ -111,7 +111,7 @@ public class GroupInput {
   }
 
   /**
-   * Get uuid
+   * The UUID of the group.
    * @return uuid
    */
   @javax.annotation.Nullable
@@ -130,7 +130,7 @@ public class GroupInput {
   }
 
   /**
-   * Get description
+   * The description of the group.
    * @return description
    */
   @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class GroupInput {
   }
 
   /**
-   * Get visibleToAll
+   * Whether the group is visible to all registered users. + false if not set.
    * @return visibleToAll
    */
   @javax.annotation.Nullable
@@ -168,7 +168,7 @@ public class GroupInput {
   }
 
   /**
-   * Get ownerId
+   * The URL encoded ID of the owner group. + This can be a group UUID, a legacy numeric group ID or a unique group name. + If not set, the new group will be self-owned.
    * @return ownerId
    */
   @javax.annotation.Nullable
@@ -195,7 +195,7 @@ public class GroupInput {
   }
 
   /**
-   * Get members
+   * The initial members in a list of + account ids.
    * @return members
    */
   @javax.annotation.Nullable

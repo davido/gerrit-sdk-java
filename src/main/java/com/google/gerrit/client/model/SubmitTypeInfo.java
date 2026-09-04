@@ -76,7 +76,7 @@ public class SubmitTypeInfo {
   }
 
   /**
-   * Get value
+   * The effective submit type value. Never INHERIT.
    * @return value
    */
   @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class SubmitTypeInfo {
   }
 
   /**
-   * Get configuredValue
+   * The configured value, can be one of the submit types, or INHERIT to inherit from the parent project.
    * @return configuredValue
    */
   @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class SubmitTypeInfo {
   }
 
   /**
-   * Get inheritedValue
+   * The effective value that would be inherited from the parent. Never INHERIT.
    * @return inheritedValue
    */
   @javax.annotation.Nullable

@@ -95,7 +95,7 @@ public class TaskSummaryInfo {
   }
 
   /**
-   * Get total
+   * Total number of current tasks.
    * @return total
    */
   @javax.annotation.Nullable
@@ -133,7 +133,7 @@ public class TaskSummaryInfo {
   }
 
   /**
-   * Get running
+   * Number of currently running tasks.
    * @return running
    */
   @javax.annotation.Nullable
@@ -190,7 +190,7 @@ public class TaskSummaryInfo {
   }
 
   /**
-   * Get ready
+   * Number of currently ready tasks.
    * @return ready
    */
   @javax.annotation.Nullable
@@ -209,7 +209,7 @@ public class TaskSummaryInfo {
   }
 
   /**
-   * Get sleeping
+   * Number of currently sleeping tasks.
    * @return sleeping
    */
   @javax.annotation.Nullable

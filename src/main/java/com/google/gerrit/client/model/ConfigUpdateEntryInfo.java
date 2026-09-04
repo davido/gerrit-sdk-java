@@ -75,7 +75,7 @@ public class ConfigUpdateEntryInfo {
   }
 
   /**
-   * Get configKey
+   * The config key that contains the value.
    * @return configKey
    */
   @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class ConfigUpdateEntryInfo {
   }
 
   /**
-   * Get oldValue
+   * The old config value. + Missing if value was not previously configured.
    * @return oldValue
    */
   @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class ConfigUpdateEntryInfo {
   }
 
   /**
-   * Get newValue
+   * The new config value, picked up after reload.
    * @return newValue
    */
   @javax.annotation.Nullable

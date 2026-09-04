@@ -87,7 +87,7 @@ public class IncludedInInfo {
   }
 
   /**
-   * Get branches
+   * The list of branches this change was merged into. Each branch is listed without the &#39;refs/head/&#39; prefix.
    * @return branches
    */
   @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class IncludedInInfo {
   }
 
   /**
-   * Get tags
+   * The list of tags this change was tagged with. Each tag is listed without the &#39;refs/tags/&#39; prefix.
    * @return tags
    */
   @javax.annotation.Nullable
@@ -141,7 +141,7 @@ public class IncludedInInfo {
   }
 
   /**
-   * Get external
+   * A map that maps a name to a list of external systems that include this change, e.g. a list of servers on which this change is deployed.
    * @return external
    */
   @javax.annotation.Nullable

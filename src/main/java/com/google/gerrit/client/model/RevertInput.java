@@ -94,7 +94,7 @@ public class RevertInput {
   }
 
   /**
-   * Get message
+   * Commit message of the revert commit. If not specified, a default commit message is set.
    * @return message
    */
   @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class RevertInput {
   }
 
   /**
-   * Get notify
+   * Notify handling that defines to whom email notifications should be sent for reverting the change. + Allowed values are NONE, OWNER, OWNER_REVIEWERS and ALL. + If not set, the default is ALL.
    * @return notify
    */
   @javax.annotation.Nullable
@@ -140,7 +140,7 @@ public class RevertInput {
   }
 
   /**
-   * Get notifyDetails
+   * Additional information about whom to notify about the revert as a map of recipient type to NotifyInfo entity.
    * @return notifyDetails
    */
   @javax.annotation.Nullable
@@ -159,7 +159,7 @@ public class RevertInput {
   }
 
   /**
-   * Get topic
+   * Name of the topic for the revert change. If not set, the default for Revert endpoint is the topic of the change being reverted, and the default for the RevertSubmission endpoint is revert-{submission_id}-{timestamp.now}. Topic can&#39;t contain quotation marks.
    * @return topic
    */
   @javax.annotation.Nullable
@@ -178,7 +178,7 @@ public class RevertInput {
   }
 
   /**
-   * Get workInProgress
+   * When present, change is marked as Work In Progress. The notify input is used if it&#39;s present, otherwise it will be overridden to NONE. + Notifications for the reverted change will only sent once the result change is no longer WIP. + If not set, the default is false.
    * @return workInProgress
    */
   @javax.annotation.Nullable
@@ -205,7 +205,7 @@ public class RevertInput {
   }
 
   /**
-   * Get validationOptions
+   * Map with key-value pairs that are forwarded as options to the commit validation listeners (e.g. can be used to skip certain validations). Which validation options are supported depends on the installed commit validation listeners.
    * @return validationOptions
    */
   @javax.annotation.Nullable

@@ -65,7 +65,7 @@ public class TopicInput {
   }
 
   /**
-   * Get topic
+   * The topic. + The topic will be deleted if not set. Topic can&#39;t contain quotation marks.
    * @return topic
    */
   @javax.annotation.Nullable

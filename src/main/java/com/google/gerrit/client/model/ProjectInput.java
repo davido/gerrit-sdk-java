@@ -162,7 +162,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get name
+   * The name of the project (not encoded). + If set, must match the project name in the URL. + If name ends with .git the suffix will be automatically removed.
    * @return name
    */
   @javax.annotation.Nullable
@@ -181,7 +181,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get parent
+   * The name of the parent project. + If not set, the All-Projects project will be the parent project.
    * @return parent
    */
   @javax.annotation.Nullable
@@ -200,7 +200,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get description
+   * The description of the project.
    * @return description
    */
   @javax.annotation.Nullable
@@ -219,7 +219,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get permissionsOnly
+   * Whether a permission-only project should be created.
    * @return permissionsOnly
    */
   @javax.annotation.Nullable
@@ -238,7 +238,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get createEmptyCommit
+   * Whether an empty initial commit should be created.
    * @return createEmptyCommit
    */
   @javax.annotation.Nullable
@@ -257,7 +257,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get submitType
+   * The submit type that should be set for the project (MERGE_IF_NECESSARY, REBASE_IF_NECESSARY, REBASE_ALWAYS, FAST_FORWARD_ONLY, MERGE_ALWAYS, CHERRY_PICK). + If not set, MERGE_IF_NECESSARY is set as submit type unless repository.&lt;name&gt;.defaultSubmitType is set to a different value.
    * @return submitType
    */
   @javax.annotation.Nullable
@@ -284,7 +284,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get branches
+   * A list of branches that should be initially created. + For the branch names the refs/heads/ prefix can be omitted. + The first entry of the list will be the default branch. + If the list is empty, host-level default is used.
    * @return branches
    */
   @javax.annotation.Nullable
@@ -311,7 +311,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get owners
+   * A list of groups that should be assigned as project owner. + Each group in the list must be specified as group-id. + If not set, the groups that are configured as default owners are set as project owners.
    * @return owners
    */
   @javax.annotation.Nullable
@@ -330,7 +330,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get useContributorAgreements
+   * Whether contributor agreements should be used for the project (TRUE, FALSE, INHERIT).
    * @return useContributorAgreements
    */
   @javax.annotation.Nullable
@@ -349,7 +349,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get useSignedOffBy
+   * Whether the usage of &#39;Signed-Off-By&#39; footers is required for the project (TRUE, FALSE, INHERIT).
    * @return useSignedOffBy
    */
   @javax.annotation.Nullable
@@ -368,7 +368,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get useContentMerge
+   * Whether content merge should be enabled for the project (TRUE, FALSE, INHERIT). + FALSE, if the submit_type is FAST_FORWARD_ONLY.
    * @return useContentMerge
    */
   @javax.annotation.Nullable
@@ -387,7 +387,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get requireChangeId
+   * Whether the usage of Change-Ids is required for the project (TRUE, FALSE, INHERIT). This property is deprecated and will be removed in a future release.
    * @return requireChangeId
    */
   @javax.annotation.Nullable
@@ -406,7 +406,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get createNewChangeForAllNotInTarget
+   * Whether a new change is created for every commit not in target branch for the project (TRUE, FALSE, INHERIT).
    * @return createNewChangeForAllNotInTarget
    */
   @javax.annotation.Nullable
@@ -425,7 +425,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get rejectEmptyCommit
+   * Whether empty commits should be rejected when a change is merged (TRUE, FALSE, INHERIT).
    * @return rejectEmptyCommit
    */
   @javax.annotation.Nullable
@@ -444,7 +444,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get enableSignedPush
+   * Whether signed push validation is enabled on the project (TRUE, FALSE, INHERIT).
    * @return enableSignedPush
    */
   @javax.annotation.Nullable
@@ -463,7 +463,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get requireSignedPush
+   * Whether signed push validation is required on the project (TRUE, FALSE, INHERIT).
    * @return requireSignedPush
    */
   @javax.annotation.Nullable
@@ -482,7 +482,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get maxObjectSizeLimit
+   * Max allowed Git object size for this project. Common unit suffixes of &#39;k&#39;, &#39;m&#39;, or &#39;g&#39; are supported.
    * @return maxObjectSizeLimit
    */
   @javax.annotation.Nullable
@@ -509,7 +509,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get pluginConfigValues
+   * Plugin configuration values as map which maps the plugin name to a map of parameter names to values.
    * @return pluginConfigValues
    */
   @javax.annotation.Nullable
@@ -528,7 +528,7 @@ public class ProjectInput {
   }
 
   /**
-   * Get initOnly
+   * If set, only the project initialization is being (re-)done and the repository creation is skipped. The project initialization consists out of setting HEAD, creating the project.config file in refs/meta/config and creating initial branches with empty commits.
    * @return initOnly
    */
   @javax.annotation.Nullable

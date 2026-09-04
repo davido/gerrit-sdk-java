@@ -51,7 +51,6 @@ import com.google.gerrit.client.model.DeleteTagsInput;
 import com.google.gerrit.client.model.DiffInfo;
 import java.io.File;
 import com.google.gerrit.client.model.GarbageCollectInput;
-import com.google.gerrit.client.model.GetProjectsDefaultResponse;
 import com.google.gerrit.client.model.HeadInput;
 import com.google.gerrit.client.model.IncludedInInfo;
 import com.google.gerrit.client.model.IndexProjectInput;
@@ -937,7 +936,7 @@ public class ProjectsApi {
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> A map of ProjectInfo keyed by project name (the default), or an array of ProjectInfo under certain query options. Modeled as a free-form object because a oneOf(array, map) does not generate into compiling SDK code. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getProjectsCall(@javax.annotation.Nullable Boolean all, @javax.annotation.Nullable Boolean description, @javax.annotation.Nullable String format, @javax.annotation.Nullable String hasAclFor, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable String prefix, @javax.annotation.Nullable String query, @javax.annotation.Nullable String r, @javax.annotation.Nullable List<String> showBranch, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String state, @javax.annotation.Nullable Boolean tree, @javax.annotation.Nullable String type, final ApiCallback _callback) throws ApiException {
@@ -1063,17 +1062,17 @@ public class ProjectsApi {
      * @param state  (optional)
      * @param tree  (optional)
      * @param type  (optional)
-     * @return GetProjectsDefaultResponse
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> A map of ProjectInfo keyed by project name (the default), or an array of ProjectInfo under certain query options. Modeled as a free-form object because a oneOf(array, map) does not generate into compiling SDK code. </td><td>  -  </td></tr>
      </table>
      */
-    public GetProjectsDefaultResponse getProjects(@javax.annotation.Nullable Boolean all, @javax.annotation.Nullable Boolean description, @javax.annotation.Nullable String format, @javax.annotation.Nullable String hasAclFor, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable String prefix, @javax.annotation.Nullable String query, @javax.annotation.Nullable String r, @javax.annotation.Nullable List<String> showBranch, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String state, @javax.annotation.Nullable Boolean tree, @javax.annotation.Nullable String type) throws ApiException {
-        ApiResponse<GetProjectsDefaultResponse> localVarResp = getProjectsWithHttpInfo(all, description, format, hasAclFor, limit, match, prefix, query, r, showBranch, start, state, tree, type);
+    public Object getProjects(@javax.annotation.Nullable Boolean all, @javax.annotation.Nullable Boolean description, @javax.annotation.Nullable String format, @javax.annotation.Nullable String hasAclFor, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable String prefix, @javax.annotation.Nullable String query, @javax.annotation.Nullable String r, @javax.annotation.Nullable List<String> showBranch, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String state, @javax.annotation.Nullable Boolean tree, @javax.annotation.Nullable String type) throws ApiException {
+        ApiResponse<Object> localVarResp = getProjectsWithHttpInfo(all, description, format, hasAclFor, limit, match, prefix, query, r, showBranch, start, state, tree, type);
         return localVarResp.getData();
     }
 
@@ -1094,18 +1093,18 @@ public class ProjectsApi {
      * @param state  (optional)
      * @param tree  (optional)
      * @param type  (optional)
-     * @return ApiResponse&lt;GetProjectsDefaultResponse&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> A map of ProjectInfo keyed by project name (the default), or an array of ProjectInfo under certain query options. Modeled as a free-form object because a oneOf(array, map) does not generate into compiling SDK code. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetProjectsDefaultResponse> getProjectsWithHttpInfo(@javax.annotation.Nullable Boolean all, @javax.annotation.Nullable Boolean description, @javax.annotation.Nullable String format, @javax.annotation.Nullable String hasAclFor, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable String prefix, @javax.annotation.Nullable String query, @javax.annotation.Nullable String r, @javax.annotation.Nullable List<String> showBranch, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String state, @javax.annotation.Nullable Boolean tree, @javax.annotation.Nullable String type) throws ApiException {
+    public ApiResponse<Object> getProjectsWithHttpInfo(@javax.annotation.Nullable Boolean all, @javax.annotation.Nullable Boolean description, @javax.annotation.Nullable String format, @javax.annotation.Nullable String hasAclFor, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable String prefix, @javax.annotation.Nullable String query, @javax.annotation.Nullable String r, @javax.annotation.Nullable List<String> showBranch, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String state, @javax.annotation.Nullable Boolean tree, @javax.annotation.Nullable String type) throws ApiException {
         okhttp3.Call localVarCall = getProjectsValidateBeforeCall(all, description, format, hasAclFor, limit, match, prefix, query, r, showBranch, start, state, tree, type, null);
-        Type localVarReturnType = new TypeToken<GetProjectsDefaultResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1133,13 +1132,13 @@ public class ProjectsApi {
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 0 </td><td> Response </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> A map of ProjectInfo keyed by project name (the default), or an array of ProjectInfo under certain query options. Modeled as a free-form object because a oneOf(array, map) does not generate into compiling SDK code. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getProjectsAsync(@javax.annotation.Nullable Boolean all, @javax.annotation.Nullable Boolean description, @javax.annotation.Nullable String format, @javax.annotation.Nullable String hasAclFor, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable String prefix, @javax.annotation.Nullable String query, @javax.annotation.Nullable String r, @javax.annotation.Nullable List<String> showBranch, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String state, @javax.annotation.Nullable Boolean tree, @javax.annotation.Nullable String type, final ApiCallback<GetProjectsDefaultResponse> _callback) throws ApiException {
+    public okhttp3.Call getProjectsAsync(@javax.annotation.Nullable Boolean all, @javax.annotation.Nullable Boolean description, @javax.annotation.Nullable String format, @javax.annotation.Nullable String hasAclFor, @javax.annotation.Nullable Integer limit, @javax.annotation.Nullable String match, @javax.annotation.Nullable String prefix, @javax.annotation.Nullable String query, @javax.annotation.Nullable String r, @javax.annotation.Nullable List<String> showBranch, @javax.annotation.Nullable Integer start, @javax.annotation.Nullable String state, @javax.annotation.Nullable Boolean tree, @javax.annotation.Nullable String type, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getProjectsValidateBeforeCall(all, description, format, hasAclFor, limit, match, prefix, query, r, showBranch, start, state, tree, type, _callback);
-        Type localVarReturnType = new TypeToken<GetProjectsDefaultResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

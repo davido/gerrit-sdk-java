@@ -81,7 +81,7 @@ public class PermissionRuleInfo {
   }
 
   /**
-   * Get action
+   * The action of this rule. For normal permissions this can be ALLOW, DENY or BLOCK. Special values for global capabilities are INTERACTIVE and BATCH.
    * @return action
    */
   @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class PermissionRuleInfo {
   }
 
   /**
-   * Get force
+   * Whether the force flag is set.
    * @return force
    */
   @javax.annotation.Nullable
@@ -119,7 +119,7 @@ public class PermissionRuleInfo {
   }
 
   /**
-   * Get min
+   * The min value of the permission range.
    * @return min
    */
   @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class PermissionRuleInfo {
   }
 
   /**
-   * Get max
+   * The max value of the permission range.
    * @return max
    */
   @javax.annotation.Nullable

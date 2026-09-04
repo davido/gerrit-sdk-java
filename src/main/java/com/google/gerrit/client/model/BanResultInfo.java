@@ -85,7 +85,7 @@ public class BanResultInfo {
   }
 
   /**
-   * Get newlyBanned
+   * List of newly banned commits.
    * @return newlyBanned
    */
   @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class BanResultInfo {
   }
 
   /**
-   * Get alreadyBanned
+   * List of commits that were already banned.
    * @return alreadyBanned
    */
   @javax.annotation.Nullable
@@ -139,7 +139,7 @@ public class BanResultInfo {
   }
 
   /**
-   * Get ignored
+   * List of object IDs that were ignored.
    * @return ignored
    */
   @javax.annotation.Nullable

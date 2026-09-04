@@ -90,7 +90,7 @@ public class DiffWebLinkInfo {
   }
 
   /**
-   * Get showOnSideBySideDiffView
+   * Whether the web link should be shown on the side-by-side diff screen.
    * @return showOnSideBySideDiffView
    */
   @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class DiffWebLinkInfo {
   }
 
   /**
-   * Get showOnUnifiedDiffView
+   * Whether the web link should be shown on the unified diff screen.
    * @return showOnUnifiedDiffView
    */
   @javax.annotation.Nullable
@@ -128,7 +128,7 @@ public class DiffWebLinkInfo {
   }
 
   /**
-   * Get name
+   * See WebLinkInfo
    * @return name
    */
   @javax.annotation.Nullable
@@ -147,7 +147,7 @@ public class DiffWebLinkInfo {
   }
 
   /**
-   * Get tooltip
+   * See WebLinkInfo
    * @return tooltip
    */
   @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class DiffWebLinkInfo {
   }
 
   /**
-   * Get imageUrl
+   * See WebLinkInfo
    * @return imageUrl
    */
   @javax.annotation.Nullable
@@ -185,7 +185,7 @@ public class DiffWebLinkInfo {
   }
 
   /**
-   * Get url
+   * See WebLinkInfo
    * @return url
    */
   @javax.annotation.Nullable

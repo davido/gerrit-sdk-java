@@ -65,7 +65,7 @@ public class DeleteDraftCommentsInput {
   }
 
   /**
-   * Get query
+   * A change query limiting results to changes matching this query; has:draft is implied and not necessary to list explicitly. If not set, matches all changes with drafts.
    * @return query
    */
   @javax.annotation.Nullable

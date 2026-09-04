@@ -104,7 +104,7 @@ public class CommitInfo {
   }
 
   /**
-   * Get commit
+   * The commit ID. Not set if included in a RevisionInfo entity that is contained in a map which has the commit ID as key.
    * @return commit
    */
   @javax.annotation.Nullable
@@ -131,7 +131,7 @@ public class CommitInfo {
   }
 
   /**
-   * Get parents
+   * The parent commits of this commit as a list of CommitInfo entities. In each parent only the commit and subject fields are populated.
    * @return parents
    */
   @javax.annotation.Nullable
@@ -150,7 +150,7 @@ public class CommitInfo {
   }
 
   /**
-   * Get author
+   * The author of the commit as a GitPersonInfo entity.
    * @return author
    */
   @javax.annotation.Nullable
@@ -169,7 +169,7 @@ public class CommitInfo {
   }
 
   /**
-   * Get committer
+   * The committer of the commit as a GitPersonInfo entity.
    * @return committer
    */
   @javax.annotation.Nullable
@@ -188,7 +188,7 @@ public class CommitInfo {
   }
 
   /**
-   * Get subject
+   * The subject of the commit (header line of the commit message).
    * @return subject
    */
   @javax.annotation.Nullable
@@ -207,7 +207,7 @@ public class CommitInfo {
   }
 
   /**
-   * Get message
+   * The commit message.
    * @return message
    */
   @javax.annotation.Nullable
@@ -234,7 +234,7 @@ public class CommitInfo {
   }
 
   /**
-   * Get webLinks
+   * Links to the patch set in external sites as a list of WebLinkInfo entities.
    * @return webLinks
    */
   @javax.annotation.Nullable
@@ -261,7 +261,7 @@ public class CommitInfo {
   }
 
   /**
-   * Get resolveConflictsWebLinks
+   * Links to the commit in external sites for resolving conflicts as a list of WebLinkInfo entities.
    * @return resolveConflictsWebLinks
    */
   @javax.annotation.Nullable

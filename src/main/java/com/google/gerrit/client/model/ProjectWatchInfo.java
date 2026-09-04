@@ -100,7 +100,7 @@ public class ProjectWatchInfo {
   }
 
   /**
-   * Get project
+   * The name of the project.
    * @return project
    */
   @javax.annotation.Nullable
@@ -119,7 +119,7 @@ public class ProjectWatchInfo {
   }
 
   /**
-   * Get filter
+   * A filter string to be applied to the project.
    * @return filter
    */
   @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class ProjectWatchInfo {
   }
 
   /**
-   * Get problem
+   * An error message when project is for example hidden or deleted.
    * @return problem
    */
   @javax.annotation.Nullable
@@ -157,7 +157,7 @@ public class ProjectWatchInfo {
   }
 
   /**
-   * Get notifyNewChanges
+   * Notify on new changes.
    * @return notifyNewChanges
    */
   @javax.annotation.Nullable
@@ -176,7 +176,7 @@ public class ProjectWatchInfo {
   }
 
   /**
-   * Get notifyNewPatchSets
+   * Notify on new patch sets.
    * @return notifyNewPatchSets
    */
   @javax.annotation.Nullable
@@ -195,7 +195,7 @@ public class ProjectWatchInfo {
   }
 
   /**
-   * Get notifyAllComments
+   * Notify on comments.
    * @return notifyAllComments
    */
   @javax.annotation.Nullable
@@ -214,7 +214,7 @@ public class ProjectWatchInfo {
   }
 
   /**
-   * Get notifySubmittedChanges
+   * Notify on submitted changes.
    * @return notifySubmittedChanges
    */
   @javax.annotation.Nullable
@@ -233,7 +233,7 @@ public class ProjectWatchInfo {
   }
 
   /**
-   * Get notifyAbandonedChanges
+   * Notify on abandoned changes.
    * @return notifyAbandonedChanges
    */
   @javax.annotation.Nullable

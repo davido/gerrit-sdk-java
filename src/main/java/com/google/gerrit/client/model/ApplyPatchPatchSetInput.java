@@ -95,7 +95,7 @@ public class ApplyPatchPatchSetInput {
   }
 
   /**
-   * Get patch
+   * The details of the patch to be applied as a ApplyPatchInput entity.
    * @return patch
    */
   @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class ApplyPatchPatchSetInput {
   }
 
   /**
-   * Get commitMessage
+   * The commit message for the new patch set. If not specified, the latest patch-set message will be used.
    * @return commitMessage
    */
   @javax.annotation.Nullable
@@ -133,7 +133,7 @@ public class ApplyPatchPatchSetInput {
   }
 
   /**
-   * Get base
+   * 40-hex digit SHA-1 of the commit which will be the parent commit of the newly created patch set. If set, it must be a merged commit or a change revision on the destination branch. Otherwise, the target change&#39;s branch tip will be used.
    * @return base
    */
   @javax.annotation.Nullable
@@ -152,7 +152,7 @@ public class ApplyPatchPatchSetInput {
   }
 
   /**
-   * Get author
+   * The author of the commit to create. Must be an AccountInput entity with at least the name and email fields set. The caller needs \&quot;Forge Author\&quot; permission when using this field, unless specifies their own details.
    * @return author
    */
   @javax.annotation.Nullable
@@ -179,7 +179,7 @@ public class ApplyPatchPatchSetInput {
   }
 
   /**
-   * Get responseFormatOptions
+   * List of query options to format the response.
    * @return responseFormatOptions
    */
   @javax.annotation.Nullable
@@ -198,7 +198,7 @@ public class ApplyPatchPatchSetInput {
   }
 
   /**
-   * Get amend
+   * If true, the revision from the URL will be amended by the patch. This will use the tree of the revision, apply the patch and create a new commit whose tree is the resulting tree of the operation and whose parent(s) are the parent(s) of the revision. Cannot be used together with base.
    * @return amend
    */
   @javax.annotation.Nullable

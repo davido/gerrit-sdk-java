@@ -75,7 +75,7 @@ public class AuthTokenInput {
   }
 
   /**
-   * Get id
+   * Must be the same as the id used in the URL.
    * @return id
    */
   @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class AuthTokenInput {
   }
 
   /**
-   * Get token
+   * The new token. Only Gerrit administrators may set the token directly.
    * @return token
    */
   @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class AuthTokenInput {
   }
 
   /**
-   * Get lifetime
+   * Lifetime of the token. After the given duration the token will be invalid.
    * @return lifetime
    */
   @javax.annotation.Nullable

@@ -98,7 +98,7 @@ public class MergeableInfo {
   }
 
   /**
-   * Get submitType
+   * Submit type used for this change, can be MERGE_IF_NECESSARY, FAST_FORWARD_ONLY, REBASE_IF_NECESSARY, REBASE_ALWAYS, MERGE_ALWAYS or CHERRY_PICK.
    * @return submitType
    */
   @javax.annotation.Nullable
@@ -117,7 +117,7 @@ public class MergeableInfo {
   }
 
   /**
-   * Get strategy
+   * The strategy of the merge, can be recursive, resolve, simple-two-way-in-core, ours or theirs.
    * @return strategy
    */
   @javax.annotation.Nullable
@@ -136,7 +136,7 @@ public class MergeableInfo {
   }
 
   /**
-   * Get mergeable
+   * true if this change is cleanly mergeable or already merged, false otherwise
    * @return mergeable
    */
   @javax.annotation.Nullable
@@ -155,7 +155,7 @@ public class MergeableInfo {
   }
 
   /**
-   * Get commitMerged
+   * true if this change is already merged, false otherwise
    * @return commitMerged
    */
   @javax.annotation.Nullable
@@ -174,7 +174,7 @@ public class MergeableInfo {
   }
 
   /**
-   * Get contentMerged
+   * true if the content of this change is already merged, false otherwise
    * @return contentMerged
    */
   @javax.annotation.Nullable
@@ -201,7 +201,7 @@ public class MergeableInfo {
   }
 
   /**
-   * Get conflicts
+   * A list of paths with conflicts
    * @return conflicts
    */
   @javax.annotation.Nullable
@@ -228,7 +228,7 @@ public class MergeableInfo {
   }
 
   /**
-   * Get mergeableInto
+   * A list of other branch names where this change could merge cleanly
    * @return mergeableInto
    */
   @javax.annotation.Nullable

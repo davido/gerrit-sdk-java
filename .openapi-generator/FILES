@@ -157,14 +157,9 @@ src/main/java/com/google/gerrit/client/model/FlowStageState.java
 src/main/java/com/google/gerrit/client/model/GarbageCollectInput.java
 src/main/java/com/google/gerrit/client/model/GeneralPreferencesInfo.java
 src/main/java/com/google/gerrit/client/model/GerritInfo.java
-src/main/java/com/google/gerrit/client/model/GetConfigServerCaches200Response.java
 src/main/java/com/google/gerrit/client/model/GetConfigServerIndexes200ResponseInner.java
 src/main/java/com/google/gerrit/client/model/GetConfigServerIndexes200ResponseInnerVersionsValue.java
-src/main/java/com/google/gerrit/client/model/GetConfigServerVersion200Response.java
-src/main/java/com/google/gerrit/client/model/GetConfigServerVersion200ResponseOneOf.java
-src/main/java/com/google/gerrit/client/model/GetGroupsDefaultResponse.java
 src/main/java/com/google/gerrit/client/model/GetMetaFileInfo.java
-src/main/java/com/google/gerrit/client/model/GetProjectsDefaultResponse.java
 src/main/java/com/google/gerrit/client/model/GitBasicAuthPolicy.java
 src/main/java/com/google/gerrit/client/model/GitPerson.java
 src/main/java/com/google/gerrit/client/model/GpgKeyInfo.java

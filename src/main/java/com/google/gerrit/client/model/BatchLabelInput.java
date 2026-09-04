@@ -85,7 +85,7 @@ public class BatchLabelInput {
   }
 
   /**
-   * Get commitMessage
+   * Message that should be used to commit the label updates in the project.config file to the refs/meta/config branch.
    * @return commitMessage
    */
   @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class BatchLabelInput {
   }
 
   /**
-   * Get delete
+   * List of labels that should be deleted.
    * @return delete
    */
   @javax.annotation.Nullable
@@ -139,7 +139,7 @@ public class BatchLabelInput {
   }
 
   /**
-   * Get create
+   * List of LabelDefinitionInput entities that describe labels that should be created.
    * @return create
    */
   @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class BatchLabelInput {
   }
 
   /**
-   * Get update
+   * Map of label names to LabelDefinitionInput entities that describe the updates that should be done for the labels. The given inputs only need to set the properties that are being changed.
    * @return update
    */
   @javax.annotation.Nullable

@@ -75,7 +75,7 @@ public class NotifyInfo {
   }
 
   /**
-   * Get accounts
+   * A list of account IDs that identify the accounts that should be should be notified.
    * @return accounts
    */
   @javax.annotation.Nullable

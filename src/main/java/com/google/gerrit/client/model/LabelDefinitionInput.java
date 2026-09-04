@@ -124,7 +124,7 @@ public class LabelDefinitionInput {
   }
 
   /**
-   * Get name
+   * The new name of the label.+ For label creation the name is required if this LabelDefinitionInput entity is contained in a BatchLabelInput entity.
    * @return name
    */
   @javax.annotation.Nullable
@@ -143,7 +143,7 @@ public class LabelDefinitionInput {
   }
 
   /**
-   * Get description
+   * The new description for the label.
    * @return description
    */
   @javax.annotation.Nullable
@@ -162,7 +162,7 @@ public class LabelDefinitionInput {
   }
 
   /**
-   * Get function
+   * The new function of the label (can be NoOp/NoBlock and PatchSetLock). By default NoOp when creating new labels.
    * @return function
    */
   @javax.annotation.Nullable
@@ -189,7 +189,7 @@ public class LabelDefinitionInput {
   }
 
   /**
-   * Get values
+   * The new values of the label as a map of label value to value description. The label values are formatted strings, e.g. \&quot;+1\&quot; instead of \&quot;1\&quot;, \&quot; 0\&quot; instead of \&quot;0\&quot;.
    * @return values
    */
   @javax.annotation.Nullable
@@ -208,7 +208,7 @@ public class LabelDefinitionInput {
   }
 
   /**
-   * Get defaultValue
+   * The new default value of the label (as integer).
    * @return defaultValue
    */
   @javax.annotation.Nullable
@@ -235,7 +235,7 @@ public class LabelDefinitionInput {
   }
 
   /**
-   * Get branches
+   * The new branches for which the label applies as a list of branches. A branch can be a ref, a ref pattern or a regular expression. If not set, the label applies for all branches.
    * @return branches
    */
   @javax.annotation.Nullable
@@ -254,7 +254,7 @@ public class LabelDefinitionInput {
   }
 
   /**
-   * Get canOverride
+   * Whether this label can be overridden by child projects.
    * @return canOverride
    */
   @javax.annotation.Nullable
@@ -273,7 +273,7 @@ public class LabelDefinitionInput {
   }
 
   /**
-   * Get copyCondition
+   * See copyCondition.
    * @return copyCondition
    */
   @javax.annotation.Nullable
@@ -292,7 +292,7 @@ public class LabelDefinitionInput {
   }
 
   /**
-   * Get unsetCopyCondition
+   * If true, clears the value stored in copy_condition.
    * @return unsetCopyCondition
    */
   @javax.annotation.Nullable
@@ -311,7 +311,7 @@ public class LabelDefinitionInput {
   }
 
   /**
-   * Get allowPostSubmit
+   * Whether allowPostSubmit is set on the label.
    * @return allowPostSubmit
    */
   @javax.annotation.Nullable
@@ -330,7 +330,7 @@ public class LabelDefinitionInput {
   }
 
   /**
-   * Get ignoreSelfApproval
+   * Whether ignoreSelfApproval is set on the label.
    * @return ignoreSelfApproval
    */
   @javax.annotation.Nullable
@@ -349,7 +349,7 @@ public class LabelDefinitionInput {
   }
 
   /**
-   * Get commitMessage
+   * Message that should be used to commit the change of the label in the project.config file to the refs/meta/config branch.+ Must not be set if this LabelDefinitionInput entity is contained in a BatchLabelInput entity.
    * @return commitMessage
    */
   @javax.annotation.Nullable

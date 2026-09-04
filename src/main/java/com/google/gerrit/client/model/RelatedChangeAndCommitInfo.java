@@ -106,7 +106,7 @@ public class RelatedChangeAndCommitInfo {
   }
 
   /**
-   * Get project
+   * The project of the change or commit.
    * @return project
    */
   @javax.annotation.Nullable
@@ -125,7 +125,7 @@ public class RelatedChangeAndCommitInfo {
   }
 
   /**
-   * Get changeId
+   * The Change-Id of the change.
    * @return changeId
    */
   @javax.annotation.Nullable
@@ -144,7 +144,7 @@ public class RelatedChangeAndCommitInfo {
   }
 
   /**
-   * Get commit
+   * The commit as a CommitInfo entity.
    * @return commit
    */
   @javax.annotation.Nullable
@@ -163,7 +163,7 @@ public class RelatedChangeAndCommitInfo {
   }
 
   /**
-   * Get changeNumber
+   * The change number.
    * @return changeNumber
    */
   @javax.annotation.Nullable
@@ -182,7 +182,7 @@ public class RelatedChangeAndCommitInfo {
   }
 
   /**
-   * Get revisionNumber
+   * The revision number.
    * @return revisionNumber
    */
   @javax.annotation.Nullable
@@ -201,7 +201,7 @@ public class RelatedChangeAndCommitInfo {
   }
 
   /**
-   * Get currentRevisionNumber
+   * The current revision number.
    * @return currentRevisionNumber
    */
   @javax.annotation.Nullable
@@ -220,7 +220,7 @@ public class RelatedChangeAndCommitInfo {
   }
 
   /**
-   * Get status
+   * The status of the change. The status of the change is one of (NEW, MERGED, ABANDONED).
    * @return status
    */
   @javax.annotation.Nullable
@@ -239,7 +239,7 @@ public class RelatedChangeAndCommitInfo {
   }
 
   /**
-   * Get submittable
+   * Boolean indicating whether the change is submittable. + Only populated if requested.
    * @return submittable
    */
   @javax.annotation.Nullable
@@ -258,7 +258,7 @@ public class RelatedChangeAndCommitInfo {
   }
 
   /**
-   * Get workInProgress
+   * Boolean indicating whether the change is work in progress.
    * @return workInProgress
    */
   @javax.annotation.Nullable

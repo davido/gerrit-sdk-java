@@ -76,7 +76,7 @@ public class AccessSectionInfo {
   }
 
   /**
-   * Get permissions
+   * The permissions assigned on the ref of this access section as a map that maps the permission names to PermissionInfo entities.
    * @return permissions
    */
   @javax.annotation.Nullable

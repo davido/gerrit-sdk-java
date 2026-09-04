@@ -92,7 +92,7 @@ public class RebaseInput {
   }
 
   /**
-   * Get base
+   * The new parent revision. This can be a ref or a SHA-1 to a concrete patchset. + Alternatively, a change number can be specified, in which case the current patch set is inferred.
    * @return base
    */
   @javax.annotation.Nullable
@@ -111,7 +111,7 @@ public class RebaseInput {
   }
 
   /**
-   * Get strategy
+   * The strategy of the merge, can be recursive, resolve, simple-two-way-in-core, ours or theirs, default will use project settings.
    * @return strategy
    */
   @javax.annotation.Nullable
@@ -130,7 +130,7 @@ public class RebaseInput {
   }
 
   /**
-   * Get allowConflicts
+   * If true, the rebase also succeeds if there are conflicts. + If there are conflicts the file contents of the rebased patch set contain git conflict markers to indicate the conflicts.
    * @return allowConflicts
    */
   @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class RebaseInput {
   }
 
   /**
-   * Get onBehalfOfUploader
+   * If true, the rebase is done on behalf of the uploader. + This means the uploader of the current patch set will also be the uploader of the rebased patch set. The calling user will be recorded as the real user. + Rebasing on behalf of the uploader is only supported for trivial rebases.
    * @return onBehalfOfUploader
    */
   @javax.annotation.Nullable
@@ -176,7 +176,7 @@ public class RebaseInput {
   }
 
   /**
-   * Get validationOptions
+   * Map with key-value pairs that are forwarded as options to the commit validation listeners (e.g. can be used to skip certain validations). Which validation options are supported depends on the installed commit validation listeners.
    * @return validationOptions
    */
   @javax.annotation.Nullable
@@ -195,7 +195,7 @@ public class RebaseInput {
   }
 
   /**
-   * Get committerEmail
+   * Rebase is committed using this email address. Only the registered emails of the calling user or uploader (when on_behalf_of_uploader is true) are considered valid. This option is not supported when rebasing a chain.
    * @return committerEmail
    */
   @javax.annotation.Nullable

@@ -80,7 +80,7 @@ public class TagInput {
   }
 
   /**
-   * Get ref
+   * The name of the tag. The leading refs/tags/ is optional.
    * @return ref
    */
   @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class TagInput {
   }
 
   /**
-   * Get revision
+   * The revision to which the tag should point. If not specified, the project&#39;s HEAD will be used.
    * @return revision
    */
   @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class TagInput {
   }
 
   /**
-   * Get message
+   * The tag message. When set, the tag will be created as an annotated tag.
    * @return message
    */
   @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class TagInput {
   }
 
   /**
-   * Get date
+   * Creation timestamp for annotated tags. Must not be a date in the future.
    * @return date
    */
   @javax.annotation.Nullable

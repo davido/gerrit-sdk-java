@@ -91,7 +91,7 @@ public class ProjectAccessInput {
   }
 
   /**
-   * Get remove
+   * A map of deductions to be applied to the project access, mapping refs to AccessSectionInfo entities.
    * @return remove
    */
   @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class ProjectAccessInput {
   }
 
   /**
-   * Get add
+   * A map of additions to be applied to the project access, mapping refs to AccessSectionInfo entities.
    * @return add
    */
   @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class ProjectAccessInput {
   }
 
   /**
-   * Get parent
+   * A new parent for the project to inherit from. Changing the parent project requires administrative privileges.
    * @return parent
    */
   @javax.annotation.Nullable
@@ -156,7 +156,7 @@ public class ProjectAccessInput {
   }
 
   /**
-   * Get message
+   * A commit message for this change.
    * @return message
    */
   @javax.annotation.Nullable

@@ -80,7 +80,7 @@ public class LabelTypeInfo {
   }
 
   /**
-   * Get values
+   * Map of the available values to their description.
    * @return values
    */
   @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class LabelTypeInfo {
   }
 
   /**
-   * Get defaultValue
+   * The default value of this label.
    * @return defaultValue
    */
   @javax.annotation.Nullable

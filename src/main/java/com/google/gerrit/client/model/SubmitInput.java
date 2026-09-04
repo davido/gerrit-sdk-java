@@ -103,7 +103,7 @@ public class SubmitInput {
   }
 
   /**
-   * Get onBehalfOf
+   * If set, submit the change on behalf of the given user. The value may take any format accepted by the accounts REST API. Using this option requires Submit (On Behalf Of) permission on the branch.
    * @return onBehalfOf
    */
   @javax.annotation.Nullable
@@ -122,7 +122,7 @@ public class SubmitInput {
   }
 
   /**
-   * Get notify
+   * Notify handling that defines to whom email notifications should be sent after the change is submitted. + Allowed values are NONE, OWNER, OWNER_REVIEWERS and ALL. + If not set, the default is ALL. + Ignored if a post approval diff is present (i.e.
    * @return notify
    */
   @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class SubmitInput {
   }
 
   /**
-   * Get notifyDetails
+   * Additional information about whom to notify about the update as a map of recipient type to NotifyInfo entity.
    * @return notifyDetails
    */
   @javax.annotation.Nullable

@@ -90,7 +90,7 @@ public class CommentLinkInfo {
   }
 
   /**
-   * Get match
+   * A JavaScript regular expression to match positions to be replaced with a hyperlink, as documented in commentlink.name.match.
    * @return match
    */
   @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class CommentLinkInfo {
   }
 
   /**
-   * Get link
+   * The URL to direct the user to whenever the regular expression is matched, as documented in commentlink.name.link.
    * @return link
    */
   @javax.annotation.Nullable
@@ -128,7 +128,7 @@ public class CommentLinkInfo {
   }
 
   /**
-   * Get prefix
+   * Text inserted before the link.
    * @return prefix
    */
   @javax.annotation.Nullable
@@ -147,7 +147,7 @@ public class CommentLinkInfo {
   }
 
   /**
-   * Get suffix
+   * Text inserted after the link.
    * @return suffix
    */
   @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class CommentLinkInfo {
   }
 
   /**
-   * Get text
+   * Text of the link.
    * @return text
    */
   @javax.annotation.Nullable
@@ -185,7 +185,7 @@ public class CommentLinkInfo {
   }
 
   /**
-   * Get enabled
+   * Whether the commentlink is enabled, as documented in commentlink.name.enabled. If not set the commentlink is enabled.
    * @return enabled
    */
   @javax.annotation.Nullable

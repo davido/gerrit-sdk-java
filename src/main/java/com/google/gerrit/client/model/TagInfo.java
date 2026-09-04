@@ -104,7 +104,7 @@ public class TagInfo {
   }
 
   /**
-   * Get _object
+   * The revision of the object to which the tag points.
    * @return _object
    */
   @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class TagInfo {
   }
 
   /**
-   * Get message
+   * The tag message. For signed tags, includes the signature.
    * @return message
    */
   @javax.annotation.Nullable
@@ -142,7 +142,7 @@ public class TagInfo {
   }
 
   /**
-   * Get tagger
+   * The tagger as a GitPersonInfo entity.
    * @return tagger
    */
   @javax.annotation.Nullable
@@ -161,7 +161,7 @@ public class TagInfo {
   }
 
   /**
-   * Get created
+   * The timestamp of when the tag was created. For annotated and signed tags, this is the timestamp of the tag object and is the same as the date field in the tagger. For lightweight tags, it is the commit timestamp of the commit to which the tag points, when the object is a commit.
    * @return created
    */
   @javax.annotation.Nullable
@@ -188,7 +188,7 @@ public class TagInfo {
   }
 
   /**
-   * Get webLinks
+   * Links to the tag in external sites as a list of WebLinkInfo entries.
    * @return webLinks
    */
   @javax.annotation.Nullable
@@ -207,7 +207,7 @@ public class TagInfo {
   }
 
   /**
-   * Get ref
+   * The ref of the tag.
    * @return ref
    */
   @javax.annotation.Nullable
@@ -226,7 +226,7 @@ public class TagInfo {
   }
 
   /**
-   * Get revision
+   * For lightweight tags, the revision of the commit to which the tag points. For annotated tags, the revision of the tag object.
    * @return revision
    */
   @javax.annotation.Nullable
@@ -245,7 +245,7 @@ public class TagInfo {
   }
 
   /**
-   * Get canDelete
+   * Whether the calling user can delete this tag.
    * @return canDelete
    */
   @javax.annotation.Nullable

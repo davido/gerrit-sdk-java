@@ -97,7 +97,7 @@ public class SubmitRequirementResultInfo {
   }
 
   /**
-   * Get name
+   * The submit requirement name.
    * @return name
    */
   @javax.annotation.Nullable
@@ -116,7 +116,7 @@ public class SubmitRequirementResultInfo {
   }
 
   /**
-   * Get description
+   * Description of the submit requirement.
    * @return description
    */
   @javax.annotation.Nullable
@@ -135,7 +135,7 @@ public class SubmitRequirementResultInfo {
   }
 
   /**
-   * Get status
+   * Status describing the result of evaluating the submit requirement. The status is one of (SATISFIED, UNSATISFIED, OVERRIDDEN, NOT_APPLICABLE, ERROR, FORCED, TIMEOUT).
    * @return status
    */
   @javax.annotation.Nullable
@@ -154,7 +154,7 @@ public class SubmitRequirementResultInfo {
   }
 
   /**
-   * Get isLegacy
+   * If true, this submit requirement result was created from a legacy SubmitRecord. Otherwise, it was created by evaluating a submit requirement.
    * @return isLegacy
    */
   @javax.annotation.Nullable
@@ -173,7 +173,7 @@ public class SubmitRequirementResultInfo {
   }
 
   /**
-   * Get applicabilityExpressionResult
+   * A SubmitRequirementExpressionInfo containing the result of evaluating the applicability expression. Not set if the submit requirement did not define an applicability expression. Note that fields expression, passing_atoms and failing_atoms are always omitted for the applicability_expression_result.
    * @return applicabilityExpressionResult
    */
   @javax.annotation.Nullable
@@ -192,7 +192,7 @@ public class SubmitRequirementResultInfo {
   }
 
   /**
-   * Get submittabilityExpressionResult
+   * A SubmitRequirementExpressionInfo containing the result of evaluating the submittability expression. + If the submit requirement does not apply, the status field of the result will be set to NOT_EVALUATED.
    * @return submittabilityExpressionResult
    */
   @javax.annotation.Nullable
@@ -211,7 +211,7 @@ public class SubmitRequirementResultInfo {
   }
 
   /**
-   * Get overrideExpressionResult
+   * A SubmitRequirementExpressionInfo containing the result of evaluating the override expression. + Not set if the submit requirement did not define an override expression. If the submit requirement does not apply, the status field of the result will be set to NOT_EVALUATED.
    * @return overrideExpressionResult
    */
   @javax.annotation.Nullable

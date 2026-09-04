@@ -80,7 +80,7 @@ public class IndexChangesInput {
   }
 
   /**
-   * Get changes
+   * List of change-ids. When delete_missing is true, each entry must be in project~changeNumber format.
    * @return changes
    */
   @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class IndexChangesInput {
   }
 
   /**
-   * Get deleteMissing
+   * Delete changes which are missing in NoteDb from the index. This can be used to get rid of stale index entries. Possible values are true and false. By default set to false.
    * @return deleteMissing
    */
   @javax.annotation.Nullable

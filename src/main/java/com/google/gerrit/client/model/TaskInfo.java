@@ -101,7 +101,7 @@ public class TaskInfo {
   }
 
   /**
-   * Get id
+   * The ID of the task.
    * @return id
    */
   @javax.annotation.Nullable
@@ -120,7 +120,7 @@ public class TaskInfo {
   }
 
   /**
-   * Get state
+   * The state of the task, can be DONE, CANCELLED, RUNNING, READY, SLEEPING and OTHER.
    * @return state
    */
   @javax.annotation.Nullable
@@ -139,7 +139,7 @@ public class TaskInfo {
   }
 
   /**
-   * Get startTime
+   * The start time of the task.
    * @return startTime
    */
   @javax.annotation.Nullable
@@ -158,7 +158,7 @@ public class TaskInfo {
   }
 
   /**
-   * Get delay
+   * The remaining delay of the task.
    * @return delay
    */
   @javax.annotation.Nullable
@@ -177,7 +177,7 @@ public class TaskInfo {
   }
 
   /**
-   * Get command
+   * The command of the task.
    * @return command
    */
   @javax.annotation.Nullable
@@ -196,7 +196,7 @@ public class TaskInfo {
   }
 
   /**
-   * Get remoteName
+   * The remote name. May only be set for tasks that are associated with a project.
    * @return remoteName
    */
   @javax.annotation.Nullable
@@ -215,7 +215,7 @@ public class TaskInfo {
   }
 
   /**
-   * Get projectName
+   * The project the task is associated with.
    * @return projectName
    */
   @javax.annotation.Nullable
@@ -234,7 +234,7 @@ public class TaskInfo {
   }
 
   /**
-   * Get queueName
+   * The work queue the task is associated with.
    * @return queueName
    */
   @javax.annotation.Nullable

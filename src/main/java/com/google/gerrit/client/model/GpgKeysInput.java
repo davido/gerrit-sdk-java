@@ -80,7 +80,7 @@ public class GpgKeysInput {
   }
 
   /**
-   * Get add
+   * List of ASCII armored public key strings to add.
    * @return add
    */
   @javax.annotation.Nullable
@@ -107,7 +107,7 @@ public class GpgKeysInput {
   }
 
   /**
-   * Get delete
+   * List of \\{gpg-key-id\\}s to delete.
    * @return delete
    */
   @javax.annotation.Nullable

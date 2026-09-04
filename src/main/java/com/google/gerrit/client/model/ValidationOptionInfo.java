@@ -70,7 +70,7 @@ public class ValidationOptionInfo {
   }
 
   /**
-   * Get name
+   * The name of the validation option.
    * @return name
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class ValidationOptionInfo {
   }
 
   /**
-   * Get description
+   * The description of the validation option.
    * @return description
    */
   @javax.annotation.Nullable

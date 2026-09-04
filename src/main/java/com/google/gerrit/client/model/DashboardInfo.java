@@ -118,7 +118,7 @@ public class DashboardInfo {
   }
 
   /**
-   * Get id
+   * The ID of the dashboard. The ID has the format &#39;&lt;ref&gt;:&lt;path&gt;&#39;, where ref and path are URL encoded.
    * @return id
    */
   @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class DashboardInfo {
   }
 
   /**
-   * Get project
+   * The name of the project for which this dashboard is returned.
    * @return project
    */
   @javax.annotation.Nullable
@@ -156,7 +156,7 @@ public class DashboardInfo {
   }
 
   /**
-   * Get definingProject
+   * The name of the project in which this dashboard is defined. This is different from project if the dashboard is inherited from a parent project.
    * @return definingProject
    */
   @javax.annotation.Nullable
@@ -175,7 +175,7 @@ public class DashboardInfo {
   }
 
   /**
-   * Get ref
+   * The name of the ref in which the dashboard is defined, without the refs/meta/dashboards/ prefix, which is common for all dashboard refs.
    * @return ref
    */
   @javax.annotation.Nullable
@@ -194,7 +194,7 @@ public class DashboardInfo {
   }
 
   /**
-   * Get path
+   * The path of the file in which the dashboard is defined.
    * @return path
    */
   @javax.annotation.Nullable
@@ -213,7 +213,7 @@ public class DashboardInfo {
   }
 
   /**
-   * Get description
+   * The description of the dashboard.
    * @return description
    */
   @javax.annotation.Nullable
@@ -232,7 +232,7 @@ public class DashboardInfo {
   }
 
   /**
-   * Get foreach
+   * Subquery that applies to all sections in the dashboard. + Tokens such as ${project} are not resolved.
    * @return foreach
    */
   @javax.annotation.Nullable
@@ -251,7 +251,7 @@ public class DashboardInfo {
   }
 
   /**
-   * Get url
+   * The URL under which the dashboard can be opened in the Gerrit Web UI. + The URL is relative to the canonical web URL. + Tokens in the queries such as ${project} are resolved.
    * @return url
    */
   @javax.annotation.Nullable
@@ -270,7 +270,7 @@ public class DashboardInfo {
   }
 
   /**
-   * Get isDefault
+   * Whether this is the default dashboard of the project.
    * @return isDefault
    */
   @javax.annotation.Nullable
@@ -289,7 +289,7 @@ public class DashboardInfo {
   }
 
   /**
-   * Get title
+   * The title of the dashboard.
    * @return title
    */
   @javax.annotation.Nullable
@@ -316,7 +316,7 @@ public class DashboardInfo {
   }
 
   /**
-   * Get sections
+   * The list of sections in the dashboard.
    * @return sections
    */
   @javax.annotation.Nullable

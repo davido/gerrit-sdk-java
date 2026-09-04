@@ -70,7 +70,7 @@ public class TrackingIdInfo {
   }
 
   /**
-   * Get system
+   * The name of the external tracking system.
    * @return system
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class TrackingIdInfo {
   }
 
   /**
-   * Get id
+   * The tracking id.
    * @return id
    */
   @javax.annotation.Nullable

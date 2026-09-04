@@ -72,7 +72,7 @@ public class MigrateLabelsReviewInfo {
   }
 
   /**
-   * Get status
+   * The status of the migration. Takes one of the following values: MIGRATED, HAS_PROLOG, PREVIOUSLY_MIGRATED, NO_CHANGE
    * @return status
    */
   @javax.annotation.Nullable
@@ -91,7 +91,7 @@ public class MigrateLabelsReviewInfo {
   }
 
   /**
-   * Get change
+   * The change created. It is a ChangeInfo entity and is set only when the status value is MIGRATED.
    * @return change
    */
   @javax.annotation.Nullable

@@ -70,7 +70,7 @@ public class DashboardSectionInfo {
   }
 
   /**
-   * Get name
+   * The title of the section.
    * @return name
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class DashboardSectionInfo {
   }
 
   /**
-   * Get query
+   * The query of the section. + Tokens such as ${project} are not resolved.
    * @return query
    */
   @javax.annotation.Nullable

@@ -70,7 +70,7 @@ public class FlowActionTypeInfo {
   }
 
   /**
-   * Get name
+   * The name of the action.
    * @return name
    */
   @javax.annotation.Nullable

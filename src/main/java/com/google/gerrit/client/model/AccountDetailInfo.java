@@ -128,7 +128,7 @@ public class AccountDetailInfo {
   }
 
   /**
-   * Get registeredOn
+   * The timestamp of when the account was registered.
    * @return registeredOn
    */
   @javax.annotation.Nullable

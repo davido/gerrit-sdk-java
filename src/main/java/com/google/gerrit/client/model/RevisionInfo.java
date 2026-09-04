@@ -153,7 +153,7 @@ public class RevisionInfo {
   }
 
   /**
-   * Get kind
+   * The change kind. Valid values are REWORK, TRIVIAL_REBASE, TRIVIAL_REBASE_WITH_MESSAGE_UPDATE, MERGE_FIRST_PARENT_UPDATE, NO_CODE_CHANGE, and NO_CHANGE.
    * @return kind
    */
   @javax.annotation.Nullable
@@ -172,7 +172,7 @@ public class RevisionInfo {
   }
 
   /**
-   * Get number
+   * The patch set number, or edit if the patch set is an edit.
    * @return number
    */
   @javax.annotation.Nullable
@@ -191,7 +191,7 @@ public class RevisionInfo {
   }
 
   /**
-   * Get created
+   * The timestamp of when the patch set was created.
    * @return created
    */
   @javax.annotation.Nullable
@@ -210,7 +210,7 @@ public class RevisionInfo {
   }
 
   /**
-   * Get uploader
+   * The uploader of the patch set as an AccountInfo entity.
    * @return uploader
    */
   @javax.annotation.Nullable
@@ -229,7 +229,7 @@ public class RevisionInfo {
   }
 
   /**
-   * Get realUploader
+   * The real uploader of the patch set as an AccountInfo entity. + Only set if the upload was done on behalf of another user.
    * @return realUploader
    */
   @javax.annotation.Nullable
@@ -248,7 +248,7 @@ public class RevisionInfo {
   }
 
   /**
-   * Get ref
+   * The Git reference for the patch set.
    * @return ref
    */
   @javax.annotation.Nullable
@@ -275,7 +275,7 @@ public class RevisionInfo {
   }
 
   /**
-   * Get fetch
+   * Information about how to fetch this patch set. The fetch information is provided as a map that maps the protocol name (\&quot;git\&quot;, \&quot;http\&quot;, \&quot;ssh\&quot;) to FetchInfo entities. This information is only included if a plugin implementing the download commands interface is installed.
    * @return fetch
    */
   @javax.annotation.Nullable
@@ -294,7 +294,7 @@ public class RevisionInfo {
   }
 
   /**
-   * Get commit
+   * The commit of the patch set as CommitInfo entity.
    * @return commit
    */
   @javax.annotation.Nullable
@@ -321,7 +321,7 @@ public class RevisionInfo {
   }
 
   /**
-   * Get parentsData
+   * The parent commits of this patch-set commit as a list of ParentInfo entities. In each parent, we include the target branch name if the parent is a merged commit in the target branch. Otherwise, we include the change and patch-set numbers of the parent change. + Only set if the PARENTS option is set.
    * @return parentsData
    */
   @javax.annotation.Nullable
@@ -340,7 +340,7 @@ public class RevisionInfo {
   }
 
   /**
-   * Get branch
+   * The name of the target branch that this revision is set to be merged into. + Note that if the change is moved with the Move Change endpoint, this field can be different for different patchsets.
    * @return branch
    */
   @javax.annotation.Nullable
@@ -367,7 +367,7 @@ public class RevisionInfo {
   }
 
   /**
-   * Get files
+   * The files of the patch set as a map that maps the file names to FileInfo entities. Only set if CURRENT_FILES or ALL_FILES option is requested.
    * @return files
    */
   @javax.annotation.Nullable
@@ -394,7 +394,7 @@ public class RevisionInfo {
   }
 
   /**
-   * Get actions
+   * Actions the caller might be able to perform on this revision. The information is a map of view name to ActionInfo entities.
    * @return actions
    */
   @javax.annotation.Nullable
@@ -413,7 +413,7 @@ public class RevisionInfo {
   }
 
   /**
-   * Get commitWithFooters
+   * If the COMMIT_FOOTERS option is requested and this is the current patch set, contains the full commit message with Gerrit-specific commit footers, as if this revision were submitted using the Cherry Pick submit type.
    * @return commitWithFooters
    */
   @javax.annotation.Nullable
@@ -432,7 +432,7 @@ public class RevisionInfo {
   }
 
   /**
-   * Get pushCertificate
+   * If the PUSH_CERTIFICATES option is requested, contains the push certificate provided by the user when uploading this patch set as a PushCertificateInfo entity. This field is always set if the option is requested; if no push certificate was provided, it is set to an empty object.
    * @return pushCertificate
    */
   @javax.annotation.Nullable
@@ -451,7 +451,7 @@ public class RevisionInfo {
   }
 
   /**
-   * Get description
+   * The description of this patchset, as displayed in the patchset selector menu. May be null if no description is set.
    * @return description
    */
   @javax.annotation.Nullable
@@ -470,7 +470,7 @@ public class RevisionInfo {
   }
 
   /**
-   * Get conflicts
+   * Information about conflicts in this revision as a ConflictsInfo entity.
    * @return conflicts
    */
   @javax.annotation.Nullable

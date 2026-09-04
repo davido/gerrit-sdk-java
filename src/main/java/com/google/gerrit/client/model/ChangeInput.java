@@ -161,7 +161,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get project
+   * The name of the project.
    * @return project
    */
   @javax.annotation.Nullable
@@ -180,7 +180,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get branch
+   * The name of the target branch. + The refs/heads/ prefix is omitted.
    * @return branch
    */
   @javax.annotation.Nullable
@@ -199,7 +199,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get subject
+   * The commit message of the change. Comment lines (beginning with #) will be removed. If the commit message contains a Change-Id (as a \&quot;Change-Id: I...\&quot; footer) that Change-Id will be used for the newly created changed.
    * @return subject
    */
   @javax.annotation.Nullable
@@ -218,7 +218,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get topic
+   * The topic to which this change belongs. Topic can&#39;t contain quotation marks.
    * @return topic
    */
   @javax.annotation.Nullable
@@ -237,7 +237,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get status
+   * The status of the change (only NEW accepted here).
    * @return status
    */
   @javax.annotation.Nullable
@@ -256,7 +256,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get isPrivate
+   * Whether the new change should be marked as private.
    * @return isPrivate
    */
   @javax.annotation.Nullable
@@ -275,7 +275,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get workInProgress
+   * Whether the new change should be set to work in progress.
    * @return workInProgress
    */
   @javax.annotation.Nullable
@@ -294,7 +294,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get baseChange
+   * A \\{change-id\\} that identifies the base change for a create change operation. + Mutually exclusive with base_commit. + If neither base_commit nor base_change are set, the target branch tip will be used as the parent commit.
    * @return baseChange
    */
   @javax.annotation.Nullable
@@ -313,7 +313,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get baseCommit
+   * A 40-digit hex SHA-1 of the commit which will be the parent commit of the newly created change. If set, it must be a merged commit on the destination branch. + Mutually exclusive with base_change.
    * @return baseCommit
    */
   @javax.annotation.Nullable
@@ -332,7 +332,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get newBranch
+   * Allow creating a new branch when set to true. Using this option is only possible for non-merge commits (if the merge field is not set).
    * @return newBranch
    */
   @javax.annotation.Nullable
@@ -359,7 +359,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get validationOptions
+   * Map with key-value pairs that are forwarded as options to the commit validation listeners (e.g. can be used to skip certain validations). Which validation options are supported depends on the installed commit validation listeners.
    * @return validationOptions
    */
   @javax.annotation.Nullable
@@ -386,7 +386,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get customKeyedValues
+   * Custom keyed values as a map from custom keys to values.
    * @return customKeyedValues
    */
   @javax.annotation.Nullable
@@ -405,7 +405,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get merge
+   * The detail of a merge commit as a MergeInput entity. If set, the target branch (see branch field) must exist (it is not possible to create it automatically by setting the new_branch field to true.
    * @return merge
    */
   @javax.annotation.Nullable
@@ -424,7 +424,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get patch
+   * The detail of a patch to be applied as an ApplyPatchInput entity.
    * @return patch
    */
   @javax.annotation.Nullable
@@ -443,7 +443,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get author
+   * The author of the commit to create. Must be an AccountInput entity with at least the name and email fields set. The caller needs \&quot;Forge Author\&quot; permission when using this field. This field does not affect the owner of the change, which will continue to use the identity of the caller.
    * @return author
    */
   @javax.annotation.Nullable
@@ -470,7 +470,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get responseFormatOptions
+   * List of query options to format the response.
    * @return responseFormatOptions
    */
   @javax.annotation.Nullable
@@ -489,7 +489,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get notify
+   * Notify handling that defines to whom email notifications should be sent after the change is created. + Allowed values are NONE, OWNER, OWNER_REVIEWERS and ALL. + If not set, the default is OWNER for WIP changes and ALL otherwise.
    * @return notify
    */
   @javax.annotation.Nullable
@@ -516,7 +516,7 @@ public class ChangeInput {
   }
 
   /**
-   * Get notifyDetails
+   * Additional information about whom to notify about the change creation as a map of recipient type to NotifyInfo entity.
    * @return notifyDetails
    */
   @javax.annotation.Nullable

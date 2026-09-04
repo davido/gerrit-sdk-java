@@ -187,7 +187,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get context
+   * The number of lines of context when viewing a patch.
    * @return context
    */
   @javax.annotation.Nullable
@@ -206,7 +206,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get tabSize
+   * Number of spaces that should be used to display one tab.
    * @return tabSize
    */
   @javax.annotation.Nullable
@@ -225,7 +225,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get fontSize
+   * Default font size in pixels for change to be displayed in the diff view.
    * @return fontSize
    */
   @javax.annotation.Nullable
@@ -244,7 +244,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get lineLength
+   * Number of characters that should be displayed in one line.
    * @return lineLength
    */
   @javax.annotation.Nullable
@@ -263,7 +263,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get cursorBlinkRate
+   * Half-period in milliseconds used for cursor blinking. Setting it to 0 disables cursor blinking.
    * @return cursorBlinkRate
    */
   @javax.annotation.Nullable
@@ -282,7 +282,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get expandAllComments
+   * Whether all inline comments should be automatically expanded.
    * @return expandAllComments
    */
   @javax.annotation.Nullable
@@ -301,7 +301,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get intralineDifference
+   * Whether intraline differences should be highlighted.
    * @return intralineDifference
    */
   @javax.annotation.Nullable
@@ -320,7 +320,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get manualReview
+   * Whether the &#39;Reviewed&#39; flag should not be set automatically on a patch when it is viewed.
    * @return manualReview
    */
   @javax.annotation.Nullable
@@ -339,7 +339,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get showLineEndings
+   * Whether Windows EOL/Cr-Lf should be displayed as &#39;\\r&#39; in a dotted-line box.
    * @return showLineEndings
    */
   @javax.annotation.Nullable
@@ -358,7 +358,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get showTabs
+   * Whether tabs should be shown.
    * @return showTabs
    */
   @javax.annotation.Nullable
@@ -377,7 +377,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get showWhitespaceErrors
+   * Whether whitespace errors should be shown.
    * @return showWhitespaceErrors
    */
   @javax.annotation.Nullable
@@ -396,7 +396,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get syntaxHighlighting
+   * Whether syntax highlighting should be enabled.
    * @return syntaxHighlighting
    */
   @javax.annotation.Nullable
@@ -415,7 +415,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get hideTopMenu
+   * If true the top menu header and site header are hidden.
    * @return hideTopMenu
    */
   @javax.annotation.Nullable
@@ -434,7 +434,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get autoHideDiffTableHeader
+   * If true the diff table header is automatically hidden when scrolling down more than half of a page.
    * @return autoHideDiffTableHeader
    */
   @javax.annotation.Nullable
@@ -453,7 +453,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get hideLineNumbers
+   * If true the line numbers are hidden.
    * @return hideLineNumbers
    */
   @javax.annotation.Nullable
@@ -510,7 +510,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get matchBrackets
+   * Whether matching brackets should be highlighted.
    * @return matchBrackets
    */
   @javax.annotation.Nullable
@@ -529,7 +529,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get lineWrapping
+   * Whether to enable line wrapping or not.
    * @return lineWrapping
    */
   @javax.annotation.Nullable
@@ -567,7 +567,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get ignoreWhitespace
+   * Whether whitespace changes should be ignored and if yes, which whitespace changes should be ignored. + Allowed values are IGNORE_NONE, IGNORE_TRAILING, IGNORE_LEADING_AND_TRAILING, IGNORE_ALL.
    * @return ignoreWhitespace
    */
   @javax.annotation.Nullable
@@ -586,7 +586,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get retainHeader
+   * Whether the header that is displayed above the patch (that either shows the commit message, the diff preferences, the patch sets or the files) should be retained on file switch.
    * @return retainHeader
    */
   @javax.annotation.Nullable
@@ -605,7 +605,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get skipDeleted
+   * Whether deleted files should be skipped on file switch.
    * @return skipDeleted
    */
   @javax.annotation.Nullable
@@ -643,7 +643,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get skipUncommented
+   * Whether uncommented files should be skipped on file switch.
    * @return skipUncommented
    */
   @javax.annotation.Nullable

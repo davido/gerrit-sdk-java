@@ -100,7 +100,7 @@ public class EditInfo {
   }
 
   /**
-   * Get commit
+   * The commit of change edit as CommitInfo entity.
    * @return commit
    */
   @javax.annotation.Nullable
@@ -119,7 +119,7 @@ public class EditInfo {
   }
 
   /**
-   * Get basePatchSetNumber
+   * The patch set number of the patch set the change edit is based on.
    * @return basePatchSetNumber
    */
   @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class EditInfo {
   }
 
   /**
-   * Get baseRevision
+   * The revision of the patch set the change edit is based on.
    * @return baseRevision
    */
   @javax.annotation.Nullable
@@ -157,7 +157,7 @@ public class EditInfo {
   }
 
   /**
-   * Get ref
+   * The ref of the change edit.
    * @return ref
    */
   @javax.annotation.Nullable
@@ -184,7 +184,7 @@ public class EditInfo {
   }
 
   /**
-   * Get fetch
+   * Information about how to fetch this patch set. The fetch information is provided as a map that maps the protocol name (\&quot;git\&quot;, \&quot;http\&quot;, \&quot;ssh\&quot;) to FetchInfo entities.
    * @return fetch
    */
   @javax.annotation.Nullable
@@ -211,7 +211,7 @@ public class EditInfo {
   }
 
   /**
-   * Get files
+   * The files of the change edit as a map that maps the file names to FileInfo entities.
    * @return files
    */
   @javax.annotation.Nullable
@@ -230,7 +230,7 @@ public class EditInfo {
   }
 
   /**
-   * Get containsGitConflicts
+   * Whether the change edit contains conflicts. + If true, some of the file contents of the change edit contain git conflict markers to indicate the conflicts. + Only set if this edit info is returned in response to a request that rebases the change edit and conflicts are allowed.
    * @return containsGitConflicts
    */
   @javax.annotation.Nullable

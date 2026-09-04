@@ -70,7 +70,7 @@ public class HitRatioInfo {
   }
 
   /**
-   * Get mem
+   * Hit ratio for cache entries that are held in memory (0 \\&lt;&#x3D; value \\&lt;&#x3D; 100).
    * @return mem
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class HitRatioInfo {
   }
 
   /**
-   * Get disk
+   * Hit ratio for cache entries that are held on disk (0 \\&lt;&#x3D; value \\&lt;&#x3D; 100). Only set for disk caches.
    * @return disk
    */
   @javax.annotation.Nullable

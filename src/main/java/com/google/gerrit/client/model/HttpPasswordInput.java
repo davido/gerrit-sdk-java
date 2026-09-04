@@ -70,7 +70,7 @@ public class HttpPasswordInput {
   }
 
   /**
-   * Get httpPassword
+   * The new HTTP password. Only Gerrit administrators may set the HTTP password directly. + If empty or not set and generate is false or not set, the HTTP password is deleted.
    * @return httpPassword
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class HttpPasswordInput {
   }
 
   /**
-   * Get generate
+   * Whether a new HTTP password should be generated
    * @return generate
    */
   @javax.annotation.Nullable

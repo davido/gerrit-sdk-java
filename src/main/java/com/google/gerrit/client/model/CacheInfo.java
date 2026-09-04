@@ -88,7 +88,7 @@ public class CacheInfo {
   }
 
   /**
-   * Get name
+   * The cache name. If the cache is defined by a plugin the cache name includes the plugin name: \&quot;&lt;plugin-name&gt;-&lt;cache-name&gt;\&quot;.
    * @return name
    */
   @javax.annotation.Nullable
@@ -107,7 +107,7 @@ public class CacheInfo {
   }
 
   /**
-   * Get type
+   * The type of the cache (MEM: in memory cache, DISK: disk cache).
    * @return type
    */
   @javax.annotation.Nullable
@@ -126,7 +126,7 @@ public class CacheInfo {
   }
 
   /**
-   * Get entries
+   * Information about the entries in the cache as a EntriesInfo entity.
    * @return entries
    */
   @javax.annotation.Nullable
@@ -145,7 +145,7 @@ public class CacheInfo {
   }
 
   /**
-   * Get averageGet
+   * The average duration of getting one entry from the cache. The value is returned with a standard time unit abbreviation (ns: nanoseconds, us: microseconds, ms: milliseconds, s: seconds).
    * @return averageGet
    */
   @javax.annotation.Nullable
@@ -164,7 +164,7 @@ public class CacheInfo {
   }
 
   /**
-   * Get hitRatio
+   * Information about the hit ratio as a HitRatioInfo entity.
    * @return hitRatio
    */
   @javax.annotation.Nullable
