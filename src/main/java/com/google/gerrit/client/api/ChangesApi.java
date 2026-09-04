@@ -6250,8 +6250,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Get Archive
+     * Retrieves an archive of the files in a revision.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param format  (optional)
@@ -6270,8 +6270,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Get Archive
+     * Retrieves an archive of the files in a revision.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param format  (optional)
@@ -6291,8 +6291,8 @@ public class ChangesApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Get Archive (asynchronously)
+     * Retrieves an archive of the files in a revision.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param format  (optional)
@@ -9686,8 +9686,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * List Robot Comments
+     * Lists the robot comments of a revision.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @return Map&lt;String, List&lt;RobotCommentInfo&gt;&gt;
@@ -9705,8 +9705,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * List Robot Comments
+     * Lists the robot comments of a revision.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @return ApiResponse&lt;Map&lt;String, List&lt;RobotCommentInfo&gt;&gt;&gt;
@@ -9725,8 +9725,8 @@ public class ChangesApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * List Robot Comments (asynchronously)
+     * Lists the robot comments of a revision.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param _callback The callback to be executed when the API call finishes
@@ -9830,8 +9830,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Get Robot Comment
+     * Retrieves a robot comment of a revision.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param robotCommentId  (required)
@@ -9850,8 +9850,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Get Robot Comment
+     * Retrieves a robot comment of a revision.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param robotCommentId  (required)
@@ -9871,8 +9871,8 @@ public class ChangesApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Get Robot Comment (asynchronously)
+     * Retrieves a robot comment of a revision.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param robotCommentId  (required)
@@ -10100,8 +10100,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * List Change Robot Comments
+     * Lists the robot comments of all revisions of the change.
      * @param changeId  (required)
      * @return Map&lt;String, List&lt;RobotCommentInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -10118,8 +10118,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * List Change Robot Comments
+     * Lists the robot comments of all revisions of the change.
      * @param changeId  (required)
      * @return ApiResponse&lt;Map&lt;String, List&lt;RobotCommentInfo&gt;&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -10137,8 +10137,8 @@ public class ChangesApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * List Change Robot Comments (asynchronously)
+     * Lists the robot comments of all revisions of the change.
      * @param changeId  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call

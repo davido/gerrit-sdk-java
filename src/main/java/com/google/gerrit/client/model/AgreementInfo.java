@@ -81,7 +81,7 @@ public class AgreementInfo {
   }
 
   /**
-   * Get name
+   * The unique name of the contributor agreement.
    * @return name
    */
   @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class AgreementInfo {
   }
 
   /**
-   * Get description
+   * The description of the contributor agreement.
    * @return description
    */
   @javax.annotation.Nullable
@@ -119,7 +119,7 @@ public class AgreementInfo {
   }
 
   /**
-   * Get url
+   * The URL of the contributor agreement.
    * @return url
    */
   @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class AgreementInfo {
   }
 
   /**
-   * Get autoVerifyGroup
+   * The group to which a user that signs the contributor agreement online is added automatically as a GroupInfo entity. If not set, users cannot sign the contributor agreement online.
    * @return autoVerifyGroup
    */
   @javax.annotation.Nullable

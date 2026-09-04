@@ -1512,7 +1512,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get plugins
+   * Plugin-provided information about the change, as a list of PluginDefinedInfo entities. Only present if a plugin contributes data.
    * @return plugins
    */
   @javax.annotation.Nullable

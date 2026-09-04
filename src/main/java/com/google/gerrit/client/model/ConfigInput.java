@@ -286,7 +286,7 @@ public class ConfigInput {
   }
 
   /**
-   * Get enableSignedPush
+   * Whether signed push validation is enabled on the project. + Can be TRUE, FALSE or INHERIT. + If not set, this setting is not updated.
    * @return enableSignedPush
    */
   @javax.annotation.Nullable
@@ -305,7 +305,7 @@ public class ConfigInput {
   }
 
   /**
-   * Get requireSignedPush
+   * Whether signed push validation is required on the project. + Can be TRUE, FALSE or INHERIT. + If not set, this setting is not updated.
    * @return requireSignedPush
    */
   @javax.annotation.Nullable
@@ -343,7 +343,7 @@ public class ConfigInput {
   }
 
   /**
-   * Get privateByDefault
+   * Whether all new changes in the project are set to private by default. + Can be TRUE, FALSE or INHERIT. + If not set, this setting is not updated.
    * @return privateByDefault
    */
   @javax.annotation.Nullable
@@ -362,7 +362,7 @@ public class ConfigInput {
   }
 
   /**
-   * Get workInProgressByDefault
+   * Whether all new changes in the project are set to work-in-progress by default. + Can be TRUE, FALSE or INHERIT. + If not set, this setting is not updated.
    * @return workInProgressByDefault
    */
   @javax.annotation.Nullable
@@ -381,7 +381,7 @@ public class ConfigInput {
   }
 
   /**
-   * Get enableReviewerByEmail
+   * Whether reviewers and CCs that do not have a Gerrit account can be added to a change by their email address. + Can be TRUE, FALSE or INHERIT. + If not set, this setting is not updated.
    * @return enableReviewerByEmail
    */
   @javax.annotation.Nullable
@@ -400,7 +400,7 @@ public class ConfigInput {
   }
 
   /**
-   * Get matchAuthorToCommitterDate
+   * Whether a change&#39;s author date is changed to match its submit date when the change is submitted. + Can be TRUE, FALSE or INHERIT. + If not set, this setting is not updated.
    * @return matchAuthorToCommitterDate
    */
   @javax.annotation.Nullable
@@ -438,7 +438,7 @@ public class ConfigInput {
   }
 
   /**
-   * Get skipAddingAuthorAndCommitterAsReviewers
+   * Whether to skip adding the Git commit author and committer as reviewers of a new change. + Can be TRUE, FALSE or INHERIT. + If not set, this setting is not updated.
    * @return skipAddingAuthorAndCommitterAsReviewers
    */
   @javax.annotation.Nullable
@@ -549,7 +549,7 @@ public class ConfigInput {
   }
 
   /**
-   * Get commentLinks
+   * Map of commentlink names to CommentLinkInput entities to add or update on the project. If the given commentlink already exists, it will be updated with the given values, otherwise it will be created. If the value is null, that entry is deleted.
    * @return commentLinks
    */
   @javax.annotation.Nullable
@@ -568,7 +568,7 @@ public class ConfigInput {
   }
 
   /**
-   * Get commitMessage
+   * A commit message for this change.
    * @return commitMessage
    */
   @javax.annotation.Nullable

@@ -99,7 +99,7 @@ public class BranchInfo {
   }
 
   /**
-   * Get actions
+   * Actions the caller might be able to perform on this branch, as a map of action name to ActionInfo entities.
    * @return actions
    */
   @javax.annotation.Nullable

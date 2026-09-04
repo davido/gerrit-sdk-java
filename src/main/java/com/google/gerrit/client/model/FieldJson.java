@@ -75,7 +75,7 @@ public class FieldJson {
   }
 
   /**
-   * Get name
+   * The name of the field.
    * @return name
    */
   @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class FieldJson {
   }
 
   /**
-   * Get type
+   * The type of the field, set only for enum-valued fields.
    * @return type
    */
   @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class FieldJson {
   }
 
   /**
-   * Get description
+   * The description of the field.
    * @return description
    */
   @javax.annotation.Nullable

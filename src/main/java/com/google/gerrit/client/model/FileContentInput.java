@@ -75,7 +75,7 @@ public class FileContentInput {
   }
 
   /**
-   * Get content
+   * The new content of the file, sent as the raw request body. If not set, an empty file is created or the existing content is cleared.
    * @return content
    */
   @javax.annotation.Nullable

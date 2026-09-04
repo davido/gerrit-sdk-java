@@ -89,7 +89,7 @@ public class FlowActionTypeInfo {
   }
 
   /**
-   * Get parametersPlaceholder
+   * Placeholder text shown for the action&#39;s parameters in the UI.
    * @return parametersPlaceholder
    */
   @javax.annotation.Nullable

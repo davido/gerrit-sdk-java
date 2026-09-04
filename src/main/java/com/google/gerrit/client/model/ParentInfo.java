@@ -14,6 +14,7 @@
 package com.google.gerrit.client.model;
 
 import java.util.Objects;
+import com.google.gerrit.client.model.ChangeStatus;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -84,7 +85,7 @@ public class ParentInfo {
   public static final String SERIALIZED_NAME_CHANGE_STATUS = "change_status";
   @SerializedName(SERIALIZED_NAME_CHANGE_STATUS)
   @javax.annotation.Nullable
-  private String changeStatus;
+  private ChangeStatus changeStatus;
 
   public ParentInfo() {
   }
@@ -203,7 +204,7 @@ public class ParentInfo {
   }
 
 
-  public ParentInfo changeStatus(@javax.annotation.Nullable String changeStatus) {
+  public ParentInfo changeStatus(@javax.annotation.Nullable ChangeStatus changeStatus) {
     this.changeStatus = changeStatus;
     return this;
   }
@@ -213,11 +214,11 @@ public class ParentInfo {
    * @return changeStatus
    */
   @javax.annotation.Nullable
-  public String getChangeStatus() {
+  public ChangeStatus getChangeStatus() {
     return changeStatus;
   }
 
-  public void setChangeStatus(@javax.annotation.Nullable String changeStatus) {
+  public void setChangeStatus(@javax.annotation.Nullable ChangeStatus changeStatus) {
     this.changeStatus = changeStatus;
   }
 
@@ -311,8 +312,9 @@ public class ParentInfo {
       if ((jsonObj.get("change_id") != null && !jsonObj.get("change_id").isJsonNull()) && !jsonObj.get("change_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `change_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("change_id").toString()));
       }
-      if ((jsonObj.get("change_status") != null && !jsonObj.get("change_status").isJsonNull()) && !jsonObj.get("change_status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `change_status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("change_status").toString()));
+      // validate the optional field `change_status`
+      if (jsonObj.get("change_status") != null && !jsonObj.get("change_status").isJsonNull()) {
+        ChangeStatus.validateJsonElement(jsonObj.get("change_status"));
       }
   }
 

@@ -520,7 +520,7 @@ public class CommentInfo {
   }
 
   /**
-   * Get isAi
+   * Whether the comment was created by an AI agent. Not set if false.
    * @return isAi
    */
   @javax.annotation.Nullable

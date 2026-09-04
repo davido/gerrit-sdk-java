@@ -97,7 +97,7 @@ public class ReviewResult {
   }
 
   /**
-   * Get labels
+   * Map of labels to values after the review was posted. Null if any reviewer additions were rejected.
    * @return labels
    */
   @javax.annotation.Nullable
@@ -124,7 +124,7 @@ public class ReviewResult {
   }
 
   /**
-   * Get reviewers
+   * Map of account or group identifier to ReviewerResult representing the outcome of adding/removing a reviewer. Absent if no reviewer additions were requested.
    * @return reviewers
    */
   @javax.annotation.Nullable
@@ -143,7 +143,7 @@ public class ReviewResult {
   }
 
   /**
-   * Get ready
+   * If true, the change was moved from WIP to ready for review as a result of this action. Not set if false.
    * @return ready
    */
   @javax.annotation.Nullable
@@ -162,7 +162,7 @@ public class ReviewResult {
   }
 
   /**
-   * Get error
+   * Error message for non-200 responses.
    * @return error
    */
   @javax.annotation.Nullable
@@ -181,7 +181,7 @@ public class ReviewResult {
   }
 
   /**
-   * Get changeInfo
+   * Post-update change information.
    * @return changeInfo
    */
   @javax.annotation.Nullable

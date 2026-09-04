@@ -65,7 +65,7 @@ public class ReceiveInfo {
   }
 
   /**
-   * Get enableSignedPush
+   * Whether signed push validation support is enabled on the server; see the global configuration for details.
    * @return enableSignedPush
    */
   @javax.annotation.Nullable

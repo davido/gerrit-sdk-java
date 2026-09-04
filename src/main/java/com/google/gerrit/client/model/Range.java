@@ -80,7 +80,7 @@ public class Range {
   }
 
   /**
-   * Get startLine
+   * The start line number of the range. (1-based)
    * @return startLine
    */
   @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class Range {
   }
 
   /**
-   * Get startCharacter
+   * The character position in the start line. (0-based)
    * @return startCharacter
    */
   @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class Range {
   }
 
   /**
-   * Get endLine
+   * The end line number of the range. (1-based)
    * @return endLine
    */
   @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class Range {
   }
 
   /**
-   * Get endCharacter
+   * The character position in the end line. (0-based)
    * @return endCharacter
    */
   @javax.annotation.Nullable

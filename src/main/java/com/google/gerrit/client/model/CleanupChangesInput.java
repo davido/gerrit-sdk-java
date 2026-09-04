@@ -80,7 +80,7 @@ public class CleanupChangesInput {
   }
 
   /**
-   * Get after
+   * Abandon all changes that weren&#39;t updated in the timespan given here
    * @return after
    */
   @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class CleanupChangesInput {
   }
 
   /**
-   * Get ifMergeable
+   * Whether to also abandon changes that are mergeable
    * @return ifMergeable
    */
   @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class CleanupChangesInput {
   }
 
   /**
-   * Get message
+   * Message to post to changes abandoned by the cleanup
    * @return message
    */
   @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class CleanupChangesInput {
   }
 
   /**
-   * Get query
+   * Additional query predicates appended to the base cleanup query. Can be used to limit the batch size, exclude changes, or both, e.g. age:4w limit:100 -project:some/repo -hashtag:keep-alive. By default unset.
    * @return query
    */
   @javax.annotation.Nullable

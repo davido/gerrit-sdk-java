@@ -244,7 +244,7 @@ public class ApprovalInfo {
   }
 
   /**
-   * Get accountId
+   * The numeric ID of the account.
    * @return accountId
    */
   @javax.annotation.Nullable
@@ -263,7 +263,7 @@ public class ApprovalInfo {
   }
 
   /**
-   * Get name
+   * The full name of the user. + Only set if detailed account information is requested. + See option DETAILED_ACCOUNTS for change queries + and option DETAILS for account queries.
    * @return name
    */
   @javax.annotation.Nullable
@@ -282,7 +282,7 @@ public class ApprovalInfo {
   }
 
   /**
-   * Get displayName
+   * The display name of the user. + Only set if detailed account information is requested. + See option DETAILED_ACCOUNTS for change queries + and option DETAILS for account queries.
    * @return displayName
    */
   @javax.annotation.Nullable
@@ -301,7 +301,7 @@ public class ApprovalInfo {
   }
 
   /**
-   * Get email
+   * The email address the user prefers to be contacted through. + Only set if detailed account information is requested. + See option DETAILED_ACCOUNTS for change queries + and options DETAILS and ALL_EMAILS for account queries.
    * @return email
    */
   @javax.annotation.Nullable
@@ -328,7 +328,7 @@ public class ApprovalInfo {
   }
 
   /**
-   * Get secondaryEmails
+   * A list of the secondary email addresses of the user. + Only set for account queries when the ALL_EMAILS option or the suggest parameter is set. + Secondary emails are only included if the calling user has the Modify Account, and hence is allowed to see secondary emails of other users.
    * @return secondaryEmails
    */
   @javax.annotation.Nullable
@@ -347,7 +347,7 @@ public class ApprovalInfo {
   }
 
   /**
-   * Get username
+   * The username of the user. + Only set if detailed account information is requested. + See option DETAILED_ACCOUNTS for change queries + and option DETAILS for account queries.
    * @return username
    */
   @javax.annotation.Nullable
@@ -374,7 +374,7 @@ public class ApprovalInfo {
   }
 
   /**
-   * Get avatars
+   * List of AvatarInfo + entities that provide information about avatar images of the account.
    * @return avatars
    */
   @javax.annotation.Nullable
@@ -393,7 +393,7 @@ public class ApprovalInfo {
   }
 
   /**
-   * Get moreAccounts
+   * Whether the query would deliver more results if not limited. + Only set on the last account that is returned.
    * @return moreAccounts
    */
   @javax.annotation.Nullable
@@ -412,7 +412,7 @@ public class ApprovalInfo {
   }
 
   /**
-   * Get status
+   * Status message of the account.
    * @return status
    */
   @javax.annotation.Nullable
@@ -431,7 +431,7 @@ public class ApprovalInfo {
   }
 
   /**
-   * Get inactive
+   * Whether the account is inactive.
    * @return inactive
    */
   @javax.annotation.Nullable
@@ -450,7 +450,7 @@ public class ApprovalInfo {
   }
 
   /**
-   * Get deleted
+   * Whether the account is deleted. + Only set if detailed account information is requested. + See option DETAILED_ACCOUNTS
    * @return deleted
    */
   @javax.annotation.Nullable
@@ -477,7 +477,7 @@ public class ApprovalInfo {
   }
 
   /**
-   * Get tags
+   * List of additional tags that this account has. The only + current tag an account can have is SERVICE_USER. + Only set if detailed account information is requested. + See option DETAILED_ACCOUNTS
    * @return tags
    */
   @javax.annotation.Nullable

@@ -75,7 +75,7 @@ public class PostInput {
   }
 
   /**
-   * Get restorePath
+   * Path to file to restore.
    * @return restorePath
    */
   @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class PostInput {
   }
 
   /**
-   * Get oldPath
+   * Old path to file to rename.
    * @return oldPath
    */
   @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class PostInput {
   }
 
   /**
-   * Get newPath
+   * New path to file to rename.
    * @return newPath
    */
   @javax.annotation.Nullable

@@ -70,7 +70,7 @@ public class PluginDefinedInfo {
   }
 
   /**
-   * Get name
+   * The name of the plugin that contributed the information.
    * @return name
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class PluginDefinedInfo {
   }
 
   /**
-   * Get message
+   * A message from the plugin.
    * @return message
    */
   @javax.annotation.Nullable

@@ -76,7 +76,7 @@ public class AutoCloseableChangesCheckResult {
   }
 
   /**
-   * Get autoCloseableChanges
+   * Changes that can be auto-closed as list of ChangeInfo entities. For each returned ChangeInfo entity the problems field is populated that includes details about the detected issues. If fix in the AutoCloseableChangesCheckInput was set to true, status and outcome in ProblemInfo are populated.
    * @return autoCloseableChanges
    */
   @javax.annotation.Nullable

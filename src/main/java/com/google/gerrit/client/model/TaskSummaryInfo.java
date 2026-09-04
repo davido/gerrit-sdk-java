@@ -114,7 +114,7 @@ public class TaskSummaryInfo {
   }
 
   /**
-   * Get stopping
+   * Number of currently stopping tasks.
    * @return stopping
    */
   @javax.annotation.Nullable
@@ -152,7 +152,7 @@ public class TaskSummaryInfo {
   }
 
   /**
-   * Get parked
+   * Number of currently parked tasks.
    * @return parked
    */
   @javax.annotation.Nullable
@@ -171,7 +171,7 @@ public class TaskSummaryInfo {
   }
 
   /**
-   * Get starting
+   * Number of currently starting tasks.
    * @return starting
    */
   @javax.annotation.Nullable

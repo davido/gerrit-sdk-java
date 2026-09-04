@@ -110,7 +110,7 @@ public class ContentEntry {
   }
 
   /**
-   * Get ab
+   * Content in the file on both sides (unchanged).
    * @return ab
    */
   @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class ContentEntry {
   }
 
   /**
-   * Get a
+   * Content only in the file on side A (deleted in B).
    * @return a
    */
   @javax.annotation.Nullable
@@ -164,7 +164,7 @@ public class ContentEntry {
   }
 
   /**
-   * Get b
+   * Content only in the file on side B (added in B).
    * @return b
    */
   @javax.annotation.Nullable
@@ -191,7 +191,7 @@ public class ContentEntry {
   }
 
   /**
-   * Get editA
+   * Text sections deleted from side A as a DiffIntralineInfo entity.
    * @return editA
    */
   @javax.annotation.Nullable
@@ -218,7 +218,7 @@ public class ContentEntry {
   }
 
   /**
-   * Get editB
+   * Text sections inserted in side B as a DiffIntralineInfo entity.
    * @return editB
    */
   @javax.annotation.Nullable
@@ -237,7 +237,7 @@ public class ContentEntry {
   }
 
   /**
-   * Get dueToRebase
+   * Indicates whether this entry was introduced by a rebase.
    * @return dueToRebase
    */
   @javax.annotation.Nullable
@@ -256,7 +256,7 @@ public class ContentEntry {
   }
 
   /**
-   * Get common
+   * Set to true if the region is common according to the requested ignore-whitespace parameter, but a and b contain differing amounts of whitespace. When present and true a and b are used instead of ab.
    * @return common
    */
   @javax.annotation.Nullable
@@ -275,7 +275,7 @@ public class ContentEntry {
   }
 
   /**
-   * Get skip
+   * count of lines skipped on both sides when the file is too large to include all common lines.
    * @return skip
    */
   @javax.annotation.Nullable

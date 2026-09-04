@@ -98,7 +98,7 @@ public class TestSubmitRuleInfo {
   }
 
   /**
-   * Get status
+   * OK, the change can be submitted. + NOT_READY, additional labels are required before submit. + CLOSED, closed changes cannot be submitted. + RULE_ERROR, rule code failed with an error.
    * @return status
    */
   @javax.annotation.Nullable
@@ -117,7 +117,7 @@ public class TestSubmitRuleInfo {
   }
 
   /**
-   * Get errorMessage
+   * When status is RULE_ERROR this message provides some text describing the failure of the rule predicate.
    * @return errorMessage
    */
   @javax.annotation.Nullable
@@ -144,7 +144,7 @@ public class TestSubmitRuleInfo {
   }
 
   /**
-   * Get ok
+   * Map of labels that are approved; an AccountInfo identifies the voter chosen by the rule.
    * @return ok
    */
   @javax.annotation.Nullable
@@ -171,7 +171,7 @@ public class TestSubmitRuleInfo {
   }
 
   /**
-   * Get reject
+   * Map of labels that are preventing submit; AccountInfo identifies voter.
    * @return reject
    */
   @javax.annotation.Nullable
@@ -198,7 +198,7 @@ public class TestSubmitRuleInfo {
   }
 
   /**
-   * Get need
+   * Map of labels that need to be given to submit. The value is currently an empty object.
    * @return need
    */
   @javax.annotation.Nullable
@@ -225,7 +225,7 @@ public class TestSubmitRuleInfo {
   }
 
   /**
-   * Get may
+   * Map of labels that can be used, but do not affect submit. AccountInfo identifies voter, if the label has been applied.
    * @return may
    */
   @javax.annotation.Nullable
@@ -252,7 +252,7 @@ public class TestSubmitRuleInfo {
   }
 
   /**
-   * Get impossible
+   * Map of labels that should have been in need but cannot be used by any user because of access restrictions. The value is currently an empty object.
    * @return impossible
    */
   @javax.annotation.Nullable

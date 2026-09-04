@@ -76,7 +76,7 @@ public class EditIdentityInput {
   }
 
   /**
-   * Get name
+   * The name of the author/committer. If not specified, the existing name will be used.
    * @return name
    */
   @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class EditIdentityInput {
   }
 
   /**
-   * Get email
+   * The email of the author/committer. If not specified, the existing email will be used.
    * @return email
    */
   @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class EditIdentityInput {
   }
 
   /**
-   * Get type
+   * Type of the identity being edited. Must be either AUTHOR or COMMITTER.
    * @return type
    */
   @javax.annotation.Nullable

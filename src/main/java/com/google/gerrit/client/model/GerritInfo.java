@@ -110,7 +110,7 @@ public class GerritInfo {
   }
 
   /**
-   * Get allProjects
+   * The name of the All-Projects root project.
    * @return allProjects
    */
   @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class GerritInfo {
   }
 
   /**
-   * Get allUsers
+   * The name of the All-Users project, in which per-user data such as account preferences and watched projects is stored.
    * @return allUsers
    */
   @javax.annotation.Nullable
@@ -224,7 +224,7 @@ public class GerritInfo {
   }
 
   /**
-   * Get primaryWeblinkName
+   * The name of the configured primary web link (gerrit.primaryWeblinkName), if one is set.
    * @return primaryWeblinkName
    */
   @javax.annotation.Nullable

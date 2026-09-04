@@ -76,7 +76,7 @@ public class ValidationOptionInfos {
   }
 
   /**
-   * Get validationOptions
+   * The list of all possible validation options.
    * @return validationOptions
    */
   @javax.annotation.Nullable

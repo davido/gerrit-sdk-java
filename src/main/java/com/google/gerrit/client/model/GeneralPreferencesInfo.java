@@ -205,7 +205,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get changesPerPage
+   * The number of changes to show on each page. Allowed values are 10, 25, 50, 100.
    * @return changesPerPage
    */
   @javax.annotation.Nullable
@@ -224,7 +224,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get downloadScheme
+   * The type of download URL the user prefers to use. May be any key from the schemes map in DownloadInfo.
    * @return downloadScheme
    */
   @javax.annotation.Nullable
@@ -243,7 +243,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get theme
+   * Which theme to use. Allowed values are AUTO or DARK or LIGHT.
    * @return theme
    */
   @javax.annotation.Nullable
@@ -262,7 +262,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get dateFormat
+   * The format to display the date in. Allowed values are STD, US, ISO, EURO, UK.
    * @return dateFormat
    */
   @javax.annotation.Nullable
@@ -281,7 +281,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get timeFormat
+   * The format to display the time in. Allowed values are HHMM_12, HHMM_24.
    * @return timeFormat
    */
   @javax.annotation.Nullable
@@ -300,7 +300,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get expandInlineDiffs
+   * Whether to expand diffs inline instead of opening as separate page (Gerrit web app UI only).
    * @return expandInlineDiffs
    */
   @javax.annotation.Nullable
@@ -319,7 +319,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get relativeDateInChangeTable
+   * Whether to show relative dates in the changes table.
    * @return relativeDateInChangeTable
    */
   @javax.annotation.Nullable
@@ -338,7 +338,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get diffView
+   * The type of diff view to show. Allowed values are SIDE_BY_SIDE, UNIFIED_DIFF.
    * @return diffView
    */
   @javax.annotation.Nullable
@@ -357,7 +357,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get sizeBarInChangeTable
+   * Whether to show the change sizes as colored bars in the change table.
    * @return sizeBarInChangeTable
    */
   @javax.annotation.Nullable
@@ -376,7 +376,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get legacycidInChangeTable
+   * Whether to show change number in the change table.
    * @return legacycidInChangeTable
    */
   @javax.annotation.Nullable
@@ -395,7 +395,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get muteCommonPathPrefixes
+   * Whether to mute common path prefixes in file names in the file table.
    * @return muteCommonPathPrefixes
    */
   @javax.annotation.Nullable
@@ -414,7 +414,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get signedOffBy
+   * Whether to insert Signed-off-by footer in changes created with the inline edit feature.
    * @return signedOffBy
    */
   @javax.annotation.Nullable
@@ -433,7 +433,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get emailStrategy
+   * The type of email strategy to use. On ENABLED, the user will receive emails from Gerrit. On CC_ON_OWN_COMMENTS the user will also receive emails for their own comments. On ATTENTION_SET_ONLY, on emails about changes, the user will receive emails only if they are in the attention set of that change.
    * @return emailStrategy
    */
   @javax.annotation.Nullable
@@ -452,7 +452,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get emailFormat
+   * The format to use for outgoing email. Allowed values are PLAINTEXT and HTML_PLAINTEXT.
    * @return emailFormat
    */
   @javax.annotation.Nullable
@@ -471,7 +471,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get defaultBaseForMerges
+   * The base which should be pre-selected in the &#39;Diff Against&#39; drop-down list when the change screen is opened for a merge commit. Allowed values are AUTO_MERGE and FIRST_PARENT.
    * @return defaultBaseForMerges
    */
   @javax.annotation.Nullable
@@ -490,7 +490,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get publishCommentsOnPush
+   * Whether to publish draft comments on push by default.
    * @return publishCommentsOnPush
    */
   @javax.annotation.Nullable
@@ -509,7 +509,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get disableKeyboardShortcuts
+   * Whether to disable all keyboard shortcuts.
    * @return disableKeyboardShortcuts
    */
   @javax.annotation.Nullable
@@ -528,7 +528,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get disableTokenHighlighting
+   * Whether to disable token highlighting on hover.
    * @return disableTokenHighlighting
    */
   @javax.annotation.Nullable
@@ -547,7 +547,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get workInProgressByDefault
+   * Whether to set work-in-progress on push or on create changes online by default.
    * @return workInProgressByDefault
    */
   @javax.annotation.Nullable
@@ -574,7 +574,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get my
+   * The menu items of the MY top menu as a list of TopMenuItemInfo entities.
    * @return my
    */
   @javax.annotation.Nullable
@@ -601,7 +601,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get changeTable
+   * The columns to display in the change table (Gerrit web app UI only). The default is empty, which will default columns as determined by the frontend.
    * @return changeTable
    */
   @javax.annotation.Nullable
@@ -620,7 +620,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get allowBrowserNotifications
+   * Whether to prompt user to enable browser notification in browser.
    * @return allowBrowserNotifications
    */
   @javax.annotation.Nullable
@@ -639,7 +639,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get allowSuggestCodeWhileCommenting
+   * Whether to receive suggested code while writing comments. This feature needs a plugin implementation.
    * @return allowSuggestCodeWhileCommenting
    */
   @javax.annotation.Nullable
@@ -658,7 +658,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get allowAutocompletingComments
+   * Whether to receive autocompletions while writing comments. This feature needs a plugin implementation.
    * @return allowAutocompletingComments
    */
   @javax.annotation.Nullable
@@ -677,7 +677,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get aiChatSelectedModel
+   * The name of the AI model selected for the AI chat. This feature needs a plugin implementation.
    * @return aiChatSelectedModel
    */
   @javax.annotation.Nullable
@@ -696,7 +696,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get labelFilter
+   * A comma-separated list of label names that limits which label columns are shown in the change table. If empty, all labels are shown.
    * @return labelFilter
    */
   @javax.annotation.Nullable
@@ -715,7 +715,7 @@ public class GeneralPreferencesInfo {
   }
 
   /**
-   * Get diffPageSidebar
+   * String indicating which sidebar should be open on the diff page. Set to \&quot;NONE\&quot; if no sidebars should be open. Plugin-supplied sidebars will be prefixed with \&quot;plugin-\&quot;.
    * @return diffPageSidebar
    */
   @javax.annotation.Nullable

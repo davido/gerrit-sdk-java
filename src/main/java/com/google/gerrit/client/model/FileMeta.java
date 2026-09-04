@@ -83,7 +83,7 @@ public class FileMeta {
   }
 
   /**
-   * Get name
+   * The name of the file.
    * @return name
    */
   @javax.annotation.Nullable
@@ -102,7 +102,7 @@ public class FileMeta {
   }
 
   /**
-   * Get contentType
+   * The content type of the file. For the commit message and merge list the value is text/x-gerrit-commit-message and text/x-gerrit-merge-list respectively. For git links the value is x-git/gitlink. For symlinks the value is x-git/symlink. For regular files the value is the file mime type (e.g.
    * @return contentType
    */
   @javax.annotation.Nullable
@@ -121,7 +121,7 @@ public class FileMeta {
   }
 
   /**
-   * Get lines
+   * The total number of lines in the file.
    * @return lines
    */
   @javax.annotation.Nullable
@@ -148,7 +148,7 @@ public class FileMeta {
   }
 
   /**
-   * Get webLinks
+   * Links to the file in external sites as a list of WebLinkInfo entries.
    * @return webLinks
    */
   @javax.annotation.Nullable

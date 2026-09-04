@@ -191,7 +191,7 @@ public class MetricJson {
   }
 
   /**
-   * Get description
+   * The description of the metric.
    * @return description
    */
   @javax.annotation.Nullable
@@ -210,7 +210,7 @@ public class MetricJson {
   }
 
   /**
-   * Get unit
+   * The unit of measurement of the recorded values.
    * @return unit
    */
   @javax.annotation.Nullable
@@ -229,7 +229,7 @@ public class MetricJson {
   }
 
   /**
-   * Get constant
+   * Whether the metric reports a single constant value.
    * @return constant
    */
   @javax.annotation.Nullable
@@ -248,7 +248,7 @@ public class MetricJson {
   }
 
   /**
-   * Get rate
+   * Whether the metric reports a rate.
    * @return rate
    */
   @javax.annotation.Nullable
@@ -267,7 +267,7 @@ public class MetricJson {
   }
 
   /**
-   * Get gauge
+   * Whether the metric is a gauge that reports an instantaneous value.
    * @return gauge
    */
   @javax.annotation.Nullable
@@ -286,7 +286,7 @@ public class MetricJson {
   }
 
   /**
-   * Get cumulative
+   * Whether the metric accumulates over time.
    * @return cumulative
    */
   @javax.annotation.Nullable
@@ -305,7 +305,7 @@ public class MetricJson {
   }
 
   /**
-   * Get count
+   * The number of recorded events.
    * @return count
    */
   @javax.annotation.Nullable
@@ -324,7 +324,7 @@ public class MetricJson {
   }
 
   /**
-   * Get value
+   * The current value, for constant metrics and gauges.
    * @return value
    */
   @javax.annotation.Nullable
@@ -343,7 +343,7 @@ public class MetricJson {
   }
 
   /**
-   * Get rate1m
+   * The one-minute moving average rate.
    * @return rate1m
    */
   @javax.annotation.Nullable
@@ -362,7 +362,7 @@ public class MetricJson {
   }
 
   /**
-   * Get rate5m
+   * The five-minute moving average rate.
    * @return rate5m
    */
   @javax.annotation.Nullable
@@ -381,7 +381,7 @@ public class MetricJson {
   }
 
   /**
-   * Get rate15m
+   * The fifteen-minute moving average rate.
    * @return rate15m
    */
   @javax.annotation.Nullable
@@ -400,7 +400,7 @@ public class MetricJson {
   }
 
   /**
-   * Get rateMean
+   * The mean rate since the metric was registered.
    * @return rateMean
    */
   @javax.annotation.Nullable
@@ -419,7 +419,7 @@ public class MetricJson {
   }
 
   /**
-   * Get p50
+   * The median (50th percentile) of the recorded values.
    * @return p50
    */
   @javax.annotation.Nullable
@@ -438,7 +438,7 @@ public class MetricJson {
   }
 
   /**
-   * Get p75
+   * The 75th percentile of the recorded values.
    * @return p75
    */
   @javax.annotation.Nullable
@@ -457,7 +457,7 @@ public class MetricJson {
   }
 
   /**
-   * Get p95
+   * The 95th percentile of the recorded values.
    * @return p95
    */
   @javax.annotation.Nullable
@@ -476,7 +476,7 @@ public class MetricJson {
   }
 
   /**
-   * Get p98
+   * The 98th percentile of the recorded values.
    * @return p98
    */
   @javax.annotation.Nullable
@@ -495,7 +495,7 @@ public class MetricJson {
   }
 
   /**
-   * Get p99
+   * The 99th percentile of the recorded values.
    * @return p99
    */
   @javax.annotation.Nullable
@@ -514,7 +514,7 @@ public class MetricJson {
   }
 
   /**
-   * Get p999
+   * The 99.9th percentile of the recorded values.
    * @return p999
    */
   @javax.annotation.Nullable
@@ -533,7 +533,7 @@ public class MetricJson {
   }
 
   /**
-   * Get min
+   * The minimum recorded value.
    * @return min
    */
   @javax.annotation.Nullable
@@ -552,7 +552,7 @@ public class MetricJson {
   }
 
   /**
-   * Get avg
+   * The average of the recorded values.
    * @return avg
    */
   @javax.annotation.Nullable
@@ -571,7 +571,7 @@ public class MetricJson {
   }
 
   /**
-   * Get max
+   * The maximum recorded value.
    * @return max
    */
   @javax.annotation.Nullable
@@ -590,7 +590,7 @@ public class MetricJson {
   }
 
   /**
-   * Get sum
+   * The sum of the recorded values.
    * @return sum
    */
   @javax.annotation.Nullable
@@ -609,7 +609,7 @@ public class MetricJson {
   }
 
   /**
-   * Get stdDev
+   * The standard deviation of the recorded values.
    * @return stdDev
    */
   @javax.annotation.Nullable
@@ -636,7 +636,7 @@ public class MetricJson {
   }
 
   /**
-   * Get fields
+   * The fields of the metric as a list of FieldJson entities.
    * @return fields
    */
   @javax.annotation.Nullable
@@ -663,7 +663,7 @@ public class MetricJson {
   }
 
   /**
-   * Get buckets
+   * The per-field-value breakdown of the metric, as a map of field values to the recorded value for that combination.
    * @return buckets
    */
   @javax.annotation.Nullable

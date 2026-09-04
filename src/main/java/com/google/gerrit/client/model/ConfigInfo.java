@@ -395,7 +395,7 @@ public class ConfigInfo {
   }
 
   /**
-   * Get enableReviewerByEmail
+   * InheritedBooleanInfo that tells whether reviewers and CCs that do not have a Gerrit account can be added to a change by their email address.
    * @return enableReviewerByEmail
    */
   @javax.annotation.Nullable
@@ -636,7 +636,7 @@ public class ConfigInfo {
   }
 
   /**
-   * Get extensionPanelNames
+   * Views that are shown as extension panels, as a map of panel section name to the list of panel names configured for the project.
    * @return extensionPanelNames
    */
   @javax.annotation.Nullable

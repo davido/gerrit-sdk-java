@@ -1665,8 +1665,8 @@ public class ConfigApi {
     }
 
     /**
-     * 
-     * 
+     * List Metrics
+     * Lists the metrics of the server, returning a map of metric name to a MetricJson entity.
      * @param dataOnly  (optional)
      * @param prefix  (optional)
      * @return Map&lt;String, MetricJson&gt;
@@ -1684,8 +1684,8 @@ public class ConfigApi {
     }
 
     /**
-     * 
-     * 
+     * List Metrics
+     * Lists the metrics of the server, returning a map of metric name to a MetricJson entity.
      * @param dataOnly  (optional)
      * @param prefix  (optional)
      * @return ApiResponse&lt;Map&lt;String, MetricJson&gt;&gt;
@@ -1704,8 +1704,8 @@ public class ConfigApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * List Metrics (asynchronously)
+     * Lists the metrics of the server, returning a map of metric name to a MetricJson entity.
      * @param dataOnly  (optional)
      * @param prefix  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -1800,8 +1800,8 @@ public class ConfigApi {
     }
 
     /**
-     * 
-     * 
+     * Get Metric
+     * Retrieves a single metric of the server. The metric name is used as the \\{metric-id\\} and must be URL-encoded because it may contain slashes.
      * @param metricId  (required)
      * @param dataOnly  (optional)
      * @return MetricJson
@@ -1819,8 +1819,8 @@ public class ConfigApi {
     }
 
     /**
-     * 
-     * 
+     * Get Metric
+     * Retrieves a single metric of the server. The metric name is used as the \\{metric-id\\} and must be URL-encoded because it may contain slashes.
      * @param metricId  (required)
      * @param dataOnly  (optional)
      * @return ApiResponse&lt;MetricJson&gt;
@@ -1839,8 +1839,8 @@ public class ConfigApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Get Metric (asynchronously)
+     * Retrieves a single metric of the server. The metric name is used as the \\{metric-id\\} and must be URL-encoded because it may contain slashes.
      * @param metricId  (required)
      * @param dataOnly  (optional)
      * @param _callback The callback to be executed when the API call finishes

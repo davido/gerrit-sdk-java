@@ -75,7 +75,7 @@ public class GarbageCollectInput {
   }
 
   /**
-   * Get showProgress
+   * Whether progress information should be shown.
    * @return showProgress
    */
   @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class GarbageCollectInput {
   }
 
   /**
-   * Get aggressive
+   * Whether an aggressive garbage collection should be done.
    * @return aggressive
    */
   @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class GarbageCollectInput {
   }
 
   /**
-   * Get async
+   * Whether the garbage collection should run asynchronously.
    * @return async
    */
   @javax.annotation.Nullable

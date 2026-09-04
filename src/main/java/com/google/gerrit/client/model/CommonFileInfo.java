@@ -120,7 +120,7 @@ public class CommonFileInfo {
   }
 
   /**
-   * Get status
+   * The status of the file (\&quot;A\&quot;&#x3D;Added, \&quot;D\&quot;&#x3D;Deleted, \&quot;R\&quot;&#x3D;Renamed, \&quot;C\&quot;&#x3D;Copied, \&quot;W\&quot;&#x3D;Rewritten). + Not set if the file was Modified (\&quot;M\&quot;).
    * @return status
    */
   @javax.annotation.Nullable
@@ -139,7 +139,7 @@ public class CommonFileInfo {
   }
 
   /**
-   * Get oldMode
+   * File mode in octal (e.g. 100644) at the old commit. The first three digits indicate the file type and the last three digits contain the file permission bits. For added files, this field will not be present.
    * @return oldMode
    */
   @javax.annotation.Nullable
@@ -158,7 +158,7 @@ public class CommonFileInfo {
   }
 
   /**
-   * Get newMode
+   * File mode in octal (e.g. 100644) at the new commit. The first three digits indicate the file type and the last three digits contain the file permission bits. For deleted files, this field will not be present.
    * @return newMode
    */
   @javax.annotation.Nullable
@@ -177,7 +177,7 @@ public class CommonFileInfo {
   }
 
   /**
-   * Get oldSha
+   * SHA-1 of the file content at the old commit. For added files, this field will not be present.
    * @return oldSha
    */
   @javax.annotation.Nullable
@@ -196,7 +196,7 @@ public class CommonFileInfo {
   }
 
   /**
-   * Get newSha
+   * SHA-1 of the file content at the new commit. For deleted files, this field will not be present.
    * @return newSha
    */
   @javax.annotation.Nullable
@@ -215,7 +215,7 @@ public class CommonFileInfo {
   }
 
   /**
-   * Get binary
+   * Whether the file is binary.
    * @return binary
    */
   @javax.annotation.Nullable
@@ -234,7 +234,7 @@ public class CommonFileInfo {
   }
 
   /**
-   * Get oldPath
+   * The old file path. + Only set if the file was renamed or copied.
    * @return oldPath
    */
   @javax.annotation.Nullable
@@ -253,7 +253,7 @@ public class CommonFileInfo {
   }
 
   /**
-   * Get linesInserted
+   * Number of inserted lines. + Not set for binary files or if no lines were inserted. + An empty last line is not included in the count and hence this number can differ by one from details provided in DiffInfo.
    * @return linesInserted
    */
   @javax.annotation.Nullable
@@ -272,7 +272,7 @@ public class CommonFileInfo {
   }
 
   /**
-   * Get linesDeleted
+   * Number of deleted lines. + Not set for binary files or if no lines were deleted. + An empty last line is not included in the count and hence this number can differ by one from details provided in DiffInfo.
    * @return linesDeleted
    */
   @javax.annotation.Nullable
@@ -291,7 +291,7 @@ public class CommonFileInfo {
   }
 
   /**
-   * Get sizeDelta
+   * Number of bytes by which the file size increased/decreased.
    * @return sizeDelta
    */
   @javax.annotation.Nullable
@@ -310,7 +310,7 @@ public class CommonFileInfo {
   }
 
   /**
-   * Get size
+   * File size in bytes.
    * @return size
    */
   @javax.annotation.Nullable

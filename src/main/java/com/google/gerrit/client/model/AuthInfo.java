@@ -131,7 +131,7 @@ public class AuthInfo {
   }
 
   /**
-   * Get authType
+   * The authentication type that is configured on the server; see auth.type.
    * @return authType
    */
   @javax.annotation.Nullable

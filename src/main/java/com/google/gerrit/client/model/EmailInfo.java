@@ -118,7 +118,7 @@ public class EmailInfo {
   }
 
   /**
-   * Get avatar
+   * Whether this email address is the one used to display the user&#39;s avatar.
    * @return avatar
    */
   @javax.annotation.Nullable

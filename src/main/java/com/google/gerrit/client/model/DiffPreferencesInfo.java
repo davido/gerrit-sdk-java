@@ -472,7 +472,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get renderEntireFile
+   * Whether the whole file should be rendered instead of only the changed parts.
    * @return renderEntireFile
    */
   @javax.annotation.Nullable
@@ -491,7 +491,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get hideEmptyPane
+   * Whether empty panes should be hidden. The left pane is empty when a file was added; the right pane is empty when a file was deleted.
    * @return hideEmptyPane
    */
   @javax.annotation.Nullable
@@ -548,7 +548,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get responsiveMode
+   * The responsive-rendering mode of the diff view. Allowed values are NONE, SHRINK_ONLY and FULL_RESPONSIVE.
    * @return responsiveMode
    */
   @javax.annotation.Nullable
@@ -624,7 +624,7 @@ public class DiffPreferencesInfo {
   }
 
   /**
-   * Get skipUnchanged
+   * Whether files without changes are skipped when switching between files.
    * @return skipUnchanged
    */
   @javax.annotation.Nullable

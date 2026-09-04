@@ -65,7 +65,7 @@ public class CommentInput {
   }
 
   /**
-   * Get enableContext
+   * Whether to include the source lines around the comment as context in the response.
    * @return enableContext
    */
   @javax.annotation.Nullable

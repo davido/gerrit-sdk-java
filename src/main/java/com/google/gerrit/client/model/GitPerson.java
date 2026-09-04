@@ -80,7 +80,7 @@ public class GitPerson {
   }
 
   /**
-   * Get name
+   * The name of the author/committer.
    * @return name
    */
   @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class GitPerson {
   }
 
   /**
-   * Get email
+   * The email address of the author/committer.
    * @return email
    */
   @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class GitPerson {
   }
 
   /**
-   * Get date
+   * The timestamp of when this identity was constructed.
    * @return date
    */
   @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class GitPerson {
   }
 
   /**
-   * Get tz
+   * The timezone offset from UTC of when this identity was constructed.
    * @return tz
    */
   @javax.annotation.Nullable

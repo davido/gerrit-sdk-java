@@ -162,7 +162,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get author
+   * The author of the message as an AccountInfo entity. + Unset for draft comments, assumed to be the calling user.
    * @return author
    */
   @javax.annotation.Nullable
@@ -181,7 +181,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get tag
+   * Value of the tag field from ReviewInput set while posting the review. NOTE: To apply different tags on different votes/comments multiple invocations of the REST call are required.
    * @return tag
    */
   @javax.annotation.Nullable
@@ -200,7 +200,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get changeMessageId
+   * Available with the list change comments endpoint. Contains the id of the change message that this comment is linked to.
    * @return changeMessageId
    */
   @javax.annotation.Nullable
@@ -219,7 +219,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get unresolved
+   * Whether or not the comment must be addressed by the user. The state of resolution of a comment thread is stored in the last comment in that thread chronologically.
    * @return unresolved
    */
   @javax.annotation.Nullable
@@ -246,7 +246,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get contextLines
+   * A list of ContextLine containing the lines of the source file where the comment was written. Available only if the \&quot;enable-context\&quot; parameter (see List Change Comments) is set.
    * @return contextLines
    */
   @javax.annotation.Nullable
@@ -265,7 +265,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get sourceContentType
+   * Mime type of the file where the comment is written. Available only if the \&quot;enable-context\&quot; parameter (see List Change Comments) is set.
    * @return sourceContentType
    */
   @javax.annotation.Nullable
@@ -284,7 +284,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get patchSet
+   * The patch set number for the comment; only set in contexts where + comments may be returned for multiple patch sets.
    * @return patchSet
    */
   @javax.annotation.Nullable
@@ -303,7 +303,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get id
+   * The URL encoded UUID of the comment.
    * @return id
    */
   @javax.annotation.Nullable
@@ -322,7 +322,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get path
+   * The file path for which the inline comment was done. + Not set if returned in a map where the key is the file path.
    * @return path
    */
   @javax.annotation.Nullable
@@ -341,7 +341,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get side
+   * The side on which the comment was added. + Allowed values are REVISION and PARENT. + If not set, the default is REVISION.
    * @return side
    */
   @javax.annotation.Nullable
@@ -360,7 +360,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get parent
+   * The 1-based parent number. Used only for merge commits when side &#x3D;&#x3D; PARENT. When not set the comment is for the auto-merge tree.
    * @return parent
    */
   @javax.annotation.Nullable
@@ -379,7 +379,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get line
+   * The number of the line for which the comment was done. + If range is set, this equals the end line of the range. + If neither line nor range is set, it&#39;s a file comment.
    * @return line
    */
   @javax.annotation.Nullable
@@ -398,7 +398,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get range
+   * The range of the comment as a CommentRange entity.
    * @return range
    */
   @javax.annotation.Nullable
@@ -417,7 +417,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get inReplyTo
+   * The URL encoded UUID of the comment to which this comment is a reply.
    * @return inReplyTo
    */
   @javax.annotation.Nullable
@@ -436,7 +436,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get updated
+   * The timestamp of when this comment was written.
    * @return updated
    */
   @javax.annotation.Nullable
@@ -455,7 +455,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get message
+   * The comment message.
    * @return message
    */
   @javax.annotation.Nullable
@@ -474,7 +474,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get commitId
+   * Hex commit SHA-1 (40 characters string) of the commit of the patchset to which this comment applies.
    * @return commitId
    */
   @javax.annotation.Nullable
@@ -501,7 +501,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get fixSuggestions
+   * Suggested fixes for this comment as a list of FixSuggestionInfo entities.
    * @return fixSuggestions
    */
   @javax.annotation.Nullable
@@ -520,7 +520,7 @@ public class RobotCommentInfo {
   }
 
   /**
-   * Get isAi
+   * Whether the comment was created by an AI agent. Not set if false.
    * @return isAi
    */
   @javax.annotation.Nullable

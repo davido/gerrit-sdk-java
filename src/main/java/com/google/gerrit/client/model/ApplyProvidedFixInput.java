@@ -81,7 +81,7 @@ public class ApplyProvidedFixInput {
   }
 
   /**
-   * Get fixReplacementInfos
+   * The replacements that make up the fix, as a list of FixReplacementInfo entities.
    * @return fixReplacementInfos
    */
   @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class ApplyProvidedFixInput {
   }
 
   /**
-   * Get originalPatchsetForFix
+   * Number of the patch set the fix was originally computed against.
    * @return originalPatchsetForFix
    */
   @javax.annotation.Nullable

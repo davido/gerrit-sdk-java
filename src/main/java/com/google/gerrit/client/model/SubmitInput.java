@@ -84,7 +84,7 @@ public class SubmitInput {
   }
 
   /**
-   * Get waitForMerge
+   * Deprecated and no longer used. Kept for backwards compatibility.
    * @return waitForMerge
    */
   @javax.annotation.Nullable

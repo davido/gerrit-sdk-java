@@ -80,7 +80,7 @@ public class MenuItem {
   }
 
   /**
-   * Get url
+   * The URL of the menu item link.
    * @return url
    */
   @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class MenuItem {
   }
 
   /**
-   * Get name
+   * The name of the menu item.
    * @return name
    */
   @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class MenuItem {
   }
 
   /**
-   * Get target
+   * Target attribute of the menu item link.
    * @return target
    */
   @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class MenuItem {
   }
 
   /**
-   * Get id
+   * The id attribute of the menu item link.
    * @return id
    */
   @javax.annotation.Nullable

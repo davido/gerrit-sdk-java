@@ -94,7 +94,7 @@ public class ReviewerResult {
   }
 
   /**
-   * Get input
+   * Value of the reviewer field from ReviewerInput set while adding the reviewer.
    * @return input
    */
   @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class ReviewerResult {
   }
 
   /**
-   * Get error
+   * Error message explaining why the reviewer could not be added. + If a group was specified in the input and an error is returned, it means that none of the members were added as reviewer.
    * @return error
    */
   @javax.annotation.Nullable
@@ -132,7 +132,7 @@ public class ReviewerResult {
   }
 
   /**
-   * Get confirm
+   * Whether adding the reviewer requires confirmation.
    * @return confirm
    */
   @javax.annotation.Nullable
@@ -159,7 +159,7 @@ public class ReviewerResult {
   }
 
   /**
-   * Get reviewers
+   * The newly added reviewers as a list of ReviewerInfo entities.
    * @return reviewers
    */
   @javax.annotation.Nullable
@@ -186,7 +186,7 @@ public class ReviewerResult {
   }
 
   /**
-   * Get ccs
+   * The newly CCed accounts as a list of AccountInfo entities. This field will only appear if the requested state for the reviewer was CC.
    * @return ccs
    */
   @javax.annotation.Nullable
@@ -205,7 +205,7 @@ public class ReviewerResult {
   }
 
   /**
-   * Get removed
+   * The newly removed accounts as a list of AccountInfo entities. This field will only appear if the requested state for the reviewer was REMOVED.
    * @return removed
    */
   @javax.annotation.Nullable
