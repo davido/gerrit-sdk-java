@@ -75,7 +75,7 @@ public class DeleteChangesInput {
   }
 
   /**
-   * Get changes
+   * A list of changes (Change-Id or Change-Number) that identify the changes that should be deleted.
    * @return changes
    */
   @javax.annotation.Nullable

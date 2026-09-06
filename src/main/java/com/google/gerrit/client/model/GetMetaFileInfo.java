@@ -76,7 +76,7 @@ public class GetMetaFileInfo {
   }
 
   /**
-   * Get webLinks
+   * Links to the file in external sites as a list of DiffWebLinkInfo entities.
    * @return webLinks
    */
   @javax.annotation.Nullable

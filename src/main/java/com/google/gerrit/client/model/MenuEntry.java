@@ -73,7 +73,7 @@ public class MenuEntry {
   }
 
   /**
-   * Get name
+   * Name of the top menu entry.
    * @return name
    */
   @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class MenuEntry {
   }
 
   /**
-   * Get items
+   * List of menu items.
    * @return items
    */
   @javax.annotation.Nullable

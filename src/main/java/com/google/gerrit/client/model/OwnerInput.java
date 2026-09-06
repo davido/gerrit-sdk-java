@@ -65,7 +65,7 @@ public class OwnerInput {
   }
 
   /**
-   * Get owner
+   * The id of the group that should own this group.
    * @return owner
    */
   @javax.annotation.Nullable

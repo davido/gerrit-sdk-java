@@ -751,7 +751,7 @@ public class ChangeInfo {
   }
 
   /**
-   * Get stars
+   * List of star labels that are applied by the calling user to this change.
    * @return stars
    */
   @javax.annotation.Nullable

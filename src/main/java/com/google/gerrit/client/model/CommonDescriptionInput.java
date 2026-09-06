@@ -65,7 +65,7 @@ public class CommonDescriptionInput {
   }
 
   /**
-   * Get description
+   * The description text.
    * @return description
    */
   @javax.annotation.Nullable

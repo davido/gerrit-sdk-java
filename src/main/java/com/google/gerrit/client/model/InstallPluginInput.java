@@ -70,7 +70,7 @@ public class InstallPluginInput {
   }
 
   /**
-   * Get url
+   * URL to the plugin jar.
    * @return url
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class InstallPluginInput {
   }
 
   /**
-   * Get raw
+   * The raw plugin content (the plugin jar) uploaded in the request body, as an alternative to url.
    * @return raw
    */
   @javax.annotation.Nullable

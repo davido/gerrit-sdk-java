@@ -71,7 +71,7 @@ public class WorkInProgressOpInput {
   }
 
   /**
-   * Get notify
+   * Notify handling that defines to whom email notifications should be sent after the change is set to WorkInProgress/ReadyForReview. Allowed values are NONE, OWNER, OWNER_REVIEWERS and ALL.
    * @return notify
    */
   @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class WorkInProgressOpInput {
   }
 
   /**
-   * Get message
+   * Message to be added as a review comment to the change being set WorkInProgress/ReadyForReview.
    * @return message
    */
   @javax.annotation.Nullable

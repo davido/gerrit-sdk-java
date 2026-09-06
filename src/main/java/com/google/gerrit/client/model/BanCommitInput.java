@@ -80,7 +80,7 @@ public class BanCommitInput {
   }
 
   /**
-   * Get commits
+   * List of commits to be banned.
    * @return commits
    */
   @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class BanCommitInput {
   }
 
   /**
-   * Get reason
+   * Reason for banning the commits.
    * @return reason
    */
   @javax.annotation.Nullable

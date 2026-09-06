@@ -72,7 +72,7 @@ public class AddSubgroupsInput {
   }
 
   /**
-   * Get oneGroup
+   * The id of one group that should be included or deleted.
    * @return oneGroup
    */
   @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class AddSubgroupsInput {
   }
 
   /**
-   * Get groups
+   * A list of group ids that identify the groups that should be included or deleted.
    * @return groups
    */
   @javax.annotation.Nullable

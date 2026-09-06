@@ -72,7 +72,7 @@ public class AccountsInfo {
   }
 
   /**
-   * Get visibility
+   * Visibility setting for accounts.
    * @return visibility
    */
   @javax.annotation.Nullable
@@ -91,7 +91,7 @@ public class AccountsInfo {
   }
 
   /**
-   * Get defaultDisplayName
+   * The default strategy for choosing the display name in the UI, see also gerrit.config.
    * @return defaultDisplayName
    */
   @javax.annotation.Nullable

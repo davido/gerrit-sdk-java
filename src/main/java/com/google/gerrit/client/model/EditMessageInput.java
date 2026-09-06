@@ -65,7 +65,7 @@ public class EditMessageInput {
   }
 
   /**
-   * Get message
+   * New commit message.
    * @return message
    */
   @javax.annotation.Nullable

@@ -65,7 +65,7 @@ public class ProjectsDescriptionInput {
   }
 
   /**
-   * Get commitMessage
+   * Message that should be used to commit the change of the project description in the project.config file to the refs/meta/config branch.
    * @return commitMessage
    */
   @javax.annotation.Nullable

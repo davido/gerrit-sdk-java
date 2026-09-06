@@ -65,7 +65,7 @@ public class StatusInput {
   }
 
   /**
-   * Get status
+   * The new status of the account. + If not set or if set to an empty string, the account status is deleted.
    * @return status
    */
   @javax.annotation.Nullable

@@ -70,7 +70,7 @@ public class ContextLineInfo {
   }
 
   /**
-   * Get lineNumber
+   * The line number of the source line.
    * @return lineNumber
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class ContextLineInfo {
   }
 
   /**
-   * Get contextLine
+   * The text of the context line.
    * @return contextLine
    */
   @javax.annotation.Nullable

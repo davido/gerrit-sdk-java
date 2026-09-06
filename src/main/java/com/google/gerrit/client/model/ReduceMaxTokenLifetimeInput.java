@@ -65,7 +65,7 @@ public class ReduceMaxTokenLifetimeInput {
   }
 
   /**
-   * Get lifetime
+   * The new maximum lifetime that will be applied to authentication tokens.
    * @return lifetime
    */
   @javax.annotation.Nullable

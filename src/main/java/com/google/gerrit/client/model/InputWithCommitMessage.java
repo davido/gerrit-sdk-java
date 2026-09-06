@@ -65,7 +65,7 @@ public class InputWithCommitMessage {
   }
 
   /**
-   * Get commitMessage
+   * The commit message to use.
    * @return commitMessage
    */
   @javax.annotation.Nullable

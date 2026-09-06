@@ -4136,7 +4136,7 @@ public class ConfigApi {
 
     /**
      * Reindex an Index Version
-     * This endpoint allows to trigger background reindexing of an index version. It is also supported to specify whether to reuse existing up-to-date (non-stale) index documents and whether to notifyListeners or not.
+     * This endpoint allows to trigger background reindexing of an index version. It is also supported to specify whether to reuse existing up-to-date (non-stale) index documents and whether to notifyListeners or not. The options are provided in the request body as a ReindexIndexVersion.Input entity.
      * @param indexId  (required)
      * @param indexVersionId  (required)
      * @param reindexIndexVersionInput  (optional)
@@ -4156,7 +4156,7 @@ public class ConfigApi {
 
     /**
      * Reindex an Index Version
-     * This endpoint allows to trigger background reindexing of an index version. It is also supported to specify whether to reuse existing up-to-date (non-stale) index documents and whether to notifyListeners or not.
+     * This endpoint allows to trigger background reindexing of an index version. It is also supported to specify whether to reuse existing up-to-date (non-stale) index documents and whether to notifyListeners or not. The options are provided in the request body as a ReindexIndexVersion.Input entity.
      * @param indexId  (required)
      * @param indexVersionId  (required)
      * @param reindexIndexVersionInput  (optional)
@@ -4177,7 +4177,7 @@ public class ConfigApi {
 
     /**
      * Reindex an Index Version (asynchronously)
-     * This endpoint allows to trigger background reindexing of an index version. It is also supported to specify whether to reuse existing up-to-date (non-stale) index documents and whether to notifyListeners or not.
+     * This endpoint allows to trigger background reindexing of an index version. It is also supported to specify whether to reuse existing up-to-date (non-stale) index documents and whether to notifyListeners or not. The options are provided in the request body as a ReindexIndexVersion.Input entity.
      * @param indexId  (required)
      * @param indexVersionId  (required)
      * @param reindexIndexVersionInput  (optional)
@@ -4279,7 +4279,7 @@ public class ConfigApi {
 
     /**
      * Create Snapshot of one Index Version
-     * This creates a snapshot of one index version of the specified index.
+     * This creates a snapshot of one index version of the specified index. The snapshot id may be provided in the request body as a SnapshotIndexVersion.Input entity.
      * @param indexId  (required)
      * @param indexVersionId  (required)
      * @param snapshotIndexVersionInput  (optional)
@@ -4299,7 +4299,7 @@ public class ConfigApi {
 
     /**
      * Create Snapshot of one Index Version
-     * This creates a snapshot of one index version of the specified index.
+     * This creates a snapshot of one index version of the specified index. The snapshot id may be provided in the request body as a SnapshotIndexVersion.Input entity.
      * @param indexId  (required)
      * @param indexVersionId  (required)
      * @param snapshotIndexVersionInput  (optional)
@@ -4320,7 +4320,7 @@ public class ConfigApi {
 
     /**
      * Create Snapshot of one Index Version (asynchronously)
-     * This creates a snapshot of one index version of the specified index.
+     * This creates a snapshot of one index version of the specified index. The snapshot id may be provided in the request body as a SnapshotIndexVersion.Input entity.
      * @param indexId  (required)
      * @param indexVersionId  (required)
      * @param snapshotIndexVersionInput  (optional)
@@ -4775,7 +4775,7 @@ public class ConfigApi {
 
     /**
      * Create Snapshot of All Indexes
-     * 
+     * This creates a snapshot of all write index versions. The snapshot id may be provided in the request body as a SnapshotIndexes.Input entity.
      * @param snapshotIndexesInput  (optional)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -4793,7 +4793,7 @@ public class ConfigApi {
 
     /**
      * Create Snapshot of All Indexes
-     * 
+     * This creates a snapshot of all write index versions. The snapshot id may be provided in the request body as a SnapshotIndexes.Input entity.
      * @param snapshotIndexesInput  (optional)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -4812,7 +4812,7 @@ public class ConfigApi {
 
     /**
      * Create Snapshot of All Indexes (asynchronously)
-     * 
+     * This creates a snapshot of all write index versions. The snapshot id may be provided in the request body as a SnapshotIndexes.Input entity.
      * @param snapshotIndexesInput  (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call

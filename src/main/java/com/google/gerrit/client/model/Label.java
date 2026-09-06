@@ -77,7 +77,7 @@ public class Label {
   }
 
   /**
-   * Get label
+   * The name of the label.
    * @return label
    */
   @javax.annotation.Nullable
@@ -96,7 +96,7 @@ public class Label {
   }
 
   /**
-   * Get status
+   * The status of the label, one of OK, REJECT, NEED, MAY or IMPOSSIBLE.
    * @return status
    */
   @javax.annotation.Nullable
@@ -115,7 +115,7 @@ public class Label {
   }
 
   /**
-   * Get appliedBy
+   * The AccountInfo of the user that applied the vote to the label.
    * @return appliedBy
    */
   @javax.annotation.Nullable

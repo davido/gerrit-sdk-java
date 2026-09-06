@@ -75,7 +75,7 @@ public class DeleteBranchesInput {
   }
 
   /**
-   * Get branches
+   * A list of branch names that identify the branches that should be deleted.
    * @return branches
    */
   @javax.annotation.Nullable

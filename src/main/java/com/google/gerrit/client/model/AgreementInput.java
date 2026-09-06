@@ -65,7 +65,7 @@ public class AgreementInput {
   }
 
   /**
-   * Get name
+   * The name of the agreement.
    * @return name
    */
   @javax.annotation.Nullable

@@ -70,7 +70,7 @@ public class ParentInput {
   }
 
   /**
-   * Get parent
+   * The name of the parent project.
    * @return parent
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class ParentInput {
   }
 
   /**
-   * Get commitMessage
+   * Message that should be used to commit the change of the project parent in the project.config file to the refs/meta/config branch.
    * @return commitMessage
    */
   @javax.annotation.Nullable

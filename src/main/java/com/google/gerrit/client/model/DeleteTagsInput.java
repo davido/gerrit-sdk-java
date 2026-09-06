@@ -75,7 +75,7 @@ public class DeleteTagsInput {
   }
 
   /**
-   * Get tags
+   * A list of tag names that identify the tags that should be deleted.
    * @return tags
    */
   @javax.annotation.Nullable

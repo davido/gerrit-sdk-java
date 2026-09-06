@@ -70,7 +70,7 @@ public class SetDashboardInput {
   }
 
   /**
-   * Get id
+   * URL encoded ID of a dashboard to which this dashboard should link to.
    * @return id
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class SetDashboardInput {
   }
 
   /**
-   * Get commitMessage
+   * Message that should be used to commit the change of the dashboard.
    * @return commitMessage
    */
   @javax.annotation.Nullable

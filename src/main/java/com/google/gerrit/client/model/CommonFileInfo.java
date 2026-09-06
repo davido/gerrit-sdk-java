@@ -329,7 +329,7 @@ public class CommonFileInfo {
   }
 
   /**
-   * Get diffsTooExpensiveToCompute
+   * Whether the diff of the file is too expensive to compute; when set the diff content is omitted.
    * @return diffsTooExpensiveToCompute
    */
   @javax.annotation.Nullable

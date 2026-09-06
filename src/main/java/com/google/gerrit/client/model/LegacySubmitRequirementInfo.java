@@ -75,7 +75,7 @@ public class LegacySubmitRequirementInfo {
   }
 
   /**
-   * Get status
+   * The status of the submit requirement, for example OK or NOT_READY.
    * @return status
    */
   @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class LegacySubmitRequirementInfo {
   }
 
   /**
-   * Get fallbackText
+   * A human readable description of the submit requirement.
    * @return fallbackText
    */
   @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class LegacySubmitRequirementInfo {
   }
 
   /**
-   * Get type
+   * The type of the submit requirement.
    * @return type
    */
   @javax.annotation.Nullable

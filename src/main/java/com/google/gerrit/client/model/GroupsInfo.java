@@ -65,7 +65,7 @@ public class GroupsInfo {
   }
 
   /**
-   * Get enableDeleteGroup
+   * gerrit.config.
    * @return enableDeleteGroup
    */
   @javax.annotation.Nullable

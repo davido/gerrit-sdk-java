@@ -65,7 +65,7 @@ public class ConfirmEmailInput {
   }
 
   /**
-   * Get token
+   * The token that was sent by mail to a newly registered email address.
    * @return token
    */
   @javax.annotation.Nullable

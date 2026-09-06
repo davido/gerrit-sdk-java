@@ -72,7 +72,7 @@ public class ConfigValue {
   }
 
   /**
-   * Get value
+   * The new single value for the configuration parameter.
    * @return value
    */
   @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class ConfigValue {
   }
 
   /**
-   * Get values
+   * The new list of values for a multi-valued configuration parameter.
    * @return values
    */
   @javax.annotation.Nullable

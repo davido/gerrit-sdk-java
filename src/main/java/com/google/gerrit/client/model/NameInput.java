@@ -65,7 +65,7 @@ public class NameInput {
   }
 
   /**
-   * Get name
+   * The new full name of the account. + If not set or if set to an empty string, the account name is deleted.
    * @return name
    */
   @javax.annotation.Nullable

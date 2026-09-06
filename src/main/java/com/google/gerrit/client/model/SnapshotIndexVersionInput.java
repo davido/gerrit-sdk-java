@@ -65,7 +65,7 @@ public class SnapshotIndexVersionInput {
   }
 
   /**
-   * Get id
+   * A string ID that will be used as the folder name containing the snapshot. Defaults to current timestamp.
    * @return id
    */
   @javax.annotation.Nullable

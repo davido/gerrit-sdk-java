@@ -65,7 +65,7 @@ public class MigratePasswordsToTokensInput {
   }
 
   /**
-   * Get lifetime
+   * Lifetime of the migrated token.
    * @return lifetime
    */
   @javax.annotation.Nullable

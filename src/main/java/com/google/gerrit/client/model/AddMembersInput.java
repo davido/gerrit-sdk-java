@@ -72,7 +72,7 @@ public class AddMembersInput {
   }
 
   /**
-   * Get oneMember
+   * The id of one account that should be added or deleted.
    * @return oneMember
    */
   @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class AddMembersInput {
   }
 
   /**
-   * Get members
+   * A list of account ids that identify the accounts that should be added or deleted.
    * @return members
    */
   @javax.annotation.Nullable

@@ -71,7 +71,7 @@ public class TestSubmitRuleInput {
   }
 
   /**
-   * Get rule
+   * Prolog code to execute instead of the code in refs/meta/config.
    * @return rule
    */
   @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class TestSubmitRuleInput {
   }
 
   /**
-   * Get filters
+   * When RUN filter rules in the parent projects are called to post-process the results of the project specific rule. This behavior matches how the rule will execute if installed. + If SKIP the parent filters are not called, allowing the test to return results from the input rule.
    * @return filters
    */
   @javax.annotation.Nullable

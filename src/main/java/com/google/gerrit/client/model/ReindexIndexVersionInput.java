@@ -70,7 +70,7 @@ public class ReindexIndexVersionInput {
   }
 
   /**
-   * Get reuse
+   * Whether existing documents may be reused instead of being recomputed while reindexing.
    * @return reuse
    */
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class ReindexIndexVersionInput {
   }
 
   /**
-   * Get notifyListeners
+   * Whether index listeners should be notified about the reindex progress.
    * @return notifyListeners
    */
   @javax.annotation.Nullable

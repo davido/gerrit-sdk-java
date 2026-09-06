@@ -65,7 +65,7 @@ public class InputWithMessage {
   }
 
   /**
-   * Get message
+   * The message to use.
    * @return message
    */
   @javax.annotation.Nullable
