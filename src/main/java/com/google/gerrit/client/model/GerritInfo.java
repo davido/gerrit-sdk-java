@@ -305,7 +305,7 @@ public class GerritInfo {
   }
 
   /**
-   * Get submitCommitUrl
+   * URL used to link commit hashes in submit messages.
    * @return submitCommitUrl
    */
   @javax.annotation.Nullable
