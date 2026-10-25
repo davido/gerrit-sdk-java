@@ -120,7 +120,7 @@ public class TaskInfo {
   }
 
   /**
-   * The state of the task, can be DONE, CANCELLED, RUNNING, READY, SLEEPING and OTHER.
+   * The state of the task, can be DONE, CANCELLED, STOPPING, RUNNING, STARTING, PARKED, READY, SLEEPING and OTHER.
    * @return state
    */
   @javax.annotation.Nullable

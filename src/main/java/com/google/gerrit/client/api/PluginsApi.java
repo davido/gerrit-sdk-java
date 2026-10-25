@@ -564,7 +564,7 @@ public class PluginsApi {
 
     /**
      * Disable Plugin
-     * 
+     * Disables a plugin on the Gerrit server.
      * @param pluginId  (required)
      * @return PluginInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -582,7 +582,7 @@ public class PluginsApi {
 
     /**
      * Disable Plugin
-     * 
+     * Disables a plugin on the Gerrit server.
      * @param pluginId  (required)
      * @return ApiResponse&lt;PluginInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -601,7 +601,7 @@ public class PluginsApi {
 
     /**
      * Disable Plugin (asynchronously)
-     * 
+     * Disables a plugin on the Gerrit server.
      * @param pluginId  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call

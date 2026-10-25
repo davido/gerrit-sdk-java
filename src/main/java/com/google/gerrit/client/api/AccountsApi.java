@@ -6593,8 +6593,8 @@ public class AccountsApi {
     }
 
     /**
-     * 
-     * 
+     * Set Avatar Email
+     * Sets an email address as the avatar email address for an account. The avatar email address is used for avatar lookup, e.g. via Gravatar.
      * @param accountId  (required)
      * @param emailId  (required)
      * @return String
@@ -6612,8 +6612,8 @@ public class AccountsApi {
     }
 
     /**
-     * 
-     * 
+     * Set Avatar Email
+     * Sets an email address as the avatar email address for an account. The avatar email address is used for avatar lookup, e.g. via Gravatar.
      * @param accountId  (required)
      * @param emailId  (required)
      * @return ApiResponse&lt;String&gt;
@@ -6632,8 +6632,8 @@ public class AccountsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Set Avatar Email (asynchronously)
+     * Sets an email address as the avatar email address for an account. The avatar email address is used for avatar lookup, e.g. via Gravatar.
      * @param accountId  (required)
      * @param emailId  (required)
      * @param _callback The callback to be executed when the API call finishes

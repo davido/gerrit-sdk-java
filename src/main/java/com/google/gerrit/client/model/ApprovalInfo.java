@@ -75,6 +75,11 @@ public class ApprovalInfo {
   @javax.annotation.Nullable
   private Boolean postSubmit;
 
+  public static final String SERIALIZED_NAME_IS_AI = "is_ai";
+  @SerializedName(SERIALIZED_NAME_IS_AI)
+  @javax.annotation.Nullable
+  private Boolean isAi;
+
   public static final String SERIALIZED_NAME_PERMITTED_VOTING_RANGE = "permitted_voting_range";
   @SerializedName(SERIALIZED_NAME_PERMITTED_VOTING_RANGE)
   @javax.annotation.Nullable
@@ -216,6 +221,25 @@ public class ApprovalInfo {
 
   public void setPostSubmit(@javax.annotation.Nullable Boolean postSubmit) {
     this.postSubmit = postSubmit;
+  }
+
+
+  public ApprovalInfo isAi(@javax.annotation.Nullable Boolean isAi) {
+    this.isAi = isAi;
+    return this;
+  }
+
+  /**
+   * If true, this vote was created by an AI agent.
+   * @return isAi
+   */
+  @javax.annotation.Nullable
+  public Boolean getIsAi() {
+    return isAi;
+  }
+
+  public void setIsAi(@javax.annotation.Nullable Boolean isAi) {
+    this.isAi = isAi;
   }
 
 
@@ -504,6 +528,7 @@ public class ApprovalInfo {
         Objects.equals(this.value, approvalInfo.value) &&
         Objects.equals(this.date, approvalInfo.date) &&
         Objects.equals(this.postSubmit, approvalInfo.postSubmit) &&
+        Objects.equals(this.isAi, approvalInfo.isAi) &&
         Objects.equals(this.permittedVotingRange, approvalInfo.permittedVotingRange) &&
         Objects.equals(this.accountId, approvalInfo.accountId) &&
         Objects.equals(this.name, approvalInfo.name) &&
@@ -521,7 +546,7 @@ public class ApprovalInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(tag, value, date, postSubmit, permittedVotingRange, accountId, name, displayName, email, secondaryEmails, username, avatars, moreAccounts, status, inactive, deleted, tags);
+    return Objects.hash(tag, value, date, postSubmit, isAi, permittedVotingRange, accountId, name, displayName, email, secondaryEmails, username, avatars, moreAccounts, status, inactive, deleted, tags);
   }
 
   @Override
@@ -532,6 +557,7 @@ public class ApprovalInfo {
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    date: ").append(toIndentedString(date)).append("\n");
     sb.append("    postSubmit: ").append(toIndentedString(postSubmit)).append("\n");
+    sb.append("    isAi: ").append(toIndentedString(isAi)).append("\n");
     sb.append("    permittedVotingRange: ").append(toIndentedString(permittedVotingRange)).append("\n");
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -563,7 +589,7 @@ public class ApprovalInfo {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("tag", "value", "date", "post_submit", "permitted_voting_range", "_account_id", "name", "display_name", "email", "secondary_emails", "username", "avatars", "_more_accounts", "status", "inactive", "deleted", "tags"));
+    openapiFields = new HashSet<String>(Arrays.asList("tag", "value", "date", "post_submit", "is_ai", "permitted_voting_range", "_account_id", "name", "display_name", "email", "secondary_emails", "username", "avatars", "_more_accounts", "status", "inactive", "deleted", "tags"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);

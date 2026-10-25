@@ -329,7 +329,7 @@ public class CommonFileInfo {
   }
 
   /**
-   * Whether the diff of the file is too expensive to compute; when set the diff content is omitted.
+   * Whether Gerrit skipped expensive diff data for this file because diff computation timed out. This can only be set when the GerritBackendFeature__timeout_file_diff_computation experiment is enabled; when the experiment is disabled, file diffs are computed without this timeout and the field is not set.
    * @return diffsTooExpensiveToCompute
    */
   @javax.annotation.Nullable

@@ -14,7 +14,7 @@
 package com.google.gerrit.client.model;
 
 import java.util.Objects;
-import com.google.gerrit.client.model.FieldJson;
+import com.google.gerrit.client.model.MetricFieldInfo;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -53,10 +53,10 @@ import java.util.Set;
 import com.google.gerrit.client.JSON;
 
 /**
- * MetricJson
+ * MetricInfo
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.25.0")
-public class MetricJson {
+public class MetricInfo {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   @javax.annotation.Nullable
@@ -175,17 +175,17 @@ public class MetricJson {
   public static final String SERIALIZED_NAME_FIELDS = "fields";
   @SerializedName(SERIALIZED_NAME_FIELDS)
   @javax.annotation.Nullable
-  private List<FieldJson> fields = new ArrayList<>();
+  private List<MetricFieldInfo> fields = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_BUCKETS = "buckets";
   @SerializedName(SERIALIZED_NAME_BUCKETS)
   @javax.annotation.Nullable
   private Map<String, Object> buckets = new HashMap<>();
 
-  public MetricJson() {
+  public MetricInfo() {
   }
 
-  public MetricJson description(@javax.annotation.Nullable String description) {
+  public MetricInfo description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
@@ -204,7 +204,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson unit(@javax.annotation.Nullable String unit) {
+  public MetricInfo unit(@javax.annotation.Nullable String unit) {
     this.unit = unit;
     return this;
   }
@@ -223,7 +223,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson constant(@javax.annotation.Nullable Boolean constant) {
+  public MetricInfo constant(@javax.annotation.Nullable Boolean constant) {
     this.constant = constant;
     return this;
   }
@@ -242,7 +242,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson rate(@javax.annotation.Nullable Boolean rate) {
+  public MetricInfo rate(@javax.annotation.Nullable Boolean rate) {
     this.rate = rate;
     return this;
   }
@@ -261,7 +261,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson gauge(@javax.annotation.Nullable Boolean gauge) {
+  public MetricInfo gauge(@javax.annotation.Nullable Boolean gauge) {
     this.gauge = gauge;
     return this;
   }
@@ -280,7 +280,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson cumulative(@javax.annotation.Nullable Boolean cumulative) {
+  public MetricInfo cumulative(@javax.annotation.Nullable Boolean cumulative) {
     this.cumulative = cumulative;
     return this;
   }
@@ -299,7 +299,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson count(@javax.annotation.Nullable Integer count) {
+  public MetricInfo count(@javax.annotation.Nullable Integer count) {
     this.count = count;
     return this;
   }
@@ -318,7 +318,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson value(@javax.annotation.Nullable Object value) {
+  public MetricInfo value(@javax.annotation.Nullable Object value) {
     this.value = value;
     return this;
   }
@@ -337,7 +337,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson rate1m(@javax.annotation.Nullable BigDecimal rate1m) {
+  public MetricInfo rate1m(@javax.annotation.Nullable BigDecimal rate1m) {
     this.rate1m = rate1m;
     return this;
   }
@@ -356,7 +356,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson rate5m(@javax.annotation.Nullable BigDecimal rate5m) {
+  public MetricInfo rate5m(@javax.annotation.Nullable BigDecimal rate5m) {
     this.rate5m = rate5m;
     return this;
   }
@@ -375,7 +375,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson rate15m(@javax.annotation.Nullable BigDecimal rate15m) {
+  public MetricInfo rate15m(@javax.annotation.Nullable BigDecimal rate15m) {
     this.rate15m = rate15m;
     return this;
   }
@@ -394,7 +394,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson rateMean(@javax.annotation.Nullable BigDecimal rateMean) {
+  public MetricInfo rateMean(@javax.annotation.Nullable BigDecimal rateMean) {
     this.rateMean = rateMean;
     return this;
   }
@@ -413,7 +413,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson p50(@javax.annotation.Nullable BigDecimal p50) {
+  public MetricInfo p50(@javax.annotation.Nullable BigDecimal p50) {
     this.p50 = p50;
     return this;
   }
@@ -432,7 +432,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson p75(@javax.annotation.Nullable BigDecimal p75) {
+  public MetricInfo p75(@javax.annotation.Nullable BigDecimal p75) {
     this.p75 = p75;
     return this;
   }
@@ -451,7 +451,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson p95(@javax.annotation.Nullable BigDecimal p95) {
+  public MetricInfo p95(@javax.annotation.Nullable BigDecimal p95) {
     this.p95 = p95;
     return this;
   }
@@ -470,7 +470,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson p98(@javax.annotation.Nullable BigDecimal p98) {
+  public MetricInfo p98(@javax.annotation.Nullable BigDecimal p98) {
     this.p98 = p98;
     return this;
   }
@@ -489,7 +489,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson p99(@javax.annotation.Nullable BigDecimal p99) {
+  public MetricInfo p99(@javax.annotation.Nullable BigDecimal p99) {
     this.p99 = p99;
     return this;
   }
@@ -508,7 +508,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson p999(@javax.annotation.Nullable BigDecimal p999) {
+  public MetricInfo p999(@javax.annotation.Nullable BigDecimal p999) {
     this.p999 = p999;
     return this;
   }
@@ -527,7 +527,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson min(@javax.annotation.Nullable BigDecimal min) {
+  public MetricInfo min(@javax.annotation.Nullable BigDecimal min) {
     this.min = min;
     return this;
   }
@@ -546,7 +546,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson avg(@javax.annotation.Nullable BigDecimal avg) {
+  public MetricInfo avg(@javax.annotation.Nullable BigDecimal avg) {
     this.avg = avg;
     return this;
   }
@@ -565,7 +565,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson max(@javax.annotation.Nullable BigDecimal max) {
+  public MetricInfo max(@javax.annotation.Nullable BigDecimal max) {
     this.max = max;
     return this;
   }
@@ -584,7 +584,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson sum(@javax.annotation.Nullable BigDecimal sum) {
+  public MetricInfo sum(@javax.annotation.Nullable BigDecimal sum) {
     this.sum = sum;
     return this;
   }
@@ -603,7 +603,7 @@ public class MetricJson {
   }
 
 
-  public MetricJson stdDev(@javax.annotation.Nullable BigDecimal stdDev) {
+  public MetricInfo stdDev(@javax.annotation.Nullable BigDecimal stdDev) {
     this.stdDev = stdDev;
     return this;
   }
@@ -622,12 +622,12 @@ public class MetricJson {
   }
 
 
-  public MetricJson fields(@javax.annotation.Nullable List<FieldJson> fields) {
+  public MetricInfo fields(@javax.annotation.Nullable List<MetricFieldInfo> fields) {
     this.fields = fields;
     return this;
   }
 
-  public MetricJson addFieldsItem(FieldJson fieldsItem) {
+  public MetricInfo addFieldsItem(MetricFieldInfo fieldsItem) {
     if (this.fields == null) {
       this.fields = new ArrayList<>();
     }
@@ -636,25 +636,25 @@ public class MetricJson {
   }
 
   /**
-   * The fields of the metric as a list of FieldJson entities.
+   * The fields of the metric as a list of MetricFieldInfo entities.
    * @return fields
    */
   @javax.annotation.Nullable
-  public List<FieldJson> getFields() {
+  public List<MetricFieldInfo> getFields() {
     return fields;
   }
 
-  public void setFields(@javax.annotation.Nullable List<FieldJson> fields) {
+  public void setFields(@javax.annotation.Nullable List<MetricFieldInfo> fields) {
     this.fields = fields;
   }
 
 
-  public MetricJson buckets(@javax.annotation.Nullable Map<String, Object> buckets) {
+  public MetricInfo buckets(@javax.annotation.Nullable Map<String, Object> buckets) {
     this.buckets = buckets;
     return this;
   }
 
-  public MetricJson putBucketsItem(String key, Object bucketsItem) {
+  public MetricInfo putBucketsItem(String key, Object bucketsItem) {
     if (this.buckets == null) {
       this.buckets = new HashMap<>();
     }
@@ -685,32 +685,32 @@ public class MetricJson {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    MetricJson metricJson = (MetricJson) o;
-    return Objects.equals(this.description, metricJson.description) &&
-        Objects.equals(this.unit, metricJson.unit) &&
-        Objects.equals(this.constant, metricJson.constant) &&
-        Objects.equals(this.rate, metricJson.rate) &&
-        Objects.equals(this.gauge, metricJson.gauge) &&
-        Objects.equals(this.cumulative, metricJson.cumulative) &&
-        Objects.equals(this.count, metricJson.count) &&
-        Objects.equals(this.value, metricJson.value) &&
-        Objects.equals(this.rate1m, metricJson.rate1m) &&
-        Objects.equals(this.rate5m, metricJson.rate5m) &&
-        Objects.equals(this.rate15m, metricJson.rate15m) &&
-        Objects.equals(this.rateMean, metricJson.rateMean) &&
-        Objects.equals(this.p50, metricJson.p50) &&
-        Objects.equals(this.p75, metricJson.p75) &&
-        Objects.equals(this.p95, metricJson.p95) &&
-        Objects.equals(this.p98, metricJson.p98) &&
-        Objects.equals(this.p99, metricJson.p99) &&
-        Objects.equals(this.p999, metricJson.p999) &&
-        Objects.equals(this.min, metricJson.min) &&
-        Objects.equals(this.avg, metricJson.avg) &&
-        Objects.equals(this.max, metricJson.max) &&
-        Objects.equals(this.sum, metricJson.sum) &&
-        Objects.equals(this.stdDev, metricJson.stdDev) &&
-        Objects.equals(this.fields, metricJson.fields) &&
-        Objects.equals(this.buckets, metricJson.buckets);
+    MetricInfo metricInfo = (MetricInfo) o;
+    return Objects.equals(this.description, metricInfo.description) &&
+        Objects.equals(this.unit, metricInfo.unit) &&
+        Objects.equals(this.constant, metricInfo.constant) &&
+        Objects.equals(this.rate, metricInfo.rate) &&
+        Objects.equals(this.gauge, metricInfo.gauge) &&
+        Objects.equals(this.cumulative, metricInfo.cumulative) &&
+        Objects.equals(this.count, metricInfo.count) &&
+        Objects.equals(this.value, metricInfo.value) &&
+        Objects.equals(this.rate1m, metricInfo.rate1m) &&
+        Objects.equals(this.rate5m, metricInfo.rate5m) &&
+        Objects.equals(this.rate15m, metricInfo.rate15m) &&
+        Objects.equals(this.rateMean, metricInfo.rateMean) &&
+        Objects.equals(this.p50, metricInfo.p50) &&
+        Objects.equals(this.p75, metricInfo.p75) &&
+        Objects.equals(this.p95, metricInfo.p95) &&
+        Objects.equals(this.p98, metricInfo.p98) &&
+        Objects.equals(this.p99, metricInfo.p99) &&
+        Objects.equals(this.p999, metricInfo.p999) &&
+        Objects.equals(this.min, metricInfo.min) &&
+        Objects.equals(this.avg, metricInfo.avg) &&
+        Objects.equals(this.max, metricInfo.max) &&
+        Objects.equals(this.sum, metricInfo.sum) &&
+        Objects.equals(this.stdDev, metricInfo.stdDev) &&
+        Objects.equals(this.fields, metricInfo.fields) &&
+        Objects.equals(this.buckets, metricInfo.buckets);
   }
 
   @Override
@@ -721,7 +721,7 @@ public class MetricJson {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class MetricJson {\n");
+    sb.append("class MetricInfo {\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    unit: ").append(toIndentedString(unit)).append("\n");
     sb.append("    constant: ").append(toIndentedString(constant)).append("\n");
@@ -775,20 +775,20 @@ public class MetricJson {
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to MetricJson
+   * @throws IOException if the JSON Element is invalid with respect to MetricInfo
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!MetricJson.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in MetricJson is not found in the empty JSON string", MetricJson.openapiRequiredFields.toString()));
+        if (!MetricInfo.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in MetricInfo is not found in the empty JSON string", MetricInfo.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!MetricJson.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `MetricJson` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!MetricInfo.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `MetricInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -808,7 +808,7 @@ public class MetricJson {
 
           // validate the optional field `fields` (array)
           for (int i = 0; i < jsonArrayfields.size(); i++) {
-            FieldJson.validateJsonElement(jsonArrayfields.get(i));
+            MetricFieldInfo.validateJsonElement(jsonArrayfields.get(i));
           };
         }
       }
@@ -818,22 +818,22 @@ public class MetricJson {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!MetricJson.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'MetricJson' and its subtypes
+       if (!MetricInfo.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'MetricInfo' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<MetricJson> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(MetricJson.class));
+       final TypeAdapter<MetricInfo> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(MetricInfo.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<MetricJson>() {
+       return (TypeAdapter<T>) new TypeAdapter<MetricInfo>() {
            @Override
-           public void write(JsonWriter out, MetricJson value) throws IOException {
+           public void write(JsonWriter out, MetricInfo value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public MetricJson read(JsonReader in) throws IOException {
+           public MetricInfo read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -844,18 +844,18 @@ public class MetricJson {
   }
 
   /**
-   * Create an instance of MetricJson given an JSON string
+   * Create an instance of MetricInfo given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of MetricJson
-   * @throws IOException if the JSON string is invalid with respect to MetricJson
+   * @return An instance of MetricInfo
+   * @throws IOException if the JSON string is invalid with respect to MetricInfo
    */
-  public static MetricJson fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, MetricJson.class);
+  public static MetricInfo fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, MetricInfo.class);
   }
 
   /**
-   * Convert an instance of MetricJson to an JSON string
+   * Convert an instance of MetricInfo to an JSON string
    *
    * @return JSON string
    */

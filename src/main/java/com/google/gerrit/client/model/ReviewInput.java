@@ -72,6 +72,11 @@ public class ReviewInput {
   @javax.annotation.Nullable
   private String tag;
 
+  public static final String SERIALIZED_NAME_IS_AI = "is_ai";
+  @SerializedName(SERIALIZED_NAME_IS_AI)
+  @javax.annotation.Nullable
+  private Boolean isAi;
+
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
   @javax.annotation.Nullable
@@ -185,6 +190,25 @@ public class ReviewInput {
 
   public void setTag(@javax.annotation.Nullable String tag) {
     this.tag = tag;
+  }
+
+
+  public ReviewInput isAi(@javax.annotation.Nullable Boolean isAi) {
+    this.isAi = isAi;
+    return this;
+  }
+
+  /**
+   * Whether the votes in labels were created by an AI agent.
+   * @return isAi
+   */
+  @javax.annotation.Nullable
+  public Boolean getIsAi() {
+    return isAi;
+  }
+
+  public void setIsAi(@javax.annotation.Nullable Boolean isAi) {
+    this.isAi = isAi;
   }
 
 
@@ -549,6 +573,7 @@ public class ReviewInput {
     ReviewInput reviewInput = (ReviewInput) o;
     return Objects.equals(this.message, reviewInput.message) &&
         Objects.equals(this.tag, reviewInput.tag) &&
+        Objects.equals(this.isAi, reviewInput.isAi) &&
         Objects.equals(this.labels, reviewInput.labels) &&
         Objects.equals(this.comments, reviewInput.comments) &&
         Objects.equals(this.drafts, reviewInput.drafts) &&
@@ -568,7 +593,7 @@ public class ReviewInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(message, tag, labels, comments, drafts, draftIdsToPublish, notify, notifyDetails, omitDuplicateComments, onBehalfOf, reviewers, workInProgress, ready, addToAttentionSet, removeFromAttentionSet, ignoreAutomaticAttentionSetRules, responseFormatOptions);
+    return Objects.hash(message, tag, isAi, labels, comments, drafts, draftIdsToPublish, notify, notifyDetails, omitDuplicateComments, onBehalfOf, reviewers, workInProgress, ready, addToAttentionSet, removeFromAttentionSet, ignoreAutomaticAttentionSetRules, responseFormatOptions);
   }
 
   @Override
@@ -577,6 +602,7 @@ public class ReviewInput {
     sb.append("class ReviewInput {\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("    tag: ").append(toIndentedString(tag)).append("\n");
+    sb.append("    isAi: ").append(toIndentedString(isAi)).append("\n");
     sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
     sb.append("    comments: ").append(toIndentedString(comments)).append("\n");
     sb.append("    drafts: ").append(toIndentedString(drafts)).append("\n");
@@ -610,7 +636,7 @@ public class ReviewInput {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("message", "tag", "labels", "comments", "drafts", "draft_ids_to_publish", "notify", "notify_details", "omit_duplicate_comments", "on_behalf_of", "reviewers", "work_in_progress", "ready", "add_to_attention_set", "remove_from_attention_set", "ignore_automatic_attention_set_rules", "response_format_options"));
+    openapiFields = new HashSet<String>(Arrays.asList("message", "tag", "is_ai", "labels", "comments", "drafts", "draft_ids_to_publish", "notify", "notify_details", "omit_duplicate_comments", "on_behalf_of", "reviewers", "work_in_progress", "ready", "add_to_attention_set", "remove_from_attention_set", "ignore_automatic_attention_set_rules", "response_format_options"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);

@@ -47,10 +47,10 @@ import java.util.Set;
 import com.google.gerrit.client.JSON;
 
 /**
- * FieldJson
+ * MetricFieldInfo
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.25.0")
-public class FieldJson {
+public class MetricFieldInfo {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   @javax.annotation.Nullable
@@ -66,10 +66,10 @@ public class FieldJson {
   @javax.annotation.Nullable
   private String description;
 
-  public FieldJson() {
+  public MetricFieldInfo() {
   }
 
-  public FieldJson name(@javax.annotation.Nullable String name) {
+  public MetricFieldInfo name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
@@ -88,7 +88,7 @@ public class FieldJson {
   }
 
 
-  public FieldJson type(@javax.annotation.Nullable String type) {
+  public MetricFieldInfo type(@javax.annotation.Nullable String type) {
     this.type = type;
     return this;
   }
@@ -107,7 +107,7 @@ public class FieldJson {
   }
 
 
-  public FieldJson description(@javax.annotation.Nullable String description) {
+  public MetricFieldInfo description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
@@ -135,10 +135,10 @@ public class FieldJson {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FieldJson fieldJson = (FieldJson) o;
-    return Objects.equals(this.name, fieldJson.name) &&
-        Objects.equals(this.type, fieldJson.type) &&
-        Objects.equals(this.description, fieldJson.description);
+    MetricFieldInfo metricFieldInfo = (MetricFieldInfo) o;
+    return Objects.equals(this.name, metricFieldInfo.name) &&
+        Objects.equals(this.type, metricFieldInfo.type) &&
+        Objects.equals(this.description, metricFieldInfo.description);
   }
 
   @Override
@@ -149,7 +149,7 @@ public class FieldJson {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class FieldJson {\n");
+    sb.append("class MetricFieldInfo {\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
@@ -181,20 +181,20 @@ public class FieldJson {
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to FieldJson
+   * @throws IOException if the JSON Element is invalid with respect to MetricFieldInfo
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!FieldJson.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in FieldJson is not found in the empty JSON string", FieldJson.openapiRequiredFields.toString()));
+        if (!MetricFieldInfo.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in MetricFieldInfo is not found in the empty JSON string", MetricFieldInfo.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!FieldJson.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `FieldJson` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!MetricFieldInfo.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `MetricFieldInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -213,22 +213,22 @@ public class FieldJson {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!FieldJson.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'FieldJson' and its subtypes
+       if (!MetricFieldInfo.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'MetricFieldInfo' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<FieldJson> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(FieldJson.class));
+       final TypeAdapter<MetricFieldInfo> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(MetricFieldInfo.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<FieldJson>() {
+       return (TypeAdapter<T>) new TypeAdapter<MetricFieldInfo>() {
            @Override
-           public void write(JsonWriter out, FieldJson value) throws IOException {
+           public void write(JsonWriter out, MetricFieldInfo value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public FieldJson read(JsonReader in) throws IOException {
+           public MetricFieldInfo read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -239,18 +239,18 @@ public class FieldJson {
   }
 
   /**
-   * Create an instance of FieldJson given an JSON string
+   * Create an instance of MetricFieldInfo given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of FieldJson
-   * @throws IOException if the JSON string is invalid with respect to FieldJson
+   * @return An instance of MetricFieldInfo
+   * @throws IOException if the JSON string is invalid with respect to MetricFieldInfo
    */
-  public static FieldJson fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, FieldJson.class);
+  public static MetricFieldInfo fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, MetricFieldInfo.class);
   }
 
   /**
-   * Convert an instance of FieldJson to an JSON string
+   * Convert an instance of MetricFieldInfo to an JSON string
    *
    * @return JSON string
    */

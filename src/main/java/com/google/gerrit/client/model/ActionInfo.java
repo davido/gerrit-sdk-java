@@ -171,7 +171,7 @@ public class ActionInfo {
   }
 
   /**
-   * Optional list of enabled options. + See the list of suppported options below.
+   * Optional list of enabled options. + See the list of supported options below.
    * @return enabledOptions
    */
   @javax.annotation.Nullable

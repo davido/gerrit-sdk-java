@@ -80,7 +80,6 @@ src/main/java/com/google/gerrit/client/model/CheckGroupsResultInfo.java
 src/main/java/com/google/gerrit/client/model/CheckProjectInput.java
 src/main/java/com/google/gerrit/client/model/CheckProjectResultInfo.java
 src/main/java/com/google/gerrit/client/model/CherryPickInput.java
-src/main/java/com/google/gerrit/client/model/CleanupChangesInput.java
 src/main/java/com/google/gerrit/client/model/CommentInfo.java
 src/main/java/com/google/gerrit/client/model/CommentInput.java
 src/main/java/com/google/gerrit/client/model/CommentLinkInfo.java
@@ -139,7 +138,6 @@ src/main/java/com/google/gerrit/client/model/EntriesInfo.java
 src/main/java/com/google/gerrit/client/model/EvaluateChangeQueryExpressionResultInfo.java
 src/main/java/com/google/gerrit/client/model/ExperimentInfo.java
 src/main/java/com/google/gerrit/client/model/FetchInfo.java
-src/main/java/com/google/gerrit/client/model/FieldJson.java
 src/main/java/com/google/gerrit/client/model/FileChange.java
 src/main/java/com/google/gerrit/client/model/FileContentInput.java
 src/main/java/com/google/gerrit/client/model/FileMeta.java
@@ -202,7 +200,8 @@ src/main/java/com/google/gerrit/client/model/MergeInput.java
 src/main/java/com/google/gerrit/client/model/MergePatchSetInput.java
 src/main/java/com/google/gerrit/client/model/MergeableInfo.java
 src/main/java/com/google/gerrit/client/model/MetadataInfo.java
-src/main/java/com/google/gerrit/client/model/MetricJson.java
+src/main/java/com/google/gerrit/client/model/MetricFieldInfo.java
+src/main/java/com/google/gerrit/client/model/MetricInfo.java
 src/main/java/com/google/gerrit/client/model/MigrateLabelFunctionsToSubmitRequirementStatus.java
 src/main/java/com/google/gerrit/client/model/MigrateLabelsInfo.java
 src/main/java/com/google/gerrit/client/model/MigrateLabelsReviewInfo.java

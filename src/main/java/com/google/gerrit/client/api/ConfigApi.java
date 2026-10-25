@@ -29,7 +29,6 @@ import java.io.IOException;
 
 import com.google.gerrit.client.model.CacheInfo;
 import com.google.gerrit.client.model.CapabilityInfo;
-import com.google.gerrit.client.model.CleanupChangesInput;
 import com.google.gerrit.client.model.ConfigUpdateEntryInfo;
 import com.google.gerrit.client.model.ConfirmEmailInput;
 import com.google.gerrit.client.model.ConsistencyCheckInfo;
@@ -42,7 +41,7 @@ import com.google.gerrit.client.model.GetConfigServerIndexes200ResponseInner;
 import com.google.gerrit.client.model.IndexChangesInput;
 import com.google.gerrit.client.model.LabelDefinitionInfo;
 import com.google.gerrit.client.model.MenuEntry;
-import com.google.gerrit.client.model.MetricJson;
+import com.google.gerrit.client.model.MetricInfo;
 import com.google.gerrit.client.model.MigratePasswordsToTokensInput;
 import com.google.gerrit.client.model.PostCachesInput;
 import com.google.gerrit.client.model.ReduceMaxTokenLifetimeInput;
@@ -793,8 +792,8 @@ public class ConfigApi {
     }
 
     /**
-     * 
-     * 
+     * Get Experiment
+     * Retrieves the details of the experiment with the given name.
      * @param experimentId  (required)
      * @return ExperimentInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -811,8 +810,8 @@ public class ConfigApi {
     }
 
     /**
-     * 
-     * 
+     * Get Experiment
+     * Retrieves the details of the experiment with the given name.
      * @param experimentId  (required)
      * @return ApiResponse&lt;ExperimentInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -830,8 +829,8 @@ public class ConfigApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Get Experiment (asynchronously)
+     * Retrieves the details of the experiment with the given name.
      * @param experimentId  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1539,7 +1538,7 @@ public class ConfigApi {
 
     /**
      * List Global Labels
-     * Lists the globally defined labels (labels that are added programatically via the LabelType extension point).
+     * Lists the globally defined labels (labels that are added programmatically via the LabelType extension point).
      * @return List&lt;LabelDefinitionInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1556,7 +1555,7 @@ public class ConfigApi {
 
     /**
      * List Global Labels
-     * Lists the globally defined labels (labels that are added programatically via the LabelType extension point).
+     * Lists the globally defined labels (labels that are added programmatically via the LabelType extension point).
      * @return ApiResponse&lt;List&lt;LabelDefinitionInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1574,7 +1573,7 @@ public class ConfigApi {
 
     /**
      * List Global Labels (asynchronously)
-     * Lists the globally defined labels (labels that are added programatically via the LabelType extension point).
+     * Lists the globally defined labels (labels that are added programmatically via the LabelType extension point).
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1666,10 +1665,10 @@ public class ConfigApi {
 
     /**
      * List Metrics
-     * Lists the metrics of the server, returning a map of metric name to a MetricJson entity.
+     * Lists the metrics of the server, returning a map of metric name to a MetricInfo entity.
      * @param dataOnly  (optional)
      * @param prefix  (optional)
-     * @return Map&lt;String, MetricJson&gt;
+     * @return Map&lt;String, MetricInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1678,17 +1677,17 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public Map<String, MetricJson> getConfigServerMetrics(@javax.annotation.Nullable Boolean dataOnly, @javax.annotation.Nullable List<String> prefix) throws ApiException {
-        ApiResponse<Map<String, MetricJson>> localVarResp = getConfigServerMetricsWithHttpInfo(dataOnly, prefix);
+    public Map<String, MetricInfo> getConfigServerMetrics(@javax.annotation.Nullable Boolean dataOnly, @javax.annotation.Nullable List<String> prefix) throws ApiException {
+        ApiResponse<Map<String, MetricInfo>> localVarResp = getConfigServerMetricsWithHttpInfo(dataOnly, prefix);
         return localVarResp.getData();
     }
 
     /**
      * List Metrics
-     * Lists the metrics of the server, returning a map of metric name to a MetricJson entity.
+     * Lists the metrics of the server, returning a map of metric name to a MetricInfo entity.
      * @param dataOnly  (optional)
      * @param prefix  (optional)
-     * @return ApiResponse&lt;Map&lt;String, MetricJson&gt;&gt;
+     * @return ApiResponse&lt;Map&lt;String, MetricInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1697,15 +1696,15 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Map<String, MetricJson>> getConfigServerMetricsWithHttpInfo(@javax.annotation.Nullable Boolean dataOnly, @javax.annotation.Nullable List<String> prefix) throws ApiException {
+    public ApiResponse<Map<String, MetricInfo>> getConfigServerMetricsWithHttpInfo(@javax.annotation.Nullable Boolean dataOnly, @javax.annotation.Nullable List<String> prefix) throws ApiException {
         okhttp3.Call localVarCall = getConfigServerMetricsValidateBeforeCall(dataOnly, prefix, null);
-        Type localVarReturnType = new TypeToken<Map<String, MetricJson>>(){}.getType();
+        Type localVarReturnType = new TypeToken<Map<String, MetricInfo>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * List Metrics (asynchronously)
-     * Lists the metrics of the server, returning a map of metric name to a MetricJson entity.
+     * Lists the metrics of the server, returning a map of metric name to a MetricInfo entity.
      * @param dataOnly  (optional)
      * @param prefix  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -1718,10 +1717,10 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConfigServerMetricsAsync(@javax.annotation.Nullable Boolean dataOnly, @javax.annotation.Nullable List<String> prefix, final ApiCallback<Map<String, MetricJson>> _callback) throws ApiException {
+    public okhttp3.Call getConfigServerMetricsAsync(@javax.annotation.Nullable Boolean dataOnly, @javax.annotation.Nullable List<String> prefix, final ApiCallback<Map<String, MetricInfo>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getConfigServerMetricsValidateBeforeCall(dataOnly, prefix, _callback);
-        Type localVarReturnType = new TypeToken<Map<String, MetricJson>>(){}.getType();
+        Type localVarReturnType = new TypeToken<Map<String, MetricInfo>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1804,7 +1803,7 @@ public class ConfigApi {
      * Retrieves a single metric of the server. The metric name is used as the \\{metric-id\\} and must be URL-encoded because it may contain slashes.
      * @param metricId  (required)
      * @param dataOnly  (optional)
-     * @return MetricJson
+     * @return MetricInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1813,8 +1812,8 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public MetricJson getConfigServerMetricsMetricId(@javax.annotation.Nonnull String metricId, @javax.annotation.Nullable Boolean dataOnly) throws ApiException {
-        ApiResponse<MetricJson> localVarResp = getConfigServerMetricsMetricIdWithHttpInfo(metricId, dataOnly);
+    public MetricInfo getConfigServerMetricsMetricId(@javax.annotation.Nonnull String metricId, @javax.annotation.Nullable Boolean dataOnly) throws ApiException {
+        ApiResponse<MetricInfo> localVarResp = getConfigServerMetricsMetricIdWithHttpInfo(metricId, dataOnly);
         return localVarResp.getData();
     }
 
@@ -1823,7 +1822,7 @@ public class ConfigApi {
      * Retrieves a single metric of the server. The metric name is used as the \\{metric-id\\} and must be URL-encoded because it may contain slashes.
      * @param metricId  (required)
      * @param dataOnly  (optional)
-     * @return ApiResponse&lt;MetricJson&gt;
+     * @return ApiResponse&lt;MetricInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1832,9 +1831,9 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<MetricJson> getConfigServerMetricsMetricIdWithHttpInfo(@javax.annotation.Nonnull String metricId, @javax.annotation.Nullable Boolean dataOnly) throws ApiException {
+    public ApiResponse<MetricInfo> getConfigServerMetricsMetricIdWithHttpInfo(@javax.annotation.Nonnull String metricId, @javax.annotation.Nullable Boolean dataOnly) throws ApiException {
         okhttp3.Call localVarCall = getConfigServerMetricsMetricIdValidateBeforeCall(metricId, dataOnly, null);
-        Type localVarReturnType = new TypeToken<MetricJson>(){}.getType();
+        Type localVarReturnType = new TypeToken<MetricInfo>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1853,10 +1852,10 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConfigServerMetricsMetricIdAsync(@javax.annotation.Nonnull String metricId, @javax.annotation.Nullable Boolean dataOnly, final ApiCallback<MetricJson> _callback) throws ApiException {
+    public okhttp3.Call getConfigServerMetricsMetricIdAsync(@javax.annotation.Nonnull String metricId, @javax.annotation.Nullable Boolean dataOnly, final ApiCallback<MetricInfo> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getConfigServerMetricsMetricIdValidateBeforeCall(metricId, dataOnly, _callback);
-        Type localVarReturnType = new TypeToken<MetricJson>(){}.getType();
+        Type localVarReturnType = new TypeToken<MetricInfo>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2275,7 +2274,7 @@ public class ConfigApi {
 
     /**
      * List Global Submit Requirements
-     * Lists the globally defined submit requirements (submit requirements that are added programatically via the SubmitRequirement extension point).
+     * Lists the globally defined submit requirements (submit requirements that are added programmatically via the SubmitRequirement extension point).
      * @return List&lt;SubmitRequirementInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2292,7 +2291,7 @@ public class ConfigApi {
 
     /**
      * List Global Submit Requirements
-     * Lists the globally defined submit requirements (submit requirements that are added programatically via the SubmitRequirement extension point).
+     * Lists the globally defined submit requirements (submit requirements that are added programmatically via the SubmitRequirement extension point).
      * @return ApiResponse&lt;List&lt;SubmitRequirementInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2310,7 +2309,7 @@ public class ConfigApi {
 
     /**
      * List Global Submit Requirements (asynchronously)
-     * Lists the globally defined submit requirements (submit requirements that are added programatically via the SubmitRequirement extension point).
+     * Lists the globally defined submit requirements (submit requirements that are added programmatically via the SubmitRequirement extension point).
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2455,6 +2454,7 @@ public class ConfigApi {
     }
     /**
      * Build call for getConfigServerTasks
+     * @param state  (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -2465,7 +2465,7 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConfigServerTasksCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getConfigServerTasksCall(@javax.annotation.Nullable List<String> state, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2490,6 +2490,10 @@ public class ConfigApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
+        if (state != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("multi", "state", state));
+        }
+
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -2510,14 +2514,15 @@ public class ConfigApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getConfigServerTasksValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return getConfigServerTasksCall(_callback);
+    private okhttp3.Call getConfigServerTasksValidateBeforeCall(@javax.annotation.Nullable List<String> state, final ApiCallback _callback) throws ApiException {
+        return getConfigServerTasksCall(state, _callback);
 
     }
 
     /**
      * List Tasks
      * Lists the tasks from the background work queues that the Gerrit daemon is currently performing, or will perform in the near future.
+     * @param state  (optional)
      * @return List&lt;TaskInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2527,14 +2532,15 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public List<TaskInfo> getConfigServerTasks() throws ApiException {
-        ApiResponse<List<TaskInfo>> localVarResp = getConfigServerTasksWithHttpInfo();
+    public List<TaskInfo> getConfigServerTasks(@javax.annotation.Nullable List<String> state) throws ApiException {
+        ApiResponse<List<TaskInfo>> localVarResp = getConfigServerTasksWithHttpInfo(state);
         return localVarResp.getData();
     }
 
     /**
      * List Tasks
      * Lists the tasks from the background work queues that the Gerrit daemon is currently performing, or will perform in the near future.
+     * @param state  (optional)
      * @return ApiResponse&lt;List&lt;TaskInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2544,8 +2550,8 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<TaskInfo>> getConfigServerTasksWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getConfigServerTasksValidateBeforeCall(null);
+    public ApiResponse<List<TaskInfo>> getConfigServerTasksWithHttpInfo(@javax.annotation.Nullable List<String> state) throws ApiException {
+        okhttp3.Call localVarCall = getConfigServerTasksValidateBeforeCall(state, null);
         Type localVarReturnType = new TypeToken<List<TaskInfo>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2553,6 +2559,7 @@ public class ConfigApi {
     /**
      * List Tasks (asynchronously)
      * Lists the tasks from the background work queues that the Gerrit daemon is currently performing, or will perform in the near future.
+     * @param state  (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2563,9 +2570,9 @@ public class ConfigApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConfigServerTasksAsync(final ApiCallback<List<TaskInfo>> _callback) throws ApiException {
+    public okhttp3.Call getConfigServerTasksAsync(@javax.annotation.Nullable List<String> state, final ApiCallback<List<TaskInfo>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getConfigServerTasksValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getConfigServerTasksValidateBeforeCall(state, _callback);
         Type localVarReturnType = new TypeToken<List<TaskInfo>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -3313,133 +3320,6 @@ public class ConfigApi {
         return localVarCall;
     }
     /**
-     * Build call for postConfigServerCleanupChanges
-     * @param cleanupChangesInput  (optional)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-        <tr><td> 202 </td><td> Accepted </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call postConfigServerCleanupChangesCall(@javax.annotation.Nullable CleanupChangesInput cleanupChangesInput, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = cleanupChangesInput;
-
-        // create path and map variables
-        String localVarPath = "/config/server/cleanup.changes";
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            "application/json",
-            "application/x-www-form-urlencoded"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] { "basicAuth" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call postConfigServerCleanupChangesValidateBeforeCall(@javax.annotation.Nullable CleanupChangesInput cleanupChangesInput, final ApiCallback _callback) throws ApiException {
-        return postConfigServerCleanupChangesCall(cleanupChangesInput, _callback);
-
-    }
-
-    /**
-     * 
-     * 
-     * @param cleanupChangesInput  (optional)
-     * @return Object
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-        <tr><td> 202 </td><td> Accepted </td><td>  -  </td></tr>
-     </table>
-     */
-    public Object postConfigServerCleanupChanges(@javax.annotation.Nullable CleanupChangesInput cleanupChangesInput) throws ApiException {
-        ApiResponse<Object> localVarResp = postConfigServerCleanupChangesWithHttpInfo(cleanupChangesInput);
-        return localVarResp.getData();
-    }
-
-    /**
-     * 
-     * 
-     * @param cleanupChangesInput  (optional)
-     * @return ApiResponse&lt;Object&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-        <tr><td> 202 </td><td> Accepted </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<Object> postConfigServerCleanupChangesWithHttpInfo(@javax.annotation.Nullable CleanupChangesInput cleanupChangesInput) throws ApiException {
-        okhttp3.Call localVarCall = postConfigServerCleanupChangesValidateBeforeCall(cleanupChangesInput, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param cleanupChangesInput  (optional)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-        <tr><td> 202 </td><td> Accepted </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call postConfigServerCleanupChangesAsync(@javax.annotation.Nullable CleanupChangesInput cleanupChangesInput, final ApiCallback<Object> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = postConfigServerCleanupChangesValidateBeforeCall(cleanupChangesInput, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
      * Build call for postConfigServerCleanupDraftComments
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -3502,8 +3382,8 @@ public class ConfigApi {
     }
 
     /**
-     * 
-     * 
+     * Cleanup of already published draft comments
+     * This endpoint allows Gerrit administrators to cleanup already published draft comments that were not deleted.
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3519,8 +3399,8 @@ public class ConfigApi {
     }
 
     /**
-     * 
-     * 
+     * Cleanup of already published draft comments
+     * This endpoint allows Gerrit administrators to cleanup already published draft comments that were not deleted.
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3537,8 +3417,8 @@ public class ConfigApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Cleanup of already published draft comments (asynchronously)
+     * This endpoint allows Gerrit administrators to cleanup already published draft comments that were not deleted.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3743,8 +3623,8 @@ public class ConfigApi {
     }
 
     /**
-     * 
-     * 
+     * Index a set of changes
+     * This endpoint allows Gerrit admins to index a set of changes with one request by providing a IndexChangesInput entity.
      * @param indexChangesInput  (optional)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -3761,8 +3641,8 @@ public class ConfigApi {
     }
 
     /**
-     * 
-     * 
+     * Index a set of changes
+     * This endpoint allows Gerrit admins to index a set of changes with one request by providing a IndexChangesInput entity.
      * @param indexChangesInput  (optional)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -3780,8 +3660,8 @@ public class ConfigApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Index a set of changes (asynchronously)
+     * This endpoint allows Gerrit admins to index a set of changes with one request by providing a IndexChangesInput entity.
      * @param indexChangesInput  (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -4407,8 +4287,8 @@ public class ConfigApi {
     }
 
     /**
-     * 
-     * 
+     * Migration of HTTP passwords to authentication tokens
+     * This endpoint allows Gerrit administrators to migrate remaining HTTP passwords to authentication tokens. For the user the migration is invisible, i.e. the same credential is still valid.
      * @param migratePasswordsToTokensInput  (optional)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -4425,8 +4305,8 @@ public class ConfigApi {
     }
 
     /**
-     * 
-     * 
+     * Migration of HTTP passwords to authentication tokens
+     * This endpoint allows Gerrit administrators to migrate remaining HTTP passwords to authentication tokens. For the user the migration is invisible, i.e. the same credential is still valid.
      * @param migratePasswordsToTokensInput  (optional)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -4444,8 +4324,8 @@ public class ConfigApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Migration of HTTP passwords to authentication tokens (asynchronously)
+     * This endpoint allows Gerrit administrators to migrate remaining HTTP passwords to authentication tokens. For the user the migration is invisible, i.e. the same credential is still valid.
      * @param migratePasswordsToTokensInput  (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -4531,8 +4411,8 @@ public class ConfigApi {
     }
 
     /**
-     * 
-     * 
+     * Apply maximum lifetime to authentication tokens
+     * This endpoint allows Gerrit administrators to apply a shorter maximum lifetime to existing authentication tokens. This is required, when a shorter maximum lifetime is enforced. Changing the configuration will not apply that maximum to existing tokens.
      * @param reduceMaxTokenLifetimeInput  (optional)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -4550,8 +4430,8 @@ public class ConfigApi {
     }
 
     /**
-     * 
-     * 
+     * Apply maximum lifetime to authentication tokens
+     * This endpoint allows Gerrit administrators to apply a shorter maximum lifetime to existing authentication tokens. This is required, when a shorter maximum lifetime is enforced. Changing the configuration will not apply that maximum to existing tokens.
      * @param reduceMaxTokenLifetimeInput  (optional)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -4570,8 +4450,8 @@ public class ConfigApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Apply maximum lifetime to authentication tokens (asynchronously)
+     * This endpoint allows Gerrit administrators to apply a shorter maximum lifetime to existing authentication tokens. This is required, when a shorter maximum lifetime is enforced. Changing the configuration will not apply that maximum to existing tokens.
      * @param reduceMaxTokenLifetimeInput  (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call

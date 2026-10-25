@@ -145,7 +145,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.CheckProjectInput.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.CheckProjectResultInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.CherryPickInput.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.CleanupChangesInput.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.CommentInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.CommentInput.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.CommentLinkInfo.CustomTypeAdapterFactory());
@@ -197,7 +196,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.EvaluateChangeQueryExpressionResultInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.ExperimentInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.FetchInfo.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.FieldJson.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.FileChange.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.FileContentInput.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.FileMeta.CustomTypeAdapterFactory());
@@ -252,7 +250,8 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.MergePatchSetInput.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.MergeableInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.MetadataInfo.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.MetricJson.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.MetricFieldInfo.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.MetricInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.MigrateLabelsInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.MigrateLabelsReviewInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.MigratePasswordsToTokensInput.CustomTypeAdapterFactory());

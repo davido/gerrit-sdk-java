@@ -1946,8 +1946,8 @@ public class ProjectsApi {
     }
 
     /**
-     * 
-     * 
+     * Get Diff for File
+     * Gets the diff for a single file between two commits. The base query parameter is required (same as Diff Between Commits).
      * @param projectId  (required)
      * @param branchId  (required)
      * @param fileId  (required)
@@ -1969,8 +1969,8 @@ public class ProjectsApi {
     }
 
     /**
-     * 
-     * 
+     * Get Diff for File
+     * Gets the diff for a single file between two commits. The base query parameter is required (same as Diff Between Commits).
      * @param projectId  (required)
      * @param branchId  (required)
      * @param fileId  (required)
@@ -1993,8 +1993,8 @@ public class ProjectsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Get Diff for File (asynchronously)
+     * Gets the diff for a single file between two commits. The base query parameter is required (same as Diff Between Commits).
      * @param projectId  (required)
      * @param branchId  (required)
      * @param fileId  (required)
@@ -5593,6 +5593,270 @@ public class ProjectsApi {
         return localVarCall;
     }
     /**
+     * Build call for getProjectsProjectIdSubmitRequirementsTemplates
+     * @param projectId  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getProjectsProjectIdSubmitRequirementsTemplatesCall(@javax.annotation.Nonnull String projectId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/projects/{project-id}/submit_requirements_templates"
+            .replace("{" + "project-id" + "}", localVarApiClient.escapeString(projectId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getProjectsProjectIdSubmitRequirementsTemplatesValidateBeforeCall(@javax.annotation.Nonnull String projectId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'projectId' is set
+        if (projectId == null) {
+            throw new ApiException("Missing the required parameter 'projectId' when calling getProjectsProjectIdSubmitRequirementsTemplates(Async)");
+        }
+
+        return getProjectsProjectIdSubmitRequirementsTemplatesCall(projectId, _callback);
+
+    }
+
+    /**
+     * Get Submit Requirement Templates
+     * Retrieves submit requirement templates configured in project.config and in its parent projects.
+     * @param projectId  (required)
+     * @return List&lt;SubmitRequirementInfo&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<SubmitRequirementInfo> getProjectsProjectIdSubmitRequirementsTemplates(@javax.annotation.Nonnull String projectId) throws ApiException {
+        ApiResponse<List<SubmitRequirementInfo>> localVarResp = getProjectsProjectIdSubmitRequirementsTemplatesWithHttpInfo(projectId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get Submit Requirement Templates
+     * Retrieves submit requirement templates configured in project.config and in its parent projects.
+     * @param projectId  (required)
+     * @return ApiResponse&lt;List&lt;SubmitRequirementInfo&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<SubmitRequirementInfo>> getProjectsProjectIdSubmitRequirementsTemplatesWithHttpInfo(@javax.annotation.Nonnull String projectId) throws ApiException {
+        okhttp3.Call localVarCall = getProjectsProjectIdSubmitRequirementsTemplatesValidateBeforeCall(projectId, null);
+        Type localVarReturnType = new TypeToken<List<SubmitRequirementInfo>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get Submit Requirement Templates (asynchronously)
+     * Retrieves submit requirement templates configured in project.config and in its parent projects.
+     * @param projectId  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getProjectsProjectIdSubmitRequirementsTemplatesAsync(@javax.annotation.Nonnull String projectId, final ApiCallback<List<SubmitRequirementInfo>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getProjectsProjectIdSubmitRequirementsTemplatesValidateBeforeCall(projectId, _callback);
+        Type localVarReturnType = new TypeToken<List<SubmitRequirementInfo>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getProjectsProjectIdSubmitRequirementsTemplatesSubmitRequirementTemplateId
+     * @param projectId  (required)
+     * @param submitRequirementTemplateId  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getProjectsProjectIdSubmitRequirementsTemplatesSubmitRequirementTemplateIdCall(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String submitRequirementTemplateId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/projects/{project-id}/submit_requirements_templates/{submit-requirement-template-id}"
+            .replace("{" + "project-id" + "}", localVarApiClient.escapeString(projectId.toString()))
+            .replace("{" + "submit-requirement-template-id" + "}", localVarApiClient.escapeString(submitRequirementTemplateId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "basicAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getProjectsProjectIdSubmitRequirementsTemplatesSubmitRequirementTemplateIdValidateBeforeCall(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String submitRequirementTemplateId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'projectId' is set
+        if (projectId == null) {
+            throw new ApiException("Missing the required parameter 'projectId' when calling getProjectsProjectIdSubmitRequirementsTemplatesSubmitRequirementTemplateId(Async)");
+        }
+
+        // verify the required parameter 'submitRequirementTemplateId' is set
+        if (submitRequirementTemplateId == null) {
+            throw new ApiException("Missing the required parameter 'submitRequirementTemplateId' when calling getProjectsProjectIdSubmitRequirementsTemplatesSubmitRequirementTemplateId(Async)");
+        }
+
+        return getProjectsProjectIdSubmitRequirementsTemplatesSubmitRequirementTemplateIdCall(projectId, submitRequirementTemplateId, _callback);
+
+    }
+
+    /**
+     * Get Submit Requirement Template
+     * Retrieves a single effective submit requirement template for a project. The returned template may be defined in the project itself or inherited from one of its parent projects.
+     * @param projectId  (required)
+     * @param submitRequirementTemplateId  (required)
+     * @return SubmitRequirementInfo
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public SubmitRequirementInfo getProjectsProjectIdSubmitRequirementsTemplatesSubmitRequirementTemplateId(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String submitRequirementTemplateId) throws ApiException {
+        ApiResponse<SubmitRequirementInfo> localVarResp = getProjectsProjectIdSubmitRequirementsTemplatesSubmitRequirementTemplateIdWithHttpInfo(projectId, submitRequirementTemplateId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get Submit Requirement Template
+     * Retrieves a single effective submit requirement template for a project. The returned template may be defined in the project itself or inherited from one of its parent projects.
+     * @param projectId  (required)
+     * @param submitRequirementTemplateId  (required)
+     * @return ApiResponse&lt;SubmitRequirementInfo&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<SubmitRequirementInfo> getProjectsProjectIdSubmitRequirementsTemplatesSubmitRequirementTemplateIdWithHttpInfo(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String submitRequirementTemplateId) throws ApiException {
+        okhttp3.Call localVarCall = getProjectsProjectIdSubmitRequirementsTemplatesSubmitRequirementTemplateIdValidateBeforeCall(projectId, submitRequirementTemplateId, null);
+        Type localVarReturnType = new TypeToken<SubmitRequirementInfo>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get Submit Requirement Template (asynchronously)
+     * Retrieves a single effective submit requirement template for a project. The returned template may be defined in the project itself or inherited from one of its parent projects.
+     * @param projectId  (required)
+     * @param submitRequirementTemplateId  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getProjectsProjectIdSubmitRequirementsTemplatesSubmitRequirementTemplateIdAsync(@javax.annotation.Nonnull String projectId, @javax.annotation.Nonnull String submitRequirementTemplateId, final ApiCallback<SubmitRequirementInfo> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getProjectsProjectIdSubmitRequirementsTemplatesSubmitRequirementTemplateIdValidateBeforeCall(projectId, submitRequirementTemplateId, _callback);
+        Type localVarReturnType = new TypeToken<SubmitRequirementInfo>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for getProjectsProjectIdTags
      * @param projectId  (required)
      * @param descending  (optional)
@@ -6514,8 +6778,8 @@ public class ProjectsApi {
     }
 
     /**
-     * 
-     * 
+     * Check project consistency
+     * Performs consistency checks on the project.
      * @param projectId  (required)
      * @param checkProjectInput  (optional)
      * @return CheckProjectResultInfo
@@ -6533,8 +6797,8 @@ public class ProjectsApi {
     }
 
     /**
-     * 
-     * 
+     * Check project consistency
+     * Performs consistency checks on the project.
      * @param projectId  (required)
      * @param checkProjectInput  (optional)
      * @return ApiResponse&lt;CheckProjectResultInfo&gt;
@@ -6553,8 +6817,8 @@ public class ProjectsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Check project consistency (asynchronously)
+     * Performs consistency checks on the project.
      * @param projectId  (required)
      * @param checkProjectInput  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -6790,8 +7054,8 @@ public class ProjectsApi {
     }
 
     /**
-     * 
-     * 
+     * Create Change for review
+     * This endpoint is functionally equivalent to create change in the change API, but it has the project name in the URL, which is easier to route in sharded deployments.
      * @param projectId  (required)
      * @param changeInput  (optional)
      * @return ChangeInfo
@@ -6809,8 +7073,8 @@ public class ProjectsApi {
     }
 
     /**
-     * 
-     * 
+     * Create Change for review
+     * This endpoint is functionally equivalent to create change in the change API, but it has the project name in the URL, which is easier to route in sharded deployments.
      * @param projectId  (required)
      * @param changeInput  (optional)
      * @return ApiResponse&lt;ChangeInfo&gt;
@@ -6829,8 +7093,8 @@ public class ProjectsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Create Change for review (asynchronously)
+     * This endpoint is functionally equivalent to create change in the change API, but it has the project name in the URL, which is easier to route in sharded deployments.
      * @param projectId  (required)
      * @param changeInput  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -7056,8 +7320,8 @@ public class ProjectsApi {
     }
 
     /**
-     * 
-     * 
+     * Index project
+     * Adds or updates the current project (and children, if specified) in the secondary index. The indexing task is executed asynchronously in background and this command returns immediately if async is specified in the input.
      * @param projectId  (required)
      * @param indexProjectInput  (optional)
      * @return Object
@@ -7075,8 +7339,8 @@ public class ProjectsApi {
     }
 
     /**
-     * 
-     * 
+     * Index project
+     * Adds or updates the current project (and children, if specified) in the secondary index. The indexing task is executed asynchronously in background and this command returns immediately if async is specified in the input.
      * @param projectId  (required)
      * @param indexProjectInput  (optional)
      * @return ApiResponse&lt;Object&gt;
@@ -7095,8 +7359,8 @@ public class ProjectsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Index project (asynchronously)
+     * Adds or updates the current project (and children, if specified) in the secondary index. The indexing task is executed asynchronously in background and this command returns immediately if async is specified in the input.
      * @param projectId  (required)
      * @param indexProjectInput  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -7186,8 +7450,8 @@ public class ProjectsApi {
     }
 
     /**
-     * 
-     * 
+     * Index all changes in a project
+     * Adds or updates all the changes belonging to a project in the secondary index. The indexing task is executed asynchronously in background, so this command returns immediately.
      * @param projectId  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -7204,8 +7468,8 @@ public class ProjectsApi {
     }
 
     /**
-     * 
-     * 
+     * Index all changes in a project
+     * Adds or updates all the changes belonging to a project in the secondary index. The indexing task is executed asynchronously in background, so this command returns immediately.
      * @param projectId  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -7223,8 +7487,8 @@ public class ProjectsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Index all changes in a project (asynchronously)
+     * Adds or updates all the changes belonging to a project in the secondary index. The indexing task is executed asynchronously in background, so this command returns immediately.
      * @param projectId  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -8369,8 +8633,8 @@ public class ProjectsApi {
     }
 
     /**
-     * 
-     * 
+     * Create Access Rights Change for review
+     * Sets access rights for the project using the diff schema provided by ProjectAccessInput
      * @param projectId  (required)
      * @param projectAccessInput  (optional)
      * @return ChangeInfo
@@ -8388,8 +8652,8 @@ public class ProjectsApi {
     }
 
     /**
-     * 
-     * 
+     * Create Access Rights Change for review
+     * Sets access rights for the project using the diff schema provided by ProjectAccessInput
      * @param projectId  (required)
      * @param projectAccessInput  (optional)
      * @return ApiResponse&lt;ChangeInfo&gt;
@@ -8408,8 +8672,8 @@ public class ProjectsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Create Access Rights Change for review (asynchronously)
+     * Sets access rights for the project using the diff schema provided by ProjectAccessInput
      * @param projectId  (required)
      * @param projectAccessInput  (optional)
      * @param _callback The callback to be executed when the API call finishes

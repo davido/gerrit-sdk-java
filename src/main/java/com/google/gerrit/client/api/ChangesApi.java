@@ -1833,8 +1833,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Delete Reviewer
+     * &#39;POST /changes/\\{change-id\\}/reviewers/\\{account-id\\}/delete&#39; --
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param reviewerId  (required)
@@ -1851,8 +1851,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Delete Reviewer
+     * &#39;POST /changes/\\{change-id\\}/reviewers/\\{account-id\\}/delete&#39; --
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param reviewerId  (required)
@@ -1871,8 +1871,8 @@ public class ChangesApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Delete Reviewer (asynchronously)
+     * &#39;POST /changes/\\{change-id\\}/reviewers/\\{account-id\\}/delete&#39; --
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param reviewerId  (required)
@@ -1982,8 +1982,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Delete Vote
+     * &#39;POST /changes/\\{change-id\\}/reviewers/\\{account-id\\}/votes/\\{label-id\\}/delete&#39; --
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param reviewerId  (required)
@@ -2001,8 +2001,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Delete Vote
+     * &#39;POST /changes/\\{change-id\\}/reviewers/\\{account-id\\}/votes/\\{label-id\\}/delete&#39; --
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param reviewerId  (required)
@@ -2022,8 +2022,8 @@ public class ChangesApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Delete Vote (asynchronously)
+     * &#39;POST /changes/\\{change-id\\}/reviewers/\\{account-id\\}/votes/\\{label-id\\}/delete&#39; --
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param reviewerId  (required)
@@ -3555,8 +3555,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Retrieve file content from Change Edit
+     * Retrieves content of a file from a change edit.
      * @param changeId  (required)
      * @param changeEditId  (required)
      * @param base  (optional)
@@ -3576,8 +3576,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Retrieve file content from Change Edit
+     * Retrieves content of a file from a change edit.
      * @param changeId  (required)
      * @param changeEditId  (required)
      * @param base  (optional)
@@ -3598,8 +3598,8 @@ public class ChangesApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Retrieve file content from Change Edit (asynchronously)
+     * Retrieves content of a file from a change edit.
      * @param changeId  (required)
      * @param changeEditId  (required)
      * @param base  (optional)
@@ -3698,8 +3698,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Retrieve meta data of a file from Change Edit
+     * Retrieves meta data of a file from a change edit. Currently only web links are returned.
      * @param changeId  (required)
      * @param changeEditId  (required)
      * @return GetMetaFileInfo
@@ -3717,8 +3717,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Retrieve meta data of a file from Change Edit
+     * Retrieves meta data of a file from a change edit. Currently only web links are returned.
      * @param changeId  (required)
      * @param changeEditId  (required)
      * @return ApiResponse&lt;GetMetaFileInfo&gt;
@@ -3737,8 +3737,8 @@ public class ChangesApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Retrieve meta data of a file from Change Edit (asynchronously)
+     * Retrieves meta data of a file from a change edit. Currently only web links are returned.
      * @param changeId  (required)
      * @param changeEditId  (required)
      * @param _callback The callback to be executed when the API call finishes
@@ -3833,8 +3833,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Retrieve commit message from Change Edit or current patch set of the change
+     * Retrieves commit message from change edit.
      * @param changeId  (required)
      * @param base  (optional)
      * @return File
@@ -3852,8 +3852,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Retrieve commit message from Change Edit or current patch set of the change
+     * Retrieves commit message from change edit.
      * @param changeId  (required)
      * @param base  (optional)
      * @return ApiResponse&lt;File&gt;
@@ -3872,8 +3872,8 @@ public class ChangesApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Retrieve commit message from Change Edit or current patch set of the change (asynchronously)
+     * Retrieves commit message from change edit.
      * @param changeId  (required)
      * @param base  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -9399,8 +9399,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Get Reviewer
+     * Retrieves a reviewer of a change.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param reviewerId  (required)
@@ -9419,8 +9419,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Get Reviewer
+     * Retrieves a reviewer of a change.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param reviewerId  (required)
@@ -9440,8 +9440,8 @@ public class ChangesApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Get Reviewer (asynchronously)
+     * Retrieves a reviewer of a change.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param reviewerId  (required)
@@ -11850,8 +11850,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Publish Change Edit
+     * Promotes change edit to a regular patch set.
      * @param changeId  (required)
      * @param publishChangeEditInput  (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -11867,8 +11867,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Publish Change Edit
+     * Promotes change edit to a regular patch set.
      * @param changeId  (required)
      * @param publishChangeEditInput  (optional)
      * @return ApiResponse&lt;Void&gt;
@@ -11886,8 +11886,8 @@ public class ChangesApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Publish Change Edit (asynchronously)
+     * Promotes change edit to a regular patch set.
      * @param changeId  (required)
      * @param publishChangeEditInput  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -13179,8 +13179,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Unmark Private
+     * Marks the change to be non-private. Note users can only unmark own private changes.
      * @param changeId  (required)
      * @param inputWithMessage  (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -13196,8 +13196,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Unmark Private
+     * Marks the change to be non-private. Note users can only unmark own private changes.
      * @param changeId  (required)
      * @param inputWithMessage  (optional)
      * @return ApiResponse&lt;Void&gt;
@@ -13215,8 +13215,8 @@ public class ChangesApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Unmark Private (asynchronously)
+     * Marks the change to be non-private. Note users can only unmark own private changes.
      * @param changeId  (required)
      * @param inputWithMessage  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -15555,8 +15555,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Add Reviewer
+     * Adds one user or all members of one group as reviewer to the change.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param reviewerInput  (optional)
@@ -15575,8 +15575,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Add Reviewer
+     * Adds one user or all members of one group as reviewer to the change.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param reviewerInput  (optional)
@@ -15596,8 +15596,8 @@ public class ChangesApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Add Reviewer (asynchronously)
+     * Adds one user or all members of one group as reviewer to the change.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param reviewerInput  (optional)
@@ -15704,8 +15704,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Delete Reviewer
+     * Deletes a reviewer from a change. Deleting a reviewer also removes that user from the attention set.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param reviewerId  (required)
@@ -15723,8 +15723,8 @@ public class ChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Delete Reviewer
+     * Deletes a reviewer from a change. Deleting a reviewer also removes that user from the attention set.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param reviewerId  (required)
@@ -15744,8 +15744,8 @@ public class ChangesApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Delete Reviewer (asynchronously)
+     * Deletes a reviewer from a change. Deleting a reviewer also removes that user from the attention set.
      * @param changeId  (required)
      * @param revisionId  (required)
      * @param reviewerId  (required)

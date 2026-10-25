@@ -101,6 +101,11 @@ public class GerritInfo {
   @javax.annotation.Nullable
   private Boolean projectStatePredicateEnabled;
 
+  public static final String SERIALIZED_NAME_SUBMIT_COMMIT_URL = "submit_commit_url";
+  @SerializedName(SERIALIZED_NAME_SUBMIT_COMMIT_URL)
+  @javax.annotation.Nullable
+  private String submitCommitUrl;
+
   public GerritInfo() {
   }
 
@@ -294,6 +299,25 @@ public class GerritInfo {
   }
 
 
+  public GerritInfo submitCommitUrl(@javax.annotation.Nullable String submitCommitUrl) {
+    this.submitCommitUrl = submitCommitUrl;
+    return this;
+  }
+
+  /**
+   * Get submitCommitUrl
+   * @return submitCommitUrl
+   */
+  @javax.annotation.Nullable
+  public String getSubmitCommitUrl() {
+    return submitCommitUrl;
+  }
+
+  public void setSubmitCommitUrl(@javax.annotation.Nullable String submitCommitUrl) {
+    this.submitCommitUrl = submitCommitUrl;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -313,12 +337,13 @@ public class GerritInfo {
         Objects.equals(this.primaryWeblinkName, gerritInfo.primaryWeblinkName) &&
         Objects.equals(this.instanceId, gerritInfo.instanceId) &&
         Objects.equals(this.defaultBranch, gerritInfo.defaultBranch) &&
-        Objects.equals(this.projectStatePredicateEnabled, gerritInfo.projectStatePredicateEnabled);
+        Objects.equals(this.projectStatePredicateEnabled, gerritInfo.projectStatePredicateEnabled) &&
+        Objects.equals(this.submitCommitUrl, gerritInfo.submitCommitUrl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(allProjects, allUsers, docSearch, docUrl, editGpgKeys, reportBugUrl, primaryWeblinkName, instanceId, defaultBranch, projectStatePredicateEnabled);
+    return Objects.hash(allProjects, allUsers, docSearch, docUrl, editGpgKeys, reportBugUrl, primaryWeblinkName, instanceId, defaultBranch, projectStatePredicateEnabled, submitCommitUrl);
   }
 
   @Override
@@ -335,6 +360,7 @@ public class GerritInfo {
     sb.append("    instanceId: ").append(toIndentedString(instanceId)).append("\n");
     sb.append("    defaultBranch: ").append(toIndentedString(defaultBranch)).append("\n");
     sb.append("    projectStatePredicateEnabled: ").append(toIndentedString(projectStatePredicateEnabled)).append("\n");
+    sb.append("    submitCommitUrl: ").append(toIndentedString(submitCommitUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -353,7 +379,7 @@ public class GerritInfo {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("all_projects", "all_users", "doc_search", "doc_url", "edit_gpg_keys", "report_bug_url", "primary_weblink_name", "instance_id", "default_branch", "project_state_predicate_enabled"));
+    openapiFields = new HashSet<String>(Arrays.asList("all_projects", "all_users", "doc_search", "doc_url", "edit_gpg_keys", "report_bug_url", "primary_weblink_name", "instance_id", "default_branch", "project_state_predicate_enabled", "submit_commit_url"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -400,6 +426,9 @@ public class GerritInfo {
       }
       if ((jsonObj.get("default_branch") != null && !jsonObj.get("default_branch").isJsonNull()) && !jsonObj.get("default_branch").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `default_branch` to be a primitive type in the JSON string but got `%s`", jsonObj.get("default_branch").toString()));
+      }
+      if ((jsonObj.get("submit_commit_url") != null && !jsonObj.get("submit_commit_url").isJsonNull()) && !jsonObj.get("submit_commit_url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `submit_commit_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("submit_commit_url").toString()));
       }
   }
 
