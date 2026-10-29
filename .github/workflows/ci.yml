@@ -1,0 +1,40 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      # The generator is openapi-generator-cli, a Java tool invoked via npx, so the
+      # regen-drift gate needs both Node (to run npx) and a JDK (to run the generator).
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # This repo's own toolchain is Maven + JDK 21 (pom.xml: java.version=21); the
+      # same JDK also runs openapi-generator-cli under npx.
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      # Regen-drift gate: regenerate the SDK from the committed spec
+      # (rest-api-openapi.json, the generate.sh default -- self-contained, no fetch) and
+      # fail if the working tree differs from what is committed.
+      - name: Regenerate SDK from the committed OpenAPI spec
+        run: ./generate.sh
+
+      - name: Fail on regeneration drift
+        run: git diff --exit-code
+
+      # Build + test with this repo's real command: the pinned Maven wrapper (mvnw),
+      # which is what JitPack also uses. package runs compile + any JUnit 5 tests.
+      - name: Build and test
+        run: ./mvnw -B -ntp package

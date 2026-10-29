@@ -16,17 +16,17 @@ cd "$(dirname "$0")"
 SPEC="${1:-rest-api-openapi.json}"
 
 if [[ "$SPEC" == http://* || "$SPEC" == https://* ]]; then
-  echo "0/4 fetch spec from $SPEC"
+  echo "0/5 fetch spec from $SPEC"
   curl -fsSL "$SPEC" -o rest-api-openapi.json
   SPEC=rest-api-openapi.json
 fi
 
 VERSION=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["info"]["version"])' "$SPEC")
 
-echo "1/4 clean generated sources"
+echo "1/5 clean generated sources"
 rm -rf src docs
 
-echo "2/4 generate java client (okhttp-gson, Gerrit $VERSION)"
+echo "2/5 generate java client (okhttp-gson, Gerrit $VERSION)"
 # README.md / LICENSE.txt / GerritXssiInterceptor / gradle files are handled by
 # .openapi-generator-ignore; pom.xml is regenerated with the version below.
 npx --yes @openapitools/openapi-generator-cli@2.41.0 generate \
@@ -34,7 +34,7 @@ npx --yes @openapitools/openapi-generator-cli@2.41.0 generate \
   --additional-properties=library=okhttp-gson,hideGenerationTimestamp=true,groupId=com.github.davido,artifactId=gerrit-sdk-java,artifactVersion="$VERSION",apiPackage=com.google.gerrit.client.api,modelPackage=com.google.gerrit.client.model,invokerPackage=com.google.gerrit.client \
   >/dev/null
 
-echo "3/4 restore hand-written XSSI interceptor + modernize the pom"
+echo "3/5 restore hand-written XSSI interceptor + modernize the pom"
 cp GerritXssiInterceptor.java src/main/java/com/google/gerrit/client/GerritXssiInterceptor.java
 # The generator's defaults are stale (Java 1.8, okhttp 4.12, gson 2.10.1, compiler
 # plugin 3.8.1); the generated code compiles clean on the latest, so bump. (python, not
@@ -54,7 +54,27 @@ s = s.replace("<description>OpenAPI Java</description>", "<description>Generated
 open(p, "w").write(s)
 PY
 
-echo "4/4 drop non-Maven scaffolding (no Gradle)"
+echo "4/5 drop non-Maven scaffolding (no Gradle)"
 rm -rf build.gradle build.sbt settings.gradle gradle gradlew gradlew.bat gradle.properties git_push.sh docs api .travis.yml
+
+echo "5/5 sync README Gerrit version to $VERSION"
+# README.md is owned by this repo (.openapi-generator-ignore), so the generator never
+# rewrites it -- it would otherwise drift from the spec's info.version (the 3.15->3.16
+# class of bug). Rewrite ONLY the Gerrit-version tokens here, reusing the $VERSION
+# derived above. Every such token is anchored to the "gerrit-sdk-java" artifact
+# coordinate (bare "gerrit-sdk-java:X", URL path "gerrit-sdk-java/vX", pom filename
+# "gerrit-sdk-java-vX.pom") or the dependency snippet's "<version>vX</version>" tag, so
+# unrelated versions (OkHttp, Gson, maven-compiler-plugin, the Maven wrapper, Java level)
+# are never touched. (python, not sed -i, for macOS/GNU portability.)
+VERSION="$VERSION" python3 - <<'PY'
+import os, re
+VERSION = os.environ["VERSION"]
+p = "README.md"; s = open(p).read()
+ver = r'\d+\.\d+\.\d+(?:\.\d+)?(?:-SNAPSHOT)?'
+s = re.sub(r'(gerrit-sdk-java[:/-]v?)' + ver, lambda m: m.group(1) + VERSION, s)
+s = re.sub(r'(<version>v)' + ver + r'(</version>)',
+           lambda m: m.group(1) + VERSION + m.group(2), s)
+open(p, "w").write(s)
+PY
 
 echo "done: src/ regenerated from $SPEC; XSSI via GerritXssiInterceptor; Maven-only; okhttp 5.4 / gson 2.14, pom metadata=Apache-2.0"
