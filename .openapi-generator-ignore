@@ -21,3 +21,4 @@ mvnw
 mvnw.cmd
 .mvn/**
 .github/**
+src/main/AndroidManifest.xml

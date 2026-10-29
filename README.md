@@ -30,10 +30,10 @@ Demonstrates feasibility for Gerrit issue
 ## Versions
 
 - **Java 21** (source/target, Gerrit's own language level), built by openapi-generator's `okhttp-gson` client.
-- **OkHttp 5.0.0**, **Gson 2.14.0**, **maven-compiler-plugin 3.13.0** — bumped off the
+- **OkHttp 5.4.0**, **Gson 2.14.0**, **maven-compiler-plugin 3.13.0** — bumped off the
   generator's stale defaults (Java 1.8 / okhttp 4.12 / gson 2.10.1); the generated code
   compiles clean on the latest.
-- Maven coordinates: **`com.github.davido:gerrit-sdk-java:3.15.0-SNAPSHOT`** — the git
+- Maven coordinates: **`com.github.davido:gerrit-sdk-java:3.16.0-SNAPSHOT`** — the git
   tag mirrors the Gerrit version.
 
 ## What's in this repo
@@ -90,9 +90,9 @@ JitPack then caches. `jitpack.yml` pins `openjdk21`, which JitPack ships out of 
 
 ```bash
 # trigger + tail the build log
-curl -s https://jitpack.io/com/github/davido/gerrit-sdk-java/v3.15.0-SNAPSHOT/build.log
+curl -s https://jitpack.io/com/github/davido/gerrit-sdk-java/v3.16.0-SNAPSHOT/build.log
 # or just fetch the pom (triggers the build, then serves it once green)
-curl -s https://jitpack.io/com/github/davido/gerrit-sdk-java/v3.15.0-SNAPSHOT/gerrit-sdk-java-v3.15.0-SNAPSHOT.pom
+curl -s https://jitpack.io/com/github/davido/gerrit-sdk-java/v3.16.0-SNAPSHOT/gerrit-sdk-java-v3.16.0-SNAPSHOT.pom
 ```
 Or open `https://jitpack.io/#davido/gerrit-sdk-java` and click the tag under *Releases*.
 The first build takes a couple of minutes; afterwards it's cached and instant.
@@ -105,14 +105,14 @@ Maven:
 <dependency>
   <groupId>com.github.davido</groupId>
   <artifactId>gerrit-sdk-java</artifactId>
-  <version>v3.15.0-SNAPSHOT</version>
+  <version>v3.16.0-SNAPSHOT</version>
 </dependency>
 ```
 
 Bazel (`rules_jvm_external`):
 ```python
 maven.install(
-    artifacts = ["com.github.davido:gerrit-sdk-java:v3.15.0-SNAPSHOT"],
+    artifacts = ["com.github.davido:gerrit-sdk-java:v3.16.0-SNAPSHOT"],
     repositories = ["https://jitpack.io", "https://repo1.maven.org/maven2"],
 )
 ```
