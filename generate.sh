@@ -77,4 +77,24 @@ s = re.sub(r'(<version>v)' + ver + r'(</version>)',
 open(p, "w").write(s)
 PY
 
+# Same ownership caveat as the version sync: README.md is .openapi-generator-ignore'd, so
+# the generator never refreshes the "N operations / N models" surface counts and they rot
+# (the 341->338 / 279->280 class of bug). Recompute both from the regenerated sources and
+# rewrite ONLY those two bold tokens. operations = one ...ValidateBeforeCall per generated
+# operation (exactly one per op; unlike the public wrappers, which the okhttp-gson template
+# emits in 4 variants); models = *.java files directly under model/. The regexes anchor to
+# the README's exact "**N operations**" / "**N models**" phrasing, so nothing else moves.
+API=src/main/java/com/google/gerrit/client/api
+MODEL=src/main/java/com/google/gerrit/client/model
+OPS=$(grep -rhcE 'private okhttp3\.Call [a-zA-Z0-9]+ValidateBeforeCall\(' "$API"/*.java | awk '{s+=$1} END {print s}')
+MODELS=$(find "$MODEL" -maxdepth 1 -name '*.java' -type f | wc -l | tr -d ' ')
+OPS="$OPS" MODELS="$MODELS" python3 - <<'PY'
+import os, re
+OPS = os.environ["OPS"]; MODELS = os.environ["MODELS"]
+p = "README.md"; s = open(p).read()
+s = re.sub(r'\*\*\d+ operations\*\*', '**%s operations**' % OPS, s)
+s = re.sub(r'\*\*\d+ models\*\*', '**%s models**' % MODELS, s)
+open(p, "w").write(s)
+PY
+
 echo "done: src/ regenerated from $SPEC; XSSI via GerritXssiInterceptor; Maven-only; okhttp 5.4 / gson 2.14, pom metadata=Apache-2.0"
