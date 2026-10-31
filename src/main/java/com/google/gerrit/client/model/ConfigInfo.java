@@ -20,6 +20,7 @@ import com.google.gerrit.client.model.ConfigParameterInfo;
 import com.google.gerrit.client.model.InheritedBooleanInfo;
 import com.google.gerrit.client.model.MaxObjectSizeLimitInfo;
 import com.google.gerrit.client.model.ProjectState;
+import com.google.gerrit.client.model.RefStorage;
 import com.google.gerrit.client.model.SubmitType;
 import com.google.gerrit.client.model.SubmitTypeInfo;
 import com.google.gson.TypeAdapter;
@@ -156,6 +157,11 @@ public class ConfigInfo {
   @SerializedName(SERIALIZED_NAME_STATE)
   @javax.annotation.Nullable
   private ProjectState state;
+
+  public static final String SERIALIZED_NAME_REF_STORAGE = "ref_storage";
+  @SerializedName(SERIALIZED_NAME_REF_STORAGE)
+  @javax.annotation.Nullable
+  private RefStorage refStorage;
 
   public static final String SERIALIZED_NAME_PLUGIN_CONFIG = "plugin_config";
   @SerializedName(SERIALIZED_NAME_PLUGIN_CONFIG)
@@ -541,6 +547,25 @@ public class ConfigInfo {
   }
 
 
+  public ConfigInfo refStorage(@javax.annotation.Nullable RefStorage refStorage) {
+    this.refStorage = refStorage;
+    return this;
+  }
+
+  /**
+   * The ref storage format of the project&#39;s repository (FILES or REFTABLE). The request fails if the repository cannot be opened.
+   * @return refStorage
+   */
+  @javax.annotation.Nullable
+  public RefStorage getRefStorage() {
+    return refStorage;
+  }
+
+  public void setRefStorage(@javax.annotation.Nullable RefStorage refStorage) {
+    this.refStorage = refStorage;
+  }
+
+
   public ConfigInfo pluginConfig(@javax.annotation.Nullable Map<String, Map<String, ConfigParameterInfo>> pluginConfig) {
     this.pluginConfig = pluginConfig;
     return this;
@@ -678,6 +703,7 @@ public class ConfigInfo {
         Objects.equals(this.submitType, configInfo.submitType) &&
         Objects.equals(this.defaultSubmitType, configInfo.defaultSubmitType) &&
         Objects.equals(this.state, configInfo.state) &&
+        Objects.equals(this.refStorage, configInfo.refStorage) &&
         Objects.equals(this.pluginConfig, configInfo.pluginConfig) &&
         Objects.equals(this.actions, configInfo.actions) &&
         Objects.equals(this.commentlinks, configInfo.commentlinks) &&
@@ -686,7 +712,7 @@ public class ConfigInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(description, useContributorAgreements, useContentMerge, useSignedOffBy, createNewChangeForAllNotInTarget, requireChangeId, enableSignedPush, requireSignedPush, rejectImplicitMerges, privateByDefault, workInProgressByDefault, enableReviewerByEmail, matchAuthorToCommitterDate, rejectEmptyCommit, skipAddingAuthorAndCommitterAsReviewers, maxObjectSizeLimit, submitType, defaultSubmitType, state, pluginConfig, actions, commentlinks, extensionPanelNames);
+    return Objects.hash(description, useContributorAgreements, useContentMerge, useSignedOffBy, createNewChangeForAllNotInTarget, requireChangeId, enableSignedPush, requireSignedPush, rejectImplicitMerges, privateByDefault, workInProgressByDefault, enableReviewerByEmail, matchAuthorToCommitterDate, rejectEmptyCommit, skipAddingAuthorAndCommitterAsReviewers, maxObjectSizeLimit, submitType, defaultSubmitType, state, refStorage, pluginConfig, actions, commentlinks, extensionPanelNames);
   }
 
   @Override
@@ -712,6 +738,7 @@ public class ConfigInfo {
     sb.append("    submitType: ").append(toIndentedString(submitType)).append("\n");
     sb.append("    defaultSubmitType: ").append(toIndentedString(defaultSubmitType)).append("\n");
     sb.append("    state: ").append(toIndentedString(state)).append("\n");
+    sb.append("    refStorage: ").append(toIndentedString(refStorage)).append("\n");
     sb.append("    pluginConfig: ").append(toIndentedString(pluginConfig)).append("\n");
     sb.append("    actions: ").append(toIndentedString(actions)).append("\n");
     sb.append("    commentlinks: ").append(toIndentedString(commentlinks)).append("\n");
@@ -734,7 +761,7 @@ public class ConfigInfo {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("description", "use_contributor_agreements", "use_content_merge", "use_signed_off_by", "create_new_change_for_all_not_in_target", "require_change_id", "enable_signed_push", "require_signed_push", "reject_implicit_merges", "private_by_default", "work_in_progress_by_default", "enable_reviewer_by_email", "match_author_to_committer_date", "reject_empty_commit", "skip_adding_author_and_committer_as_reviewers", "max_object_size_limit", "submit_type", "default_submit_type", "state", "plugin_config", "actions", "commentlinks", "extension_panel_names"));
+    openapiFields = new HashSet<String>(Arrays.asList("description", "use_contributor_agreements", "use_content_merge", "use_signed_off_by", "create_new_change_for_all_not_in_target", "require_change_id", "enable_signed_push", "require_signed_push", "reject_implicit_merges", "private_by_default", "work_in_progress_by_default", "enable_reviewer_by_email", "match_author_to_committer_date", "reject_empty_commit", "skip_adding_author_and_committer_as_reviewers", "max_object_size_limit", "submit_type", "default_submit_type", "state", "ref_storage", "plugin_config", "actions", "commentlinks", "extension_panel_names"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -835,6 +862,10 @@ public class ConfigInfo {
       // validate the optional field `state`
       if (jsonObj.get("state") != null && !jsonObj.get("state").isJsonNull()) {
         ProjectState.validateJsonElement(jsonObj.get("state"));
+      }
+      // validate the optional field `ref_storage`
+      if (jsonObj.get("ref_storage") != null && !jsonObj.get("ref_storage").isJsonNull()) {
+        RefStorage.validateJsonElement(jsonObj.get("ref_storage"));
       }
   }
 

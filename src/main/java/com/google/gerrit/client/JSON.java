@@ -286,6 +286,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.RebaseInput.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.ReceiveInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.ReduceMaxTokenLifetimeInput.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.RefStorageInput.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.ReflogEntryInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.ReindexIndexVersionInput.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.google.gerrit.client.model.RelatedChangeAndCommitInfo.CustomTypeAdapterFactory());

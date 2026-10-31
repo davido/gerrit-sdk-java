@@ -16,6 +16,7 @@ package com.google.gerrit.client.model;
 import java.util.Objects;
 import com.google.gerrit.client.model.ConfigValue;
 import com.google.gerrit.client.model.InheritableBoolean;
+import com.google.gerrit.client.model.RefStorage;
 import com.google.gerrit.client.model.SubmitType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -82,6 +83,11 @@ public class ProjectInput {
   @SerializedName(SERIALIZED_NAME_CREATE_EMPTY_COMMIT)
   @javax.annotation.Nullable
   private Boolean createEmptyCommit;
+
+  public static final String SERIALIZED_NAME_REF_STORAGE = "ref_storage";
+  @SerializedName(SERIALIZED_NAME_REF_STORAGE)
+  @javax.annotation.Nullable
+  private RefStorage refStorage;
 
   public static final String SERIALIZED_NAME_SUBMIT_TYPE = "submit_type";
   @SerializedName(SERIALIZED_NAME_SUBMIT_TYPE)
@@ -248,6 +254,25 @@ public class ProjectInput {
 
   public void setCreateEmptyCommit(@javax.annotation.Nullable Boolean createEmptyCommit) {
     this.createEmptyCommit = createEmptyCommit;
+  }
+
+
+  public ProjectInput refStorage(@javax.annotation.Nullable RefStorage refStorage) {
+    this.refStorage = refStorage;
+    return this;
+  }
+
+  /**
+   * The ref storage format for the project&#39;s repository (FILES, REFTABLE). + If not set, the repository manager selects the format. Local disk storage uses JGit&#39;s init defaults, falling back to FILES.
+   * @return refStorage
+   */
+  @javax.annotation.Nullable
+  public RefStorage getRefStorage() {
+    return refStorage;
+  }
+
+  public void setRefStorage(@javax.annotation.Nullable RefStorage refStorage) {
+    this.refStorage = refStorage;
   }
 
 
@@ -556,6 +581,7 @@ public class ProjectInput {
         Objects.equals(this.description, projectInput.description) &&
         Objects.equals(this.permissionsOnly, projectInput.permissionsOnly) &&
         Objects.equals(this.createEmptyCommit, projectInput.createEmptyCommit) &&
+        Objects.equals(this.refStorage, projectInput.refStorage) &&
         Objects.equals(this.submitType, projectInput.submitType) &&
         Objects.equals(this.branches, projectInput.branches) &&
         Objects.equals(this.owners, projectInput.owners) &&
@@ -574,7 +600,7 @@ public class ProjectInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, parent, description, permissionsOnly, createEmptyCommit, submitType, branches, owners, useContributorAgreements, useSignedOffBy, useContentMerge, requireChangeId, createNewChangeForAllNotInTarget, rejectEmptyCommit, enableSignedPush, requireSignedPush, maxObjectSizeLimit, pluginConfigValues, initOnly);
+    return Objects.hash(name, parent, description, permissionsOnly, createEmptyCommit, refStorage, submitType, branches, owners, useContributorAgreements, useSignedOffBy, useContentMerge, requireChangeId, createNewChangeForAllNotInTarget, rejectEmptyCommit, enableSignedPush, requireSignedPush, maxObjectSizeLimit, pluginConfigValues, initOnly);
   }
 
   @Override
@@ -586,6 +612,7 @@ public class ProjectInput {
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    permissionsOnly: ").append(toIndentedString(permissionsOnly)).append("\n");
     sb.append("    createEmptyCommit: ").append(toIndentedString(createEmptyCommit)).append("\n");
+    sb.append("    refStorage: ").append(toIndentedString(refStorage)).append("\n");
     sb.append("    submitType: ").append(toIndentedString(submitType)).append("\n");
     sb.append("    branches: ").append(toIndentedString(branches)).append("\n");
     sb.append("    owners: ").append(toIndentedString(owners)).append("\n");
@@ -618,7 +645,7 @@ public class ProjectInput {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("name", "parent", "description", "permissions_only", "create_empty_commit", "submit_type", "branches", "owners", "use_contributor_agreements", "use_signed_off_by", "use_content_merge", "require_change_id", "create_new_change_for_all_not_in_target", "reject_empty_commit", "enable_signed_push", "require_signed_push", "max_object_size_limit", "plugin_config_values", "init_only"));
+    openapiFields = new HashSet<String>(Arrays.asList("name", "parent", "description", "permissions_only", "create_empty_commit", "ref_storage", "submit_type", "branches", "owners", "use_contributor_agreements", "use_signed_off_by", "use_content_merge", "require_change_id", "create_new_change_for_all_not_in_target", "reject_empty_commit", "enable_signed_push", "require_signed_push", "max_object_size_limit", "plugin_config_values", "init_only"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -653,6 +680,10 @@ public class ProjectInput {
       }
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+      }
+      // validate the optional field `ref_storage`
+      if (jsonObj.get("ref_storage") != null && !jsonObj.get("ref_storage").isJsonNull()) {
+        RefStorage.validateJsonElement(jsonObj.get("ref_storage"));
       }
       // validate the optional field `submit_type`
       if (jsonObj.get("submit_type") != null && !jsonObj.get("submit_type").isJsonNull()) {

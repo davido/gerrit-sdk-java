@@ -242,6 +242,8 @@ src/main/java/com/google/gerrit/client/model/RebaseChangeEditInput.java
 src/main/java/com/google/gerrit/client/model/RebaseInput.java
 src/main/java/com/google/gerrit/client/model/ReceiveInfo.java
 src/main/java/com/google/gerrit/client/model/ReduceMaxTokenLifetimeInput.java
+src/main/java/com/google/gerrit/client/model/RefStorage.java
+src/main/java/com/google/gerrit/client/model/RefStorageInput.java
 src/main/java/com/google/gerrit/client/model/ReflogEntryInfo.java
 src/main/java/com/google/gerrit/client/model/ReindexIndexVersionInput.java
 src/main/java/com/google/gerrit/client/model/RelatedChangeAndCommitInfo.java
