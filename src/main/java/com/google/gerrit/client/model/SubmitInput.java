@@ -75,6 +75,11 @@ public class SubmitInput {
   @javax.annotation.Nullable
   private Map<String, NotifyInfo> notifyDetails = new HashMap<>();
 
+  public static final String SERIALIZED_NAME_SUBMIT_WHOLE_TOPIC = "submit_whole_topic";
+  @SerializedName(SERIALIZED_NAME_SUBMIT_WHOLE_TOPIC)
+  @javax.annotation.Nullable
+  private Boolean submitWholeTopic;
+
   public SubmitInput() {
   }
 
@@ -162,6 +167,25 @@ public class SubmitInput {
   }
 
 
+  public SubmitInput submitWholeTopic(@javax.annotation.Nullable Boolean submitWholeTopic) {
+    this.submitWholeTopic = submitWholeTopic;
+    return this;
+  }
+
+  /**
+   * If true, all open changes that share the topic of the submitted change are also submitted together in a single operation. Defaults to false.
+   * @return submitWholeTopic
+   */
+  @javax.annotation.Nullable
+  public Boolean getSubmitWholeTopic() {
+    return submitWholeTopic;
+  }
+
+  public void setSubmitWholeTopic(@javax.annotation.Nullable Boolean submitWholeTopic) {
+    this.submitWholeTopic = submitWholeTopic;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -175,12 +199,13 @@ public class SubmitInput {
     return Objects.equals(this.waitForMerge, submitInput.waitForMerge) &&
         Objects.equals(this.onBehalfOf, submitInput.onBehalfOf) &&
         Objects.equals(this.notify, submitInput.notify) &&
-        Objects.equals(this.notifyDetails, submitInput.notifyDetails);
+        Objects.equals(this.notifyDetails, submitInput.notifyDetails) &&
+        Objects.equals(this.submitWholeTopic, submitInput.submitWholeTopic);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(waitForMerge, onBehalfOf, notify, notifyDetails);
+    return Objects.hash(waitForMerge, onBehalfOf, notify, notifyDetails, submitWholeTopic);
   }
 
   @Override
@@ -191,6 +216,7 @@ public class SubmitInput {
     sb.append("    onBehalfOf: ").append(toIndentedString(onBehalfOf)).append("\n");
     sb.append("    notify: ").append(toIndentedString(notify)).append("\n");
     sb.append("    notifyDetails: ").append(toIndentedString(notifyDetails)).append("\n");
+    sb.append("    submitWholeTopic: ").append(toIndentedString(submitWholeTopic)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -209,7 +235,7 @@ public class SubmitInput {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("wait_for_merge", "on_behalf_of", "notify", "notify_details"));
+    openapiFields = new HashSet<String>(Arrays.asList("wait_for_merge", "on_behalf_of", "notify", "notify_details", "submit_whole_topic"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);

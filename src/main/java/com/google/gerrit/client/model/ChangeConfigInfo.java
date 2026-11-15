@@ -71,6 +71,11 @@ public class ChangeConfigInfo {
   @javax.annotation.Nullable
   private Boolean submitWholeTopic;
 
+  public static final String SERIALIZED_NAME_ENFORCE_WHOLE_TOPIC_SUBMIT = "enforce_whole_topic_submit";
+  @SerializedName(SERIALIZED_NAME_ENFORCE_WHOLE_TOPIC_SUBMIT)
+  @javax.annotation.Nullable
+  private Boolean enforceWholeTopicSubmit;
+
   public static final String SERIALIZED_NAME_MERGEABILITY_COMPUTATION_BEHAVIOR = "mergeability_computation_behavior";
   @SerializedName(SERIALIZED_NAME_MERGEABILITY_COMPUTATION_BEHAVIOR)
   @javax.annotation.Nullable
@@ -152,7 +157,7 @@ public class ChangeConfigInfo {
   }
 
   /**
-   * A configuration if the whole topic is submitted.
+   * Configuration that enforces the whole topic to be submitted. Deprecated; use enforce_whole_topic_submit.
    * @return submitWholeTopic
    */
   @javax.annotation.Nullable
@@ -162,6 +167,25 @@ public class ChangeConfigInfo {
 
   public void setSubmitWholeTopic(@javax.annotation.Nullable Boolean submitWholeTopic) {
     this.submitWholeTopic = submitWholeTopic;
+  }
+
+
+  public ChangeConfigInfo enforceWholeTopicSubmit(@javax.annotation.Nullable Boolean enforceWholeTopicSubmit) {
+    this.enforceWholeTopicSubmit = enforceWholeTopicSubmit;
+    return this;
+  }
+
+  /**
+   * Configuration that enforces the whole topic to be submitted.
+   * @return enforceWholeTopicSubmit
+   */
+  @javax.annotation.Nullable
+  public Boolean getEnforceWholeTopicSubmit() {
+    return enforceWholeTopicSubmit;
+  }
+
+  public void setEnforceWholeTopicSubmit(@javax.annotation.Nullable Boolean enforceWholeTopicSubmit) {
+    this.enforceWholeTopicSubmit = enforceWholeTopicSubmit;
   }
 
 
@@ -236,6 +260,7 @@ public class ChangeConfigInfo {
         Objects.equals(this.disablePrivateChanges, changeConfigInfo.disablePrivateChanges) &&
         Objects.equals(this.updateDelay, changeConfigInfo.updateDelay) &&
         Objects.equals(this.submitWholeTopic, changeConfigInfo.submitWholeTopic) &&
+        Objects.equals(this.enforceWholeTopicSubmit, changeConfigInfo.enforceWholeTopicSubmit) &&
         Objects.equals(this.mergeabilityComputationBehavior, changeConfigInfo.mergeabilityComputationBehavior) &&
         Objects.equals(this.conflictsPredicateEnabled, changeConfigInfo.conflictsPredicateEnabled) &&
         Objects.equals(this.allowMarkdownBase64ImagesInComments, changeConfigInfo.allowMarkdownBase64ImagesInComments);
@@ -243,7 +268,7 @@ public class ChangeConfigInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowBlame, disablePrivateChanges, updateDelay, submitWholeTopic, mergeabilityComputationBehavior, conflictsPredicateEnabled, allowMarkdownBase64ImagesInComments);
+    return Objects.hash(allowBlame, disablePrivateChanges, updateDelay, submitWholeTopic, enforceWholeTopicSubmit, mergeabilityComputationBehavior, conflictsPredicateEnabled, allowMarkdownBase64ImagesInComments);
   }
 
   @Override
@@ -254,6 +279,7 @@ public class ChangeConfigInfo {
     sb.append("    disablePrivateChanges: ").append(toIndentedString(disablePrivateChanges)).append("\n");
     sb.append("    updateDelay: ").append(toIndentedString(updateDelay)).append("\n");
     sb.append("    submitWholeTopic: ").append(toIndentedString(submitWholeTopic)).append("\n");
+    sb.append("    enforceWholeTopicSubmit: ").append(toIndentedString(enforceWholeTopicSubmit)).append("\n");
     sb.append("    mergeabilityComputationBehavior: ").append(toIndentedString(mergeabilityComputationBehavior)).append("\n");
     sb.append("    conflictsPredicateEnabled: ").append(toIndentedString(conflictsPredicateEnabled)).append("\n");
     sb.append("    allowMarkdownBase64ImagesInComments: ").append(toIndentedString(allowMarkdownBase64ImagesInComments)).append("\n");
@@ -275,7 +301,7 @@ public class ChangeConfigInfo {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("allow_blame", "disable_private_changes", "update_delay", "submit_whole_topic", "mergeability_computation_behavior", "conflicts_predicate_enabled", "allow_markdown_base64_images_in_comments"));
+    openapiFields = new HashSet<String>(Arrays.asList("allow_blame", "disable_private_changes", "update_delay", "submit_whole_topic", "enforce_whole_topic_submit", "mergeability_computation_behavior", "conflicts_predicate_enabled", "allow_markdown_base64_images_in_comments"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
