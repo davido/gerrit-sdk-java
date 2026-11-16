@@ -56,6 +56,11 @@ public class ProjectsDescriptionInput {
   @javax.annotation.Nullable
   private String commitMessage;
 
+  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
+  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
+  private String description;
+
   public ProjectsDescriptionInput() {
   }
 
@@ -78,6 +83,25 @@ public class ProjectsDescriptionInput {
   }
 
 
+  public ProjectsDescriptionInput description(@javax.annotation.Nullable String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * The project description. + The project description will be deleted if not set.
+   * @return description
+   */
+  @javax.annotation.Nullable
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(@javax.annotation.Nullable String description) {
+    this.description = description;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -88,12 +112,13 @@ public class ProjectsDescriptionInput {
       return false;
     }
     ProjectsDescriptionInput projectsDescriptionInput = (ProjectsDescriptionInput) o;
-    return Objects.equals(this.commitMessage, projectsDescriptionInput.commitMessage);
+    return Objects.equals(this.commitMessage, projectsDescriptionInput.commitMessage) &&
+        Objects.equals(this.description, projectsDescriptionInput.description);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(commitMessage);
+    return Objects.hash(commitMessage, description);
   }
 
   @Override
@@ -101,6 +126,7 @@ public class ProjectsDescriptionInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class ProjectsDescriptionInput {\n");
     sb.append("    commitMessage: ").append(toIndentedString(commitMessage)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -119,7 +145,7 @@ public class ProjectsDescriptionInput {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("commit_message"));
+    openapiFields = new HashSet<String>(Arrays.asList("commit_message", "description"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -148,6 +174,9 @@ public class ProjectsDescriptionInput {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("commit_message") != null && !jsonObj.get("commit_message").isJsonNull()) && !jsonObj.get("commit_message").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `commit_message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("commit_message").toString()));
+      }
+      if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
   }
 

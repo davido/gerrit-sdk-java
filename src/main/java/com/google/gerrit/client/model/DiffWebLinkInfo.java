@@ -128,7 +128,7 @@ public class DiffWebLinkInfo {
   }
 
   /**
-   * See WebLinkInfo
+   * The text to be linkified.
    * @return name
    */
   @javax.annotation.Nullable
@@ -147,7 +147,7 @@ public class DiffWebLinkInfo {
   }
 
   /**
-   * See WebLinkInfo
+   * Tooltip to show when hovering over the link. Using \&quot;Open in $NAME_OF_EXTERNAL_TOOL\&quot; is a good option here.
    * @return tooltip
    */
   @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class DiffWebLinkInfo {
   }
 
   /**
-   * See WebLinkInfo
+   * URL to the icon of the link.
    * @return imageUrl
    */
   @javax.annotation.Nullable
@@ -185,7 +185,7 @@ public class DiffWebLinkInfo {
   }
 
   /**
-   * See WebLinkInfo
+   * The link URL.
    * @return url
    */
   @javax.annotation.Nullable

@@ -14,13 +14,18 @@
 package com.google.gerrit.client.model;
 
 import java.util.Objects;
+import com.google.gerrit.client.model.FixSuggestionInfo;
+import com.google.gerrit.client.model.Range;
+import com.google.gerrit.client.model.Side;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,30 +56,350 @@ import com.google.gerrit.client.JSON;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.25.0")
 public class CommentInput {
-  public static final String SERIALIZED_NAME_ENABLE_CONTEXT = "enable_context";
-  @SerializedName(SERIALIZED_NAME_ENABLE_CONTEXT)
+  public static final String SERIALIZED_NAME_UNRESOLVED = "unresolved";
+  @SerializedName(SERIALIZED_NAME_UNRESOLVED)
   @javax.annotation.Nullable
-  private Boolean enableContext;
+  private Boolean unresolved;
+
+  public static final String SERIALIZED_NAME_PATCH_SET = "patch_set";
+  @SerializedName(SERIALIZED_NAME_PATCH_SET)
+  @javax.annotation.Nullable
+  private Integer patchSet;
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
+  private String id;
+
+  public static final String SERIALIZED_NAME_PATH = "path";
+  @SerializedName(SERIALIZED_NAME_PATH)
+  @javax.annotation.Nullable
+  private String path;
+
+  public static final String SERIALIZED_NAME_SIDE = "side";
+  @SerializedName(SERIALIZED_NAME_SIDE)
+  @javax.annotation.Nullable
+  private Side side;
+
+  public static final String SERIALIZED_NAME_PARENT = "parent";
+  @SerializedName(SERIALIZED_NAME_PARENT)
+  @javax.annotation.Nullable
+  private Integer parent;
+
+  public static final String SERIALIZED_NAME_LINE = "line";
+  @SerializedName(SERIALIZED_NAME_LINE)
+  @javax.annotation.Nullable
+  private Integer line;
+
+  public static final String SERIALIZED_NAME_RANGE = "range";
+  @SerializedName(SERIALIZED_NAME_RANGE)
+  @javax.annotation.Nullable
+  private Range range;
+
+  public static final String SERIALIZED_NAME_IN_REPLY_TO = "in_reply_to";
+  @SerializedName(SERIALIZED_NAME_IN_REPLY_TO)
+  @javax.annotation.Nullable
+  private String inReplyTo;
+
+  public static final String SERIALIZED_NAME_UPDATED = "updated";
+  @SerializedName(SERIALIZED_NAME_UPDATED)
+  @javax.annotation.Nullable
+  private String updated;
+
+  public static final String SERIALIZED_NAME_MESSAGE = "message";
+  @SerializedName(SERIALIZED_NAME_MESSAGE)
+  @javax.annotation.Nullable
+  private String message;
+
+  public static final String SERIALIZED_NAME_COMMIT_ID = "commit_id";
+  @SerializedName(SERIALIZED_NAME_COMMIT_ID)
+  @javax.annotation.Nullable
+  private String commitId;
+
+  public static final String SERIALIZED_NAME_FIX_SUGGESTIONS = "fix_suggestions";
+  @SerializedName(SERIALIZED_NAME_FIX_SUGGESTIONS)
+  @javax.annotation.Nullable
+  private List<FixSuggestionInfo> fixSuggestions = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_IS_AI = "is_ai";
+  @SerializedName(SERIALIZED_NAME_IS_AI)
+  @javax.annotation.Nullable
+  private Boolean isAi;
 
   public CommentInput() {
   }
 
-  public CommentInput enableContext(@javax.annotation.Nullable Boolean enableContext) {
-    this.enableContext = enableContext;
+  public CommentInput unresolved(@javax.annotation.Nullable Boolean unresolved) {
+    this.unresolved = unresolved;
     return this;
   }
 
   /**
-   * Whether to include the source lines around the comment as context in the response.
-   * @return enableContext
+   * Whether or not the comment must be addressed by the user. This value will default to false if the comment is an orphan, or the value of the in_reply_to comment if it is supplied.
+   * @return unresolved
    */
   @javax.annotation.Nullable
-  public Boolean getEnableContext() {
-    return enableContext;
+  public Boolean getUnresolved() {
+    return unresolved;
   }
 
-  public void setEnableContext(@javax.annotation.Nullable Boolean enableContext) {
-    this.enableContext = enableContext;
+  public void setUnresolved(@javax.annotation.Nullable Boolean unresolved) {
+    this.unresolved = unresolved;
+  }
+
+
+  public CommentInput patchSet(@javax.annotation.Nullable Integer patchSet) {
+    this.patchSet = patchSet;
+    return this;
+  }
+
+  /**
+   * The patch set number for the comment; only set in contexts where + comments may be returned for multiple patch sets.
+   * @return patchSet
+   */
+  @javax.annotation.Nullable
+  public Integer getPatchSet() {
+    return patchSet;
+  }
+
+  public void setPatchSet(@javax.annotation.Nullable Integer patchSet) {
+    this.patchSet = patchSet;
+  }
+
+
+  public CommentInput id(@javax.annotation.Nullable String id) {
+    this.id = id;
+    return this;
+  }
+
+  /**
+   * The URL encoded UUID of the comment if an existing draft comment should be updated.
+   * @return id
+   */
+  @javax.annotation.Nullable
+  public String getId() {
+    return id;
+  }
+
+  public void setId(@javax.annotation.Nullable String id) {
+    this.id = id;
+  }
+
+
+  public CommentInput path(@javax.annotation.Nullable String path) {
+    this.path = path;
+    return this;
+  }
+
+  /**
+   * The file path for which the inline comment should be added. + Doesn&#39;t need to be set if contained in a map where the key is the file path.
+   * @return path
+   */
+  @javax.annotation.Nullable
+  public String getPath() {
+    return path;
+  }
+
+  public void setPath(@javax.annotation.Nullable String path) {
+    this.path = path;
+  }
+
+
+  public CommentInput side(@javax.annotation.Nullable Side side) {
+    this.side = side;
+    return this;
+  }
+
+  /**
+   * The side on which the comment should be added. + Allowed values are REVISION and PARENT. + If not set, the default is REVISION.
+   * @return side
+   */
+  @javax.annotation.Nullable
+  public Side getSide() {
+    return side;
+  }
+
+  public void setSide(@javax.annotation.Nullable Side side) {
+    this.side = side;
+  }
+
+
+  public CommentInput parent(@javax.annotation.Nullable Integer parent) {
+    this.parent = parent;
+    return this;
+  }
+
+  /**
+   * The 1-based parent number. Used only for merge commits when side &#x3D;&#x3D; PARENT. When not set the comment is for the auto-merge tree.
+   * @return parent
+   */
+  @javax.annotation.Nullable
+  public Integer getParent() {
+    return parent;
+  }
+
+  public void setParent(@javax.annotation.Nullable Integer parent) {
+    this.parent = parent;
+  }
+
+
+  public CommentInput line(@javax.annotation.Nullable Integer line) {
+    this.line = line;
+    return this;
+  }
+
+  /**
+   * The number of the line for which the comment should be added. + 0 if it is a file comment. + If neither line nor range is set, a file comment is added. + If range is set, this value is ignored in favor of the end_line of the range. + When updating a draft without path, the draft keeps its line.
+   * @return line
+   */
+  @javax.annotation.Nullable
+  public Integer getLine() {
+    return line;
+  }
+
+  public void setLine(@javax.annotation.Nullable Integer line) {
+    this.line = line;
+  }
+
+
+  public CommentInput range(@javax.annotation.Nullable Range range) {
+    this.range = range;
+    return this;
+  }
+
+  /**
+   * The range of the comment as a CommentRange entity.
+   * @return range
+   */
+  @javax.annotation.Nullable
+  public Range getRange() {
+    return range;
+  }
+
+  public void setRange(@javax.annotation.Nullable Range range) {
+    this.range = range;
+  }
+
+
+  public CommentInput inReplyTo(@javax.annotation.Nullable String inReplyTo) {
+    this.inReplyTo = inReplyTo;
+    return this;
+  }
+
+  /**
+   * The URL encoded UUID of the comment to which this comment is a reply.
+   * @return inReplyTo
+   */
+  @javax.annotation.Nullable
+  public String getInReplyTo() {
+    return inReplyTo;
+  }
+
+  public void setInReplyTo(@javax.annotation.Nullable String inReplyTo) {
+    this.inReplyTo = inReplyTo;
+  }
+
+
+  public CommentInput updated(@javax.annotation.Nullable String updated) {
+    this.updated = updated;
+    return this;
+  }
+
+  /**
+   * The timestamp of this comment. + Accepted but ignored.
+   * @return updated
+   */
+  @javax.annotation.Nullable
+  public String getUpdated() {
+    return updated;
+  }
+
+  public void setUpdated(@javax.annotation.Nullable String updated) {
+    this.updated = updated;
+  }
+
+
+  public CommentInput message(@javax.annotation.Nullable String message) {
+    this.message = message;
+    return this;
+  }
+
+  /**
+   * The comment message. + If not set and an existing draft comment is updated, the existing draft comment is deleted.
+   * @return message
+   */
+  @javax.annotation.Nullable
+  public String getMessage() {
+    return message;
+  }
+
+  public void setMessage(@javax.annotation.Nullable String message) {
+    this.message = message;
+  }
+
+
+  public CommentInput commitId(@javax.annotation.Nullable String commitId) {
+    this.commitId = commitId;
+    return this;
+  }
+
+  /**
+   * Hex commit SHA-1 (40 characters string) of the commit of the patchset to which this comment applies.
+   * @return commitId
+   */
+  @javax.annotation.Nullable
+  public String getCommitId() {
+    return commitId;
+  }
+
+  public void setCommitId(@javax.annotation.Nullable String commitId) {
+    this.commitId = commitId;
+  }
+
+
+  public CommentInput fixSuggestions(@javax.annotation.Nullable List<FixSuggestionInfo> fixSuggestions) {
+    this.fixSuggestions = fixSuggestions;
+    return this;
+  }
+
+  public CommentInput addFixSuggestionsItem(FixSuggestionInfo fixSuggestionsItem) {
+    if (this.fixSuggestions == null) {
+      this.fixSuggestions = new ArrayList<>();
+    }
+    this.fixSuggestions.add(fixSuggestionsItem);
+    return this;
+  }
+
+  /**
+   * Suggested fixes for this comment as a list of FixSuggestionInfo entities.
+   * @return fixSuggestions
+   */
+  @javax.annotation.Nullable
+  public List<FixSuggestionInfo> getFixSuggestions() {
+    return fixSuggestions;
+  }
+
+  public void setFixSuggestions(@javax.annotation.Nullable List<FixSuggestionInfo> fixSuggestions) {
+    this.fixSuggestions = fixSuggestions;
+  }
+
+
+  public CommentInput isAi(@javax.annotation.Nullable Boolean isAi) {
+    this.isAi = isAi;
+    return this;
+  }
+
+  /**
+   * Whether the comment was created by an AI agent. Not set if false.
+   * @return isAi
+   */
+  @javax.annotation.Nullable
+  public Boolean getIsAi() {
+    return isAi;
+  }
+
+  public void setIsAi(@javax.annotation.Nullable Boolean isAi) {
+    this.isAi = isAi;
   }
 
 
@@ -88,19 +413,45 @@ public class CommentInput {
       return false;
     }
     CommentInput commentInput = (CommentInput) o;
-    return Objects.equals(this.enableContext, commentInput.enableContext);
+    return Objects.equals(this.unresolved, commentInput.unresolved) &&
+        Objects.equals(this.patchSet, commentInput.patchSet) &&
+        Objects.equals(this.id, commentInput.id) &&
+        Objects.equals(this.path, commentInput.path) &&
+        Objects.equals(this.side, commentInput.side) &&
+        Objects.equals(this.parent, commentInput.parent) &&
+        Objects.equals(this.line, commentInput.line) &&
+        Objects.equals(this.range, commentInput.range) &&
+        Objects.equals(this.inReplyTo, commentInput.inReplyTo) &&
+        Objects.equals(this.updated, commentInput.updated) &&
+        Objects.equals(this.message, commentInput.message) &&
+        Objects.equals(this.commitId, commentInput.commitId) &&
+        Objects.equals(this.fixSuggestions, commentInput.fixSuggestions) &&
+        Objects.equals(this.isAi, commentInput.isAi);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableContext);
+    return Objects.hash(unresolved, patchSet, id, path, side, parent, line, range, inReplyTo, updated, message, commitId, fixSuggestions, isAi);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommentInput {\n");
-    sb.append("    enableContext: ").append(toIndentedString(enableContext)).append("\n");
+    sb.append("    unresolved: ").append(toIndentedString(unresolved)).append("\n");
+    sb.append("    patchSet: ").append(toIndentedString(patchSet)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    path: ").append(toIndentedString(path)).append("\n");
+    sb.append("    side: ").append(toIndentedString(side)).append("\n");
+    sb.append("    parent: ").append(toIndentedString(parent)).append("\n");
+    sb.append("    line: ").append(toIndentedString(line)).append("\n");
+    sb.append("    range: ").append(toIndentedString(range)).append("\n");
+    sb.append("    inReplyTo: ").append(toIndentedString(inReplyTo)).append("\n");
+    sb.append("    updated: ").append(toIndentedString(updated)).append("\n");
+    sb.append("    message: ").append(toIndentedString(message)).append("\n");
+    sb.append("    commitId: ").append(toIndentedString(commitId)).append("\n");
+    sb.append("    fixSuggestions: ").append(toIndentedString(fixSuggestions)).append("\n");
+    sb.append("    isAi: ").append(toIndentedString(isAi)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -119,7 +470,7 @@ public class CommentInput {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("enable_context"));
+    openapiFields = new HashSet<String>(Arrays.asList("unresolved", "patch_set", "id", "path", "side", "parent", "line", "range", "in_reply_to", "updated", "message", "commit_id", "fix_suggestions", "is_ai"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -146,6 +497,46 @@ public class CommentInput {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      }
+      if ((jsonObj.get("path") != null && !jsonObj.get("path").isJsonNull()) && !jsonObj.get("path").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("path").toString()));
+      }
+      // validate the optional field `side`
+      if (jsonObj.get("side") != null && !jsonObj.get("side").isJsonNull()) {
+        Side.validateJsonElement(jsonObj.get("side"));
+      }
+      // validate the optional field `range`
+      if (jsonObj.get("range") != null && !jsonObj.get("range").isJsonNull()) {
+        Range.validateJsonElement(jsonObj.get("range"));
+      }
+      if ((jsonObj.get("in_reply_to") != null && !jsonObj.get("in_reply_to").isJsonNull()) && !jsonObj.get("in_reply_to").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `in_reply_to` to be a primitive type in the JSON string but got `%s`", jsonObj.get("in_reply_to").toString()));
+      }
+      if ((jsonObj.get("updated") != null && !jsonObj.get("updated").isJsonNull()) && !jsonObj.get("updated").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `updated` to be a primitive type in the JSON string but got `%s`", jsonObj.get("updated").toString()));
+      }
+      if ((jsonObj.get("message") != null && !jsonObj.get("message").isJsonNull()) && !jsonObj.get("message").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
+      }
+      if ((jsonObj.get("commit_id") != null && !jsonObj.get("commit_id").isJsonNull()) && !jsonObj.get("commit_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `commit_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("commit_id").toString()));
+      }
+      if (jsonObj.get("fix_suggestions") != null && !jsonObj.get("fix_suggestions").isJsonNull()) {
+        JsonArray jsonArrayfixSuggestions = jsonObj.getAsJsonArray("fix_suggestions");
+        if (jsonArrayfixSuggestions != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("fix_suggestions").isJsonArray()) {
+            throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `fix_suggestions` to be an array in the JSON string but got `%s`", jsonObj.get("fix_suggestions").toString()));
+          }
+
+          // validate the optional field `fix_suggestions` (array)
+          for (int i = 0; i < jsonArrayfixSuggestions.size(); i++) {
+            FixSuggestionInfo.validateJsonElement(jsonArrayfixSuggestions.get(i));
+          };
+        }
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
